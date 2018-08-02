@@ -1,0 +1,1206 @@
+@body_color: #929292;
+@navi_color: #323232;
+@navi_active_color: #D6B161;
+@title-dark: #494949;
+@color_8: #878787;
+@color_9: #a8a8a8;
+@color_10: #868686;
+@color_11: #575757;
+@color_12: black;
+@color_13: red;
+@font_family_SSP: "Source Sans Pro", sans-serif;
+@font_family_Mr: Montserrat, sans-serif;
+@font_family_normalize1: monospace, monospace;
+@font_family_normalize2: inherit;
+@background_color_1: black;
+@background_color_2: #eeeeee;
+@background_color_3: rgba(0, 0, 0, 0.8);
+@background_color_4: #bbb;
+@background_color_5: #717171;
+@background_color_6: #f6f6f6;
+@col-1:calc(100% * 1/12);
+@col-2:calc(100% * 2/12);
+@col-3:calc(100% * 3/12);
+@col-4:calc(100% * 4/12);
+@col-5:calc(100% * 5/12);
+@col-6:calc(100% * 6/12);
+@col-7:calc(100% * 7/12);
+@col-8:calc(100% * 8/12);
+@col-9:calc(100% * 9/12);
+@col-10:calc(100% * 10/12);
+@col-11:calc(100% * 11/12);
+@col-12:calc(100% * 12/12);
+
+
+
+/*--------------------------------normalize.css-----------------------------------------*/
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+pre {
+	font-family: @font_family_normalize1;
+	font-size: 1em;
+}
+a {
+	background-color: transparent;
+}
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
+b {
+	font-weight: bolder;
+}
+strong {
+	font-weight: bolder;
+}
+code {
+	font-family: @font_family_normalize1;
+	font-size: 1em;
+}
+kbd {
+	font-family: @font_family_normalize1;
+	font-size: 1em;
+}
+samp {
+	font-family: @font_family_normalize1;
+	font-size: 1em;
+}
+small {
+	font-size: 80%;
+}
+sub {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+	bottom: -0.25em;
+}
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+	top: -0.5em;
+}
+img {
+	border-style: none;
+}
+button {
+	font-family: @font_family_normalize2;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+	overflow: visible;
+	text-transform: none;
+	-webkit-appearance: button;
+	&::-moz-focus-inner {
+		border-style: none;
+		padding: 0;
+	}
+	&:-moz-focusring {
+		outline: 1px dotted ButtonText;
+	}
+}
+input {
+	font-family: @font_family_normalize2;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+	overflow: visible;
+}
+optgroup {
+	font-family: @font_family_normalize2;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+select {
+	font-family: @font_family_normalize2;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+	text-transform: none;
+}
+textarea {
+	font-family: @font_family_normalize2;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+	overflow: auto;
+}
+[type="button"] {
+	-webkit-appearance: button;
+	&::-moz-focus-inner {
+		border-style: none;
+		padding: 0;
+	}
+	&:-moz-focusring {
+		outline: 1px dotted ButtonText;
+	}
+}
+[type="reset"] {
+	-webkit-appearance: button;
+	&::-moz-focus-inner {
+		border-style: none;
+		padding: 0;
+	}
+	&:-moz-focusring {
+		outline: 1px dotted ButtonText;
+	}
+}
+[type="submit"] {
+	-webkit-appearance: button;
+	&::-moz-focus-inner {
+		border-style: none;
+		padding: 0;
+	}
+	&:-moz-focusring {
+		outline: 1px dotted ButtonText;
+	}
+}
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+progress {
+	vertical-align: baseline;
+}
+[type="checkbox"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+[type="number"] {
+	&::-webkit-inner-spin-button {
+		height: auto;
+	}
+	&::-webkit-outer-spin-button {
+		height: auto;
+	}
+}
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+	&::-webkit-search-decoration {
+		-webkit-appearance: none;
+	}
+}
+&::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+details {
+	display: block;
+}
+summary {
+	display: list-item;
+}
+template {
+	display: none;
+}
+[hidden] {
+	display: none;
+}
+/*---------------------------------off-canvas-------------------------------------------*/
+/**
+ * body
+ */
+#responsive-nav-wrapper {
+	position: relative;
+}
+.nav-open {
+	overflow: hidden;
+}
+
+/**
+ * #responsive-btn
+ * #responsive-btn of display is "block" when you want to valid off-canvas-navigation.
+ */
+#responsive-btn {
+	height: 19px;
+	width: 20px;
+	overflow: hidden;
+	display: none;
+	cursor: pointer;
+}
+
+/**
+ * .responsive-nav
+ */
+.responsive-nav {
+}
+.responsive-nav ul,
+.responsive-nav ul li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	*zoom: 1;
+}
+.responsive-nav ul:after,
+.responsive-nav ul li:after {
+	clear: both;
+	content: '';
+	display: block;
+}
+.responsive-nav ul li {
+	float: left;
+	position: relative;
+}
+.responsive-nav ul li a {
+	display: block;
+}
+.responsive-nav ul li ul {
+	display: block !important;
+	position: absolute;
+	width: 220px;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.1s ease-in, opacity 0.1s ease-in;
+}
+.responsive-nav ul:first-child li:hover>ul {
+	visibility: visible;
+	opacity: 1;
+}
+.responsive-nav ul:first-child>li>ul {
+	top: 100%;
+}
+.responsive-nav ul li ul.show-pulldown {
+	display: block;
+}
+.responsive-nav ul li ul li {
+	float: none !important;
+	position: relative;
+	width: auto !important;
+}
+.responsive-nav ul li ul li a {
+	font-weight: normal;
+	padding: 10px 15px;
+}
+.responsive-nav ul li ul li ul {
+	position: absolute;
+	top: 0;
+	left: 219px;
+}
+.responsive-nav ul li ul li ul.reverse-pulldown {
+	left: -219px;
+}
+
+/**
+ * .off-canvas-nav
+ * Do not set "overflow: hidden" to element that wrapping
+ */
+.off-canvas-nav {
+	background-color: #000 !important;
+	background-image: none !important;
+	display: none;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 80%;
+	max-width: 300px;
+	position: absolute !important;
+	overflow: auto !important;
+	top: 0 !important;
+	left: -80%;
+}
+.off-canvas-nav * {
+	background-image: none !important;
+	float: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: auto !important;
+	text-align: left !important;
+}
+.off-canvas-nav,
+.off-canvas-nav ul li {
+	background-color: #000 !important;
+	display: block !important;
+	float: none !important;
+	border-bottom: 1px solid #333;
+}
+.off-canvas-nav ul li:first-child {
+	border-top: 1px solid #333;
+}
+.off-canvas-nav ul {
+	display: block !important;
+}
+.off-canvas-nav ul li ul {
+	border-top: none !important;
+	border-left: 1px solid #333;
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1;
+	margin-left: 3em !important;
+	margin-bottom: -1px !important;
+	position: static !important;
+	width: auto !important;
+}
+.off-canvas-nav ul li a {
+	color:white !important;
+	background-color: #000 !important;
+	border: none !important;
+	display: block !important;
+	padding: 10px 20px 7px !important;
+	text-decoration: none !important;
+	transition: color 0.3s linear !important;
+}
+
+.off-canvas-nav ul li a.active {
+	color: #D6B161 !important;	
+}
+
+
+.off-canvas-nav ul li a:hover,
+.off-canvas-nav ul li a:active {
+	background-color: #222 !important;
+	color: #D6B161 !important;
+}
+
+/*---------------------------------about.css--------------------------------------------*/
+@keyframes fade {
+	from {
+		opacity: .4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	position: relative;
+	color: @body_color;
+	font-family: @font_family_SSP;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+h1 {
+	margin: 0;
+}
+h2 {
+	margin: 0;
+}
+h3 {
+	margin: 0;
+}
+h4 {
+	margin: 0;
+}
+h5 {
+	margin: 0;
+}
+h6 {
+	margin: 0;
+}
+p {
+	margin: 0;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style-type: none;
+}
+dl,dt,dd{
+	margin: 0;
+}
+img {
+	display: block;
+	width: 100%;
+	/*Q:width:100%;這個設定在RWD中還是有其必要性
+		但問題是，如our-team底下的img，設計稿要求是
+		280*280，會很接近，但沒辦法完全精確...應該說，為了RWD，container底下的col必須以百分比計算...*/
+}
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.clearfix {
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+.col-6 {
+	width: 50%;
+	float: left;
+	padding: 0 15px;
+}
+.col-5 {
+	width: 41.666666666666667%;
+	float: left;
+	padding: 0 15px;
+}
+.col-4 {
+	width: 33.333333%;
+	float: left;
+	padding: 0 15px;
+}
+.col-3 {
+	width: calc(25%);
+	float: left;
+	padding: 0 15px;
+}
+.co-2 {
+	width: calc(16.66666667%);
+}
+.row {
+	margin: 0 -15px;
+}
+.col-2 {
+	float: left;
+	padding: 0 15px;
+}
+.col-12 {
+	float: left;
+	padding: 0 15px;
+}
+.container {
+	max-width: 1200px;
+	/*
+		Q:把width改成max-width後，除了scroll bar會不見外，
+		原本縮小會爆掉的背影顏色等也恢復正常了，但我還是不太懂其原理，不想硬記...
+		A:其實根本沒什麼，就只是模擬手機裝置在看太大的視窗時，只有超出的部分會用scroll bar顯示
+		  其他沒有超出的容器就保持原狀
+	*/ 
+	padding: 0px;
+	position: relative;
+	margin: 0 auto;
+}
+#cart-container{
+	display:none;
+}
+.template {
+    display:none;
+}
+
+.logo_navi {
+	padding: 44px 0px 50px 53px;
+	#logo {
+		>a {
+			width: 112px
+			height:30px;
+			display: block;
+			float: left;
+		}
+		p {
+			float: left;
+			padding-top: 11px;
+			padding-left: 32px;
+			font-family: @font_family_Mr;
+			font-size: 12px;
+			font-weight: 700;
+			color: #4B4B4B;
+		}
+	}
+	#nav_others,#navi{
+		float: right;
+	}
+	>div ul {
+		padding-top: 11px;
+		list-style-type: none;
+		font-family: @font_family_Mr;
+		font-size: 14px;
+		color:#0E0E0E;
+		>li {
+			position: relative;
+			float: left;
+			font-size: 10px;
+			padding: 0 12px;
+			text-transform: uppercase;
+			i.fa-3x {
+				position: relative;
+				bottom: 10px;
+			}
+			i.icon-handbag {
+				&:before {
+					position: relative;
+					bottom: 3px;
+					margin: 0px;
+					font-size: 30px;
+				}
+			}			
+			>a {
+				text-decoration: none;
+				color: @navi_color;
+				transition: color 0.3s ease;
+				&:hover {
+					color: @navi_active_color;
+				}
+			}
+			>a.active {
+				color: @navi_active_color;
+			}
+			div.count {
+				background-color: @background_color_1;
+				position: absolute;
+				bottom: 5px;
+				right: 0px;
+				border-radius: 50%;
+				padding-top: 2px;
+				height: 20px;
+				width: 20px;
+				text-align: center;
+				font-size: 8px;
+				font-weight: 400;
+				color:white;
+			}
+		}
+	}
+	>div.off-canvas-nav{
+		color:white;
+	}
+}
+
+#responsive-btn-cart {
+	display: none;
+}
+
+
+.about-us {
+	background: #f4f4f4;
+	padding: 52px 0px 71px 0px;
+	text-align: center;
+	h1 {
+		color: @title-dark;
+		font-family: @font_family_Mr;
+		font-size: 44px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	p {
+		padding-top: 18px;
+		text-transform: capitalize;
+		font-size: 14px;
+		color: @title-dark;
+	}
+}
+
+.who-we-are {
+	padding-top: 95px;
+	h2 {
+		font-family: @font_family_Mr;
+		color: @title-dark;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 28px;
+	}
+	p {
+		padding-top: 60px;
+		line-height: 30px;
+		color: @title-dark;
+		span {
+			line-height: 30px;
+			font-family: @font_family_Mr;
+			font-weight: 700;
+			font-size: 22px;
+			color: @title-dark;
+		}
+	}
+	p.bold {
+		font-family: @font_family_SSP;
+		font-weight: 700;
+		font-size: 16px;
+		color: @title-dark;
+	}
+	ul.social {
+		padding-top: 10px;
+		li {
+			float: left;
+			a {
+				padding-right: 10px;
+				font-size: 16px;
+				color: @title-dark;
+			}
+		}
+	}
+}
+
+.our-team {
+	h2 {
+		font-family: @font_family_Mr;
+		color: @title-dark;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 28px;
+	}
+	.container {
+		padding-top: 112px;
+	}
+	.row {
+		padding-top: 42px;
+	}
+	.col-3 {
+		padding: 0px 15px;
+		&:nth-child(4){
+			position: relative;
+		}
+		>ul {
+			padding-top: 18px;
+			li {
+				&:first-child{
+					margin-right: 10px;
+					width: 7px;
+					height: 32px;
+					background-color: @background_color_2;
+					float: left;					
+				}
+			}
+			.name {
+				font-family: @font_family_Mr;
+				font-size: 16px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				color: @title-dark;
+			}
+			.position {
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 5px;
+			}
+		}
+	}
+	.member {
+		position: relative;
+	}
+	.cover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(255, 255, 255, 0.7);
+		opacity: 0;
+		transition: all 0.3s ease;
+		&:hover {
+			opacity: 1;
+			cursor: pointer;
+			ul {
+				transform: translate(-50%,-50%);
+			}
+		}
+		ul {
+			position: absolute;
+			top: 0;
+			left: 0;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,100%);
+			transition: all 0.3s ease;
+			li {
+				i {
+					background: #515151;
+					padding-top: 9px;
+					padding-left: 10px;
+					border-radius: 50%;
+					width: 35px;
+					height: 35px;
+					font-size: 18px;
+					color:white;
+					transition:color 0.3s ease;
+					&:hover{
+						color:#D6B161;
+					}
+				}
+			}
+		}
+	}
+
+	.empty {
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%,-50%);
+		font-family: @font_family_Mr;
+		font-size: 30px;
+		font-weight: 700;
+		text-transform: uppercase;
+		/*重大發現!原本每次用過mediaquery就會跑掉的設定，在發現上面這個寫法後，確定會乖乖置中!
+		不過詳細的原理我還不是很理解(用pos調與用tarnsform:translate調的細部差異)
+		要再請教老師!
+		 text-align: center;
+		p {
+			position: relative;
+			top:-160px;
+		} */
+	}
+}
+
+.our-work-space{
+	margin-top: 125px;
+	.container{
+		h2{
+		    font-family: Montserrat, sans-serif;
+		    color: #494949;
+		    font-weight: 700;
+		    text-transform: uppercase;
+		    font-size: 28px;
+		}
+	}
+	#slider1{
+		margin:47px 0px 152px 0px;
+	}
+    .left,.right {
+        cursor: pointer;
+        width: auto;
+    }
+} 
+
+#Footer {
+	.misc {
+		background-color: @background_color_6;
+		.container {
+			padding: 72px 0px 75px 0px;
+		}
+	}
+	.col-4 {
+		font-weight: 700;
+		color: @color_9;
+		a {
+			text-transform: capitalize;
+			color: @color_9;
+		}
+		div {
+			i {
+				padding-right: 3px;
+			}
+			i.fa-map-marker {
+				display: inline-block;
+				position: relative;
+				top: -15px;
+			}
+		}
+		div.address {
+			a {
+				display: inline-block;
+			}
+		}
+		#logo-gray {
+			padding-bottom: 30px;
+			width: 112px;
+		}
+		p {
+			padding-bottom: 30px;
+		}
+		.address {
+			padding-bottom: 30px;
+		}
+	}
+	.col-5 {
+		.col-4{
+			/*本來沒有設這個，會導致文章自然流動，空間不夠大會自然往下掉，
+			但那不是我現在想要的效果，我現在要的是能擠就擠-fluid的效果
+			container給max-width再利用各種col-3、4、5等設定百分比的方式達到效果*/ 
+			dt {
+				cursor: pointer;
+				padding-left: 5px;
+				padding-bottom: 30px;
+				font-weight: 700;
+				font-size: 18px;
+				color: @color_11;
+			}
+			dd{
+				margin-left: 0px;
+				a {
+					color: @color_10;
+					line-height: 30px;
+					text-transform: capitalize;
+					font-weight: 700;
+					display: block;
+				}
+			}
+		}
+	}
+	.col-3 {
+		.sign-up {
+			text-align: right;
+			>li {
+				padding-bottom: 30px;
+				font-weight: 700;
+			}
+			li.title{
+				font-size: 18px;
+				color: @color_11;
+				padding-bottom: 30px;
+			}
+			li.email {
+				position: relative;
+			}
+			li {
+				i.fa-angle-right {
+					position: absolute;
+					right: 30px;
+					bottom: 42px;
+					font-size: 16px;
+					cursor: pointer;
+				}
+			}
+			li.bold {
+				padding-bottom: 10px;
+				font-family: @font_family_SSP;
+				font-weight: 700;
+				font-size: 16px;
+				color: @title-dark;
+			}
+			ul.social {
+				float: right;
+				li {
+					float: left;
+					a {
+						padding-left: 10px;
+						font-size: 16px;
+						color: @title-dark;
+					}
+				}
+			}
+			input {
+				padding: 10px 0px;
+				padding-left: 20px;
+				background-color: @background_color_6;
+				border-radius: 23px;
+				width: 100%;
+				border: 1px solid #868686;
+				&:focus {
+					outline: none;
+					border: 1px solid #66afe9;
+				}
+			}
+		}
+	}
+	.copy-right {
+		.container {
+			padding: 40px 0px 95px 0px;
+		}
+		.col-6 {
+			p {
+				font-weight: 700;
+			}
+			a {
+				color: @color_12;
+				font-family: @font_family_Mr;
+				font-weight: 700;
+				letter-spacing: 0px;
+				transition: all 0.3s linear;
+				&:hover {
+					color: @color_13;
+				}
+			}
+			.pay-method{
+				float: right;
+				width: 117px;
+				img {
+					position: relative;
+					bottom: 3px;
+				}
+			}
+			
+		}
+	}
+}
+
+/*--------------------------------------------------------RWD-------------------------------------------------------*/
+/*取決於內容*/
+/*摺疊收納是看格線對齊的位置，很重要的小技巧，正確的收納!*/
+
+/*tip:由於桌機的container是設定在1200px，斷點如果設在1200px，使用者使用1200px的裝置觀看時，
+畫面會非常擁擠，因此加50px，讓左右兩邊還有25px的留白時，就到斷點了*/
+
+ 
+@media (max-width:1250px){//12螢幕吋以下pad landsacpe以上
+	.container{
+	 	max-width:1000px;
+	 }
+}
+
+
+
+@media screen and (max-width:1050px){ // pad landscape~ pad portrait
+	.container{
+		max-width:717px 
+	}
+
+	.our-team .container .col-3{
+		padding-bottom: 10px;
+		width:@col-6;
+	}
+	 			
+
+	#Footer{
+		.row{
+			>.col-4{
+				width:@col-12;
+				float:none;
+				text-align: center;
+				#logo-gray{
+					margin:0 auto;
+				}
+			}
+			>.col-5{
+				width:@col-12;
+				padding: 30px 0px 30px 0px;
+			}
+			>.col-3{
+				width:@col-12;
+				li{
+					position: relative;
+					text-align: center;
+					input{
+						width: 50%
+					}
+					i.fa-angle-right {
+						right:200px;
+					}
+					ul.social{
+						position: absolute;
+						bottom: 0px;
+						left:275px;
+						float: none;
+						a{
+							padding:0px 10px 0px 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	
+	#responsive-btn {
+	  display: block;
+	  position: absolute;
+	  color:#000;
+	  right: 15px;
+	  top: 10px;
+	  i{
+		font-size: 22px;
+	  }
+	}
+}
+
+/*平板電腦一下的尺寸統一規格!*/
+@media screen and (max-width:767px){
+	
+	@keyframes cartshow{
+		from{
+			width:0%;
+		}
+		to{
+			width:33%;
+		}
+	}
+
+	@keyframes carthide{
+		from{
+			width:33%;
+		}
+		to{
+			width:0%;
+		}
+	}
+
+	#cart-container.cartshow {
+		position: absolute;
+		top:0;
+		right: 0;
+		display:block;
+		background-color:rgba(14,14,14,0.8);
+		width: 33%;
+		/*如果最後沒有給這個完結要有的值，則width會在做完一次動畫後，回歸0%...*/
+		height:100%;
+		animation: cartshow 0.3s linear;
+		/* 我就一直覺得我自己做的這個off-canvas操作起來怪怪的，展開時點擊有時有反應，有時又像掛掉一樣
+		，a:hover的效果也是時有時沒有，最後才發現，中間也不是沒有想到過z-index，不過最後發現是要放在
+		這邊才會生效~至於想要有點半透明，依樣去bgc設定rgba就好啦~*/
+		z-index: 1;
+		#nav_others{
+		    position:relative;
+		    top: 8%;
+		    /* 浪費了半小時...可能不只...在搞less發出的錯誤
+		    Error"media definitions require block statements after any features"
+		    結果...top:8%忘記家分號...把我的生命還給我啊啊啊啊啊!*/
+		    text-align: center;
+		    a{
+			    line-height:5rem;
+				color:white;
+				transition: color 0.3s ease;
+				&:hover {
+					color: @navi_active_color;
+				}
+				[class^="icon-"]:before, [class*=" icon-"]:before {
+					margin:0;
+				}
+			}
+			div.count {
+			    background-color: white;
+			    position: absolute;
+			    bottom: 8%;
+			    right: 37%;
+			    border-radius: 50%;
+			    padding-top: 2px;
+			    height: 20px;
+			    width: 20px;
+			    text-align: center;
+			    font-size: 13px;
+			    font-weight: 700;
+				color:black;
+			}		
+		}
+	}
+
+	#cart-container.carthide{
+		display:block;
+		position: absolute;
+		background-color: rgba(0,0,0,0.5);
+		top:0;
+		right: 0;
+		width: 0%;
+		/*同上，沒有設定這個完結值(假設仍為width:33%)，則width會在做完一次動畫後，回歸33%...*/
+		height:100%;
+		animation: carthide 0.3s linear;
+	}
+
+	.logo_navi #nav_others {
+		display:none;
+	}
+
+	#responsive-btn {
+		transform: translateX(-100%);  
+	}
+
+	#responsive-btn-cart {
+		display: block;
+		position: absolute;
+		color:#000;
+		right: 8px;
+		top: 10px;
+  		cursor: pointer;
+	  	i{
+			font-size: 22px;
+	  	}
+	}
+	/*以上是為了做出off-canvas的效果*/
+	
+	.container{
+		min-width: 320px;
+	}
+
+	/* 發現當容器皆設為100%時，若視窗太小，會有多餘留白，產生scroll bar，
+	此時ˊ把原本給各個col的padding-left padding-right ，還有row的margin 0,-15都取消即可*/
+	
+	.our-team .container .row{
+		margin-left: 0px;
+		margin-right: 0px;
+		.col-3{
+			padding:0;
+			padding-bottom: 10px;
+			width:@col-12;
+		}
+	}
+
+
+	#Footer .container .row{
+		margin:0px; 
+		.col-5 .col-4{
+			padding-left:0px;
+			padding-left:0px; 
+			width:100%;
+			text-align: center;
+			.Zebra_Accordion {
+				dd {
+				    display: none;
+				}
+			}
+		}
+		/* 被懲罰了....受權重的影響，只是要改個設定也花了一堆時間!不管是desktop first或是mobile first
+		   ，都該養成能簡單寫就簡單寫的大原則!
+		   */
+		>.col-3{
+			padding-left: 0px;
+			padding-right: 0px;
+
+			li{
+				/* ul原本像nav的那種「容器靠右內容物從左往右排列」的設定方式，在要使容器置中時反而會有困擾
+				這時候反璞歸真，把多餘的設定都去掉在用tac置中即可 */
+				ul.social{
+					position:static;
+					float:none;
+					li{
+						float:none;
+						display: inline-block;
+					}
+				}
+			}
+		}		
+	} 	
+}
+
+/* 我非常不滿意下面這些設定...因為感覺就是硬幹的。效果又很差!
+		Q:這邊都是針對position做的調整，目前我知道在position唯一能一勞永逸的只有置中(postiotion推50%，
+		然後用transform:translate50%把自己的一半拉回來)還有固定在容器的角落，其他設定...
+		只要畫面一跑掉位置也會跟著跑掉，調這個真的浪費了我很多時間...*/
+@media screen and (max-width:540px) {
+	#cart-container.cartshow #nav_others{
+		div.count {
+		    right: 32%;
+		}			
+	}
+	#Footer .row > .col-3 li i.fa-angle-right {
+		right:180px;
+	}			
+}
+
+@media screen and (max-width:425px) {
+	#cart-container.cartshow #nav_others{
+		div.count {
+		    right: 29%;
+		}			
+	}
+	#Footer .row > .col-3 li i.fa-angle-right {
+		right:140px;
+	}		
+}
+
+
+
+
+@media screen and (max-width:320px) {
+	#cart-container.cartshow #nav_others{
+		div.count {
+		    right: 22%;
+		}			
+	}
+	#Footer .row > .col-3 li i.fa-angle-right {
+		right:100px;
+	}	
+}
