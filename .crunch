@@ -1,0 +1,45 @@
+{
+	"files": {
+		"less/main.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "main.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
+				"header.less",
+				"footer.less",
+				"content.less",
+				"basic.less"
+			]
+		},
+		"less/about.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "about.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
+				"about.less"
+			]
+		}
+	}
+}

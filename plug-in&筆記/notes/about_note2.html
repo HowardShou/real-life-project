@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ABOUT US</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.responsive-nav.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Source+Sans+Pro:300,600" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <!-- normalixze的css不多，用引入的方式反而易導致效能降低，所以將之直接放入about.css裡 -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- 決定下一個專案開始在用bootstrap開發，這次還是先照自己的作 -->
+    <!-- <link rel="stylesheet" href="css/jquery.responsive-nav.css"> -->
+    <link rel="stylesheet" href="css/jquery.easy_slides.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="less/about.css">
+</head>
+
+<body>
+    <div id="cart-container"></div>    
+    <div id="Header clearfix">
+        <!-- html和css業界習慣用全小寫或自首大小，從善如流 -->
+        <div id="responsive-nav-wrapper" class="logo_navi clearfix">
+            <!-- 對著範例的index檔案對照，終於發現要讓這個plug-in運作，還要在外圍包覆的容器
+            增加個id才會作用!作者的doc這邊寫得不夠完整! -->
+            <div id="logo">
+                <a href="#"><img src="images/logo.png" alt="logo"></a>
+                <p>+1(555) 333 22 11</p>
+            </div>
+            <div id="responsive-btn"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <!-- 作者本來是插圖片，我用icon-fonts取代 -->
+            <div id="responsive-btn-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+            <!--一樣去對照作者的html，發現這邊原來需要用div包覆才能運作，又讓我去css那邊調整了不少東西，累 -->
+            <div id="nav_others" class="clearfix">
+                <ul>
+                <!-- 為了讓購物車等不要一起被編入收納範圍，利用我們在jQ控制的只有#nav底下的ul li，a
+                的特性，再開一個ul 取不同名字使其不被插件控制即可 -->
+                <!-- ul要靠最右的東西要先寫，將nav_others的位置跟navi對調 -->
+                <li><a href="#"><i class="fa fa-search fa-3x" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-heart-o fa-3x" aria-hidden="true"></i></a></li>
+                <li>
+                    <a href="#"><i class="icon-handbag fa-3x"></i></a>
+                    <div class="count">3</div>
+                </li>
+            </div>
+            </ul>
+            <div id="navi" class="clearfix">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#" class=active>products<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                    <li><a href="#">pages<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>    
+            </div>
+            
+        </div>
+        <div class="about-us">
+            <div class="container clearfix">
+                <h1>about us</h1>
+                <p>home > about us</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="Content">
+        <div class="who-we-are">
+            <div class="container clearfix">
+                <h2>who we are?</h2>
+                <p>Morbi in erat malesuada, sollicitudin massa at, tristique nisl. Maecenas id eros scelerisque, vulputate tortor quis, efficitur arcu sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Umco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit sse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    <br><span>Vestibulum sit amet metus euismod, condimentum lectus id, ultrices sem.
+                </span></p>
+                <p>Fusce mattis nunc lacus, vulputate facilisis dui efficitur ut. Vestibulum sit amet metus euismod, condimentum lectus id, ultrices sem. Morbi in erat malesuada, sollicitudin massa at, </p>
+                <p class="bold">Follow Us</p>
+                <ul class="social clearfix">
+                    <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="our-team">
+            <div class="container clearfix">
+                <h2>our team</h2>
+                <div class="row clearfix">
+                    <div class="col-3">
+                        <div class="member">
+                            <img src="https://picsum.photos/280/280" alt="photo">
+                            <div class="cover">
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="bar"></li>
+                            <li class="name">clara wooden</li>
+                            <li class="position">designer</li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <div class="member">
+                            <img src="https://picsum.photos/280/280" alt="photo">
+                            <div class="cover">
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="bar"></li>
+                            <li class="name">john wick</li>
+                            <li class="position">founder</li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <div class="member">
+                            <img src="https://picsum.photos/280/280" alt="photo">
+                            <div class="cover">
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="bar"></li>
+                            <li class="name">harry kane</li>
+                            <li class="position">designer</li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <img src="images/background.jpg" alt="bgc">
+                        <div class="empty">
+                            <p>you?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="our-work-space">
+            <div class="container clearfix">
+                <h2>OUR WORK SPACE</h2>
+            </div>
+            <div class="slider">
+                <ul>
+                    <li>
+                        <img src="images/1.png" alt="">
+                    </li>
+                    <li>
+                        <img src="images/2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="images/3.png" alt="">
+                    </li>
+                    <img src="images/left.png" class="left">
+                    <img src="images/right.png" class="right">
+                </ul>
+            </div>
+        </div>
+
+        <div id="slider1" class="slider template">
+            <ul>
+                <li>
+                    <img src="images/1.png" alt="photo">
+                </li>
+                <li>
+                    <img src="images/2.png" alt="photo">
+                </li>
+                <li>
+                    <img src="images/3.png" alt="photo">
+                </li>
+                <img src="images/left.png" class="left">
+                <img src="images/right.png" class="right">
+            </ul>
+        </div>
+
+        <div id="slider2" class="slider template">
+            <div><img src="images/1.png" alt="photo"></div>
+            <div><img src="images/2.png" alt="photo"></div>
+            <div><img src="images/3.png" alt="photo"></div>
+            <div class="next_button">NEXT</div>  
+            <div class="prev_button">PREV</div>  
+            <div class="nav_indicators"></div>
+         </div>
+
+    <div id="Footer">
+        <div class="misc clearfix">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-4">
+                        <div id="logo-gray">
+                            <a href="#"><img src="images/logo.gray.png" alt="logo"></a>
+                        </div>
+                        <p>Exercitation ullamco laboris nisi ut aliquip excommodo consequat. Duis aute irure
+                        </p>
+                        <div class="address">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <a href="#">connaught orad central suite 18B, 148 <br>New Yankee</a>
+                        </div>
+                        <div class="phone">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+1(500)333 22 11">+1(500)333 22 11</a>
+                        </div>
+                        <div class="email">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <a href="mailto:info@schon.chair">info@schon.chair</a>
+                        </div>
+                    </div>
+                    <div class="col-5 clearfix">
+                        <!-- 這一塊為了插入別人的套件折騰好久，不過覺得很值得，至少以後在使用別人的套件時，知道:
+                        doc一定要看仔細!包括對方的html是如何搭配、css有沒有做其他設定，以及js方面可以做什麼客製化的開關調整! -->
+                        <div class="col-4">
+                            <dl class="Zebra_Accordion">
+                                <dt>Categories</dt>
+                                <dd>
+                                    <a href="#">chairs</a>
+                                    <a href="#">sofas</a>
+                                    <a href="#">living</a>
+                                    <a href="#">bedroom</a>
+                                    <a href="#">tables</a>
+                                    <a href="#">new</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-4">
+                            <dl class="Zebra_Accordion">
+                                <dt>Informations</dt>
+                                <dd>
+                                    <a href="#">about</a>
+                                    <a href="#">contact us</a>
+                                    <a href="#">terms&conditions</a>
+                                    <a href="#">bedroom</a>
+                                    <a href="#">tables</a>
+                                    <a href="#">new</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-4">
+                            <dl class="Zebra_Accordion">
+                                <dt>Accounts</dt>
+                                <dd>
+                                    <a href="#">MyAccount</a>
+                                    <a href="#">OrderTracking</a>
+                                    <a href="#">Wishlist</a>
+                                    <a href="#">ShoppingCart</a>
+                                    <a href="#">Checkout</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <ul class="sign-up">
+                            <li class="title">Sign Up Newsletter</li>
+                            <li>Subscribe now to get 15% off
+                                <br>on any product</li>
+                            <li class="email">
+                                <input type="email" placeholder="Your Email">
+                                <i class="fa fa-angle-right" aria-hidden="true "></i>
+                            </li>
+                            <li class="bold">Follow us</li>
+                            <li>
+                                <ul class="social clearfix">
+                                    <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                    <li><a href="#" target="_blank "><i class="fa fa-youtube"  aria-hidden="true"></i></a></li>
+                                    <li><a href="#" target="_blank "><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="#" target="_blank "><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-6">
+                        <p>&copy; <a href="#" class="transition">Schön.</a> All Rights Reserved</p>
+                    </div>
+                    <div class="col-6">
+                        <div class="pay-method">
+                            <img src="images/card icon.png" alt="card icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/zebra_accordion.min.js"></script>
+    <script src="js/Carousel.js"></script>
+    <script src="js/jquery.easy_slides.js"></script>
+
+    <!-- Q:照助教說的，我直接在這邊呼叫，外掛確實起了作用，但我不懂的是，為何我不能把呼叫的
+    這個動作，放到main.js裡面?我的想法是:因為main.js放在Carousel下面，所以瀏覽器會先讀取 
+    Carousel.js再讀取main.js，所以下面這322行以下的東西，應該寫在main.js裡就可以了，但結果
+    會導致這個外掛無法作用...-->
+    <script>
+        /*初始效果是達到了，但是目前最少還是有以下三個問題:
+        
+        Q1:使用者再變動視窗大小前畫面仍是爆掉的狀態:
+            這個問題也是我再line問的那個問題，我想要頁面一載入完畢就觸發resize事件，讓畫面有動作
+            問題是，我在嘗試過$(window).resize();或者$(window).trigger('resize')，始終沒有作用
+            我已經花太多時間在這個問題上了...
+
+        Q2:下面這個"一視窗大小更換外掛"的構想，初步看起來是成功了，但還是破綻百出
+            1.resize在chrome裡面每拖動一次就會執行一次，感覺效能會超差(雖然一般人不會沒事狂切視窗...)
+            2.carousel.在畫面順利變動後就會開始在console瘋狂的噴出錯誤(但是作用仍在)，現在最常遇到的困擾是，
+              要插入別人的插件已經比較會了，但是要把他們停掉的正確方式我還不會，因為別人的插見往往一經呼叫
+              很可稜連html的架構都被更動了，要還原得自己在寫一些程式...(真希望能有一支程式叫.stop()之類的
+              程式，專門all出來把別人的外掛刪掉並回復原狀Q_Q)
+            3.EasySlides這個外掛以這樣的形式插入似乎都會有些問題...不過我暫時不打算修了，花太多時間了...   
+        */
+        
+
+        $(document).ready(function() {
+            $(window).resize(function(){
+                // 當視窗大於等於768時
+                if ($(window).width() >=768) {
+
+                    //先複製適合外掛:Carousel.js的html架構(及#slider1)，再把這份複製好的架構的隱藏class移除
+                    var slider1 =$('#Content > #slider1').clone().removeClass('template');
+
+                    // 把初始的html架構清除
+                    $('.our-work-space').find('.slider').remove();
+
+                    // 將複製好的架構插入容器
+                    $('.our-work-space').append(slider1);
+
+                    // 依不同的情況，呼叫外掛並改變外掛的參數使其合於畫面
+                    if ($(window).width() >=1366 ){
+                        $('.our-work-space #slider1').carousel({
+
+                        // the number of images to display
+                        num: 3, 
+
+                        // max width of the active image
+                        maxWidth: 1197,
+
+                        // min width of the active image
+                        maxHeight: 540, 
+
+                        // enable auto play
+                        autoPlay: true,
+
+                        // autoplay interval
+                        showTime: 5000,
+
+                        // animation speed
+                        animationTime: 300,
+
+                        // 0.0 - 1.0
+                        scale: 0.8,
+
+                        // the distance between images
+                        distance: 60
+                        });
+                    }
+
+                    if ($(window).width() <1366 && $(window).width() >=1170){
+                        $('.our-work-space #slider1').carousel({
+
+
+                        // max width of the active image
+                        maxWidth: 1000,
+
+                        // min width of the active image
+                        maxHeight: 540, 
+
+
+                        });                    
+                    }
+                
+                    if ($(window).width() <1170 && $(window).width() >=768 ) {
+                        $('.our-work-space #slider1').carousel({
+
+                
+
+                        // max width of the active image
+                        maxWidth: 540,
+
+                        // min width of the active image
+                        maxHeight: 540, 
+
+                       
+                        });                    
+                    }  
+                }
+                
+                //當視窗大小 小於等於767時
+                else {
+                    //複製適合外掛:jquery.Easy_sliders.js的html架構(及#slider2)，再把這份複製好的架構的隱藏class移除
+                    var slider2 =$('#Content > #slider2').clone().removeClass('template');
+
+                    // 把初始的html架構清除
+                    $('.our-work-space').find('.slider').remove();
+
+                    // 插入新的外掛
+                    $('.our-work-space').append(slider2);
+
+                    // 呼叫新的外掛
+                    $('.our-work-space #slider2').EasySlides();
+                }
+            });
+        });
+
+/*W.E:
+
+    $(document).ready(function() {
+
+
+        $(window).resize(function(){
+            if ($(window).width() >=1366 ){
+                $('.photos').carousel({
+
+                    // the number of images to display
+                    num: 3, 
+
+                    // max width of the active image
+                    maxWidth: 1197,
+
+                    // min width of the active image
+                    maxHeight: 540, 
+
+                    // enable auto play
+                    autoPlay: true,
+
+                    // autoplay interval
+                    showTime: 5000,
+
+                    // animation speed
+                    animationTime: 300,
+
+                    // 0.0 - 1.0
+                    scale: 0.8,
+
+                    // the distance between images
+                    distance: 60
+                });
+            }  
+            
+            if ($(window).width() <1366 && $(window).width() >=1170){
+                $('.photos').carousel({
+
+                    // the number of images to display
+                    num: 3, 
+
+                    // max width of the active image
+                    maxWidth: 1000,
+
+                    // min width of the active image
+                    maxHeight: 540, 
+
+                    // enable auto play
+                    autoPlay: true,
+
+                    // autoplay interval
+                    showTime: 5000,
+
+                    // animation speed
+                    animationTime: 300,
+
+                    // 0.0 - 1.0
+                    scale: 0.8,
+
+                    // the distance between images
+                    distance: 60
+                });                    
+            }
+            
+            if ($(window).width() <1170 && $(window).width() >=768 ) {
+                $('.photos').carousel({
+
+                    // the number of images to display
+                    num: 3, 
+
+                    // max width of the active image
+                    maxWidth: 540,
+
+                    // min width of the active image
+                    maxHeight: 540, 
+
+                    // enable auto play
+                    autoPlay: true,
+
+                    // autoplay interval
+                    showTime: 5000,
+
+                    // animation speed
+                    animationTime: 300,
+
+                    // 0.0 - 1.0
+                    scale: 0.8,
+
+                    // the distance between images
+                    distance: 60
+                });                    
+
+            }
+
+            if ($(window).width() < 768 ) {
+                $('.our-work-place .photos').remove()                  
+            }
+            
+            以下這個寫法，沒有像正規版用if else的寫法，會導致每間監聽到resize一次就複製一份!
+            
+            // 當視窗大小 小於等於767時
+            if ($(window).width() <=767) {
+
+                //複製一份適合新的外掛的html架構
+
+                var slider2 =$('#Content > .slider2').clone().removeClass('template')
+
+                // 移除原本的html架構
+                $('.our-work-place').find('.photos').remove();
+
+
+                // 插入新的外掛
+                $('.our-work-place').append(slider2);
+
+                // 呼叫新的外掛
+                $('.our-work-place .slider2').RSwiper();
+            }                
+        });
+    });
+*/
+
+    </script>
+    <script src="js/main.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> 這次先不用bootstrap開發-->
+    <!-- <script src="js/main.js"></script> -->
+</body>
+
+</html>

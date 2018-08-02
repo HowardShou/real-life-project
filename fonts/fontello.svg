@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2018 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="handbag" unicode="&#xe800;" d="M332 647c3 112 95 203 209 203 115 0 208-93 208-208 0 0 0-84 0-84l103 0c55 0 104-43 111-97l77-532c4-19 0-39-12-54-12-16-32-25-53-25l-866 0c-20 0-39 8-52 23-13 15-19 35-16 55l79 534c8 54 58 96 113 96l99 0 0 84 0 5z m417-172l0-53c25-14 42-41 42-72 0-46-37-83-83-83-46 0-84 37-84 83 0 31 17 58 42 72l0 53-250 0 0-53c24-14 41-41 41-72 0-46-37-83-83-83-46 0-84 37-84 83 0 31 17 58 42 72l0 53m-206-542l829 0-75 516c-2 14-16 26-28 26l-619 0c-14 0-28-13-31-26l-76-516z m248 375c0 0 0 0 0 0l0 0z m334 3l0 0 0-3 0 3z m-42 331c0 69-56 125-125 125-67 0-122-53-125-119l0-6 0-84 250 0 0 84z" horiz-adv-x="1042" />
+</font>
+</defs>
+</svg>
