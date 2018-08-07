@@ -1,4 +1,4 @@
-/*--------------------------------normalize.css-----------------------------------------*/
+--------------------------------normalize.css-----------------------------------------*/
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -679,10 +679,10 @@ a {
   font-weight: 700;
   text-transform: uppercase;
 }
-.our-work-space {
+/*.our-work-space {
   margin-top: 125px;
-}
-.our-work-space .container h2 {
+}*/
+/*.our-work-space .container h2 {
   font-family: Montserrat, sans-serif;
   color: #494949;
   font-weight: 700;
@@ -696,7 +696,60 @@ a {
 .our-work-space .right {
   cursor: pointer;
   width: auto;
+}*/
+
+.our-work-space {
+  margin-top: 125px;
+  margin-bottom: 50px;
 }
+
+.our-work-space .owl-item, .active, .our-work-space .owl-item.cloned {
+  opacity: 0.3
+}
+
+.our-work-space .owl-item.active.center {
+  opacity: 1;
+}
+
+
+/* owl-carousel nav*/
+.owl-carousel .owl-nav button.owl-prev {
+  position: absolute;
+  top: 45%;
+  left: 11%;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  top: 45%;
+  right: 11%;
+}
+
+/* navigation 的大小 */
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+  font-size: 40px;
+  color: #444;
+  outline: none;
+}
+
+/* dots style*/
+.owl-carousel .owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-carousel button.owl-dot {
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background: #000;
+  margin-right: 10px;
+  outline: none;
+}
+
+
+
 #Footer .misc {
   background-color: #f6f6f6;
 }
@@ -1041,4 +1094,4 @@ a {
   }
 }
 
-/*# sourceMappingURL=about.css.map */
+/*# sourceMappingURL=about.css.map
