@@ -1,38 +1,3 @@
-@body_color: #929292;
-@navi_color: #323232;
-@navi_active_color: #D6B161;
-@title-dark: #494949;
-@color_8: #878787;
-@color_9: #a8a8a8;
-@color_10: #868686;
-@color_11: #575757;
-@color_12: black;
-@color_13: red;
-@SSP: "Source Sans Pro", sans-serif;
-@Mr: Montserrat, sans-serif;
-@font_family_normalize1: monospace, monospace;
-@font_family_normalize2: inherit;
-@background_color_1: black;
-@background_color_2: #eeeeee;
-@background_color_3: rgba(0, 0, 0, 0.8);
-@background_color_4: #bbb;
-@background_color_5: #717171;
-@background_color_6: #f6f6f6;
-@col-1:calc(100% * 1/12);
-@col-2:calc(100% * 2/12);
-@col-3:calc(100% * 3/12);
-@col-4:calc(100% * 4/12);
-@col-5:calc(100% * 5/12);
-@col-6:calc(100% * 6/12);
-@col-7:calc(100% * 7/12);
-@col-8:calc(100% * 8/12);
-@col-9:calc(100% * 9/12);
-@col-10:calc(100% * 10/12);
-@col-11:calc(100% * 11/12);
-@col-12:calc(100% * 12/12);
-
-
-
 /*bootstrap已包含normliaze的程式碼 
 	--------------------------------normalize.css-----------------------------------------
 	html {
@@ -228,10 +193,7 @@
 		display: none;
 	} 
 */
-
 /*---------------------------------off-canvas-------------------------------------------*/
-
-
 /* *已被bootstrap取代已被bootstrap取代已被bootstrap取代
  * body
 #responsive-nav-wrapper {
@@ -381,186 +343,175 @@
 	background-color: #222 !important;
 	color: #D6B161 !important;
 } */
-
 /*---------------------------------about.css--------------------------------------------*/
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-	position: relative;
-	color: @body_color;
-	font-family: @SSP;
-	font-size: 14px;
-	font-weight: 400;
-	letter-spacing: 1px;
+  position: relative;
+  color: #929292;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 h1 {
-	margin: 0;
+  margin: 0;
 }
 h2 {
-	margin: 0;
+  margin: 0;
 }
 h3 {
-	margin: 0;
+  margin: 0;
 }
 h4 {
-	margin: 0;
+  margin: 0;
 }
 h5 {
-	margin: 0;
+  margin: 0;
 }
 h6 {
-	margin: 0;
+  margin: 0;
 }
 p {
-	margin: 0;
+  margin: 0;
 }
 ul {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 li {
-	list-style-type: none;
+  list-style-type: none;
 }
-dl,dt,dd{
-	margin: 0;
+dl,
+dt,
+dd {
+  margin: 0;
 }
-
 img {
-	display: block;
-	width: 100%;
+  display: block;
+  width: 100%;
 }
 a {
-	text-decoration: none;
-	text-transform: uppercase;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-.clearfix {
-	&:after {
-		content: " ";
-		display: table;
-		clear: both;
-	}
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
 }
 .col-6 {
-	width: 50%;
-	float: left;
-	padding: 0 15px;
+  width: 50%;
+  float: left;
+  padding: 0 15px;
 }
 .col-5 {
-	width: 41.666666666666667%;
-	float: left;
-	padding: 0 15px;
+  width: 41.666666666666667%;
+  float: left;
+  padding: 0 15px;
 }
 .col-4 {
-	width: 33.333333%;
-	float: left;
-	padding: 0 15px;
+  width: 33.333333%;
+  float: left;
+  padding: 0 15px;
 }
 .col-3 {
-	width: calc(25%);
-	float: left;
-	padding: 0 15px;
+  width: calc(25%);
+  float: left;
+  padding: 0 15px;
 }
 .co-2 {
-	width: calc(16.66666667%);
+  width: calc(16.66666667%);
 }
 .row {
-	margin: 0 -15px;
+  margin: 0 -15px;
 }
 .col-2 {
-	float: left;
-	padding: 0 15px;
+  float: left;
+  padding: 0 15px;
 }
 .col-12 {
-	float: left;
-	padding: 0 15px;
+  float: left;
+  padding: 0 15px;
 }
 .container {
-	max-width: 1200px;
-	padding: 0px;
-	position: relative;
-	margin: 0 auto;
+  max-width: 1200px;
+  padding: 0px;
+  position: relative;
+  margin: 0 auto;
 }
-
-.nav_container{
-	max-width: 1980px;
-	display: block;
-	margin:0 auto;
+.nav_container {
+  max-width: 1980px;
+  display: block;
+  margin: 0 auto;
 }
-
-#cart-container{
-	display:none;
+#cart-container {
+  display: none;
 }
 .template {
-    display:none;
+  display: none;
 }
-
 /*----------------------------Header------------------------------*/
 .navbar-default {
-    background-color: transparent; 
-    border-color: transparent; 
+  background-color: transparent;
+  border-color: transparent;
 }
-
-.navbar-brand{
-	height:auto;
-	padding:44px 42px 50px 53px;
-	line-height: normal;
+.navbar-brand {
+  height: auto;
+  padding: 44px 42px 50px 53px;
+  line-height: normal;
 }
-
 .navbar {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
-
-.navbar-default{
-	font-family:@Mr;
-	.navbar-nav>li{
-		.twicks{
-			position: relative;
-			bottom:5px;
-		}
-	}
-	.navbar-nav>li>a {
-		display: inline-block;
-	    color: black;
-		transition:color 0.3s ease;
-	    &:active{
-			color:@navi_active_color;
-	    }
-	    &:hover{
-	    	color:@navi_active_color;	
-	    }
-	    [class^="icon-"]:before, [class*=" icon-"]:before {
-	    	margin: 0;
-	    }
-	    div.count {
-			background-color: @background_color_1;
-			position: absolute;
-			bottom: 6px;
-			right: 3px;
-			border-radius: 50%;
-			height: 20px;
-			width: 20px;
-			text-align: center;
-			font-size: 8px;
-			font-weight: 400;
-			color:white;
-			transition:background-color 0.2s linear;
-			&:hover{
-				background:#D6B161; 
-			}
-		}
-	}
-	.navbar-text{
-		margin:0;
-		padding-top:53px;
-		color:black;
-	}
+.navbar-default {
+  font-family: Montserrat, sans-serif;
 }
-
-ul.nav.navbar-nav.navbar-right{
-	padding-top:38px;
-} 
-
+.navbar-default .navbar-nav > li .twicks {
+  position: relative;
+  bottom: 5px;
+}
+.navbar-default .navbar-nav > li > a {
+  display: inline-block;
+  color: black;
+  transition: color 0.3s ease;
+}
+.navbar-default .navbar-nav > li > a:active {
+  color: #D6B161;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #D6B161;
+}
+.navbar-default .navbar-nav > li > a [class^="icon-"]:before,
+.navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+  margin: 0;
+}
+.navbar-default .navbar-nav > li > a div.count {
+  background-color: black;
+  position: absolute;
+  bottom: 6px;
+  right: 3px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  font-size: 8px;
+  font-weight: 400;
+  color: white;
+  transition: background-color 0.2s linear;
+}
+.navbar-default .navbar-nav > li > a div.count:hover {
+  background: #D6B161;
+}
+.navbar-default .navbar-text {
+  margin: 0;
+  padding-top: 53px;
+  color: black;
+}
+ul.nav.navbar-nav.navbar-right {
+  padding-top: 38px;
+}
 /*已被bootstrap取代
 .logo_navi {
 	padding: 44px 0px 50px 53px;
@@ -654,167 +605,156 @@ ul.nav.navbar-nav.navbar-right{
 	display: none;
 }
 */
-
 .about-us {
-	background: #f4f4f4;
-	padding: 52px 0px 71px 0px;
-	text-align: center;
-	h1 {
-		color: @title-dark;
-		font-family: @Mr;
-		font-size: 44px;
-		font-weight: 700;
-		text-transform: uppercase;
-	}
-	p {
-		padding-top: 18px;
-		text-transform: capitalize;
-		font-size: 14px;
-		color: @title-dark;
-	}
+  background: #f4f4f4;
+  padding: 52px 0px 71px 0px;
+  text-align: center;
 }
-
+.about-us h1 {
+  color: #494949;
+  font-family: Montserrat, sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.about-us p {
+  padding-top: 18px;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #494949;
+}
 /*----------------------------------Content-----------------------*/
 .who-we-are {
-	padding-top: 95px;
-	h2 {
-		font-family: @Mr;
-		color: @title-dark;
-		font-weight: 700;
-		text-transform: uppercase;
-		font-size: 28px;
-	}
-	p {
-		padding-top: 60px;
-		line-height: 30px;
-		color: @title-dark;
-		span {
-			line-height: 30px;
-			font-family: @Mr;
-			font-weight: 700;
-			font-size: 22px;
-			color: @title-dark;
-		}
-	}
-	p.bold {
-		font-family: @SSP;
-		font-weight: 700;
-		font-size: 16px;
-		color: @title-dark;
-	}
-	ul.social {
-		padding-top: 10px;
-		li {
-			float: left;
-			a {
-				padding-right: 10px;
-				font-size: 16px;
-				color: @title-dark;
-			}
-		}
-	}
+  padding-top: 95px;
 }
-
-.our-team {
-	h2 {
-		font-family: @Mr;
-		color: @title-dark;
-		font-weight: 700;
-		text-transform: uppercase;
-		font-size: 28px;
-	}
-	.container {
-		padding-top: 112px;
-	}
-	.row {
-		padding-top: 42px;
-	}
-	.col-x {
-		&:nth-child(4){
-			position: relative;
-		}
-		>ul {
-			padding-top: 18px;
-			li {
-				&:first-child{
-					margin-right: 10px;
-					width: 7px;
-					height: 32px;
-					background-color: @background_color_2;
-					float: left;					
-				}
-			}
-			.name {
-				font-family: @Mr;
-				font-size: 16px;
-				font-weight: 700;
-				text-transform: uppercase;
-				letter-spacing: 2px;
-				color: @title-dark;
-			}
-			.position {
-				font-weight: 700;
-				text-transform: uppercase;
-				letter-spacing: 5px;
-			}
-		}
-	}
-	.member {
-		position: relative;
-	}
-	.cover {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(255, 255, 255, 0.7);
-		opacity: 0;
-		transition: all 0.3s ease;
-		&:hover {
-			opacity: 1;
-			cursor: pointer;
-			ul {
-				transform: translate(-50%,-50%);
-			}
-		}
-		ul {
-			position: absolute;
-			top: 0;
-			left: 0;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%,100%);
-			transition: all 0.3s ease;
-			li {
-				i {
-					background: #515151;
-					padding-top: 9px;
-					padding-left: 10px;
-					border-radius: 50%;
-					width: 35px;
-					height: 35px;
-					font-size: 18px;
-					color:white;
-					transition:color 0.3s ease;
-					&:hover{
-						color:#D6B161;
-					}
-				}
-			}
-		}
-	}
-
-	.empty {
-	    position: absolute;
-	    top: 50%;
-	    left: 50%;
-	    transform: translate(-50%,-50%);
-		font-family: @Mr;
-		font-size: 30px;
-		font-weight: 700;
-		text-transform: uppercase;
-		/*重大發現!原本每次用過mediaquery就會跑掉的設定，在發現上面這個寫法後，確定會乖乖置中!
+.who-we-are h2 {
+  font-family: Montserrat, sans-serif;
+  color: #494949;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 28px;
+}
+.who-we-are p {
+  padding-top: 60px;
+  line-height: 30px;
+  color: #494949;
+}
+.who-we-are p span {
+  line-height: 30px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #494949;
+}
+.who-we-are p.bold {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #494949;
+}
+.who-we-are ul.social {
+  padding-top: 10px;
+}
+.who-we-are ul.social li {
+  float: left;
+}
+.who-we-are ul.social li a {
+  padding-right: 10px;
+  font-size: 16px;
+  color: #494949;
+}
+.our-team h2 {
+  font-family: Montserrat, sans-serif;
+  color: #494949;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 28px;
+}
+.our-team .container {
+  padding-top: 112px;
+}
+.our-team .row {
+  padding-top: 42px;
+}
+.our-team .col-x:nth-child(4) {
+  position: relative;
+}
+.our-team .col-x > ul {
+  padding-top: 18px;
+}
+.our-team .col-x > ul li:first-child {
+  margin-right: 10px;
+  width: 7px;
+  height: 32px;
+  background-color: #eeeeee;
+  float: left;
+}
+.our-team .col-x > ul .name {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #494949;
+}
+.our-team .col-x > ul .position {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.our-team .member {
+  position: relative;
+}
+.our-team .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.our-team .cover:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.our-team .cover:hover ul {
+  transform: translate(-50%, -50%);
+}
+.our-team .cover ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 100%);
+  transition: all 0.3s ease;
+}
+.our-team .cover ul li i {
+  background: #515151;
+  padding-top: 9px;
+  padding-left: 10px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  color: white;
+  transition: color 0.3s ease;
+}
+.our-team .cover ul li i:hover {
+  color: #D6B161;
+}
+.our-team .empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /*重大發現!原本每次用過mediaquery就會跑掉的設定，在發現上面這個寫法後，確定會乖乖置中!
 		不過詳細的原理我還不是很理解(用pos調與用tarnsform:translate調的細部差異)
 		要再請教老師!
 		 text-align: center;
@@ -822,65 +762,55 @@ ul.nav.navbar-nav.navbar-right{
 			position: relative;
 			top:-160px;
 		} */
-	}
 }
-
-
- 
 .our-work-space {
-	margin-top: 125px;
-	margin-bottom: 50px;
-	.owl-item {
-		opacity: 0.3;
-	}
-	.owl-item.cloned {
-		opacity: 0.3;
-	}
-	.owl-item.active.center {
-		opacity: 1;
-	}
+  margin-top: 125px;
+  margin-bottom: 50px;
 }
-
+.our-work-space .owl-item {
+  opacity: 0.3;
+}
+.our-work-space .owl-item.cloned {
+  opacity: 0.3;
+}
+.our-work-space .owl-item.active.center {
+  opacity: 1;
+}
 .active {
-	opacity: 0.3;
+  opacity: 0.3;
 }
-
 .owl-carousel {
-	/*  owl-carousel nav 與navigation 的大小 */
-	.owl-nav {
-		button.owl-prev {
-			position: absolute;
-			top: 45%;
-			left: 11%;
-			font-size: 40px;
-			color:#444;
-			outline: none;
-		}
-		button.owl-next {
-			position: absolute;
-			top: 45%;
-			right: 11%;
-			font-size: 40px;
-			color: #444;
-			outline: none;
-		}
-	}
-	/* dots style*/
-	.owl-dots {
-		text-align: center;
-		margin-top: 20px;
-	}
-	button.owl-dot {
-		display: inline-block;
-		width: 50px;
-		height: 2px;
-		background: #000;
-		margin-right: 10px;
-		outline: none;
-	}
+  /*  owl-carousel nav 與navigation 的大小 */
+  /* dots style*/
 }
-
-
+.owl-carousel .owl-nav button.owl-prev {
+  position: absolute;
+  top: 45%;
+  left: 11%;
+  font-size: 40px;
+  color: #444;
+  outline: none;
+}
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  top: 45%;
+  right: 11%;
+  font-size: 40px;
+  color: #444;
+  outline: none;
+}
+.owl-carousel .owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-carousel button.owl-dot {
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background: #000;
+  margin-right: 10px;
+  outline: none;
+}
 /*已被owl取代
 .our-work-space{
 	margin-top: 125px;
@@ -902,169 +832,146 @@ ul.nav.navbar-nav.navbar-right{
     }
 } 
 */
-
 /*---------------------------------Footer--------------------------*/
-
-#Footer {
-	.misc {
-		background-color: @background_color_6;
-		.container {
-			padding: 72px 0px 75px 0px;
-		}
-	}
-	.col-left {
-		font-weight: 700;
-		color: @color_9;
-		a {
-			text-transform: capitalize;
-			color: @color_9;
-		}
-		div {
-			i {
-				padding-right: 3px;
-			}
-			i.fa-map-marker {
-				display: inline-block;
-				position: relative;
-				top: -15px;
-			}
-		}
-		div.address {
-			a {
-				display: inline-block;
-			}
-		}
-		#logo-gray {
-			padding-bottom: 30px;
-			width: 112px;
-		}
-		p {
-			padding-bottom: 30px;
-		}
-		.address {
-			padding-bottom: 30px;
-		}
-	}
-	.col-center {
-		.col-inner{
-			>a{
-				text-transform: capitalize;
-			    cursor: pointer;
-			    padding-left: 5px;
-			    font-weight: 700;
-			    font-size: 18px;
-			    color: #575757;
-			    &:hover{
-			    	text-decoration: none;
-			    }
-			}
-			ul.collapse.in{
-				padding-top:27px;
-			}
-			ul.collapsing{
-			  padding-top:27px;
-			}
-			li a{
-				color:@body_color;
-			    line-height: 30px;
-			    text-transform: capitalize;
-			    font-weight: 700;
-			    display: block;
-			}
-		}
-	}
-	.col-right {
-		.sign-up {
-			text-align: right;
-			>li {
-				padding-bottom: 30px;
-				font-weight: 700;
-			}
-			li.title{
-				font-size: 18px;
-				color: @color_11;
-				padding-bottom: 30px;
-			}
-			li.email {
-				position: relative;
-				padding-bottom:0px;
-				margin-bottom: 30px; 
-			}
-			li {
-				i.fa-angle-right {
-					position: absolute;
-				    right: 10%;
-				    bottom: 50%;
-				    transform: translateY(50%);
-					font-size: 16px;
-					cursor: pointer;
-				}
-			}
-			li.bold {
-				padding-bottom: 10px;
-				font-family: @SSP;
-				font-weight: 700;
-				font-size: 16px;
-				color: @title-dark;
-			}
-			ul.social {
-				float: right;
-				li {
-					float: left;
-					a {
-						padding-left: 10px;
-						font-size: 16px;
-						color: @title-dark;
-					}
-				}
-			}
-			input {
-				padding: 10px 0px;
-				padding-left: 20px;
-				background-color: @background_color_6;
-				border-radius: 23px;
-				width: 100%;
-				border: 1px solid #868686;
-				&:focus {
-					outline: none;
-					border: 1px solid #66afe9;
-				}
-			}
-		}
-	}
-	.copy-right {
-		.container {
-			padding: 40px 0px 95px 0px;
-		}
-		.col-xs-6 {
-			p {
-				font-weight: 700;
-			}
-			a {
-				color: @color_12;
-				font-family: @Mr;
-				font-weight: 700;
-				letter-spacing: 0px;
-				transition: all 0.3s linear;
-				&:hover {
-					color: @color_13;
-				}
-			}
-			.pay-method{
-				float: right;
-				width: 117px;
-				img {
-					position: relative;
-					bottom: 3px;
-				}
-			}
-			
-		}
-	}
+#Footer .misc {
+  background-color: #f6f6f6;
 }
-
+#Footer .misc .container {
+  padding: 72px 0px 75px 0px;
+}
+#Footer .col-left {
+  font-weight: 700;
+  color: #a8a8a8;
+}
+#Footer .col-left a {
+  text-transform: capitalize;
+  color: #a8a8a8;
+}
+#Footer .col-left div i {
+  padding-right: 3px;
+}
+#Footer .col-left div i.fa-map-marker {
+  display: inline-block;
+  position: relative;
+  top: -15px;
+}
+#Footer .col-left div.address a {
+  display: inline-block;
+}
+#Footer .col-left #logo-gray {
+  padding-bottom: 30px;
+  width: 112px;
+}
+#Footer .col-left p {
+  padding-bottom: 30px;
+}
+#Footer .col-left .address {
+  padding-bottom: 30px;
+}
+#Footer .col-center .col-inner > a {
+  text-transform: capitalize;
+  cursor: pointer;
+  padding-left: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #575757;
+}
+#Footer .col-center .col-inner > a:hover {
+  text-decoration: none;
+}
+#Footer .col-center .col-inner ul.collapse.in {
+  padding-top: 27px;
+}
+#Footer .col-center .col-inner ul.collapsing {
+  padding-top: 27px;
+}
+#Footer .col-center .col-inner li a {
+  color: #929292;
+  line-height: 30px;
+  text-transform: capitalize;
+  font-weight: 700;
+  display: block;
+}
+#Footer .col-right .sign-up {
+  text-align: right;
+}
+#Footer .col-right .sign-up > li {
+  padding-bottom: 30px;
+  font-weight: 700;
+}
+#Footer .col-right .sign-up li.title {
+  font-size: 18px;
+  color: #575757;
+  padding-bottom: 30px;
+}
+#Footer .col-right .sign-up li.email {
+  position: relative;
+  padding-bottom: 0px;
+  margin-bottom: 30px;
+}
+#Footer .col-right .sign-up li i.fa-angle-right {
+  position: absolute;
+  right: 10%;
+  bottom: 50%;
+  transform: translateY(50%);
+  font-size: 16px;
+  cursor: pointer;
+}
+#Footer .col-right .sign-up li.bold {
+  padding-bottom: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #494949;
+}
+#Footer .col-right .sign-up ul.social {
+  float: right;
+}
+#Footer .col-right .sign-up ul.social li {
+  float: left;
+}
+#Footer .col-right .sign-up ul.social li a {
+  padding-left: 10px;
+  font-size: 16px;
+  color: #494949;
+}
+#Footer .col-right .sign-up input {
+  padding: 10px 0px;
+  padding-left: 20px;
+  background-color: #f6f6f6;
+  border-radius: 23px;
+  width: 100%;
+  border: 1px solid #868686;
+}
+#Footer .col-right .sign-up input:focus {
+  outline: none;
+  border: 1px solid #66afe9;
+}
+#Footer .copy-right .container {
+  padding: 40px 0px 95px 0px;
+}
+#Footer .copy-right .col-xs-6 p {
+  font-weight: 700;
+}
+#Footer .copy-right .col-xs-6 a {
+  color: black;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0px;
+  transition: all 0.3s linear;
+}
+#Footer .copy-right .col-xs-6 a:hover {
+  color: red;
+}
+#Footer .copy-right .col-xs-6 .pay-method {
+  float: right;
+  width: 117px;
+}
+#Footer .copy-right .col-xs-6 .pay-method img {
+  position: relative;
+  bottom: 3px;
+}
 /*--------------------------------------------------------RWD-------------------------------------------------------*/
-
 /*bootstrap以內建此斷點
 @media (max-width:1250px){//12螢幕吋以下pad landsacpe以上
 	.container{
@@ -1072,64 +979,51 @@ ul.nav.navbar-nav.navbar-right{
 	 }
 }
 */
-
-
-@media screen and (max-width:991px){ 
-/*除了bootstrap內建min-width的四個斷點，自己搭配max-width*/
-// pad landscape~ pad portrait
-
-/* 	.our-team .container .col-3{
+@media screen and (max-width: 991px) {
+  /*除了bootstrap內建min-width的四個斷點，自己搭配max-width*/
+  /* 	.our-team .container .col-3{
 	padding-bottom: 10px;
 	width:@col-6;
 } */
-	 			
-
-	#Footer{
-		.row{
-			.col-x{
-				text-align: center;
-			}
-			>.col-left{
-				float:none;
-				#logo-gray{
-					margin:0 auto;
-				}
-			}
-			>.col-center{
-				padding: 30px 0px 30px 0px;
-				.col-inner{
-					padding-bottom:20px;
-				}
-			}
-			>.col-right{
-				li{
-					position: relative;
-					text-align: center;
-					input{
-						width: 50%
-					}
-					i.fa-angle-right {
-						right:30%;
-					}
-					i.fa-map-marker{
-						top:-20px;
-					}
-					ul.social{
-						position: absolute;
-    					top: 50%;
-    					left: 50%;
-    					transform: translate(-50%);
-						float: none;
-						a{
-							padding:0px 10px 0px 0px;
-						}
-					}
-				}
-			}
-		}
-	}
-
-/*已用bootstrap取代 
+  #Footer .row .col-x {
+    text-align: center;
+  }
+  #Footer .row > .col-left {
+    float: none;
+  }
+  #Footer .row > .col-left #logo-gray {
+    margin: 0 auto;
+  }
+  #Footer .row > .col-center {
+    padding: 30px 0px 30px 0px;
+  }
+  #Footer .row > .col-center .col-inner {
+    padding-bottom: 20px;
+  }
+  #Footer .row > .col-right li {
+    position: relative;
+    text-align: center;
+  }
+  #Footer .row > .col-right li input {
+    width: 50%;
+  }
+  #Footer .row > .col-right li i.fa-angle-right {
+    right: 30%;
+  }
+  #Footer .row > .col-right li i.fa-map-marker {
+    top: -20px;
+  }
+  #Footer .row > .col-right li ul.social {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    float: none;
+  }
+  #Footer .row > .col-right li ul.social a {
+    padding: 0px 10px 0px 0px;
+  }
+  /*已用bootstrap取代 
 	#responsive-btn {
   display: block;
   position: absolute;
@@ -1141,39 +1035,28 @@ ul.nav.navbar-nav.navbar-right{
   }
 } */
 }
-
-
-@media screen and (max-width:767px){
-
-	div#nav1{
-		text-align: center;
-	}
-
-	.navbar-default{
-		font-family:@Mr;
-		.navbar-nav>li .twicks{
-				position: relative;
-				bottom:5px;
-		}
-		
-		.navbar-nav>li>a {
-
-		    div.count {
-				bottom: 2px;
-				right: 3px;
-			}
-		}
-
-		.navbar-text{
-			padding-top:43.5px;
-		}
-
-		ul.nav.navbar-nav.navbar-right{
-			padding-bottom:36px;
-		} 	
-	}
+@media screen and (max-width: 767px) {
+  div#nav1 {
+    text-align: center;
+  }
+  .navbar-default {
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar-default .navbar-nav > li .twicks {
+    position: relative;
+    bottom: 5px;
+  }
+  .navbar-default .navbar-nav > li > a div.count {
+    bottom: 2px;
+    right: 3px;
+  }
+  .navbar-default .navbar-text {
+    padding-top: 43.5px;
+  }
+  .navbar-default ul.nav.navbar-nav.navbar-right {
+    padding-bottom: 36px;
+  }
 }
-	
 /*以下是為了做出off-canvas的效果，已被bootstrap取代 
 @keyframes cartshow{
 	from{
@@ -1279,15 +1162,9 @@ ul.nav.navbar-nav.navbar-right{
 		font-size: 22px;
   	}
 } */
-
-
-	
 /* 	.container{
 	min-width: 320px;
 } */
-
-
-	
 /* 	.our-team .container .row{
 	margin-left: 0px;
 	margin-right: 0px;
@@ -1297,8 +1174,6 @@ ul.nav.navbar-nav.navbar-right{
 		width:@col-12;
 	}
 } */
-
-
 /*	#Footer .container .row{
 		margin:0px;
 		.col-5 .col-4{
@@ -1326,7 +1201,6 @@ ul.nav.navbar-nav.navbar-right{
 		}		
 	}
 }*/
-
 /* 我非常不滿意下面這些設定...因為感覺就是硬幹的。效果又很差!
 	Q:這邊都是針對position做的調整，目前我知道在position唯一能一勞永逸的只有置中(postiotion推50%，
 	然後用transform:translate50%把自己的一半拉回來)還有固定在容器的角落，其他設定...
@@ -1366,3 +1240,5 @@ ul.nav.navbar-nav.navbar-right{
 	}	
 	}
 */
+
+/*# sourceMappingURL=about.css.map */

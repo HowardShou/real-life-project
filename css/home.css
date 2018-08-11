@@ -1,0 +1,972 @@
+/*--------------------------------normalize.css-----------------------------------------*/
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+a {
+  background-color: transparent;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+b {
+  font-weight: bolder;
+}
+strong {
+  font-weight: bolder;
+}
+code {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+kbd {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  bottom: -0.25em;
+}
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
+button {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+input {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+optgroup {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+select {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  text-transform: none;
+}
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: auto;
+}
+[type="button"] {
+  -webkit-appearance: button;
+}
+[type="button"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+[type="button"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+[type="reset"] {
+  -webkit-appearance: button;
+}
+[type="reset"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+[type="reset"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+[type="submit"] {
+  -webkit-appearance: button;
+}
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+progress {
+  vertical-align: baseline;
+}
+[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+details {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+/*--------------------------------style.always-----------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  color: #929292;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  margin: 0;
+}
+h3 {
+  margin: 0;
+}
+h4 {
+  margin: 0;
+}
+h5 {
+  margin: 0;
+}
+h6 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+li {
+  list-style-type: none;
+}
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  float: left;
+}
+.col-12 {
+  width: calc(100%);
+}
+.col-11 {
+  width: calc(91.66666667%);
+}
+.col-10 {
+  width: calc(83.33333333%);
+}
+.col-9 {
+  width: calc(75%);
+}
+.col-8 {
+  width: calc(66.66666667%);
+}
+.col-7 {
+  width: calc(58.33333333%);
+}
+.col-6 {
+  width: calc(50%);
+}
+.col-5 {
+  width: calc(41.66666667%);
+}
+.col-4 {
+  width: calc(33.33333333%);
+}
+.col-2 {
+  width: calc(16.66666667%);
+}
+.col-1 {
+  width: calc(8.33333333%);
+}
+/*--------------------------------style.customize-----------------------------------------*/
+.container {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+}
+.row {
+  margin: 0 -15px;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  padding: 0 15px;
+}
+/*---------------------------------home.css--------------------------------------------*/
+/* --------------------------------customize----------------------------------------- */
+.row {
+  margin: 0px -10px;
+}
+/* --------------------------------Header------------------------------------------- */
+#Header_home {
+  background-color: #282828;
+}
+#Header_home .contact {
+  float: left;
+  text-transform: lowercase;
+}
+#Header_home .lists {
+  float: right;
+}
+#Header_home li {
+  float: left;
+  padding: 13px 17px;
+  transition: background-color 0.2s ease;
+}
+#Header_home li:hover {
+  background-color: #3f3e43;
+}
+#Header_home li:active {
+  color: #D6B161;
+}
+#Header_home a {
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #a1a1a1;
+}
+#Header_home a:active {
+  color: #D6B161;
+}
+.logo_navi {
+  padding: 30px 0px 0px 0px;
+}
+.logo_navi #logo {
+  float: left;
+}
+.logo_navi #logo > a {
+  width: 112px
+			height:30px;
+  display: block;
+  float: left;
+}
+.logo_navi #logo p {
+  float: left;
+  padding-top: 11px;
+  padding-left: 32px;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #4B4B4B;
+}
+.logo_navi #nav_others,
+.logo_navi #navi {
+  float: right;
+}
+.logo_navi > div ul {
+  padding-top: 11px;
+  list-style-type: none;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  color: #0E0E0E;
+}
+.logo_navi > div ul > li {
+  position: relative;
+  float: left;
+  font-size: 10px;
+  padding: 0 12px;
+  text-transform: uppercase;
+}
+.logo_navi > div ul > li.cart-info {
+  bottom: 10px;
+}
+.logo_navi > div ul > li.cart-info h5 {
+  padding-bottom: 3px;
+}
+.logo_navi > div ul > li.cart-info h6 {
+  padding-top: 3px;
+  font-size: 8px;
+  text-transform: lowercase;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.logo_navi > div ul > li i.fa-3x {
+  position: relative;
+  bottom: 10px;
+}
+.logo_navi > div ul > li i.icon-handbag:before {
+  position: relative;
+  bottom: 3px;
+  margin: 0px;
+  font-size: 30px;
+}
+.logo_navi > div ul > li > a {
+  text-decoration: none;
+  color: #323232;
+  transition: color 0.3s ease;
+}
+.logo_navi > div ul > li > a:hover {
+  color: #D6B161;
+}
+.logo_navi > div ul > li > a.active {
+  color: #D6B161;
+}
+.logo_navi > div ul > li div.count {
+  background-color: black;
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  border-radius: 50%;
+  padding-top: 2px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  font-size: 8px;
+  font-weight: 400;
+  color: white;
+}
+.logo_navi > div.off-canvas-nav {
+  color: white;
+}
+#responsive-btn-cart {
+  display: none;
+}
+/* -----------------------------------Content------------------------------------------- */
+#Content .FDI_1 .row .col-5,
+#Content .FDI_2 .row .col-5,
+#Content .FDI_1 .row .col-6,
+#Content .FDI_2 .row .col-6,
+#Content .FDI_1 .row .col-7,
+#Content .FDI_2 .row .col-7,
+#Content .FDI_1 .row .col-12,
+#Content .FDI_2 .row .col-12 {
+  position: relative;
+  padding: 0px;
+}
+#Content .FDI_1 .row > .col-5,
+#Content .FDI_2 .row > .col-5,
+#Content .FDI_1 .row > .col-6,
+#Content .FDI_2 .row > .col-6,
+#Content .FDI_1 .row > .col-7,
+#Content .FDI_2 .row > .col-7,
+#Content .FDI_1 .row > .col-12,
+#Content .FDI_2 .row > .col-12 {
+  padding: 0 10px;
+}
+#Content .FDI_1 .row .product_info,
+#Content .FDI_2 .row .product_info {
+  position: absolute;
+  color: white;
+  bottom: 0;
+  left: 0;
+}
+#Content .FDI_1 .row .product_info .title,
+#Content .FDI_2 .row .product_info .title {
+  display: inline-block;
+  padding: 5px;
+  background: #535353;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+#Content .FDI_1 .row .product_info h1,
+#Content .FDI_2 .row .product_info h1 {
+  font-size: 70px;
+  font-weight: 400 ;
+}
+#Content .FDI_1 .row .product_info span,
+#Content .FDI_2 .row .product_info span {
+  font-family: Montserrat, sans-serif;
+}
+#Content .FDI_1 .row .product_info p,
+#Content .FDI_2 .row .product_info p {
+  line-height: 1.5rem;
+}
+#Content .FDI_1 .row .product_info .price,
+#Content .FDI_2 .row .product_info .price {
+  padding-top: 25px;
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+}
+#Content .FDI_1 .row .product_info .rank li,
+#Content .FDI_2 .row .product_info .rank li {
+  float: left;
+}
+#Content .FDI_1 .row .product_1,
+#Content .FDI_2 .row .product_1 {
+  transform: translate(17%, 65%);
+}
+#Content .FDI_1 .row .product_2 .title,
+#Content .FDI_2 .row .product_2 .title {
+  background: none;
+}
+#Content .FDI_1 .row .product_2 h2,
+#Content .FDI_2 .row .product_2 h2 {
+  text-transform: capitalize;
+}
+#Content .FDI_1 .row .product_2 .circle,
+#Content .FDI_2 .row .product_2 .circle {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 42px 0px;
+  width: 129px;
+  text-align: center;
+  background-color: #62c5de;
+}
+#Content .FDI_1 .row .product_2 .circle .price-through,
+#Content .FDI_2 .row .product_2 .circle .price-through {
+  text-decoration: line-through;
+  font-size: 16px;
+}
+#Content .FDI_1 .row .product_2 .circle .price-through span,
+#Content .FDI_2 .row .product_2 .circle .price-through span {
+  font-size: 8px;
+}
+#Content .FDI_1 .row .product_2 .circle .price,
+#Content .FDI_2 .row .product_2 .circle .price {
+  padding-top: 0px;
+  font-size: 24px;
+}
+#Content .FDI_1 .row .product_2 .circle .price span,
+#Content .FDI_2 .row .product_2 .circle .price span {
+  font-size: 20px;
+}
+#Content .FDI_1 .row .product_2 .shopnow,
+#Content .FDI_2 .row .product_2 .shopnow {
+  float: left;
+}
+#Content .FDI_1 .row .product_2 .shopnow button,
+#Content .FDI_2 .row .product_2 .shopnow button {
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+#Content .FDI_1 .row .product_2 .shopnow a,
+#Content .FDI_2 .row .product_2 .shopnow a {
+  color: white;
+}
+#Content .FDI_1 {
+  padding-top: 35px;
+}
+#Content .FDI_2 {
+  padding-top: 20px;
+}
+/* -----------------------------------Footer-------------------------------------------- */
+#Footer .misc {
+  background-color: #f6f6f6;
+}
+#Footer .misc .container {
+  padding: 72px 0px 75px 0px;
+}
+#Footer .col-4 {
+  font-weight: 700;
+  color: #a8a8a8;
+}
+#Footer .col-4 a {
+  text-transform: capitalize;
+  color: #a8a8a8;
+}
+#Footer .col-4 div i {
+  padding-right: 3px;
+}
+#Footer .col-4 div i.fa-map-marker {
+  display: inline-block;
+  position: relative;
+  top: -15px;
+}
+#Footer .col-4 div.address a {
+  display: inline-block;
+}
+#Footer .col-4 #logo-gray {
+  padding-bottom: 30px;
+  width: 112px;
+}
+#Footer .col-4 p {
+  padding-bottom: 30px;
+}
+#Footer .col-4 .address {
+  padding-bottom: 30px;
+}
+#Footer .col-5 .col-4 {
+  /*本來沒有設這個，會導致文章自然流動，空間不夠大會自然往下掉，
+			但那不是我現在想要的效果，我現在要的是能擠就擠-fluid的效果
+			container給max-width再利用各種col-3、4、5等設定百分比的方式達到效果*/
+}
+#Footer .col-5 .col-4 dt {
+  cursor: pointer;
+  padding-left: 5px;
+  padding-bottom: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #575757;
+}
+#Footer .col-5 .col-4 dd {
+  margin-left: 0px;
+}
+#Footer .col-5 .col-4 dd a {
+  color: #868686;
+  line-height: 30px;
+  text-transform: capitalize;
+  font-weight: 700;
+  display: block;
+}
+#Footer .col-3 {
+  float: right;
+}
+#Footer .col-3 .sign-up {
+  text-align: right;
+}
+#Footer .col-3 .sign-up > li {
+  padding-bottom: 30px;
+  font-weight: 700;
+}
+#Footer .col-3 .sign-up li.title {
+  font-size: 18px;
+  color: #575757;
+  padding-bottom: 30px;
+}
+#Footer .col-3 .sign-up li.email {
+  position: relative;
+  display: block;
+  width: 255px;
+}
+#Footer .col-3 .sign-up li.email [type='email'] {
+  /*   只要是input系列的元素，作出圓弧的效果，都會導致外觀看起來壞掉， 一定要對border進行設定，
+					  才能矯正回正常的外觀*/
+  border-radius: 23px;
+  border: 1px solid #fff;
+  padding: 10px 0px;
+  /*   讓placeholder的內容往右推，否則太靠邊*/
+  padding-left: 10px;
+  /*
+					  1.因為padding推了10px，導致input email變長，所以要扣回 來，而這邊為什麼padding明明只往左推了10px，
+					  width卻要減12px，是因為widh只減10px時，在focus的時候會凸出來，因此才多減一些。
+					  2.css的function可以辨別兩種不同的unit，所以可以像下面這樣%、px混合，但要記得中間的空白要斷好，
+					  否則瀏覽器會看無
+					  3.用~''將calc(100% - 12px)包起來是因為我們現在是在用less寫，而less看不懂這個寫法，此外，
+					  less也不能將unit混著寫，此時用~''跳脫出less，使之成為單純的css即可
+					  */
+  width: calc(100% - 12px);
+  font-family: Montserrat, sans-serif;
+  font-size: 8px;
+  color: #696969;
+}
+#Footer .col-3 .sign-up li.email [type='email']:focus {
+  outline: none;
+  border: 1px solid #D6B161;
+}
+#Footer .col-3 .sign-up li.email [type="submit"] {
+  /* 重疊input! */
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* 一樣是為了讓input空間寬一點 */
+  border-radius: 0 23px 23px 0;
+  border: 1px solid  #696969;
+  padding: 10px 10px;
+  padding-left: 10px;
+  font-family: Montserrat, sans-serif;
+  font-size: 8px;
+  color: white;
+  background-color: #696969;
+  cursor: pointer;
+  /* 點擊時產生效果即可 */
+}
+#Footer .col-3 .sign-up li.email [type="submit"]:active {
+  color: #D6B161;
+}
+#Footer .col-3 .sign-up li.email [type="submit"]:focus {
+  outline: none;
+}
+#Footer .col-3 .sign-up li i.fa-angle-right {
+  position: absolute;
+  right: 30px;
+  bottom: 42px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#Footer .col-3 .sign-up li.bold {
+  padding-bottom: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #494949;
+}
+#Footer .col-3 .sign-up ul.social {
+  float: right;
+}
+#Footer .col-3 .sign-up ul.social li {
+  float: left;
+}
+#Footer .col-3 .sign-up ul.social li a {
+  padding-left: 10px;
+  font-size: 16px;
+  color: #494949;
+}
+#Footer .copy-right .container {
+  padding: 40px 0px 95px 0px;
+}
+#Footer .copy-right .col-6 p {
+  font-weight: 700;
+}
+#Footer .copy-right .col-6 a {
+  color: black;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0px;
+  transition: all 0.3s linear;
+}
+#Footer .copy-right .col-6 a:hover {
+  color: red;
+}
+#Footer .copy-right .col-6 .pay-method {
+  float: right;
+  width: 117px;
+}
+#Footer .copy-right .col-6 .pay-method img {
+  position: relative;
+  bottom: 3px;
+}
+/*--------------------------------------------------------RWD-------------------------------------------------------*/
+/*取決於內容*/
+/*摺疊收納是看格線對齊的位置，很重要的小技巧，正確的收納!*/
+/*tip:由於桌機的container是設定在1200px，斷點如果設在1200px，使用者使用1200px的裝置觀看時，
+畫面會非常擁擠，因此加50px，讓左右兩邊還有25px的留白時，就到斷點了*/
+@media (max-width: 1250px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .container {
+    max-width: 717px;
+  }
+  .our-team .container .col-3 {
+    padding-bottom: 10px;
+    width: calc(50%);
+  }
+  #Footer .row > .col-4 {
+    width: calc(100%);
+    float: none;
+    text-align: center;
+  }
+  #Footer .row > .col-4 #logo-gray {
+    margin: 0 auto;
+  }
+  #Footer .row > .col-5 {
+    width: calc(100%);
+    padding: 30px 0px 30px 0px;
+  }
+  #Footer .row > .col-3 {
+    width: calc(100%);
+  }
+  #Footer .row > .col-3 li {
+    position: relative;
+    text-align: center;
+  }
+  #Footer .row > .col-3 li input {
+    width: 50%;
+  }
+  #Footer .row > .col-3 li i.fa-angle-right {
+    right: 200px;
+  }
+  #Footer .row > .col-3 li ul.social {
+    position: absolute;
+    bottom: 0px;
+    left: 275px;
+    float: none;
+  }
+  #Footer .row > .col-3 li ul.social a {
+    padding: 0px 10px 0px 0px;
+  }
+  #responsive-btn {
+    display: block;
+    position: absolute;
+    color: #000;
+    right: 15px;
+    top: 10px;
+  }
+  #responsive-btn i {
+    font-size: 22px;
+  }
+}
+/*平板電腦一下的尺寸統一規格!*/
+@media screen and (max-width: 767px) {
+  @keyframes cartshow {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 33%;
+    }
+  }
+  @keyframes carthide {
+    from {
+      width: 33%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+  #cart-container.cartshow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    background-color: rgba(14, 14, 14, 0.8);
+    width: 33%;
+    /*如果最後沒有給這個完結要有的值，則width會在做完一次動畫後，回歸0%...*/
+    height: 100%;
+    animation: cartshow 0.3s linear;
+    /* 我就一直覺得我自己做的這個off-canvas操作起來怪怪的，展開時點擊有時有反應，有時又像掛掉一樣
+		，a:hover的效果也是時有時沒有，最後才發現，中間也不是沒有想到過z-index，不過最後發現是要放在
+		這邊才會生效~至於想要有點半透明，依樣去bgc設定rgba就好啦~*/
+    z-index: 1;
+  }
+  #cart-container.cartshow #nav_others {
+    position: relative;
+    top: 8%;
+    /* 浪費了半小時...可能不只...在搞less發出的錯誤
+		    Error"media definitions require block statements after any features"
+		    結果...top:8%忘記家分號...把我的生命還給我啊啊啊啊啊!*/
+    text-align: center;
+  }
+  #cart-container.cartshow #nav_others a {
+    line-height: 5rem;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  #cart-container.cartshow #nav_others a:hover {
+    color: #D6B161;
+  }
+  #cart-container.cartshow #nav_others a [class^="icon-"]:before,
+  #cart-container.cartshow #nav_others a [class*=" icon-"]:before {
+    margin: 0;
+  }
+  #cart-container.cartshow #nav_others div.count {
+    background-color: white;
+    position: absolute;
+    bottom: 8%;
+    right: 37%;
+    border-radius: 50%;
+    padding-top: 2px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: black;
+  }
+  #cart-container.carthide {
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    right: 0;
+    width: 0%;
+    /*同上，沒有設定這個完結值(假設仍為width:33%)，則width會在做完一次動畫後，回歸33%...*/
+    height: 100%;
+    animation: carthide 0.3s linear;
+  }
+  .logo_navi #nav_others {
+    display: none;
+  }
+  #responsive-btn {
+    transform: translateX(-100%);
+  }
+  #responsive-btn-cart {
+    display: block;
+    position: absolute;
+    color: #000;
+    right: 8px;
+    top: 10px;
+    cursor: pointer;
+  }
+  #responsive-btn-cart i {
+    font-size: 22px;
+  }
+  /*以上是為了做出off-canvas的效果*/
+  .container {
+    min-width: 320px;
+  }
+  /* 發現當容器皆設為100%時，若視窗太小，會有多餘留白，產生scroll bar，
+	此時ˊ把原本給各個col的padding-left padding-right ，還有row的margin 0,-15都取消即可*/
+  .our-team .container .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .our-team .container .row .col-3 {
+    padding: 0;
+    padding-bottom: 10px;
+    width: calc(100%);
+  }
+  #Footer .container .row {
+    margin: 0px;
+    /* 被懲罰了....受權重的影響，只是要改個設定也花了一堆時間!不管是desktop first或是mobile first
+		   ，都該養成能簡單寫就簡單寫的大原則!
+		   */
+  }
+  #Footer .container .row .col-5 .col-4 {
+    padding-left: 0px;
+    width: 100%;
+    text-align: center;
+  }
+  #Footer .container .row .col-5 .col-4 .Zebra_Accordion dd {
+    display: none;
+  }
+  #Footer .container .row > .col-3 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #Footer .container .row > .col-3 li {
+    /* ul原本像nav的那種「容器靠右內容物從左往右排列」的設定方式，在要使容器置中時反而會有困擾
+				這時候反璞歸真，把多餘的設定都去掉在用tac置中即可 */
+  }
+  #Footer .container .row > .col-3 li ul.social {
+    position: static;
+    float: none;
+  }
+  #Footer .container .row > .col-3 li ul.social li {
+    float: none;
+    display: inline-block;
+  }
+}
+/* 我非常不滿意下面這些設定...因為感覺就是硬幹的。效果又很差!
+		Q:這邊都是針對position做的調整，目前我知道在position唯一能一勞永逸的只有置中(postiotion推50%，
+		然後用transform:translate50%把自己的一半拉回來)還有固定在容器的角落，其他設定...
+		只要畫面一跑掉位置也會跟著跑掉，調這個真的浪費了我很多時間...*/
+@media screen and (max-width: 540px) {
+  #cart-container.cartshow #nav_others div.count {
+    right: 32%;
+  }
+  #Footer .row > .col-3 li i.fa-angle-right {
+    right: 180px;
+  }
+}
+@media screen and (max-width: 425px) {
+  #cart-container.cartshow #nav_others div.count {
+    right: 29%;
+  }
+  #Footer .row > .col-3 li i.fa-angle-right {
+    right: 140px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #cart-container.cartshow #nav_others div.count {
+    right: 22%;
+  }
+  #Footer .row > .col-3 li i.fa-angle-right {
+    right: 100px;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
