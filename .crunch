@@ -57,8 +57,27 @@
 				}
 			],
 			"sources": [
-				"basic.less",
-				"home.less"
+				"home.less",
+				"basic.less"
+			]
+		},
+		"less/basic.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/basic.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
+				"basic.less"
 			]
 		}
 	}
