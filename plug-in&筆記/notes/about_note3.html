@@ -9,15 +9,56 @@
     <script src="js/jquery.responsive-nav.js"></script>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Source+Sans+Pro:300,600" rel="stylesheet">
-    <link rel="stylesheet" href="css/jquery.easy_slides.css">
+    <!-- 已用owl取代了
+        <link rel="stylesheet" href="css/jquery.easy_slides.css">
+     -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
-    <div id="cart-container"></div>    
     <div id="Header clearfix">
+        <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" alt="logo">
+                  </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="nav1">
+              <p class="navbar-text">+1(555) 333 22 11</p>
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">home</a></li>
+                  <li><a href="#">products<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                  <li><a href="#">pages<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                  <li><a href="#">blog</a></li>
+                  <li><a href="#">about</a></li>
+                  <li><a href="#">contact</a></li>
+                  <li><a class="twicks" href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a></li>
+                  <li><a class="twicks" href="#"><i class="fa fa-heart-o fa-2x" aria-hidden="true"></i></a></li>
+                  <li>
+                      <a class="twicks" href="#">
+                          <i class="icon-handbag fa-2x"></i>
+                          <div class="count">3</div>
+                      </a>
+                  </li>
+              </ul>
+            </div>
+        </nav>    
+        
+
+        <!--這是初版的nav，是我使用他人的plug-in和自己用jquery手寫的，我覺得效果也很好
+        不過應助教要求，本次使用bootstrap的，當作練習            
         <div id="responsive-nav-wrapper" class="logo_navi clearfix">
             <div id="logo">
                 <a href="#"><img src="images/logo.png" alt="logo"></a>
@@ -26,12 +67,14 @@
             <div id="responsive-btn"><i class="fa fa-bars" aria-hidden="true"></i></div>
             <div id="responsive-btn-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
             <div id="nav_others" class="clearfix">
-                <ul>
+                <ul class="clearfix">
                     <li><a href="#"><i class="fa fa-search fa-3x" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fa fa-heart-o fa-3x" aria-hidden="true"></i></a></li>
                     <li>
-                        <a href="#"><i class="icon-handbag fa-3x"></i></a>
-                        <div class="count">3</div>
+                        <a href="#">
+                            <i class="icon-handbag fa-3x"></i>
+                            <div class="count">3</div>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -45,8 +88,8 @@
                     <li><a href="#">contact</a></li>
                 </ul>    
             </div>
-            
-        </div>
+        </div> -->
+        
         <div class="about-us">
             <div class="container clearfix">
                 <h1>about us</h1>
@@ -79,7 +122,7 @@
             <div class="container clearfix">
                 <h2>our team</h2>
                 <div class="row clearfix">
-                    <div class="col-3">
+                    <div class="col-x col-xs-12 col-sm-6 col-md-3">
                         <div class="member">
                             <img src="https://picsum.photos/280/280" alt="photo">
                             <div class="cover">
@@ -98,7 +141,7 @@
                             <li class="position">designer</li>
                         </ul>
                     </div>
-                    <div class="col-3">
+                    <div class="col-x col-xs-12 col-sm-6 col-md-3">
                         <div class="member">
                             <img src="https://picsum.photos/280/280" alt="photo">
                             <div class="cover">
@@ -117,7 +160,7 @@
                             <li class="position">founder</li>
                         </ul>
                     </div>
-                    <div class="col-3">
+                    <div class="col-x col-xs-12 col-sm-6 col-md-3">
                         <div class="member">
                             <img src="https://picsum.photos/280/280" alt="photo">
                             <div class="cover">
@@ -136,7 +179,7 @@
                             <li class="position">designer</li>
                         </ul>
                     </div>
-                    <div class="col-3">
+                    <div class="col-x col-xs-12 col-sm-6 col-md-3">
                         <img src="images/background.jpg" alt="bgc">
                         <div class="empty">
                             <p>you?</p>
@@ -145,7 +188,15 @@
                 </div>
             </div>
         </div>
-        
+
+        <div class="owl-carousel our-work-space">
+          <div class="slide-1"><img src="images/1.png" alt=""></div>
+
+          <div class="slide-2"><img src="images/2.png" alt=""></div>
+
+          <div class="slide-3"><img src="images/3.png" alt=""></div>
+        </div>
+        <!-- 套用助教推薦的carousel，以下原本寫得複雜的要換外掛之類的模板等等全數刪除 
         <div class="our-work-space">
             <div class="container clearfix">
                 <h2>OUR WORK SPACE</h2>
@@ -187,16 +238,18 @@
             <div><img src="images/1.png" alt="photo"></div>
             <div><img src="images/2.png" alt="photo"></div>
             <div><img src="images/3.png" alt="photo"></div>
-            <div class="next_button">NEXT</div>  
-            <div class="prev_button">PREV</div>  
+            <div class="next_button">NEXT</div>
+            <div class="prev_button">PREV</div>
             <div class="nav_indicators"></div>
-         </div>
+         </div> -->
+    </div>
+        
 
     <div id="Footer">
         <div class="misc clearfix">
             <div class="container">
                 <div class="row clearfix">
-                    <div class="col-4">
+                    <div class="col-x col-left col-xs-12 col-md-4">
                         <div id="logo-gray">
                             <a href="#"><img src="images/logo.gray.png" alt="logo"></a>
                         </div>
@@ -215,47 +268,49 @@
                             <a href="mailto:info@schon.chair">info@schon.chair</a>
                         </div>
                     </div>
-                    <div class="col-5 clearfix">
-                        <div class="col-4">
-                            <dl class="Zebra_Accordion">
-                                <dt>Categories</dt>
-                                <dd>
-                                    <a href="#">chairs</a>
-                                    <a href="#">sofas</a>
-                                    <a href="#">living</a>
-                                    <a href="#">bedroom</a>
-                                    <a href="#">tables</a>
-                                    <a href="#">new</a>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-4">
-                            <dl class="Zebra_Accordion">
-                                <dt>Informations</dt>
-                                <dd>
-                                    <a href="#">about</a>
-                                    <a href="#">contact us</a>
-                                    <a href="#">terms&conditions</a>
-                                    <a href="#">bedroom</a>
-                                    <a href="#">tables</a>
-                                    <a href="#">new</a>
-                                </dd>
-                            </dl>
-                        </div>
-                        <div class="col-4">
-                            <dl class="Zebra_Accordion">
-                                <dt>Accounts</dt>
-                                <dd>
-                                    <a href="#">MyAccount</a>
-                                    <a href="#">OrderTracking</a>
-                                    <a href="#">Wishlist</a>
-                                    <a href="#">ShoppingCart</a>
-                                    <a href="#">Checkout</a>
-                                </dd>
-                            </dl>
+                    <div class="col-x col-center col-xs-12 col-md-5 clearfix">
+                        <div class="row">
+                            <div class="col-x col-inner col-xs-12 col-md-4">
+                                <a  data-toggle="collapse" data-target="#categories" aria-expanded="true" aria-controls="categories">
+                                  Categories
+                                </a>
+                                <ul class="collapse in" id="categories">
+                                    <li><a href="#">chairs</a></li>
+                                    <li><a href="#">sofas</a></li>
+                                    <li><a href="#">living</a></li>
+                                    <li><a href="#">bedroom</a></li>
+                                    <li><a href="#">tables</a></li>
+                                    <li><a href="#">new</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-x col-inner col-xs-12 col-md-4">
+                                <a  data-toggle="collapse" data-target="#informations" aria-expanded="true" aria-controls="informations">
+                                  Informations
+                                </a>
+                                <ul class="collapse in" id="informations">
+                                    <li><a href="#">About Contact Us</a></li>
+                                    <li><a href="#">sofas</a></li>
+                                    <li><a href="#">Terms&Conditions</a></li>
+                                    <li><a href="#">Privay Policy</a></li>
+                                    <li><a href="#">Customer Services</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-x col-inner col-xs-12 col-md-4">
+                                <a  data-toggle="collapse" data-target="#accounts" aria-expanded="true" aria-controls="accounts">
+                                  Accounts
+                                </a>
+                                <ul class="collapse in" id="accounts">
+                                    <li><a href="#">MyAccount</a></li>
+                                    <li><a href="#">OrderTracking</a></li>
+                                    <li><a href="#">Wishlist</a></li>
+                                    <li><a href="#">ShoppingCart</a></li>
+                                    <li><a href="#">Checkout</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-x col-right col-xs-12 col-md-3">
                         <ul class="sign-up">
                             <li class="title">Sign Up Newsletter</li>
                             <li>Subscribe now to get 15% off
@@ -283,10 +338,10 @@
         <div class="copy-right">
             <div class="container">
                 <div class="row clearfix">
-                    <div class="col-6">
+                    <div class="col-xs-6">
                         <p>&copy; <a href="#" class="transition">Schön.</a> All Rights Reserved</p>
                     </div>
-                    <div class="col-6">
+                    <div class="col-xs-6">
                         <div class="pay-method">
                             <img src="images/card icon.png" alt="card icon">
                         </div>
@@ -296,34 +351,123 @@
         </div>
     </div>
 
-    <script src="js/zebra_accordion.min.js"></script>
-    <script src="js/Carousel.js"></script>
-    <script src="js/jquery.easy_slides.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    
+    <!--這是初版的nav，是我使用他人的plug-in和自己用jquery手寫的，我覺得效果也很好
+        不過應助教要求，本次使用bootstrap的，當作練習;這段程式是為了發動off-canvas等效果，
+        只是把它從main.js搬過來然後把main.js刪除而已
+     <script>
+        $(document).ready(function() {
+          
 
-    <!-- Q:照助教說的，我直接在這邊呼叫，外掛確實起了作用，但我不懂的是，為何我不能把呼叫的
-    這個動作，放到main.js裡面?我的想法是:因為main.js放在Carousel下面，所以瀏覽器會先讀取 
-    Carousel.js再讀取main.js，所以下面這322行以下的東西，應該寫在main.js裡就可以了，但結果
-    會導致這個外掛無法作用...-->
+          /*Q1原本想要在全域設定以下變數，裝jQ物件，以精簡原本的程式碼，
+            但是照這樣的部分這樣設定瀏覽器看不懂，我錯在哪...
+            var Nav_Others = $('#nav_others').clone();
+            var Cart = $('#cart-container');
+            var Showing = $('#cart-container.cartshow');
+            var Hiding = $('#cart-container.carthide');*/
+
+          $('body').on('click', '#responsive-btn-cart', function() {
+            var nav_others = $('#nav_others').clone();
+            $('#cart-container.carthide').removeClass('carthide')
+            $('#cart-container').html(nav_others);
+            $('#cart-container').addClass('cartshow')  
+          });
+          
+          /* Q2:我本來想要製造效果:
+                當off-cnavas顯現中，我點body的任一處，就可以讓它自動收合
+                所以想這樣寫:$('body').on('click', 'body', function() {......}，但失敗了
+                ，下面這個寫法雖然能順利地將off-canvas關起來，但是僅限點擊黑色範圍內，
+                而不同於我想要的效果:點擊畫面內任一處即使之消失*/
+
+          $('body').on('click', '#cart-container.cartshow', function() {
+            $('#cart-container.cartshow').removeClass('cartshow').addClass('carthide')
+            $('#cart-container.carthide').empty()
+          });
+
+
+          $(window).resize(function(){
+            if ($(window).width() >= 768){
+              $('#cart-container').removeClass();
+            }
+          });
+
+          $('#navi').responsive_nav();
+        });
+    </script>
+     -->
     <script>
-        /*初始效果是達到了，但是目前最少還是有以下問題:
-        
-        Q1:使用者再變動視窗大小前畫面仍是爆掉的狀態:
-            這個問題也是我再line問的那個問題，我想要頁面一載入完畢就觸發resize事件，讓畫面有動作
-            問題是，我在嘗試過$(window).resize();或者$(window).trigger('resize')，始終沒有作用
-            我已經花太多時間在這個問題上了...
-
-        Q2:下面這個"一視窗大小更換外掛"的構想，初步看起來是成功了，但還是破綻百出
-            1.resize在chrome裡面每拖動一次就會執行一次，感覺效能會超差(雖然一般人不會沒事狂切視窗...)
-            2.carousel.在畫面順利變動後就會開始在console瘋狂的噴出錯誤(但是作用仍在)，現在最常遇到的困擾是，
-              要插入別人的插件已經比較會了，但是要把他們停掉的正確方式我還不會，因為別人的插見往往一經呼叫
-              很可稜連html的架構都被更動了，要還原得自己在寫一些程式...(真希望能有一支程式叫.stop()之類的
-              程式，專門all出來把別人的外掛刪掉並回復原狀Q_Q)
-            3.EasySlides這個外掛以這樣的形式插入似乎都會有些問題...不過我暫時不打算修了，花太多時間了...   
-        */
-        
+        $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                center: true,
+                loop:true,
+                margin:10,
+                nav:true,
+                dots: true,
+                responsive:{
+                    0:{
+                      items:1,
+                      nav: false,
+                      dots: true
+                    },
+                    600:{
+                      items:1,
+                      nav: false,
+                      dots: true
+                    },
+                    1000:{
+                      items:2
+                    }
+                }
+            })
+        });
+    </script>
+    <script>
+        function accordin(){
+            if ($(window).width()<=992) {
+            /*一開始只用.collapse，沒想到在套用navbar時竟然有一樣的屬性，導致效果一直怪怪的，限縮選擇器
+            範圍後已解決*/
+                $('.col-4 .collapse').collapse('hide')
+            }
+            else{
+                $('.col-4 .collapse').collapse('show')
+            }
+        }
+        accordin();
 
         $(document).ready(function() {
-            $(window).resize(function(){
+            $(window).resize(function() {
+                if ($(window).width()<=992) {
+                    $('.col-4 .collapse').collapse('hide')
+                }
+                else{
+                    $('.col-4 .collapse').collapse('show')
+                }
+            });
+        });
+
+    </script>
+
+    <!--bootstrap的collapse功能即可取代之 
+        <script src="js/zebra_accordion.min.js"></script> 
+    -->
+    
+    <!--單純用owl carousel即可解決    
+    <script src="js/Carousel.js"></script>
+    <script src="js/jquery.easy_slides.js"></script>
+   -->
+
+   
+    <!--學會了最基礎trigger的方式，而且在bootstrap上也順利應用了，good!
+    <script>
+        $(document).ready(function() {
+            /*先把if等等程式打包成一個函式，在文件讀完的時候就呼叫它!這樣在一開網頁時就會有效果了，
+            原來這就是trigger一開始就trigger的做法*/
+
+
+
+            function loadPackage() {
                 // 當視窗大於等於768時
                 if ($(window).width() >=768) {
 
@@ -410,13 +554,19 @@
                     // 呼叫新的外掛
                     $('.our-work-space #slider2').EasySlides();
                 }
+            }
+
+            loadPackage();
+            
+            /*當resize時，再呼叫一次函式進來*/
+            $(window).resize(function(){
+                loadPackage();
             });
         });
+    </script> --> 
+    
+    
 
-
-
-    </script>
-    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,706 @@
+@import "basic";
+
+/*---------------------------------home.css--------------------------------------------*/
+
+/* --------------------------------customize----------------------------------------- */
+
+.row{
+	margin:0px -10px;
+}
+
+/* --------------------------------Header------------------------------------------- */
+#Header_home{
+	background-color: #282828;
+	.contact{
+		float: left;
+		text-transform: lowercase;
+	}
+	.lists{
+		float: right;
+	}
+	li{
+		float: left;
+		padding: 13px 17px;
+		transition:background-color 0.2s ease;
+		&:hover{
+			background-color:#3f3e43;
+		}
+		&:active{
+			color:#D6B161;
+		}	
+	}
+	a{
+		font-weight: bold;
+		text-transform: capitalize;
+		color:rgb(161,161,161);
+		&:active{
+				color:#D6B161;
+		}
+	}
+}
+
+.logo_navi {
+	padding: 30px 0px 0px 0px;
+	#logo {
+		float: left;
+		>a {
+			width: 112px
+			height:30px;
+			display: block;
+			float: left;
+		}
+		p {
+			float: left;
+			padding-top: 11px;
+			padding-left: 32px;
+			font-family: @Mr;
+			font-size: 12px;
+			font-weight: 700;
+			color: #4B4B4B;
+		}
+	}	
+
+	#nav_others,#navi{
+		float: right;
+	}
+	
+	>div ul {
+		padding-top: 11px;
+		list-style-type: none;
+		font-family: @Mr;
+		font-size: 14px;
+		color:#0E0E0E;
+		>li {
+			position: relative;
+			float: left;
+			font-size: 10px;
+			padding: 0 12px;
+			text-transform: uppercase;
+			&.cart-info{
+				bottom: 10px;
+				h5{
+					padding-bottom: 3px;
+				}
+				h6{
+					padding-top: 3px;
+					font-size: 8px;
+					text-transform: lowercase;
+					font-family:@SSP;
+				}
+			}			
+			i.fa-3x {
+				position: relative;
+				bottom: 10px;
+			}
+			i.icon-handbag {
+				&:before {
+					position: relative;
+					bottom: 3px;
+					margin: 0px;
+					font-size: 30px;
+				}
+			}
+			>a {
+				text-decoration: none;
+				color: @navi_color;
+				transition: color 0.3s ease;
+				&:hover {
+					color: @navi_active_color;
+				}
+			}
+			>a.active {
+				color: @navi_active_color;
+			}
+			div.count {
+				background-color: @background_color_1;
+				position: absolute;
+				bottom: 5px;
+				right: 0px;
+				border-radius: 50%;
+				padding-top: 2px;
+				height: 20px;
+				width: 20px;
+				text-align: center;
+				font-size: 8px;
+				font-weight: 400;
+				color:white;
+			}
+		}
+	}
+	
+	>div.off-canvas-nav{
+		color:white;
+	}
+}
+
+#responsive-btn-cart {
+	display: none;
+}
+
+
+/* -----------------------------------Content------------------------------------------- */
+#Content{
+	.FDI_1,.FDI_2{
+		.row{
+			.col-5,.col-6,.col-7,.col-12{
+				position: relative;
+				padding:0px;
+			}
+			>.col-5,>.col-6,>.col-7,>.col-12{
+				padding:0 10px;
+			}
+			.product_info{
+				position: absolute;
+			    color: white;
+				bottom:0;
+				left:0;
+				.title{
+				    display: inline-block;
+				    padding: 5px;
+				    background: #535353;
+				    font-weight: bold;					
+				    text-transform: uppercase;
+				    letter-spacing: 3px;
+				}
+				h1{
+					font-size: 70px;
+					font-weight:400 ;
+				}
+				span{
+					font-family:@Mr;
+				}
+				p{
+					line-height: 1.5rem;
+				}
+				.price{
+					padding-top: 25px;
+					font-family: @Mr;
+					font-size: 30px;
+				}
+				.rank li{
+					float: left;
+				}
+			}
+			.product_1{
+				transform: translate(,);
+			}
+			.product_2{
+				.title{
+					background: none;
+				}
+				h2{
+					text-transform: capitalize;
+				}
+				.circle{
+					display: inline-block;
+					border-radius: 50%;
+					padding:42px 0px;
+					width: 129px;
+					text-align: center;
+					background-color: #62c5de;
+					.price-through{
+						text-decoration: line-through;
+						font-size: 16px;
+						span{
+							font-size: 8px;
+						}
+					}
+					.price{
+						padding-top:0px;
+						font-size:24px;
+						span{
+							font-size: 20px;
+						}
+					}
+				}
+				.shopnow{
+					float: left;
+					button{
+					    border-radius: 50%;
+					    background: transparent;
+					    border: 1px solid white;
+					    color: white;							
+					}
+					a{
+						color:white;
+					}
+				}
+			}
+		}
+	}
+	.FDI_1{
+		padding-top: 35px;
+
+	}
+	.FDI_2{
+		padding-top: 20px;
+	}
+}
+
+/* -----------------------------------Footer-------------------------------------------- */
+#Footer {
+	.misc {
+		background-color: @background_color_6;
+		.container {
+			padding: 72px 0px 75px 0px;
+		}
+	}
+	.col-4 {
+		font-weight: 700;
+		color: @color_9;
+		a {
+			text-transform: capitalize;
+			color: @color_9;
+		}
+		div {
+			i {
+				padding-right: 3px;
+			}
+			i.fa-map-marker {
+				display: inline-block;
+				position: relative;
+				top: -15px;
+			}
+		}
+		div.address {
+			a {
+				display: inline-block;
+			}
+		}
+		#logo-gray {
+			padding-bottom: 30px;
+			width: 112px;
+		}
+		p {
+			padding-bottom: 30px;
+		}
+		.address {
+			padding-bottom: 30px;
+		}
+	}
+	.col-5 {
+		.col-4{
+			/*本來沒有設這個，會導致文章自然流動，空間不夠大會自然往下掉，
+			但那不是我現在想要的效果，我現在要的是能擠就擠-fluid的效果
+			container給max-width再利用各種col-3、4、5等設定百分比的方式達到效果*/ 
+			dt {
+				cursor: pointer;
+				padding-left: 5px;
+				padding-bottom: 30px;
+				font-weight: 700;
+				font-size: 18px;
+				color: @color_11;
+			}
+			dd{
+				margin-left: 0px;
+				a {
+					color: @color_10;
+					line-height: 30px;
+					text-transform: capitalize;
+					font-weight: 700;
+					display: block;
+				}
+			}
+		}
+	}
+	.col-3 {
+		float: right;
+		.sign-up {
+			text-align: right;
+			>li {
+				padding-bottom: 30px;
+				font-weight: 700;
+			}
+			li.title{
+				font-size: 18px;
+				color: @color_11;
+				padding-bottom: 30px;
+			}
+			li.email {
+				position: relative;
+				display: block;
+				width:255px;
+				[type='email']{
+					  /*   只要是input系列的元素，作出圓弧的效果，都會導致外觀看起來壞掉， 一定要對border進行設定，
+					  才能矯正回正常的外觀*/
+					  border-radius:23px;
+					  border: 1px solid #fff;
+					  padding:10px 0px;
+					  /*   讓placeholder的內容往右推，否則太靠邊*/
+					  padding-left:10px;
+					  /*
+					  1.因為padding推了10px，導致input email變長，所以要扣回 來，而這邊為什麼padding明明只往左推了10px，
+					  width卻要減12px，是因為widh只減10px時，在focus的時候會凸出來，因此才多減一些。
+					  2.css的function可以辨別兩種不同的unit，所以可以像下面這樣%、px混合，但要記得中間的空白要斷好，
+					  否則瀏覽器會看無
+					  3.用~''將calc(100% - 12px)包起來是因為我們現在是在用less寫，而less看不懂這個寫法，此外，
+					  less也不能將unit混著寫，此時用~''跳脫出less，使之成為單純的css即可
+					  */
+					  width:~'calc(100% - 12px)';
+					  font-family: @Mr;
+					  font-size: 8px;
+					  color:rgb(105,105,105);
+					  &:focus{
+					    outline:none;
+					    border:1px solid #D6B161
+					  }
+				}
+				[type="submit"]{
+					/* 重疊input! */
+					position: absolute;
+					top:0;
+					right:0;
+					/* 一樣是為了讓input空間寬一點 */
+					border-radius:0 23px 23px 0; 
+					border:1px solid  #696969;
+					padding:10px 10px;
+					padding-left:10px;
+				    font-family: @Mr;					
+					font-size: 8px;
+					color:white;
+					background-color: #696969;
+					cursor:pointer;
+					/* 點擊時產生效果即可 */
+					&:active{
+					color: #D6B161;
+					}
+					&:focus{
+					outline:none;
+					}
+				}				  
+			}				
+			li {
+				i.fa-angle-right {
+					position: absolute;
+					right: 30px;
+					bottom: 42px;
+					font-size: 16px;
+					cursor: pointer;
+				}
+			}
+			li.bold {
+				padding-bottom: 10px;
+				font-family: @SSP;
+				font-weight: 700;
+				font-size: 16px;
+				color: @title-dark;
+			}
+			ul.social {
+				float: right;
+				li {
+					float: left;
+					a {
+						padding-left: 10px;
+						font-size: 16px;
+						color: @title-dark;
+					}
+				}
+			}
+		}
+	}
+	.copy-right {
+		.container {
+			padding: 40px 0px 95px 0px;
+		}
+		.col-6 {
+			p {
+				font-weight: 700;
+			}
+			a {
+				color: @color_12;
+				font-family: @Mr;
+				font-weight: 700;
+				letter-spacing: 0px;
+				transition: all 0.3s linear;
+				&:hover {
+					color: @color_13;
+				}
+			}
+			.pay-method{
+				float: right;
+				width: 117px;
+				img {
+					position: relative;
+					bottom: 3px;
+				}
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------RWD-------------------------------------------------------*/
+/*取決於內容*/
+/*摺疊收納是看格線對齊的位置，很重要的小技巧，正確的收納!*/
+
+/*tip:由於桌機的container是設定在1200px，斷點如果設在1200px，使用者使用1200px的裝置觀看時，
+畫面會非常擁擠，因此加50px，讓左右兩邊還有25px的留白時，就到斷點了*/
+
+ 
+@media (max-width:1250px){//12螢幕吋以下pad landsacpe以上
+	.container{
+	 	max-width:1000px;
+	 }
+}
+
+
+
+@media screen and (max-width:1050px){ // pad landscape~ pad portrait
+	.container{
+		max-width:717px 
+	}
+
+	.our-team .container .col-3{
+		padding-bottom: 10px;
+		width:@col-6;
+	}
+	 			
+
+	#Footer{
+		.row{
+			>.col-4{
+				width:@col-12;
+				float:none;
+				text-align: center;
+				#logo-gray{
+					margin:0 auto;
+				}
+			}
+			>.col-5{
+				width:@col-12;
+				padding: 30px 0px 30px 0px;
+			}
+			>.col-3{
+				width:@col-12;
+				li{
+					position: relative;
+					text-align: center;
+					input{
+						width: 50%
+					}
+					i.fa-angle-right {
+						right:200px;
+					}
+					ul.social{
+						position: absolute;
+						bottom: 0px;
+						left:275px;
+						float: none;
+						a{
+							padding:0px 10px 0px 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	
+	#responsive-btn {
+	  display: block;
+	  position: absolute;
+	  color:#000;
+	  right: 15px;
+	  top: 10px;
+	  i{
+		font-size: 22px;
+	  }
+	}
+}
+
+/*平板電腦一下的尺寸統一規格!*/
+@media screen and (max-width:767px){
+	
+	@keyframes cartshow{
+		from{
+			width:0%;
+		}
+		to{
+			width:33%;
+		}
+	}
+
+	@keyframes carthide{
+		from{
+			width:33%;
+		}
+		to{
+			width:0%;
+		}
+	}
+
+	#cart-container.cartshow {
+		position: absolute;
+		top:0;
+		right: 0;
+		display:block;
+		background-color:rgba(14,14,14,0.8);
+		width: 33%;
+		/*如果最後沒有給這個完結要有的值，則width會在做完一次動畫後，回歸0%...*/
+		height:100%;
+		animation: cartshow 0.3s linear;
+		/* 我就一直覺得我自己做的這個off-canvas操作起來怪怪的，展開時點擊有時有反應，有時又像掛掉一樣
+		，a:hover的效果也是時有時沒有，最後才發現，中間也不是沒有想到過z-index，不過最後發現是要放在
+		這邊才會生效~至於想要有點半透明，依樣去bgc設定rgba就好啦~*/
+		z-index: 1;
+		#nav_others{
+		    position:relative;
+		    top: 8%;
+		    /* 浪費了半小時...可能不只...在搞less發出的錯誤
+		    Error"media definitions require block statements after any features"
+		    結果...top:8%忘記家分號...把我的生命還給我啊啊啊啊啊!*/
+		    text-align: center;
+		    a{
+			    line-height:5rem;
+				color:white;
+				transition: color 0.3s ease;
+				&:hover {
+					color: @navi_active_color;
+				}
+				[class^="icon-"]:before, [class*=" icon-"]:before {
+					margin:0;
+				}
+			}
+			div.count {
+			    background-color: white;
+			    position: absolute;
+			    bottom: 8%;
+			    right: 37%;
+			    border-radius: 50%;
+			    padding-top: 2px;
+			    height: 20px;
+			    width: 20px;
+			    text-align: center;
+			    font-size: 13px;
+			    font-weight: 700;
+				color:black;
+			}		
+		}
+	}
+
+	#cart-container.carthide{
+		display:block;
+		position: absolute;
+		background-color: rgba(0,0,0,0.5);
+		top:0;
+		right: 0;
+		width: 0%;
+		/*同上，沒有設定這個完結值(假設仍為width:33%)，則width會在做完一次動畫後，回歸33%...*/
+		height:100%;
+		animation: carthide 0.3s linear;
+	}
+
+	.logo_navi #nav_others {
+		display:none;
+	}
+
+	#responsive-btn {
+		transform: translateX(-100%);  
+	}
+
+	#responsive-btn-cart {
+		display: block;
+		position: absolute;
+		color:#000;
+		right: 8px;
+		top: 10px;
+  		cursor: pointer;
+	  	i{
+			font-size: 22px;
+	  	}
+	}
+	/*以上是為了做出off-canvas的效果*/
+	
+	.container{
+		min-width: 320px;
+	}
+
+	/* 發現當容器皆設為100%時，若視窗太小，會有多餘留白，產生scroll bar，
+	此時ˊ把原本給各個col的padding-left padding-right ，還有row的margin 0,-15都取消即可*/
+	
+	.our-team .container .row{
+		margin-left: 0px;
+		margin-right: 0px;
+		.col-3{
+			padding:0;
+			padding-bottom: 10px;
+			width:@col-12;
+		}
+	}
+
+
+	#Footer .container .row{
+		margin:0px; 
+		.col-5 .col-4{
+			padding-left:0px;
+			padding-left:0px; 
+			width:100%;
+			text-align: center;
+			.Zebra_Accordion {
+				dd {
+				    display: none;
+				}
+			}
+		}
+		/* 被懲罰了....受權重的影響，只是要改個設定也花了一堆時間!不管是desktop first或是mobile first
+		   ，都該養成能簡單寫就簡單寫的大原則!
+		   */
+		>.col-3{
+			padding-left: 0px;
+			padding-right: 0px;
+
+			li{
+				/* ul原本像nav的那種「容器靠右內容物從左往右排列」的設定方式，在要使容器置中時反而會有困擾
+				這時候反璞歸真，把多餘的設定都去掉在用tac置中即可 */
+				ul.social{
+					position:static;
+					float:none;
+					li{
+						float:none;
+						display: inline-block;
+					}
+				}
+			}
+		}		
+	} 	
+}
+
+/* 我非常不滿意下面這些設定...因為感覺就是硬幹的。效果又很差!
+		Q:這邊都是針對position做的調整，目前我知道在position唯一能一勞永逸的只有置中(postiotion推50%，
+		然後用transform:translate50%把自己的一半拉回來)還有固定在容器的角落，其他設定...
+		只要畫面一跑掉位置也會跟著跑掉，調這個真的浪費了我很多時間...*/
+@media screen and (max-width:540px) {
+	#cart-container.cartshow #nav_others{
+		div.count {
+		    right: 32%;
+		}			
+	}
+	#Footer .row > .col-3 li i.fa-angle-right {
+		right:180px;
+	}			
+}
+
+@media screen and (max-width:425px) {
+	#cart-container.cartshow #nav_others{
+		div.count {
+		    right: 29%;
+		}			
+	}
+	#Footer .row > .col-3 li i.fa-angle-right {
+		right:140px;
+	}		
+}
+
+
+
+
+@media screen and (max-width:320px) {
+	#cart-container.cartshow #nav_others{
+		div.count {
+		    right: 22%;
+		}			
+	}
+	#Footer .row > .col-3 li i.fa-angle-right {
+		right:100px;
+	}	
+}
