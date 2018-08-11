@@ -1,4 +1,3 @@
-
 /*---------------------------------about.css--------------------------------------------*/
 * {
   box-sizing: border-box;
@@ -57,7 +56,7 @@ a {
   display: table;
   clear: both;
 }
-/*.col-6 {
+.col-6 {
   width: 50%;
   float: left;
   padding: 0 15px;
@@ -90,10 +89,9 @@ a {
 .col-12 {
   float: left;
   padding: 0 15px;
-}*/
+}
 .container {
   max-width: 1200px;
-  padding: 0px;
   position: relative;
   margin: 0 auto;
 }
@@ -168,7 +166,6 @@ a {
 ul.nav.navbar-nav.navbar-right {
   padding-top: 38px;
 }
-
 .about-us {
   background: #f4f4f4;
   padding: 52px 0px 71px 0px;
@@ -335,7 +332,10 @@ ul.nav.navbar-nav.navbar-right {
 .active {
   opacity: 0.3;
 }
-
+.owl-carousel {
+  /*  owl-carousel nav 與navigation 的大小 */
+  /* dots style*/
+}
 .owl-carousel .owl-nav button.owl-prev {
   position: absolute;
   top: 45%;
@@ -364,13 +364,13 @@ ul.nav.navbar-nav.navbar-right {
   margin-right: 10px;
   outline: none;
 }
-
 /*---------------------------------Footer--------------------------*/
 #Footer .misc {
   background-color: #f6f6f6;
 }
 #Footer .misc .container {
-  padding: 72px 0px 75px 0px;
+  padding-top: 72px;
+  padding-bottom: 75px;
 }
 #Footer .col-left {
   font-weight: 700;
@@ -481,7 +481,8 @@ ul.nav.navbar-nav.navbar-right {
   border: 1px solid #66afe9;
 }
 #Footer .copy-right .container {
-  padding: 40px 0px 95px 0px;
+  padding-top: 40px;
+  padding-bottom: 95px;
 }
 #Footer .copy-right .col-xs-6 p {
   font-weight: 700;
@@ -505,20 +506,22 @@ ul.nav.navbar-nav.navbar-right {
   bottom: 3px;
 }
 /*--------------------------------------------------------RWD-------------------------------------------------------*/
-
 @media screen and (max-width: 991px) {
-
   #Footer .row .col-x {
     text-align: center;
   }
   #Footer .row > .col-left {
     float: none;
   }
+  #Footer .row > .col-left i.fa-map-marker {
+    top: -20px;
+  }
   #Footer .row > .col-left #logo-gray {
     margin: 0 auto;
   }
   #Footer .row > .col-center {
-    padding: 30px 0px 30px 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   #Footer .row > .col-center .col-inner {
     padding-bottom: 20px;
@@ -533,22 +536,19 @@ ul.nav.navbar-nav.navbar-right {
   #Footer .row > .col-right li i.fa-angle-right {
     right: 30%;
   }
-  #Footer .row > .col-right li i.fa-map-marker {
-    top: -20px;
+  #Footer .row > .col-right li.social {
+    width: 153px;
+    display: block;
+    margin: 0 auto;
   }
-  #Footer .row > .col-right li ul.social {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);
+  #Footer .row > .col-right li.social ul.social {
     float: none;
   }
-  #Footer .row > .col-right li ul.social a {
+  #Footer .row > .col-right li.social ul.social a {
     padding: 0px 10px 0px 0px;
   }
- }
-  
-@media screen and (max-width: 767px) {
+}
+@media screen and (max-width: 1229px) {
   div#nav1 {
     text-align: center;
   }
@@ -569,7 +569,19 @@ ul.nav.navbar-nav.navbar-right {
   .navbar-default ul.nav.navbar-nav.navbar-right {
     padding-bottom: 36px;
   }
+  .navbar-toggle {
+    margin-right: 53px;
+    padding: 10px 10px;
+    margin-top: 41px;
+  }
 }
-
+@media screen and (max-width: 767px) {
+  a.navbar-brand {
+    padding-left: 7px;
+  }
+  .navbar-toggle {
+    margin-right: 7px;
+  }
+}
 
 /*# sourceMappingURL=about.css.map */
