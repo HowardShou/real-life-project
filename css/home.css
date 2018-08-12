@@ -46,9 +46,12 @@ a {
 a:hover {
   text-decoration: none;
 }
+<<<<<<< HEAD
 a:active {
   text-decoration: none;
 }
+=======
+>>>>>>> 782c72d1f709e38cff83163c86a060f76264f94e
 li {
   list-style-type: none;
 }
@@ -304,6 +307,7 @@ ul.nav.navbar-nav.navbar-right {
 #Content .FDI_2 .row .product_info .rank li {
   float: left;
 }
+<<<<<<< HEAD
 #Content .FDI_1 .row .product_1,
 #Content .FDI_2 .row .product_1 {
   bottom: 12%;
@@ -315,6 +319,8 @@ ul.nav.navbar-nav.navbar-right {
   left: 10%;
   top: 3%;
 }
+=======
+>>>>>>> 782c72d1f709e38cff83163c86a060f76264f94e
 #Content .FDI_1 .row .product_2 .title,
 #Content .FDI_2 .row .product_2 .title {
   background: none;
@@ -421,10 +427,17 @@ ul.nav.navbar-nav.navbar-right {
 }
 #Footer .col-center .col-inner ul.collapse.in {
   padding-top: 27px;
+<<<<<<< HEAD
 }
 #Footer .col-center .col-inner ul.collapsing {
   padding-top: 27px;
 }
+=======
+}
+#Footer .col-center .col-inner ul.collapsing {
+  padding-top: 27px;
+}
+>>>>>>> 782c72d1f709e38cff83163c86a060f76264f94e
 #Footer .col-center .col-inner li a {
   color: #929292;
   line-height: 30px;
@@ -549,6 +562,7 @@ ul.nav.navbar-nav.navbar-right {
   bottom: 3px;
 }
 /*--------------------------------------------------------RWD-------------------------------------------------------*/
+<<<<<<< HEAD
 @media screen and (max-width: 991px) {
   #Footer .row .col-x {
     text-align: center;
@@ -637,5 +651,7 @@ ul.nav.navbar-nav.navbar-right {
     padding: 17px 24px;
   }
 }
+=======
+>>>>>>> 782c72d1f709e38cff83163c86a060f76264f94e
 
 /*# sourceMappingURL=home.css.map */

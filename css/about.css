@@ -548,7 +548,11 @@ ul.nav.navbar-nav.navbar-right {
     padding: 0px 10px 0px 0px;
   }
 }
+<<<<<<< HEAD
 @media screen and (max-width: 1229px) {
+=======
+@media screen and (max-width: 1199px) {
+>>>>>>> 782c72d1f709e38cff83163c86a060f76264f94e
   div#nav1 {
     text-align: center;
   }
@@ -574,6 +578,7 @@ ul.nav.navbar-nav.navbar-right {
     padding: 10px 10px;
     margin-top: 41px;
   }
+<<<<<<< HEAD
 }
 @media screen and (max-width: 767px) {
   a.navbar-brand {
@@ -582,6 +587,8 @@ ul.nav.navbar-nav.navbar-right {
   .navbar-toggle {
     margin-right: 7px;
   }
+=======
+>>>>>>> 782c72d1f709e38cff83163c86a060f76264f94e
 }
 
 /*# sourceMappingURL=about.css.map */
