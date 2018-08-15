@@ -78,6 +78,9 @@
     </div> 
 
     <div id="Content">
+        <!-- 弄這個切版弄到天荒地老...除了還是沒有完全貼齊的問題外，一開始設計錯誤也很要命
+        本來以為991px以下的格式通一就行，卻沒有發現設計稿每張圖幾乎都接近320px，也就是幾乎等於小尺寸螢幕的大小!所以這些圖在小尺寸螢幕底下都應該用col-xs-12才對，但是在最後才發現，一動就動輒得咎
+        ，只好用max-width:767px設定width都為100%才解決，唉，學起來吧，下次排版前先看看圖的大小在想想在手機上會如何呈現! -->
         <div class="FDI_1 clearfix">
             <div class="container clearfix">
                 <div class="row clearfix">
@@ -114,6 +117,7 @@
                                         <a href="#"><img src="https://picsum.photos/294/275" alt="photo"></a>
                                         <div class="product_info product_3 clearfix">
                                             <div class="title">ACRYLIC FABRIC<br>BEAN BAG</div>
+                                            <!-- 弄星星那這邊，畫面完全爆掉，搞半天才發現忘記在每個i後面打</i>，跟智障一樣，幹...不過最後在調整距離時，發現根本不用弄那麼複雜，畢竟一個icon-font就是一個字，裝在li裡面吃到block的屬性反而變得很複雜，因此捨棄ul li架構，反璞歸真~-->
                                             <div class="rank">
                                                 <i class="fa fa-star" aria-hidden="true"></i>
                                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -410,6 +414,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來col-xs-5要底下的child的tag要繼續用li，
+                                            結果瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -441,6 +448,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來clo-xs-5要底下的child要繼續用li，
+                                            瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -462,6 +472,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來col-xs-5要底下的child的tag要繼續用li，
+                                            結果瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -493,6 +506,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來clo-xs-5要底下的child要繼續用li，
+                                            瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -514,6 +530,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來col-xs-5要底下的child的tag要繼續用li，
+                                            結果瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -545,6 +564,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來clo-xs-5要底下的child要繼續用li，
+                                            瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -566,6 +588,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來col-xs-5要底下的child的tag要繼續用li，
+                                            結果瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -597,6 +622,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來clo-xs-5要底下的child要繼續用li，
+                                            瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -618,6 +646,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來col-xs-5要底下的child的tag要繼續用li，
+                                            結果瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -649,6 +680,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來clo-xs-5要底下的child要繼續用li，
+                                            瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -670,6 +704,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來col-xs-5要底下的child的tag要繼續用li，
+                                            結果瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -701,6 +738,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來clo-xs-5要底下的child要繼續用li，
+                                            瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -722,6 +762,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來col-xs-5要底下的child的tag要繼續用li，
+                                            結果瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -753,6 +796,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來clo-xs-5要底下的child要繼續用li，
+                                            瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -774,6 +820,9 @@
                                     <div class="cover-context">
                                         <ul class="clearfix">
                                             <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                            <!-- 新發現~~本來col-xs-5要底下的child的tag要繼續用li，
+                                            結果瀏覽器竟然看無!最後改成div才恢復正常，所以li的child
+                                            不能是li! -->
                                             <li class="col-xs-5">
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
                                                 <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
@@ -805,6 +854,8 @@
             <div class="container">
                 <div class="row clearfix">
                     <h2 class="title">BRANDS <small>FURNITURE</small></h2>
+                    <!-- 這個col-xs-11是特別為了符合設計稿的要求，達到致中效果
+                    我很快就想到解決方案，觀念已經比較對了，牡蠣! -->
                     <div class="col-xs-11">
                         <div class="owl-carousel slider3">
                             <div class="brands-picture"><img src="images/devon.png" alt="brand"></div>
@@ -859,9 +910,9 @@
                         </div>
                     </div>
                 </div>
-                
+                <!-- hr放這邊雖然有點怪，但是為了讓它自動合於.container的大小，
+                最後還是決定放這邊 -->
                 <hr>
-            
             </div>
         </div>
 
@@ -936,6 +987,8 @@
                             <li class="title">Sign Up Newsletter</li>
                             <li>Subscribe now to get 15% off
                                 <br>on any product</li>
+                                <!-- 搭配css的pos相關設定可以讓兩個作出
+                                input疊在一起卻又有各自功能的效果-->                                
                             <li class="email">
                                   <input type="email" placeholder='Your e-mail'>
                                   <input type="submit" value='subscribe'>

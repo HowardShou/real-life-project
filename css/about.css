@@ -369,6 +369,8 @@ ul.nav.navbar-nav.navbar-right {
   background-color: #f6f6f6;
 }
 #Footer .misc .container {
+  /*原本寫成padding:72px 0px 75px 0px;導致不小心把container內建
+			的padding給覆蓋掉，然後就跑版了!fk~*/
   padding-top: 72px;
   padding-bottom: 75px;
 }
@@ -532,6 +534,7 @@ ul.nav.navbar-nav.navbar-right {
   }
   #Footer .row > .col-right li input {
     width: 50%;
+    min-width: 218px;
   }
   #Footer .row > .col-right li i.fa-angle-right {
     right: 30%;
@@ -581,6 +584,28 @@ ul.nav.navbar-nav.navbar-right {
   }
   .navbar-toggle {
     margin-right: 7px;
+  }
+}
+@media screen and (max-width: 464px) {
+  /*在這個input上，嘗試做出與home不同的呈現效果(原則上要隨著螢幕大小拖動讓input自由身長縮短)
+	上面已經先利用min-with解決螢幕過小時input會太短的問題，至於這個submit要如何順利覆蓋在其上面
+	呢?由於之前要的效果是跟著input一起移動，所以用pos-a對齊li動沒有問題，但是現在我們要的是「固定」
+	效果，既然對齊的標的在這邊沒辦法替換，索性把它還原成static，在利用transform直接變換它的位置，
+	此時位置就會是固定的囉!*/
+  #Footer .col-right .sign-up li i.fa-angle-right {
+    position: static;
+    bottom: 50%;
+    transform: translate(-600%, 0%);
+    font-size: 16px;
+    cursor: pointer;
+    /* 嘗試下面這套，仍沒有達到效果，因為整個li的width是兩邊一起減少，不是單純從右邊減而已
+	    right:unset;
+	    left:290px;
+	    position: absolute;
+	    bottom:50%;
+	    transform: translateY(50%);
+	    font-size: 16px;
+	    cursor: pointer; */
   }
 }
 
