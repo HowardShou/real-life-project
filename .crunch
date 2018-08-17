@@ -38,6 +38,7 @@
 				}
 			],
 			"sources": [
+				"basic.less",
 				"about.less"
 			]
 		},
@@ -78,6 +79,26 @@
 			],
 			"sources": [
 				"basic.less"
+			]
+		},
+		"less/contact.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/contact.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
+				"basic.less",
+				"contact.less"
 			]
 		}
 	}
