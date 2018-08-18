@@ -1,0 +1,501 @@
+@import "basic";
+
+/*---------------------------------about.css--------------------------------------------*/
+* {
+	box-sizing: border-box;
+}
+body {
+	position: relative;
+	color: @body_color;
+	font-family: @SSP;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+h1 {
+	margin: 0;
+}
+h2 {
+	margin: 0;
+}
+h3 {
+	margin: 0;
+}
+h4 {
+	margin: 0;
+}
+h5 {
+	margin: 0;
+}
+h6 {
+	margin: 0;
+}
+p {
+	margin: 0;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style-type: none;
+}
+dl,dt,dd{
+	margin: 0;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.clearfix {
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+.col-6 {
+	width: 50%;
+	float: left;
+	padding: 0 15px;
+}
+.col-5 {
+	width: 41.666666666666667%;
+	float: left;
+	padding: 0 15px;
+}
+.col-4 {
+	width: 33.333333%;
+	float: left;
+	padding: 0 15px;
+}
+.col-3 {
+	width: calc(25%);
+	float: left;
+	padding: 0 15px;
+}
+.co-2 {
+	width: calc(16.66666667%);
+}
+.row {
+	margin: 0 -15px;
+}
+.col-2 {
+	float: left;
+	padding: 0 15px;
+}
+.col-12 {
+	float: left;
+	padding: 0 15px;
+}
+.container {
+	max-width: 1200px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.nav_container{
+	max-width: 1980px;
+	display: block;
+	margin:0 auto;
+}
+
+#cart-container{
+	display:none;
+}
+.template {
+    display:none;
+}
+
+/*----------------------------Header------------------------------*/
+.navbar-default {
+    background-color: transparent; 
+    border-color: transparent; 
+}
+
+.navbar-brand{
+	height:auto;
+	padding:44px 42px 50px 53px;
+	line-height: normal;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-default{
+	font-family:@Mr;
+	.navbar-nav>li{
+		.twicks{
+			position: relative;
+			bottom:5px;
+		}
+	}
+	.navbar-nav>li>a {
+		display: inline-block;
+	    color: black;
+		transition:color 0.3s ease;
+	    &:active{
+			color:@navi_active_color;
+	    }
+	    &:hover{
+	    	color:@navi_active_color;	
+	    }
+	    [class^="icon-"]:before, [class*=" icon-"]:before {
+	    	margin: 0;
+	    }
+	    div.count {
+			background-color: @background_color_1;
+			position: absolute;
+			bottom: 6px;
+			right: 3px;
+			border-radius: 50%;
+			height: 20px;
+			width: 20px;
+			text-align: center;
+			font-size: 8px;
+			font-weight: 400;
+			color:white;
+			transition:background-color 0.2s linear;
+			&:hover{
+				background:#D6B161; 
+			}
+		}
+	}
+	.navbar-text{
+		margin:0;
+		padding-top:53px;
+		color:black;
+	}
+}
+
+ul.nav.navbar-nav.navbar-right{
+	padding-top:38px;
+} 
+
+.contact-us {
+	background: #f4f4f4 url("https://picsum.photos/1600/1030/") 50% 50% no-repeat fixed;
+	// background-color
+	// background-image
+	// background-position
+	// background-size
+	// background-repeat:n;
+	// background-origin
+	// background-clip
+	// background-attachment
+	padding: 60px 0px 60px 0px;
+	text-align: center;
+	h1 {
+		color: @title-dark;
+		font-family: @Mr;
+		font-size: 44px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	p {
+		padding-top: 18px;
+		text-transform: capitalize;
+		font-size: 14px;
+		color: @title-dark;
+	}
+}
+
+/*----------------------------------Content-----------------------*/
+
+.infos {
+	margin-top: 75px;
+	.container.small{
+		max-width:1033px;
+		.col-x:first-child{
+			h2 {
+				font-family:@SSP;
+				color: @title-dark;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 28px;
+			}
+			p{
+				margin-top: 35px;
+				color:#343434;
+				font-size: 16px;
+			}
+			.info{
+				margin-top: 80px;
+				.col-xs-4 {
+					.title{
+						font-size: 16px;
+						color: #303030;
+						font-weight: 700;
+					}
+					p{
+						/*這玩意兒起碼讓我多花了兩小時在想為何跑版......學起來吧...*/
+						word-wrap:break-word;
+						margin-top: 20px;
+						font-size: 14px;
+					} 
+				}
+			}
+		}
+		.col-x:nth-child(2){
+			form{
+				float: right;
+				.title{
+					color:#343434;
+					font-size: 16px;
+					font-weight: bold;
+				}
+
+				.form-control{
+					max-width: 352px;
+					min-width: 320px;
+					border-radius: 17px;
+					border:1px solid #c0c0c0;
+					color:#c0c0c0;
+					height:40px; 
+					padding: 6px 18px;
+					&:focus{
+						outline:none;
+						border:1px solid @navi_active_color;
+						box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 
+						0 0 8px rgba(214, 177, 97, 0.6);
+					}
+					&:first-child{
+						margin-top: 21px;
+					}
+				}
+				textarea.form-control{
+					height:auto;
+				}
+				// placeholder顏色這樣改的，真妙...
+				::placeholder{
+					color:black;
+				}
+				[type="submit"]{
+					width: 73px;
+					min-width:0px;
+					color: white;
+					background-color:#383838;
+					transition: all 0.3s ease;
+					&:hover{
+						background-color:@navi_active_color;
+					}
+				}
+			}
+		}
+	}
+}
+
+.map{
+	background-color: #f6f6f6;
+	margin-top: 87px;
+}
+
+
+
+/*---------------------------------Footer--------------------------*/
+
+#Footer {
+	.misc {
+		background-color: @background_color_6;
+		.container {
+			/*原本寫成padding:72px 0px 75px 0px;導致不小心把container內建
+			的padding給覆蓋掉，然後就跑版了!fk~*/
+			padding-top:82px;
+		}
+	}
+	.col-left {
+		.col-inner{
+			>a{
+				text-transform: capitalize;
+			    cursor: pointer;
+			    font-weight: 700;
+			    font-size: 18px;
+			    color: #575757;
+			    &:hover{
+			    	text-decoration: none;
+			    }
+			}
+			ul.collapse.in{
+				padding-left: 2px;
+				padding-top:20px;
+			}
+			ul.collapsing{
+				padding-left: 2px;
+				padding-top:20px;
+			}
+			li a{
+				color:@body_color;
+			    line-height: 30px;
+			    text-transform: capitalize;
+			    font-weight: 700;
+			    display: block;
+			}
+		}
+	}
+	.col-right {
+		font-weight: 700;
+		color: @color_9;
+		a {
+			text-transform: capitalize;
+			color: @color_9;
+		}
+		div {
+			i {
+				padding-right: 3px;
+			}
+			i.fa-map-marker {
+				display: inline-block;
+				position: relative;
+			}
+		}
+		#logo-gray {
+			margin-top: 11px;
+			width: 112px;
+		}
+		.contact_info {
+			margin-top: 58px;
+			line-height: 1.9rem;
+			a {
+				display: inline-block;
+			}
+		}
+	}
+	.copy-right {
+		padding-top: 76px;
+		padding-bottom: 117px;
+		background-color: #f6f6f6;;	
+		p {
+			font-weight: 700;
+			width: 245px;
+			margin: 0 auto;
+			margin-top: 5px;
+			a {
+				color: @color_12;
+				font-family: @Mr;
+				font-weight: 700;
+				letter-spacing: 0px;
+				transition: all 0.3s linear;
+				&:hover {
+					color: @color_13;
+				}
+			}
+		}
+		.pay-method{
+			margin: 0 auto;
+			width: 117px;
+			img {
+				position: relative;
+				bottom: 3px;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------RWD-------------------------------------------------------*/
+@media screen and (max-width:1229px){
+
+
+	div#nav1{
+		text-align: center;
+	}
+
+	.navbar-default{
+		font-family:@Mr;
+		.navbar-nav>li .twicks{
+				position: relative;
+				bottom:5px;
+		}
+		
+		.navbar-nav>li>a {
+
+		    div.count {
+				bottom: 2px;
+				right: 3px;
+			}
+		}
+
+		.navbar-text{
+			padding-top:43.5px;
+		}
+
+		ul.nav.navbar-nav.navbar-right{
+			padding-bottom:36px;
+		} 	
+	}
+	
+	.navbar-toggle {
+	    margin-right: 53px;
+	    padding: 10px 10px;
+	    margin-top: 41px;
+	}
+}
+
+@media screen and (max-width:991px){
+	#Content{
+		.infos {
+			.cleartest{
+				clear:both;
+			}
+		
+			.container.small{
+				.col-x{
+					// float: none!important;
+				}
+				.col-x:nth-child(2){
+					margin-top: 75px;
+					form{
+						max-width: 352px;
+						margin: 0 auto;
+						float: none;
+
+						.form-control{
+							min-width:0px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	
+	#Footer{
+		.row{
+			/*記住:after和:before是怎麼運作了...*/
+			*{
+				float:none!important;
+			}
+			.col-x{
+				text-align: center;
+			}
+			>.col-right{
+				float:none;
+				#logo-gray{
+					width: 112px;
+					margin:0 auto;
+				}
+			}
+			>.col-left{
+				padding-bottom:30px;
+				.col-inner{
+					padding-bottom:20px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:767px){
+	a.navbar-brand{
+		padding-left: 7px;
+	}
+	.navbar-toggle{
+		margin-right: 7px;
+	}
+}
+
+

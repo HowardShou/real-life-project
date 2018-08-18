@@ -97,8 +97,28 @@
 				}
 			],
 			"sources": [
+				"contact.less",
+				"basic.less"
+			]
+		},
+		"less/blog_sidebar.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/blog_sidebar.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
 				"basic.less",
-				"contact.less"
+				"blog_sidebar.less"
 			]
 		}
 	}
