@@ -1,0 +1,813 @@
+@import "basic";
+
+
+/*---------------------------------product_detail.css--------------------------------------------*/
+
+/*比例很怪?算%數客製化解決!*/
+#Content{
+	.product_summary{
+		.col-md-6.left{
+			width: 55.75%
+		}
+		.col-md-6.right{
+			width: 44.25%
+		}
+	}
+}
+
+/*--------------------------customize------------------------------*/
+
+
+/*----------------------------Header------------------------------*/
+.navbar-default {
+    background-color: transparent; 
+    border-color: transparent; 
+}
+
+.navbar-brand{
+	height:auto;
+	padding:44px 42px 50px 53px;
+	line-height: normal;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-default{
+	font-family:@Mr;
+	.navbar-nav>li{
+		.twicks{
+			position: relative;
+			bottom:5px;
+		}
+	}
+	.navbar-nav>li>a {
+		display: inline-block;
+	    color: black;
+		transition:color 0.3s ease;
+	    &:active{
+			color:@navi_active_color;
+	    }
+	    &:hover{
+	    	color:@navi_active_color;	
+	    }
+	    [class^="icon-"]:before, [class*=" icon-"]:before {
+	    	margin: 0;
+	    }
+	    div.count {
+			background-color: @background_color_1;
+			position: absolute;
+			bottom: 6px;
+			right: 3px;
+			border-radius: 50%;
+			height: 20px;
+			width: 20px;
+			text-align: center;
+			font-size: 8px;
+			font-weight: 400;
+			color:white;
+			transition:background-color 0.2s linear;
+			&:hover{
+				background:#D6B161; 
+			}
+		}
+	}
+	.navbar-text{
+		margin:0;
+		padding-top:53px;
+		color:black;
+	}
+}
+
+ul.nav.navbar-nav.navbar-right{
+	padding-top:38px;
+} 
+
+/*----------------------------------Content-----------------------*/
+#Content{
+	.product_summary{
+		background-color: #f6f6f6;
+		padding-bottom: 61px;
+		padding-top: 53px;
+		.share{
+			font-size: 18px;
+    		font-weight: bold;
+    		a{
+    			margin-right: 15px;	
+    		}
+		}
+		
+		.owl-carousel.slider1{
+			margin-left: 35px;
+			margin-top: 50px;
+			/*要用容器調整照片到想要的大小，一開始是把這個設定直接放在owl-carousel上，完全不是想要的效果，
+			後來發現要放這邊才對*/
+			.slide-1,.slide-2,.slide-3,.slide-4{
+				width: 79.9%
+			}
+			.owl-dots{
+				margin-top: 25px;
+				button.owl-dot{
+					background:50% 50%; 
+				    background-color: transparent;
+				    color: transparent; 
+				    border: none; 
+				    padding: 52px!important; 
+				    font: inherit;
+				    margin-right: 15px;
+				    &:focus{
+				    	outline: none;
+				    }
+				}
+				button.owl-dot:first-child{
+					background-image: url("https://picsum.photos/105/105?image=410");
+				}
+				button.owl-dot:nth-child(2) {
+					background-image: url("https://picsum.photos/105/105?image=411");
+				}
+				button.owl-dot:nth-child(3) {
+					background-image: url("https://picsum.photos/105/105?image=412");
+				}
+				button.owl-dot:nth-child(4) {
+					background-image: url("https://picsum.photos/105/105?image=413");
+				}
+			}
+			.owl-nav{
+				button.owl-prev{
+					display: none;
+				}
+				button.owl-next{
+					position: absolute;
+				    bottom: 0;
+				    background: #fff;
+				    padding: 31px 5px!important;
+				    right: 20%;
+				    transition: background-color 0.5s ease;
+				    &:focus{
+				    	outline: none;
+				    }
+				    &:active{
+						background-color: @navi_active_color;
+				    }
+				}
+			}
+		}
+
+		.crumbs{	
+			a {
+				margin-right: 10px;
+			}
+			i{
+				margin-right: 10px;
+			}
+		}
+
+		.title{
+			margin-top: 15px;
+			color:#000;
+			letter-spacing:5px;
+		}
+
+		.rank{
+			margin-top: 18px;
+			i.fa-star{
+				color:@navi_active_color;
+			}
+			i.fa-star-o{
+				margin-right: 6px;
+			}
+		}
+
+		.interaction{
+			margin-top: 30px;
+			a{
+				margin-right: 26px;
+				i{
+					margin-right: 9px;
+				}
+			}
+		}
+		
+		hr{
+			margin-top: 30px;
+		}
+
+		p{
+			font-size: 16px;
+		}
+
+		.price{
+			margin-top: 14px;
+			font-size: 29px;
+			font-family: @Mr;
+			color:#000;
+			span{
+				font-size: 18px;
+				font-family: @Mr;
+				color:@body_color;
+				text-decoration: line-through;
+			}
+		}
+		
+		form{
+			margin-top: 30px;
+			span{
+				margin-right: 26px;
+			}
+			/*spinner請教老師怎麼客製化!*/
+			input[type="number"]{
+				margin-right: 11px;
+				padding: 17.5px 12px;
+				height: 50px;
+				border-radius:43px; 
+			}
+			button[type="submit"]{
+				width: 173px;
+				background-color: #f46060;
+				font-family: @Mr;
+				color:white;
+				padding: 15px 0px;
+				border-radius: 45px;
+			}
+
+		}		
+	}
+	
+	.product_info{
+	    margin-top: 76px;
+	    ul{
+	      text-align: center;
+	      margin: 0px;
+	    }
+	    li{
+	      display: inline-block;
+	      cursor:pointer;
+	      font-size: 16px;
+	      font-family: @Mr;
+	      &.active{
+	        border-bottom:3px solid black;
+	        padding-bottom:10px;
+	        color:#232323;
+	      }
+	      &:nth-child(2){
+	        margin: 0 55px;
+	      }
+	    }
+	    hr{
+	      margin-top: 0px;
+	      margin-bottom: 54px;
+	    }
+		.tabcontent{
+			display:none;
+			word-wrap: break-word;
+			&.active{
+				display: block;
+			}
+		}
+	}
+
+	/*直接把home作完的拿來用94爽喇!*/
+	.related_products{
+		margin-top: 115px;
+		.title{
+			font-family: @Mr;
+			color:#535353;
+		}
+		.owl-carousel.slider2{
+			margin-top: 37px;
+			.item,.item-with-rank{
+				position: relative;
+				z-index: -1;
+				.discount{
+					position: absolute;
+					top:10%;
+					padding:5px 10px;
+					background-color:#b2cc29;
+					font-family: @Mr;
+					color:white;
+				}
+				.new{
+					position: absolute;
+					top:10%;
+					padding:5px 10px;
+					background-color:#000;
+					font-family: @Mr;
+					color:white;
+				}
+				.new.couple{
+					top:23%;
+				}
+			}
+		
+			.for-cover{
+				position: relative;
+				.cover{
+					position: absolute;
+					top:0;
+					bottom: 0;
+					right:0;
+					left:0;
+					bottom: 0;
+					transition:all 0.3s linear;					
+					z-index: 1;
+					&:hover{
+						cursor:pointer;
+						background-color: rgba(255,255,255,0.6);
+						.cover-context li{
+							opacity:0.9;
+						}
+					}
+					.cover-context{
+						position: absolute;
+						// top:0;
+						left:0;
+						right:0;
+						bottom:0;
+						text-align: center;
+						li{
+							opacity: 0;
+							float: left;
+							padding:15px 0px;
+							border:1px solid rgba(92, 92, 92, 0.5);
+							background-color: #fff;
+							transition:all 0.3s linear;
+							&:first-child{
+								border-right-color: transparent;
+								&:hover{
+									background-color: @navi_active_color;
+									a{
+										color:white;
+									}
+								}
+							}
+							&:nth-child(2){
+								padding:0px;
+								div{
+									transition: all 0.3s linear;
+								}
+								div:hover{
+									background-color:@navi_active_color;
+									a{
+										color:white;
+									}
+								}
+								div:first-child{
+									border-right: 1px solid rgba(92, 92, 92, 0.5);
+								}
+							}
+							.col-xs-6{
+								padding:15px 0px;
+							}
+							a{
+								color:@body_color;
+								text-transform: capitalize;
+								i.icon-handbag{
+									padding-right: 8px;
+								}
+							}
+						}
+					}
+				}
+			}
+			.name-price.rank,.name-price{
+				position: relative;
+				z-index: 0;
+			}
+			.name-price{
+				bottom: 18px;	
+				padding-left: 20px;
+				.name{
+					padding-top: 35px;
+					font-size: 18px;
+					font-weight: 700;
+					text-transform: capitalize;
+				}
+				.price{
+					padding-top: 5px;
+					font-size: 18px;
+					font-weight: 700;
+					color:black;
+					i{
+						padding-right: 5px;
+					}
+				}
+			}
+			.name-price.rank{
+				bottom:32px;
+				padding-top: 0px;
+				.name{
+					padding-top: 29px;
+				}
+				.rank li{
+					float: left;
+					i.fa-star{
+						color: @navi_active_color;
+					}
+				}
+			}
+			.owl-nav{
+				position: absolute;
+				top:-19.5%;
+				// md-15.5% sm-14%
+				right:0;
+			    border-radius: 19px;
+			    padding: 4px 5px;
+				background-color: #eee;
+				button{
+					margin: 0px 1px;
+					padding:5px 11.781px !important;
+					border-radius: 50%;
+					background-color:white;
+					&:focus{
+						outline: none;
+					}
+					&:active{
+						background-color: rgba(0,0,0,0.3);
+					}
+				}
+				i{
+					font-size: 18px;
+				}
+			}
+		}
+	}	
+}
+
+
+/*---------------------------------Footer--------------------------*/
+
+#Footer {
+	margin-top: 160px;
+	.misc {
+		background-color: @background_color_6;
+		.container {
+			/*原本寫成padding:72px 0px 75px 0px;導致不小心把container內建
+			的padding給覆蓋掉，然後就跑版了!fk~*/
+			padding-top:72px;
+			padding-bottom:75px;
+		}
+	}
+	.col-left {
+		font-weight: 700;
+		color: @color_9;
+		a {
+			text-transform: capitalize;
+			color: @color_9;
+		}
+		div {
+			i {
+				padding-right: 3px;
+			}
+			i.fa-map-marker {
+				display: inline-block;
+				position: relative;
+				top: -15px;
+			}
+		}
+		div.address {
+			a {
+				display: inline-block;
+			}
+		}
+		#logo-gray {
+			padding-bottom: 30px;
+			width: 112px;
+		}
+		p {
+			padding-bottom: 30px;
+		}
+		.address {
+			padding-bottom: 30px;
+		}
+	}
+	.col-center {
+		.col-inner{
+			>a{
+				text-transform: capitalize;
+			    cursor: pointer;
+			    padding-left: 5px;
+			    font-weight: 700;
+			    font-size: 18px;
+			    color: #575757;
+			    &:hover{
+			    	text-decoration: none;
+			    }
+			}
+			ul.collapse.in{
+				padding-top:27px;
+			}
+			ul.collapsing{
+			  padding-top:27px;
+			}
+			li a{
+				color:@body_color;
+			    line-height: 30px;
+			    text-transform: capitalize;
+			    font-weight: 700;
+			    display: block;
+			}
+		}
+	}
+	.col-right {
+		.sign-up {
+			text-align: right;
+			>li {
+				padding-bottom: 30px;
+				font-weight: 700;
+			}
+			li.title{
+				font-size: 18px;
+				color: @color_11;
+				padding-bottom: 30px;
+			}
+			li.email {
+				position: relative;
+				padding-bottom:0px;
+				margin-bottom: 30px; 
+			}
+			li {
+				i.fa-angle-right {
+					position: absolute;
+				    right: 10%;
+				    bottom: 50%;
+				    transform: translateY(50%);
+					font-size: 16px;
+					cursor: pointer;
+				}
+			}
+			li.bold {
+				padding-bottom: 10px;
+				font-family: @SSP;
+				font-weight: 700;
+				font-size: 16px;
+				color: @title-dark;
+			}
+			ul.social {
+				float: right;
+				li {
+					float: left;
+					a {
+						padding-left: 10px;
+						font-size: 16px;
+						color: @title-dark;
+					}
+				}
+			}
+			input {
+				padding: 10px 0px;
+				padding-left: 20px;
+				background-color: @background_color_6;
+				border-radius: 23px;
+				width: 100%;
+				border: 1px solid #868686;
+				&:focus {
+					outline: none;
+					border: 1px solid #66afe9;
+				}
+			}
+		}
+	}
+	.copy-right {
+		.container {
+			padding-top:40px;
+			padding-bottom: 95px;
+		}
+		.col-xs-6 {
+			p {
+				font-weight: 700;
+			}
+			a {
+				color: @color_12;
+				font-family: @Mr;
+				font-weight: 700;
+				letter-spacing: 0px;
+				transition: all 0.3s linear;
+				&:hover {
+					color: @color_13;
+				}
+			}
+			.pay-method{
+				float: right;
+				width: 117px;
+				img {
+					position: relative;
+					bottom: 3px;
+				}
+			}
+			
+		}
+	}
+}
+
+/*--------------------------------------------------------RWD-------------------------------------------------------*/
+@media screen and (max-width:1229px){
+	div#nav1{
+		text-align: center;
+	}
+
+	.navbar-default{
+		font-family:@Mr;
+		.navbar-nav>li .twicks{
+				position: relative;
+				bottom:5px;
+		}
+		
+		.navbar-nav>li>a {
+
+		    div.count {
+				bottom: 2px;
+				right: 3px;
+			}
+		}
+
+		.navbar-text{
+			padding-top:43.5px;
+		}
+
+		ul.nav.navbar-nav.navbar-right{
+			padding-bottom:36px;
+		} 	
+	}
+	
+	.navbar-toggle {
+	    margin-right: 53px;
+	    padding: 10px 10px;
+	    margin-top: 41px;
+	}
+
+	#Content{
+		.product_summary{
+			
+			
+			.owl-carousel.slider1{
+				
+				.slide-1,.slide-2,.slide-3,.slide-4{
+					width: 89.9%
+				}
+				.owl-nav{
+					button.owl-next{
+						display: none;
+					}
+				}
+			}	
+		}
+	}	
+}
+
+
+@media screen and (max-width:991px){ 
+	#Content{
+		.product_summary{
+			.col-md-6.left{
+			width: 50%;
+			}
+			.col-md-6.right{
+			width: 50%;
+			}
+			
+			.owl-carousel.slider1{
+				margin-left: 0px;
+				.slide-1,.slide-2,.slide-3,.slide-4{
+					width: 90%;
+				}
+				.owl-dots{
+					text-align: center;
+					button.owl-dot:first-child{
+						background-image: url("https://picsum.photos/105/105?image=410");
+						margin-bottom: 20px;
+					}
+					button.owl-dot:nth-child(2) {
+						background-image: url("https://picsum.photos/105/105?image=411");
+						margin-bottom: 20px;
+					}
+				}
+				.owl-nav{
+					button.owl-next{
+						display: none;
+					}
+				}
+			}	
+		}
+	}
+	
+	#Footer{
+		.row{
+			.col-x{
+				text-align: center;
+			}
+			>.col-left{
+				float:none;
+				i.fa-map-marker{
+					top:-20px;
+				}
+				#logo-gray{
+					margin:0 auto;
+				}
+			}
+			>.col-center{
+				padding-top:30px;
+				padding-bottom:30px;
+				.col-inner{
+					padding-bottom:20px;
+				}
+			}
+			>.col-right{
+				li{
+					position: relative;
+					text-align: center;
+					input{
+						width: 50%;
+						min-width:218px;
+					}
+					i.fa-angle-right {
+						right:30%;
+					}
+				}
+				li.social{
+				    width: 153px;
+					display: block;
+					margin: 0 auto;
+					ul.social{
+						float:none;
+						a{
+							padding:0px 10px 0px 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width:767px){
+	a.navbar-brand{
+		padding-left: 7px;
+	}
+	.navbar-toggle{
+		margin-right: 7px;
+	}
+
+	#Content{
+		.product_summary{
+			.col-xs-12.left{
+			width: 100%;
+			}
+			.col-xs-12.right{
+			width: 100%;
+			margin-top: 20px;
+			}
+			
+			.owl-carousel.slider1{;
+				.slide-1,.slide-2,.slide-3,.slide-4{
+					width: 100%;
+				}
+			}
+
+			form{
+				span{
+					display: inline-block;
+					margin-bottom: 20px;
+				}
+
+				/*spinner請教老師怎麼客製化!*/
+				input[type="number"]{
+					max-width: 320px; 
+				}
+
+			}	
+		}
+	}
+}
+
+@media screen and (max-width:525px){
+	#Content{
+		.product_info{
+		    li{
+		      display: block;
+		      margin: 0px auto;
+		      margin-top: 20px;
+		      &:first-child{
+		      	margin-top: 0px;
+		      }
+		      &:nth-child(2){
+		      	margin: 0px auto;
+		      	margin-top: 20px;
+		      }
+			}
+		}     
+	}
+}
+
+
+@media screen and (max-width:464px){
+	#Footer .col-right .sign-up li i.fa-angle-right {
+	    position: static;
+	    bottom:50%;
+	    transform: translate(-600%,0%);
+	    font-size: 16px;
+	    cursor: pointer;
+	}
+}
+

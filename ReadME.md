@@ -1,3 +1,10 @@
+8/22
+
+1.blog_post的content尾端的comments，雖然看起來版面是沒有問題，不過總覺得該部分的html的架構可能有問題...
+
+2.product_detail關於input[type="number"]，找過資料後，還是無法弄出客製化的spinner...
+
+
 8/16
 
 1.最大的問題還是在FDI_1與FDI_2這兩個大容器的切版，很明顯還是跟設計稿有落差，但是我真的盡力了...

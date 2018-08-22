@@ -1,0 +1,830 @@
+/*--------------------------------style.always-----------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  color: #929292;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  margin: 0;
+}
+h3 {
+  margin: 0;
+}
+h4 {
+  margin: 0;
+}
+h5 {
+  margin: 0;
+}
+h6 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #929292;
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+li {
+  list-style-type: none;
+}
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  float: left;
+}
+.col-12 {
+  width: calc(100%);
+}
+.col-11 {
+  width: calc(91.66666667%);
+}
+.col-10 {
+  width: calc(83.33333333%);
+}
+.col-9 {
+  width: calc(75%);
+}
+.col-8 {
+  width: calc(66.66666667%);
+}
+.col-7 {
+  width: calc(58.33333333%);
+}
+.col-6 {
+  width: calc(50%);
+}
+.col-5 {
+  width: calc(41.66666667%);
+}
+.col-4 {
+  width: calc(33.33333333%);
+}
+.col-2 {
+  width: calc(16.66666667%);
+}
+.col-1 {
+  width: calc(8.33333333%);
+}
+.container {
+  position: relative;
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/*---------------------------------product_detail.css--------------------------------------------*/
+/*比例很怪?算%數客製化解決!*/
+#Content .product_summary .col-md-6.left {
+  width: 55.75%;
+}
+#Content .product_summary .col-md-6.right {
+  width: 44.25%;
+}
+/*--------------------------customize------------------------------*/
+/*----------------------------Header------------------------------*/
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-brand {
+  height: auto;
+  padding: 44px 42px 50px 53px;
+  line-height: normal;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+.navbar-default {
+  font-family: Montserrat, sans-serif;
+}
+.navbar-default .navbar-nav > li .twicks {
+  position: relative;
+  bottom: 5px;
+}
+.navbar-default .navbar-nav > li > a {
+  display: inline-block;
+  color: black;
+  transition: color 0.3s ease;
+}
+.navbar-default .navbar-nav > li > a:active {
+  color: #D6B161;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #D6B161;
+}
+.navbar-default .navbar-nav > li > a [class^="icon-"]:before,
+.navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+  margin: 0;
+}
+.navbar-default .navbar-nav > li > a div.count {
+  background-color: black;
+  position: absolute;
+  bottom: 6px;
+  right: 3px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  font-size: 8px;
+  font-weight: 400;
+  color: white;
+  transition: background-color 0.2s linear;
+}
+.navbar-default .navbar-nav > li > a div.count:hover {
+  background: #D6B161;
+}
+.navbar-default .navbar-text {
+  margin: 0;
+  padding-top: 53px;
+  color: black;
+}
+ul.nav.navbar-nav.navbar-right {
+  padding-top: 38px;
+}
+/*----------------------------------Content-----------------------*/
+#Content {
+  /*直接把home作完的拿來用94爽喇!*/
+}
+#Content .product_summary {
+  background-color: #f6f6f6;
+  padding-bottom: 61px;
+  padding-top: 53px;
+}
+#Content .product_summary .share {
+  font-size: 18px;
+  font-weight: bold;
+}
+#Content .product_summary .share a {
+  margin-right: 15px;
+}
+#Content .product_summary .owl-carousel.slider1 {
+  margin-left: 35px;
+  margin-top: 50px;
+  /*要用容器調整照片到想要的大小，一開始是把這個設定直接放在owl-carousel上，完全不是想要的效果，
+			後來發現要放這邊才對*/
+}
+#Content .product_summary .owl-carousel.slider1 .slide-1,
+#Content .product_summary .owl-carousel.slider1 .slide-2,
+#Content .product_summary .owl-carousel.slider1 .slide-3,
+#Content .product_summary .owl-carousel.slider1 .slide-4 {
+  width: 79.9%;
+}
+#Content .product_summary .owl-carousel.slider1 .owl-dots {
+  margin-top: 25px;
+}
+#Content .product_summary .owl-carousel.slider1 .owl-dots button.owl-dot {
+  background: 50% 50%;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  padding: 52px!important;
+  font: inherit;
+  margin-right: 15px;
+}
+#Content .product_summary .owl-carousel.slider1 .owl-dots button.owl-dot:focus {
+  outline: none;
+}
+#Content .product_summary .owl-carousel.slider1 .owl-dots button.owl-dot:first-child {
+  background-image: url("https://picsum.photos/105/105?image=410");
+}
+#Content .product_summary .owl-carousel.slider1 .owl-dots button.owl-dot:nth-child(2) {
+  background-image: url("https://picsum.photos/105/105?image=411");
+}
+#Content .product_summary .owl-carousel.slider1 .owl-dots button.owl-dot:nth-child(3) {
+  background-image: url("https://picsum.photos/105/105?image=412");
+}
+#Content .product_summary .owl-carousel.slider1 .owl-dots button.owl-dot:nth-child(4) {
+  background-image: url("https://picsum.photos/105/105?image=413");
+}
+#Content .product_summary .owl-carousel.slider1 .owl-nav button.owl-prev {
+  display: none;
+}
+#Content .product_summary .owl-carousel.slider1 .owl-nav button.owl-next {
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  padding: 31px 5px!important;
+  right: 20%;
+  transition: background-color 0.5s ease;
+}
+#Content .product_summary .owl-carousel.slider1 .owl-nav button.owl-next:focus {
+  outline: none;
+}
+#Content .product_summary .owl-carousel.slider1 .owl-nav button.owl-next:active {
+  background-color: #D6B161;
+}
+#Content .product_summary .crumbs a {
+  margin-right: 10px;
+}
+#Content .product_summary .crumbs i {
+  margin-right: 10px;
+}
+#Content .product_summary .title {
+  margin-top: 15px;
+  color: #000;
+  letter-spacing: 5px;
+}
+#Content .product_summary .rank {
+  margin-top: 18px;
+}
+#Content .product_summary .rank i.fa-star {
+  color: #D6B161;
+}
+#Content .product_summary .rank i.fa-star-o {
+  margin-right: 6px;
+}
+#Content .product_summary .interaction {
+  margin-top: 30px;
+}
+#Content .product_summary .interaction a {
+  margin-right: 26px;
+}
+#Content .product_summary .interaction a i {
+  margin-right: 9px;
+}
+#Content .product_summary hr {
+  margin-top: 30px;
+}
+#Content .product_summary p {
+  font-size: 16px;
+}
+#Content .product_summary .price {
+  margin-top: 14px;
+  font-size: 29px;
+  font-family: Montserrat, sans-serif;
+  color: #000;
+}
+#Content .product_summary .price span {
+  font-size: 18px;
+  font-family: Montserrat, sans-serif;
+  color: #929292;
+  text-decoration: line-through;
+}
+#Content .product_summary form {
+  margin-top: 30px;
+  /*spinner請教老師怎麼客製化!*/
+}
+#Content .product_summary form span {
+  margin-right: 26px;
+}
+#Content .product_summary form input[type="number"] {
+  margin-right: 11px;
+  padding: 17.5px 12px;
+  height: 50px;
+  border-radius: 43px;
+}
+#Content .product_summary form button[type="submit"] {
+  width: 173px;
+  background-color: #f46060;
+  font-family: Montserrat, sans-serif;
+  color: white;
+  padding: 15px 0px;
+  border-radius: 45px;
+}
+#Content .product_info {
+  margin-top: 76px;
+}
+#Content .product_info ul {
+  text-align: center;
+  margin: 0px;
+}
+#Content .product_info li {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+}
+#Content .product_info li.active {
+  border-bottom: 3px solid black;
+  padding-bottom: 10px;
+  color: #232323;
+}
+#Content .product_info li:nth-child(2) {
+  margin: 0 55px;
+}
+#Content .product_info hr {
+  margin-top: 0px;
+  margin-bottom: 54px;
+}
+#Content .product_info .tabcontent {
+  display: none;
+  word-wrap: break-word;
+}
+#Content .product_info .tabcontent.active {
+  display: block;
+}
+#Content .related_products {
+  margin-top: 115px;
+}
+#Content .related_products .title {
+  font-family: Montserrat, sans-serif;
+  color: #535353;
+}
+#Content .related_products .owl-carousel.slider2 {
+  margin-top: 37px;
+}
+#Content .related_products .owl-carousel.slider2 .item,
+#Content .related_products .owl-carousel.slider2 .item-with-rank {
+  position: relative;
+  z-index: -1;
+}
+#Content .related_products .owl-carousel.slider2 .item .discount,
+#Content .related_products .owl-carousel.slider2 .item-with-rank .discount {
+  position: absolute;
+  top: 10%;
+  padding: 5px 10px;
+  background-color: #b2cc29;
+  font-family: Montserrat, sans-serif;
+  color: white;
+}
+#Content .related_products .owl-carousel.slider2 .item .new,
+#Content .related_products .owl-carousel.slider2 .item-with-rank .new {
+  position: absolute;
+  top: 10%;
+  padding: 5px 10px;
+  background-color: #000;
+  font-family: Montserrat, sans-serif;
+  color: white;
+}
+#Content .related_products .owl-carousel.slider2 .item .new.couple,
+#Content .related_products .owl-carousel.slider2 .item-with-rank .new.couple {
+  top: 23%;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover {
+  position: relative;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s linear;
+  z-index: 1;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover:hover .cover-context li {
+  opacity: 0.9;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover .cover-context {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover .cover-context li {
+  opacity: 0;
+  float: left;
+  padding: 15px 0px;
+  border: 1px solid rgba(92, 92, 92, 0.5);
+  background-color: #fff;
+  transition: all 0.3s linear;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover .cover-context li:first-child {
+  border-right-color: transparent;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover .cover-context li:first-child:hover {
+  background-color: #D6B161;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover .cover-context li:first-child:hover a {
+  color: white;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover .cover-context li:nth-child(2) {
+  padding: 0px;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover .cover-context li:nth-child(2) div {
+  transition: all 0.3s linear;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover .cover-context li:nth-child(2) div:hover {
+  background-color: #D6B161;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover .cover-context li:nth-child(2) div:hover a {
+  color: white;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover .cover-context li:nth-child(2) div:first-child {
+  border-right: 1px solid rgba(92, 92, 92, 0.5);
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover .cover-context li .col-xs-6 {
+  padding: 15px 0px;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover .cover-context li a {
+  color: #929292;
+  text-transform: capitalize;
+}
+#Content .related_products .owl-carousel.slider2 .for-cover .cover .cover-context li a i.icon-handbag {
+  padding-right: 8px;
+}
+#Content .related_products .owl-carousel.slider2 .name-price.rank,
+#Content .related_products .owl-carousel.slider2 .name-price {
+  position: relative;
+  z-index: 0;
+}
+#Content .related_products .owl-carousel.slider2 .name-price {
+  bottom: 18px;
+  padding-left: 20px;
+}
+#Content .related_products .owl-carousel.slider2 .name-price .name {
+  padding-top: 35px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+#Content .related_products .owl-carousel.slider2 .name-price .price {
+  padding-top: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+}
+#Content .related_products .owl-carousel.slider2 .name-price .price i {
+  padding-right: 5px;
+}
+#Content .related_products .owl-carousel.slider2 .name-price.rank {
+  bottom: 32px;
+  padding-top: 0px;
+}
+#Content .related_products .owl-carousel.slider2 .name-price.rank .name {
+  padding-top: 29px;
+}
+#Content .related_products .owl-carousel.slider2 .name-price.rank .rank li {
+  float: left;
+}
+#Content .related_products .owl-carousel.slider2 .name-price.rank .rank li i.fa-star {
+  color: #D6B161;
+}
+#Content .related_products .owl-carousel.slider2 .owl-nav {
+  position: absolute;
+  top: -19.5%;
+  right: 0;
+  border-radius: 19px;
+  padding: 4px 5px;
+  background-color: #eee;
+}
+#Content .related_products .owl-carousel.slider2 .owl-nav button {
+  margin: 0px 1px;
+  padding: 5px 11.781px !important;
+  border-radius: 50%;
+  background-color: white;
+}
+#Content .related_products .owl-carousel.slider2 .owl-nav button:focus {
+  outline: none;
+}
+#Content .related_products .owl-carousel.slider2 .owl-nav button:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#Content .related_products .owl-carousel.slider2 .owl-nav i {
+  font-size: 18px;
+}
+/*---------------------------------Footer--------------------------*/
+#Footer {
+  margin-top: 160px;
+}
+#Footer .misc {
+  background-color: #f6f6f6;
+}
+#Footer .misc .container {
+  /*原本寫成padding:72px 0px 75px 0px;導致不小心把container內建
+			的padding給覆蓋掉，然後就跑版了!fk~*/
+  padding-top: 72px;
+  padding-bottom: 75px;
+}
+#Footer .col-left {
+  font-weight: 700;
+  color: #a8a8a8;
+}
+#Footer .col-left a {
+  text-transform: capitalize;
+  color: #a8a8a8;
+}
+#Footer .col-left div i {
+  padding-right: 3px;
+}
+#Footer .col-left div i.fa-map-marker {
+  display: inline-block;
+  position: relative;
+  top: -15px;
+}
+#Footer .col-left div.address a {
+  display: inline-block;
+}
+#Footer .col-left #logo-gray {
+  padding-bottom: 30px;
+  width: 112px;
+}
+#Footer .col-left p {
+  padding-bottom: 30px;
+}
+#Footer .col-left .address {
+  padding-bottom: 30px;
+}
+#Footer .col-center .col-inner > a {
+  text-transform: capitalize;
+  cursor: pointer;
+  padding-left: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #575757;
+}
+#Footer .col-center .col-inner > a:hover {
+  text-decoration: none;
+}
+#Footer .col-center .col-inner ul.collapse.in {
+  padding-top: 27px;
+}
+#Footer .col-center .col-inner ul.collapsing {
+  padding-top: 27px;
+}
+#Footer .col-center .col-inner li a {
+  color: #929292;
+  line-height: 30px;
+  text-transform: capitalize;
+  font-weight: 700;
+  display: block;
+}
+#Footer .col-right .sign-up {
+  text-align: right;
+}
+#Footer .col-right .sign-up > li {
+  padding-bottom: 30px;
+  font-weight: 700;
+}
+#Footer .col-right .sign-up li.title {
+  font-size: 18px;
+  color: #575757;
+  padding-bottom: 30px;
+}
+#Footer .col-right .sign-up li.email {
+  position: relative;
+  padding-bottom: 0px;
+  margin-bottom: 30px;
+}
+#Footer .col-right .sign-up li i.fa-angle-right {
+  position: absolute;
+  right: 10%;
+  bottom: 50%;
+  transform: translateY(50%);
+  font-size: 16px;
+  cursor: pointer;
+}
+#Footer .col-right .sign-up li.bold {
+  padding-bottom: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #494949;
+}
+#Footer .col-right .sign-up ul.social {
+  float: right;
+}
+#Footer .col-right .sign-up ul.social li {
+  float: left;
+}
+#Footer .col-right .sign-up ul.social li a {
+  padding-left: 10px;
+  font-size: 16px;
+  color: #494949;
+}
+#Footer .col-right .sign-up input {
+  padding: 10px 0px;
+  padding-left: 20px;
+  background-color: #f6f6f6;
+  border-radius: 23px;
+  width: 100%;
+  border: 1px solid #868686;
+}
+#Footer .col-right .sign-up input:focus {
+  outline: none;
+  border: 1px solid #66afe9;
+}
+#Footer .copy-right .container {
+  padding-top: 40px;
+  padding-bottom: 95px;
+}
+#Footer .copy-right .col-xs-6 p {
+  font-weight: 700;
+}
+#Footer .copy-right .col-xs-6 a {
+  color: black;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0px;
+  transition: all 0.3s linear;
+}
+#Footer .copy-right .col-xs-6 a:hover {
+  color: red;
+}
+#Footer .copy-right .col-xs-6 .pay-method {
+  float: right;
+  width: 117px;
+}
+#Footer .copy-right .col-xs-6 .pay-method img {
+  position: relative;
+  bottom: 3px;
+}
+/*--------------------------------------------------------RWD-------------------------------------------------------*/
+@media screen and (max-width: 1229px) {
+  div#nav1 {
+    text-align: center;
+  }
+  .navbar-default {
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar-default .navbar-nav > li .twicks {
+    position: relative;
+    bottom: 5px;
+  }
+  .navbar-default .navbar-nav > li > a div.count {
+    bottom: 2px;
+    right: 3px;
+  }
+  .navbar-default .navbar-text {
+    padding-top: 43.5px;
+  }
+  .navbar-default ul.nav.navbar-nav.navbar-right {
+    padding-bottom: 36px;
+  }
+  .navbar-toggle {
+    margin-right: 53px;
+    padding: 10px 10px;
+    margin-top: 41px;
+  }
+  #Content .product_summary .owl-carousel.slider1 .slide-1,
+  #Content .product_summary .owl-carousel.slider1 .slide-2,
+  #Content .product_summary .owl-carousel.slider1 .slide-3,
+  #Content .product_summary .owl-carousel.slider1 .slide-4 {
+    width: 89.9%;
+  }
+  #Content .product_summary .owl-carousel.slider1 .owl-nav button.owl-next {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  #Content .product_summary .col-md-6.left {
+    width: 50%;
+  }
+  #Content .product_summary .col-md-6.right {
+    width: 50%;
+  }
+  #Content .product_summary .owl-carousel.slider1 {
+    margin-left: 0px;
+  }
+  #Content .product_summary .owl-carousel.slider1 .slide-1,
+  #Content .product_summary .owl-carousel.slider1 .slide-2,
+  #Content .product_summary .owl-carousel.slider1 .slide-3,
+  #Content .product_summary .owl-carousel.slider1 .slide-4 {
+    width: 90%;
+  }
+  #Content .product_summary .owl-carousel.slider1 .owl-dots {
+    text-align: center;
+  }
+  #Content .product_summary .owl-carousel.slider1 .owl-dots button.owl-dot:first-child {
+    background-image: url("https://picsum.photos/105/105?image=410");
+    margin-bottom: 20px;
+  }
+  #Content .product_summary .owl-carousel.slider1 .owl-dots button.owl-dot:nth-child(2) {
+    background-image: url("https://picsum.photos/105/105?image=411");
+    margin-bottom: 20px;
+  }
+  #Content .product_summary .owl-carousel.slider1 .owl-nav button.owl-next {
+    display: none;
+  }
+  #Footer .row .col-x {
+    text-align: center;
+  }
+  #Footer .row > .col-left {
+    float: none;
+  }
+  #Footer .row > .col-left i.fa-map-marker {
+    top: -20px;
+  }
+  #Footer .row > .col-left #logo-gray {
+    margin: 0 auto;
+  }
+  #Footer .row > .col-center {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #Footer .row > .col-center .col-inner {
+    padding-bottom: 20px;
+  }
+  #Footer .row > .col-right li {
+    position: relative;
+    text-align: center;
+  }
+  #Footer .row > .col-right li input {
+    width: 50%;
+    min-width: 218px;
+  }
+  #Footer .row > .col-right li i.fa-angle-right {
+    right: 30%;
+  }
+  #Footer .row > .col-right li.social {
+    width: 153px;
+    display: block;
+    margin: 0 auto;
+  }
+  #Footer .row > .col-right li.social ul.social {
+    float: none;
+  }
+  #Footer .row > .col-right li.social ul.social a {
+    padding: 0px 10px 0px 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  a.navbar-brand {
+    padding-left: 7px;
+  }
+  .navbar-toggle {
+    margin-right: 7px;
+  }
+  #Content .product_summary .col-xs-12.left {
+    width: 100%;
+  }
+  #Content .product_summary .col-xs-12.right {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #Content .product_summary .owl-carousel.slider1 .slide-1,
+  #Content .product_summary .owl-carousel.slider1 .slide-2,
+  #Content .product_summary .owl-carousel.slider1 .slide-3,
+  #Content .product_summary .owl-carousel.slider1 .slide-4 {
+    width: 100%;
+  }
+  #Content .product_summary form {
+    /*spinner請教老師怎麼客製化!*/
+  }
+  #Content .product_summary form span {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  #Content .product_summary form input[type="number"] {
+    max-width: 320px;
+  }
+}
+@media screen and (max-width: 525px) {
+  #Content .product_info li {
+    display: block;
+    margin: 0px auto;
+    margin-top: 20px;
+  }
+  #Content .product_info li:first-child {
+    margin-top: 0px;
+  }
+  #Content .product_info li:nth-child(2) {
+    margin: 0px auto;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 464px) {
+  #Footer .col-right .sign-up li i.fa-angle-right {
+    position: static;
+    bottom: 50%;
+    transform: translate(-600%, 0%);
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=product_detail.css.map */

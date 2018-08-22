@@ -38,8 +38,8 @@
 				}
 			],
 			"sources": [
-				"basic.less",
-				"about.less"
+				"about.less",
+				"basic.less"
 			]
 		},
 		"less/home.less": {
@@ -117,8 +117,68 @@
 				}
 			],
 			"sources": [
+				"blog_sidebar.less",
+				"basic.less"
+			]
+		},
+		"less/blog_post.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/blog_post.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
+				"blog_post.less",
+				"basic.less"
+			]
+		},
+		"less/prodcut_detail.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/prodcut_detail.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
+				"prodcut_detail.less",
+				"basic.less"
+			]
+		},
+		"less/product_detail.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/product_detail.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
 				"basic.less",
-				"blog_sidebar.less"
+				"product_detail.less"
 			]
 		}
 	}

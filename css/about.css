@@ -40,7 +40,9 @@ img {
   width: 100%;
 }
 a {
+  text-decoration: none;
   text-transform: uppercase;
+  color: #929292;
 }
 a:hover,
 a:focus,
@@ -103,7 +105,6 @@ li {
 .col-1 {
   width: calc(8.33333333%);
 }
-/*--------------------------------style.customize-----------------------------------------*/
 .container {
   position: relative;
   display: block;

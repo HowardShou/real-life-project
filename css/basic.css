@@ -42,9 +42,13 @@ img {
 a {
   text-decoration: none;
   text-transform: uppercase;
+  color: #929292;
 }
-a:hover {
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
+  outline: none;
 }
 li {
   list-style-type: none;
@@ -101,28 +105,11 @@ li {
 .col-1 {
   width: calc(8.33333333%);
 }
-/*--------------------------------style.customize-----------------------------------------*/
 .container {
-  max-width: 1200px;
   position: relative;
+  display: block;
+  max-width: 1200px;
   margin: 0 auto;
-}
-.row {
-  margin: 0 -15px;
-}
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
-  padding: 0 15px;
 }
 
 /*# sourceMappingURL=basic.css.map */

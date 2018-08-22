@@ -1,0 +1,736 @@
+/*--------------------------------style.always-----------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  color: #929292;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  margin: 0;
+}
+h3 {
+  margin: 0;
+}
+h4 {
+  margin: 0;
+}
+h5 {
+  margin: 0;
+}
+h6 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #929292;
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+li {
+  list-style-type: none;
+}
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  float: left;
+}
+.col-12 {
+  width: calc(100%);
+}
+.col-11 {
+  width: calc(91.66666667%);
+}
+.col-10 {
+  width: calc(83.33333333%);
+}
+.col-9 {
+  width: calc(75%);
+}
+.col-8 {
+  width: calc(66.66666667%);
+}
+.col-7 {
+  width: calc(58.33333333%);
+}
+.col-6 {
+  width: calc(50%);
+}
+.col-5 {
+  width: calc(41.66666667%);
+}
+.col-4 {
+  width: calc(33.33333333%);
+}
+.col-2 {
+  width: calc(16.66666667%);
+}
+.col-1 {
+  width: calc(8.33333333%);
+}
+.container {
+  position: relative;
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/*--------------------------------style.customize-----------------------------------------*/
+/*目前順序:
+1.必要時先畫出草稿，讓自己心裡大概有個底
+2.html框架，現在已經會bootstrap盡量在這階段就使用bootstrap順便做layout
+3.html完換CSS，此時先把css的layout搞定(小技巧:在psdetch先看每個大先抓大的明顯的段落間距)
+※記得好好用google的dev tool!包括直接測試、找程式碼等
+*/
+/*----------------------------Header------------------------------*/
+#Header .navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+#Header .navbar-brand {
+  height: auto;
+  padding: 44px 42px 50px 53px;
+  line-height: normal;
+}
+#Header .navbar {
+  margin-bottom: 0px;
+}
+#Header .navbar-default {
+  font-family: Montserrat, sans-serif;
+}
+#Header .navbar-default .navbar-nav > li .twicks {
+  position: relative;
+  bottom: 5px;
+}
+#Header .navbar-default .navbar-nav > li > a {
+  display: inline-block;
+  color: black;
+  transition: color 0.3s ease;
+}
+#Header .navbar-default .navbar-nav > li > a:active {
+  color: #D6B161;
+}
+#Header .navbar-default .navbar-nav > li > a:hover {
+  color: #D6B161;
+}
+#Header .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
+#Header .navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+  margin: 0;
+}
+#Header .navbar-default .navbar-nav > li > a div.count {
+  background-color: black;
+  position: absolute;
+  bottom: 6px;
+  right: 3px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  font-size: 8px;
+  font-weight: 400;
+  color: white;
+  transition: background-color 0.2s linear;
+}
+#Header .navbar-default .navbar-nav > li > a div.count:hover {
+  background: #D6B161;
+}
+#Header .navbar-default .navbar-text {
+  margin: 0;
+  padding-top: 53px;
+  color: black;
+}
+#Header ul.nav.navbar-nav.navbar-right {
+  padding-top: 38px;
+}
+#Header .blog-title1 {
+  background: #f4f4f4;
+  padding: 72px 0px 60px 0px;
+  text-align: center;
+}
+#Header .blog-title1 h1 {
+  color: #494949;
+  font-family: Montserrat, sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#Header .blog-title1 p {
+  padding-top: 18px;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #494949;
+}
+#Header .blog-title2 {
+  background-color: #eeeeee;
+}
+#Header .blog-title2 .col-sm-4 {
+  height: 45px;
+  line-height: 45px;
+}
+#Header .blog-title2 .col-sm-4 form {
+  display: inline-block;
+}
+#Header .blog-title2 .col-sm-4 form * {
+  display: inline-block;
+}
+#Header .blog-title2 .col-sm-4 form .form-group {
+  margin-bottom: 0px;
+}
+#Header .blog-title2 .col-sm-4 form .form-control {
+  padding: 6px 0px;
+}
+#Header .blog-title2 .col-sm-4 form label {
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+#Header .blog-title2 .col-sm-4 form label:active ~ input {
+  opacity: 1;
+}
+#Header .blog-title2 .col-sm-4 form label:hover ~ input {
+  opacity: 1;
+}
+#Header .blog-title2 .col-sm-4 form label i {
+  padding-left: 3px;
+}
+#Header .blog-title2 .col-sm-4 form input {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+  transition: all 0.3s linear;
+}
+#Header .blog-title2 .col-sm-4 form input:focus {
+  opacity: 1;
+  width: 65%;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+#Header .blog-title2 .col-sm-4 form p {
+  display: inline-block;
+  margin-left: 30px;
+}
+#Header .blog-title2 .col-sm-4 form p a {
+  margin-left: 13px;
+  color: #929292;
+}
+#Header .blog-title2 .col-sm-4.text-left a {
+  margin-right: 10px;
+}
+#Header .blog-title2 .col-sm-4.text-left i {
+  margin-right: 10px;
+}
+/*----------------------------------Content-----------------------*/
+#Content {
+  margin-top: 48px;
+  /*layout部分想蠻久的，不過最後是正確的，而且這次有記得先把每段的mt都先做出來，沒放類太多時間一直切畫面，
+	牡蠣~*/
+}
+#Content .main-picture {
+  position: relative;
+}
+#Content .main-picture .date-and-month {
+  position: absolute;
+  top: 53px;
+  left: 56px;
+  background-color: #fff;
+  display: inline-block;
+  text-align: center;
+  color: #737373;
+  width: 78px;
+  padding: 11.5px 0px;
+}
+#Content .main-picture .date-and-month .date {
+  font-size: 30px;
+  font-weight: bold;
+}
+#Content .main-picture .date-and-month .month {
+  font-size: 20px;
+}
+#Content .main-picture .share {
+  position: absolute;
+  top: 53px;
+  right: 56px;
+  font-size: 16px;
+}
+#Content .main-picture .share a {
+  margin-left: 17px;
+  color: rgba(0, 0, 0, 0.5);
+}
+#Content .container.inner {
+  padding-top: 56px;
+  max-width: 1100px;
+  background-color: #fff;
+  position: relative;
+  top: -56px;
+}
+#Content .container.inner .summary {
+  padding: 0px 84px 0px 58px;
+}
+#Content .container.inner .summary .title {
+  font-size: 30px;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  color: #494949;
+}
+#Content .container.inner .summary ul {
+  margin-top: 24px;
+}
+#Content .container.inner .summary ul li {
+  display: inline-block;
+  font-style: italic;
+  margin-right: 40px;
+}
+#Content .container.inner .summary ul li i {
+  margin-right: 4px;
+}
+#Content .container.inner .summary p {
+  margin-top: 35px;
+  color: #494949;
+  line-height: 2em;
+}
+#Content .container.inner .pictures {
+  max-width: 882px;
+  margin-top: 62px;
+}
+#Content .container.inner .pictures .n2 {
+  margin-top: 38px;
+}
+#Content .container.inner .middle {
+  margin-top: 124px;
+  line-height: 2em;
+}
+#Content .container.inner .author_and_comments {
+  max-width: 866px;
+  margin-top: 193px;
+}
+#Content .container.inner .author_and_comments .author {
+  padding: 42px 47px;
+  background-color: #f4f4f4;
+}
+#Content .container.inner .author_and_comments .author .photo {
+  display: inline-block;
+  margin-right: 37px;
+  max-width: 18%;
+  /* width:146px;
+					height:146px; */
+}
+#Content .container.inner .author_and_comments .author .info {
+  position: relative;
+  bottom: 11px;
+  display: inline-block;
+  /* max-width: 576px; */
+  max-width: 75%;
+}
+#Content .container.inner .author_and_comments .author .info * {
+  margin-top: 10px;
+}
+#Content .container.inner .author_and_comments .author .info .name {
+  font-size: 18px;
+  color: #232323;
+}
+#Content .container.inner .author_and_comments .author .info .socials a {
+  margin-left: 10px;
+}
+#Content .container.inner .author_and_comments .comments {
+  margin-top: 130px;
+}
+#Content .container.inner .author_and_comments .comments .title {
+  font-size: 22px;
+  font-family: Montserrat, sans-serif;
+  color: #737373;
+}
+#Content .container.inner .author_and_comments .comments hr.title {
+  margin-top: 10px;
+  margin-bottom: 0;
+  border: 0;
+  border-top: 2px solid #737373;
+  margin-right: 91%;
+}
+#Content .container.inner .author_and_comments .comments .commentatories {
+  margin-top: 50px;
+}
+#Content .container.inner .author_and_comments .comments .commentatories .photo {
+  float: left;
+  margin: 0px 20px;
+  width: 65px;
+  height: 65px;
+}
+#Content .container.inner .author_and_comments .comments .commentatories .comment_info {
+  display: inline-block;
+  max-width: 757px;
+}
+#Content .container.inner .author_and_comments .comments .commentatories .comment_info .name {
+  color: #737373;
+  font-weight: bold;
+}
+#Content .container.inner .author_and_comments .comments .commentatories .comment_info .date {
+  font-size: 11px;
+  font-style: italic;
+}
+#Content .container.inner .author_and_comments .comments .commentatories .comment_info p {
+  margin-top: 24px;
+}
+#Content .container.inner .author_and_comments .comments .commentatories .comment_info hr {
+  margin-top: 43px;
+  margin-bottom: 56px;
+}
+#Content .container.inner .author_and_comments .comments .commentatories .comment_info .commentator.inner .comment_info {
+  max-width: 652px;
+}
+#Content .container.inner .author_and_comments form {
+  margin-top: 164px;
+}
+#Content .container.inner .author_and_comments form .title {
+  font-size: 30px;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  color: #494949;
+  margin-bottom: 46px;
+}
+#Content .container.inner .author_and_comments form textarea.form-control {
+  height: 108px;
+}
+#Content .container.inner .author_and_comments form [type="submit"].form-control {
+  width: 92px;
+  height: 47px;
+}
+#Content .container.inner .author_and_comments form [type="email"] {
+  margin: 0px 13px;
+}
+#Content .container.inner .author_and_comments form .form-control {
+  display: block;
+  margin-bottom: 16px;
+  width: 100%;
+  height: 34px;
+  background-color: #f7f7f7;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+#Content .container.inner .author_and_comments form .form-control:focus {
+  border: 1px solid #D6B161;
+  box-shadow: inset 0 1px 1px rgba(136, 111, 61, 0.075);
+}
+#Content .container.inner .author_and_comments form .form-control.inline {
+  display: inline-block;
+  max-width: 32%;
+  height: 47px;
+}
+/*---------------------------------Footer--------------------------*/
+#Footer {
+  margin-top: 152px;
+}
+#Footer .misc {
+  background-color: #f6f6f6;
+}
+#Footer .misc .container {
+  padding-top: 82px;
+}
+#Footer .col-left .col-inner > a {
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 18px;
+  color: #575757;
+}
+#Footer .col-left .col-inner > a:hover {
+  text-decoration: none;
+}
+#Footer .col-left .col-inner ul.collapse.in {
+  padding-left: 2px;
+  padding-top: 20px;
+}
+#Footer .col-left .col-inner ul.collapsing {
+  padding-left: 2px;
+  padding-top: 20px;
+}
+#Footer .col-left .col-inner li a {
+  color: #929292;
+  line-height: 30px;
+  text-transform: capitalize;
+  font-weight: 700;
+  display: block;
+}
+#Footer .col-right {
+  font-weight: 700;
+  color: #a8a8a8;
+}
+#Footer .col-right a {
+  text-transform: capitalize;
+  color: #a8a8a8;
+}
+#Footer .col-right div i {
+  padding-right: 3px;
+}
+#Footer .col-right div i.fa-map-marker {
+  display: inline-block;
+  position: relative;
+}
+#Footer .col-right #logo-gray {
+  margin-top: 11px;
+  width: 112px;
+}
+#Footer .col-right .contact_info {
+  margin-top: 58px;
+  line-height: 1.9rem;
+}
+#Footer .col-right .contact_info a {
+  display: inline-block;
+}
+#Footer .copy-right {
+  padding-top: 76px;
+  padding-bottom: 117px;
+  background-color: #f6f6f6;
+}
+#Footer .copy-right p {
+  font-weight: 700;
+  width: 245px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+#Footer .copy-right p a {
+  color: black;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0px;
+  transition: all 0.3s linear;
+}
+#Footer .copy-right p a:hover {
+  color: red;
+}
+#Footer .copy-right .pay-method {
+  margin: 0 auto;
+  width: 117px;
+}
+#Footer .copy-right .pay-method img {
+  position: relative;
+  bottom: 3px;
+}
+/*--------------------------------------------------------RWD-------------------------------------------------------*/
+/*這次在Header的form那邊犯了一個致命的錯誤:應該先從上往下設定!因為我這邊的斷點都是用max-width啊!
+導致同樣的東西重寫了好幾次，浪費了一堆時間，務必注意!*/
+@media screen and (max-width: 1229px) {
+  #Header div#nav1 {
+    text-align: center;
+  }
+  #Header .navbar-default {
+    font-family: Montserrat, sans-serif;
+  }
+  #Header .navbar-default .navbar-nav > li .twicks {
+    position: relative;
+    bottom: 5px;
+  }
+  #Header .navbar-default .navbar-nav > li > a div.count {
+    bottom: 2px;
+    right: 3px;
+  }
+  #Header .navbar-default .navbar-text {
+    padding-top: 43.5px;
+  }
+  #Header .navbar-default ul.nav.navbar-nav.navbar-right {
+    padding-bottom: 36px;
+  }
+  #Header .navbar-toggle {
+    margin-right: 53px;
+    padding: 10px 10px;
+    margin-top: 41px;
+  }
+  #Header .blog-title2 .col-sm-4 form {
+    display: block;
+  }
+  #Header .blog-title2 .col-sm-4 form input:focus {
+    width: 63%;
+  }
+  #Header .blog-title2 .col-sm-4 form .form-group {
+    width: 67%;
+    float: left;
+    /*這個ta-l超重要，否則這個form-group的內容不會對到最左邊，
+						跟上面的float-left有各自存在的意義!*/
+    text-align: left;
+  }
+  #Header .blog-title2 .col-sm-4 form p {
+    margin-left: 0px;
+    float: right;
+  }
+  #Content .container.inner {
+    max-width: 880px;
+  }
+  #Content .container.inner .author_and_comments .comments .commentatories .photo {
+    margin: 0px 0px;
+    margin-right: 22px;
+  }
+}
+@media screen and (max-width: 991px) {
+  #Header .blog-title2 .col-sm-4 form {
+    display: block;
+  }
+  #Header .blog-title2 .col-sm-4 form input:focus {
+    width: 41%;
+  }
+  #Header .blog-title2 .col-sm-4 form .form-group {
+    width: 56%;
+    float: left;
+    /*這個ta-l超重要，否則這個form-group的內容不會對到最左邊，
+						跟上面的float-left有各自存在的意義!*/
+    text-align: left;
+  }
+  #Header .blog-title2 .col-sm-4 form p {
+    margin-left: 0px;
+    float: right;
+  }
+  #Content .container.inner {
+    padding-top: 56px;
+    max-width: 100%;
+    position: static;
+    top: none;
+  }
+  #Content .container.inner .author_and_comments .author .photo {
+    position: relative;
+    bottom: 28px;
+  }
+  #Content .container.inner .author_and_comments .comments .commentatories .photo {
+    margin: 0px 0px;
+    margin-right: 5px;
+  }
+  #Content .container.inner .author_and_comments form [type="submit"].form-control {
+    width: 92px;
+    height: 47px;
+  }
+  #Content .container.inner .author_and_comments form [type="email"] {
+    margin: 0px 0px;
+    margin-bottom: 16px;
+  }
+  #Content .container.inner .author_and_comments form .form-control.inline {
+    display: block;
+    max-width: 70%;
+  }
+  #Footer .row {
+    /*記住:after和:before是怎麼運作了...*/
+  }
+  #Footer .row * {
+    float: none!important;
+  }
+  #Footer .row .col-x {
+    text-align: center;
+  }
+  #Footer .row > .col-right {
+    float: none;
+  }
+  #Footer .row > .col-right #logo-gray {
+    width: 112px;
+    margin: 0 auto;
+  }
+  #Footer .row > .col-left {
+    padding-bottom: 30px;
+  }
+  #Footer .row > .col-left .col-inner {
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #Header .blog-title2 .col-sm-4 {
+    text-align: center;
+  }
+  #Header .blog-title2 .col-sm-4 form {
+    display: block;
+  }
+  #Header .blog-title2 .col-sm-4 form input:focus {
+    width: 65%;
+  }
+  #Header .blog-title2 .col-sm-4 form [type="search"] {
+    /*不小心再這邊讓input常駐了width，加上前面又把它設opacity:0;浪費一堆時間找... 
+						width: 76%;*/
+    display: inline-block;
+  }
+  #Header .blog-title2 .col-sm-4 form .form-group {
+    float: left;
+    /*這個ta-l超重要，否則這個form-group的內容不會對到最左邊，
+						跟上面的float-left有各自存在的意義!*/
+    text-align: left;
+  }
+  #Header .blog-title2 .col-sm-4 form p {
+    margin-left: 0px;
+    float: right;
+  }
+  #Content .main-picture .date-and-month {
+    top: 17px;
+    left: 17px;
+  }
+  #Content .main-picture .share {
+    top: 17px;
+    right: 17px;
+  }
+  #Content .container.inner .summary {
+    padding: 0px 0px;
+  }
+  #Content .container.inner .pictures .center .n1 {
+    margin-top: 38px;
+  }
+  #Content .container.inner .pictures .right .n1 {
+    margin-top: 38px;
+  }
+  #Content .container.inner .author_and_comments .author .photo {
+    position: static;
+    margin: 0 auto;
+    max-width: 100%;
+    display: block;
+  }
+  #Content .container.inner .author_and_comments .author .info {
+    display: block;
+    max-width: 100%;
+  }
+  #Content .container.inner .author_and_comments .author .info .name {
+    margin-top: 25px;
+  }
+  #Content .container.inner .author_and_comments .comments .commentatories .photo {
+    margin: 0px 0px;
+    margin-right: 5px;
+  }
+  #Content .container.inner .author_and_comments form {
+    margin-top: 58px;
+  }
+  #Header a.navbar-brand {
+    padding-left: 7px;
+  }
+  #Header .navbar-toggle {
+    margin-right: 7px;
+  }
+}
+
+/*# sourceMappingURL=blog_post.css.map */

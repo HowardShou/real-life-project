@@ -263,20 +263,31 @@
 			ul{
 			    margin-top: 29px;
 			    margin-bottom: 77px;
-			    line-height: 2.5rem;
+			    line-height: 1.42857143;
 			}
+			/*1.這是第一種寫法，但是我和助教都覺得float是比較差的解決方案，能夠用inline-block解決最好
+			，目前的結論是:當左右兩個inline-block的容器高度差不多時，可以用inline-block取代float
+
+			2.助教認為width最好都還是用%數計算最保險，一起改掉*/
 			.intro{
 				display: inline-block;
-				margin-right: 17px;
+				width: 75%;
+				margin-right: 15px;
 			}
 			.photo{
+				display: inline-block;
 				position: relative;
-    			top: 6px;
-				width:64px;
-				height: 64px;
+    			margin-top: 6px;
+    			width: 17%;
+    			top: 7px;
 			}
-			p{
-				margin-top: 29px;
+			&.tag{
+				a{
+					display: block;
+					margin-top: 29px;
+					color: #929292;
+					text-transform: lowercase;
+				}
 			}
 		}
 	}
