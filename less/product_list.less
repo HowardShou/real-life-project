@@ -1,0 +1,880 @@
+@import "basic";
+
+/*---------------------------------product-list.css--------------------------------------------*/
+
+/*---------------------------customize------------------------------*/
+.rank {
+	i.fa-star{
+		color:@navi_active_color;
+	}
+}
+
+h2.title{
+	font-size: 20px;
+	font-family: @Mr;
+	color:#737373;
+}
+/*----------------------------Header------------------------------*/
+.navbar-default {
+    background-color: transparent; 
+    border-color: transparent; 
+}
+
+.navbar-brand{
+	height:auto;
+	padding:44px 42px 50px 53px;
+	line-height: normal;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-default{
+	font-family:@Mr;
+	.navbar-nav>li{
+		.twicks{
+			position: relative;
+			bottom:5px;
+		}
+	}
+	.navbar-nav>li>a {
+		display: inline-block;
+	    color: black;
+		transition:color 0.3s ease;
+	    &:active{
+			color:@navi_active_color;
+	    }
+	    &:hover{
+	    	color:@navi_active_color;	
+	    }
+	    [class^="icon-"]:before, [class*=" icon-"]:before {
+	    	margin: 0;
+	    }
+	    div.count {
+			background-color: @background_color_1;
+			position: absolute;
+			bottom: 6px;
+			right: 3px;
+			border-radius: 50%;
+			height: 20px;
+			width: 20px;
+			text-align: center;
+			font-size: 8px;
+			font-weight: 400;
+			color:white;
+			transition:background-color 0.2s linear;
+			&:hover{
+				background:#D6B161; 
+			}
+		}
+	}
+	.navbar-text{
+		margin:0;
+		padding-top:53px;
+		color:black;
+	}
+}
+
+ul.nav.navbar-nav.navbar-right{
+	padding-top:38px;
+} 
+
+.chairs {
+	background: #f4f4f4;
+	padding: 52px 0px 71px 0px;
+	text-align: center;
+	h1 {
+		color: @title-dark;
+		font-family: @Mr;
+		font-size: 44px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	p {
+		text-align: center;
+		margin-top: 26px;
+		text-transform: capitalize;
+		font-size: 14px;
+		color: @title-dark;
+		/*本來想運用跟home裡面feature一樣的after方法，但這邊需要用icon-fonts
+		css那個content不能放tag因此作罷*/
+		a{
+			margin-right: 7px;
+		}
+		i{
+			margin-right: 7px;
+		}
+	}
+}
+
+/*----------------------------------Content-----------------------*/
+#Content{
+	.container{
+		margin-top: 25px;
+		.sidebar{
+			.filter{
+				/*背景上色不及於margin 耍87*/
+				padding-top: 42px;
+				padding-bottom: 42px;
+				background-color: #f4f4f4;
+				.filter-class{
+					width: 78%;
+					margin: 0 auto;
+				}
+				.filter-by-brand{
+					margin-top: 42px;
+					h4{
+						font-size: 14px;
+						font-weight: bold;
+					}
+					ul{
+						margin-top: 22px;
+						.check-and-brand{
+							input[type="checkbox"]{
+								display: inline-block;
+								margin-right: 9px;
+							}
+							.brand{
+								display: inline-block;
+								position: relative;
+								/*input怪怪的只好這樣讓brand對齊*/
+								bottom:2px;
+							}
+						}
+					}
+				}
+				hr{
+					border-color: #e0e0e0;
+				}
+				.filter-by-price{
+					position: relative;
+					h4{
+						font-size: 14px;
+						font-weight: bold;
+					}
+					/*price-slider 用jqueryUI完工，牡蠣!*/
+					#slider-range{
+						margin-top: 21px;
+					}
+					.ui-widget-content{
+						background-color: #b3b3b3;
+					}
+					.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{
+						border-radius: 5px;
+					}
+					.ui-slider-horizontal{
+						height: 5px;
+						.ui-slider-handle{
+							top:-0.6rem;
+						}
+					}
+					.ui-widget-header{
+						background-color: #494949;
+						height: 5px;
+					}
+					span.ui-slider-handle.ui-corner-all.ui-state-default{
+						border-radius:15px;
+					    border: 4px solid #494949;
+					    background: #f2f2f2;
+					    &:focus{
+					    	outline:none;
+					    }
+					}
+					p{
+						margin-top: 21px;
+						display: inline-block;
+						label{
+							margin-right: 5px;
+						}
+						#amount{
+							color:#737373;
+							background-color: #f4f4f4;
+							/*沒把border設0會壞掉，input就是這樣*/
+							border: 0;
+							width: 113px;
+						}
+					}
+					input[type="submit"]{
+						background-color: #494949;
+						color:white;
+						border:0;
+						padding: 0px 10px;
+						border-radius: 5px;
+						&:focus{
+							outline: none;
+						}
+						&:active{
+							color:@navi_active_color;
+						}
+					}
+				}
+			}
+			.categories{
+				margin-top: 40px;
+				ul{
+					margin-top: 28px;
+					li{
+						padding:10px 0px;
+						border-bottom: 1px solid rgba(0,0,0,0.1);
+						font-family: @Mr;
+						font-size: 16px;
+						font-weight: bold;
+						color:#e6e6e6;
+						&:last-child{
+							border-bottom: 1px solid rgba(0,0,0,0);
+						}
+						.number{
+							float: right;
+							font-family: @SSP;
+							font-size: 14px;
+							color:@body_color;
+						}
+					}
+				}
+			}
+			.hot-sales{
+				margin-top: 70px;
+				.sale{
+					margin-top: 33px;
+					.photo{
+					    display: inline-block;
+					    margin-right: 10px;
+					    width: 29.5%;
+					}
+					.info{
+						position: relative;
+					    bottom: 15px;
+						display: inline-block;
+						width: 65%;
+						.subtitle{
+							color:rgb(149,149,149);
+							font-family: @Mr;
+							font-size: 12px;
+						}
+						.rank{
+							margin-top: 6px;
+							i {
+								margin: 0px;
+								font-size: 12px;
+								float: left;
+								/*i的間隙不是margin也不是p，用下面的ta-l也沒用，
+								還是只能出動float達到完全貼緊的效果
+								text-align: left;
+								 */ 
+							}
+						}
+						.price{
+							margin-top: 4px;
+							font-family: @Mr;
+							font-size: 16px;
+							color:#252528;
+							span{
+								margin-right: 15px;
+								text-decoration: line-through;
+								color:#959596;
+								font-size: 8px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.products{
+			.results-and-info{
+				.result span{
+					font-weight: bold;
+				}	
+				.sort-info{
+					li{
+						float: left;
+						transition: all 0.3s ease;
+						border:1px solid #a5a5a5;
+						padding: 10px 0px;
+						&:hover{
+							color:@navi_active_color;
+						}
+						a{	
+							transition: all 0.3s ease;
+							&:hover{
+								color: @navi_active_color;
+							}
+						}
+					}
+					/*拿w3schools做好的車子來用<3，當然也已經知道他運作的技巧囉*/
+					li.dropdown{
+   						display: inline-block;
+						position: relative;
+						border-radius:40px ;
+						text-align: center;
+						width: 146px;
+   						cursor:pointer;
+   						&:hover{
+   							.dropdown-content{
+   								display:block;
+   							}
+   						}
+   						.dropdown-content{
+   							display: none;
+						    position: absolute;
+						    right: 16px;
+						    background-color: #fff;
+						    min-width: 110px;
+						    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+						    z-index: 1;
+
+						    a{
+					    	    color: #929292;
+							    padding: 12px 16px;
+							    text-decoration: none;
+							    display: block;
+							    transition: all 0.3s ease;
+							    &:hover{
+							    	color:@navi_active_color;
+							    }
+
+						    }
+   						}
+					}
+					li.circle{
+						margin-left: 10px;
+						border-radius: 50%;
+						width: 40px;
+						text-align: center;
+					}
+				}
+			}
+			.products-info{
+				.row-inner:first-child{
+					margin-top: 20px;
+				}
+				.row-inner:nth-child(2),.row-inner:nth-child(3){
+					margin-top: 50px;
+				}
+				.item,.item-with-rank{
+					position: relative;
+					.discount{
+						position: absolute;
+						top:10%;
+						padding:5px 10px;
+						background-color:#b2cc29;
+						font-family: @Mr;
+						color:white;
+					}
+				}
+				.name-price{
+					padding-top: 18px;
+					padding-left: 20px;
+					.name{
+						font-size: 18px;
+						padding-top: 10px;
+						font-weight: 700;
+						text-transform: capitalize;
+					}
+					.price{
+						padding-top: 5px;
+						font-size: 18px;
+						font-weight: 700;
+						color:black;
+						i{
+							padding-right: 5px;
+						}
+					}
+				}
+				.name-price.rank{
+					padding-top: 0px;	
+				}
+				.rank li{
+					float: left;
+				}
+			}
+			nav[aria-label="Page navigation"]{
+				margin-top: 188px;
+				text-align: center;
+				ul{
+					margin: 0px;
+					li{
+						a{
+							margin-right: 5px;
+							border-radius: 0px;
+							border:0;
+							padding: 2.5px 5px;
+							width: 27px;
+							background-color: #f6f6f6;
+							font-family: @Mr;
+							font-size: 16px;
+							color:#bababa;
+							/*高沒辦法置中，因此在borderbox下，要靠padding達到想要的效果
+							height: 27px;
+							 */ 
+							
+						}
+					}
+				}
+			}
+			
+		}
+	}
+}
+
+/*---------------------------------Footer--------------------------*/
+
+#Footer {
+	margin-top: 98px;
+	background-color: @background_color_6;
+	.misc1{
+		padding-top: 65px;
+		i{
+			float: left;
+		}
+		.services{
+			display: inline-block;
+			margin-left: 23px;
+			color:#535353;
+			h5.title{
+				font-family: @Mr;
+				font-weight: 700;
+				margin-bottom: 2px;
+			}
+			p{
+				font-weight: 700;
+			}
+		}
+		hr{
+			border-color:rgba(92,92,92,0.2);
+			margin: 0;
+			margin-top: 55px;
+
+		}
+	}
+	.misc2 {
+		.container {
+			padding-top: 51px;
+			padding-bottom:75px;
+			.col-left {
+				font-weight: 700;
+				color: @color_9;
+				a {
+					text-transform: capitalize;
+					color: @color_9;
+				}
+				div {
+					i {
+						padding-right: 3px;
+					}
+					i.fa-map-marker {
+						display: inline-block;
+						position: relative;
+						top: -15px;
+					}
+				}
+				div.address {
+					a {
+						display: inline-block;
+					}
+				}
+				#logo-gray {
+					padding-bottom: 30px;
+					width: 112px;
+				}
+				p {
+					padding-bottom: 30px;
+				}
+				.address {
+					padding-bottom: 30px;
+				}
+			}
+			.col-center {
+				.col-inner{
+					>a{
+						text-transform: capitalize;
+					    cursor: pointer;
+					    padding-left: 5px;
+					    font-weight: 700;
+					    font-size: 18px;
+					    color: #575757;
+					    &:hover{
+					    	text-decoration: none;
+					    }
+					}
+					ul.collapse.in{
+						padding-top:27px;
+					}
+					ul.collapsing{
+					  padding-top:27px;
+					}
+					li a{
+						color:@body_color;
+					    line-height: 30px;
+					    text-transform: capitalize;
+					    font-weight: 700;
+					    display: block;
+					}
+				}
+			}
+			.col-right {
+				.sign-up {
+					text-align: right;
+					>li {
+						padding-bottom: 30px;
+						font-weight: 700;
+					}
+					li.title{
+						font-size: 18px;
+						color: @color_11;
+						padding-bottom: 30px;
+					}
+					li.bold {
+						padding-bottom: 10px;
+						font-family: @SSP;
+						font-weight: 700;
+						font-size: 16px;
+						color: @title-dark;
+					}
+					li.email {
+						float: right;
+						position: relative;
+						display: block;
+						width:255px;
+						[type='email']{
+							  border-radius:23px;
+							  border: 1px solid #fff;
+							  padding:10px 0px;
+							  padding-left:10px;
+							  width:~'calc(100% - 12px)';
+							  font-family: @Mr;
+							  font-size: 8px;
+							  color:rgb(105,105,105);
+							  &:focus{
+							    outline:none;
+							    border:1px solid #D6B161
+							  }
+						}
+						[type="submit"]{
+							position: absolute;
+							top:0;
+							right:0;
+							border-radius:0 23px 23px 0; 
+							border:1px solid  #696969;
+							padding:10px 10px;
+							padding-left:10px;
+						    font-family: @Mr;					
+							font-size: 8px;
+							color:white;
+							background-color: #696969;
+							cursor:pointer;
+							&:active{
+							color: #D6B161;
+							}
+							&:focus{
+							outline:none;
+							}
+						}				  
+					}
+					ul.social {
+						float: right;
+						li {
+							float: left;
+							a {
+								padding-left: 10px;
+								font-size: 16px;
+								color: @title-dark;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.copy-right {
+		background-color: #fff;
+		.container {
+			padding-top: 40px;
+			padding-bottom: 95px;
+		}
+		.col-xs-6 {
+			p {
+				font-weight: 700;
+			}
+			a {
+				color: @color_12;
+				font-family: @Mr;
+				font-weight: 700;
+				letter-spacing: 0px;
+				transition: all 0.3s linear;
+				&:hover {
+					color: @color_13;
+				}
+			}
+			.pay-method{
+				float: right;
+				width: 117px;
+				img {
+					position: relative;
+					bottom: 3px;
+				}
+			}
+			
+		}
+	}
+}
+
+/*--------------------------------------------------------RWD-------------------------------------------------------*/
+@media screen and (max-width:1229px){
+
+
+	div#nav1{
+		text-align: center;
+	}
+
+	.navbar-default{
+		font-family:@Mr;
+		.navbar-nav>li .twicks{
+				position: relative;
+				bottom:5px;
+		}
+		
+		.navbar-nav>li>a {
+
+		    div.count {
+				bottom: 2px;
+				right: 3px;
+			}
+		}
+
+		.navbar-text{
+			padding-top:43.5px;
+		}
+
+		ul.nav.navbar-nav.navbar-right{
+			padding-bottom:36px;
+		} 	
+	}
+	
+	.navbar-toggle {
+	    margin-right: 53px;
+	    padding: 10px 10px;
+	    margin-top: 41px;
+	}
+
+	#Content{
+		.container{
+			.sidebar{
+				.hot-sales{
+					.sale{
+						.photo{
+						    display: inline-block;
+						    margin-right: 0px;
+						    margin-left: 20px;
+						    width: 40%;
+						}
+						.info{
+							display: block;
+							position: static;
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	#Footer{
+		.misc1{
+			i{
+				margin-left: 60px;
+			}
+			.row{
+				.col-md-6:nth-child(3){
+					margin-top: 50px;
+				}
+				.col-md-6:nth-child(4){
+					margin-top: 50px;
+				}
+			}			
+		}
+	}
+}
+
+
+@media screen and (max-width:991px){
+	#Content{
+		.container{
+			.sidebar{
+				.hot-sales{
+					/*繞了一大圈...應該有一小時...最後還是回到bootstarp的grid框架...
+					果然不要不信邪啊...*/
+					.sale{
+						.photo{
+						    display: block;
+						    margin-right: 0px;
+						    margin-left: 0px;
+						    width: 100%;
+						}
+					}
+				}
+			}
+			.products{
+				margin-top: 70px;
+			}
+		}
+	}
+	 
+	
+	#Footer{
+		.misc1{
+			.row{
+				.col-md-6{
+					position: relative;
+					&:nth-child(2){
+						margin-top: 50px;
+					}
+				}
+				.col-xs-12{
+					float: none;
+					width:40%;
+					margin:0 auto;
+					i{
+						margin-left: 0px;
+						width: 100%;
+						text-align: center;
+					}
+					.services{
+						margin-top: 20px;
+						padding-left: 10px;
+					}			
+				}
+			}
+		}
+		.misc2{
+			.container{
+				.col-x{
+					text-align: center;
+				}
+				.col-left{
+					float:none;
+					#logo-gray{
+						margin:0 auto;
+					}
+				}
+				.col-center{
+					padding-top: 30px; 
+					padding-bottom: 30px;
+					.col-inner{
+						padding-bottom:20px;
+					}
+				}
+				.col-right{
+					.sign-up{
+						li{
+							position: relative;
+							text-align: center;
+							i.fa-map-marker{
+								top:-20px;
+							}
+						}
+						li.email {
+							float: none;
+							margin:0 auto;
+						}
+						li.social{
+						    width: 153px;
+							display: block;
+							margin: 0 auto;
+							ul.social{
+								float:none;
+								a{
+									padding:0px 10px 0px 0px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+@media screen and (max-width:767px){
+	a.navbar-brand{
+		padding-left: 7px;
+	}
+	.navbar-toggle{
+		margin-right: 7px;
+	}
+
+	#Content{
+		.container{
+			.sidebar{
+				.hot-sales{
+					.sale{
+						/*
+						到底要如何用同樣的架構達成「991~768一行四排，767以下一行兩排」
+
+						嘗試用inline-block解決
+						算很接近了...但還是有明顯的落差
+						float:none;
+						width: 49.175%;
+						display: inline-block;
+						
+						 */
+						.photo{
+						    display: block;
+						    margin-right: 0px;
+						    margin-left: 0px;
+						    width: 100%;
+						}
+					}
+				}
+			}
+			.products{
+				margin-top: 70px;
+				.results-and-info{
+					text-align: center;
+					.result{
+						float: none!important;
+					}
+					.sort-info{
+						margin-top: 40px;
+						text-align: center;
+						float: none!important;
+						li{
+							display: inline-block;
+							float:none;
+						}
+					}
+				}
+				.products-info{
+					.row-inner{
+						margin-top: 0px!important;
+					}
+					.col-xs-12{
+						margin-top: 40px;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+@media screen and (max-width:425px)  {
+	#Footer{
+		.misc1{
+			.row{
+				.col-xs-12{
+					
+					width:70%;
+				
+				}
+			}
+		}
+	}
+}

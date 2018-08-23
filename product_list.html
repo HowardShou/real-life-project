@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PRODUCT_LIST</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Source+Sans+Pro:300,600" rel="stylesheet">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/fontello.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/product_list.css">
+    </head>
+
+    <body>
+        <div id="Header clearfix">
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="logo">
+                      </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="nav1">
+                  <p class="navbar-text">+1(555) 333 22 11</p>
+                  <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#">home</a></li>
+                      <li><a href="#">products<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                      <li><a href="#">pages<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                      <li><a href="#">blog</a></li>
+                      <li><a href="#">about</a></li>
+                      <li><a href="#">contact</a></li>
+                      <li><a class="twicks" href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a></li>
+                      <li><a class="twicks" href="#"><i class="fa fa-heart-o fa-2x" aria-hidden="true"></i></a></li>
+                      <li>
+                          <a class="twicks" href="#">
+                              <i class="icon-handbag fa-2x"></i>
+                              <div class="count">3</div>
+                          </a>
+                      </li>
+                  </ul>
+                </div>
+            </nav>    
+            
+            <div class="chairs">
+                <div class="container clearfix">
+                    <h1>CHAIRS</h1>
+                    <p><a href="#">Home</a><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Product</a><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Chairs</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="Content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-3 sidebar">
+                        <div class="filter">
+                            <!-- 經查，form真的在action時，會很聰明的只找有INPUT的元素SUBMIT
+                            所以儘管用其他的TAG吧 -->
+                            <div class="filter-class">
+                                <h2 class="title">FILTER</h2>
+                                <form class="filter-by-brand">
+                                    <h4>Filter by Brands</h4>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <div class="check-and-brand pull-left">
+                                                <input type="checkbox" name="brand1" value="Casali">
+                                                <div class="brand">Casali</div>
+                                            </div>
+                                            <div class="number pull-right">2</div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <div class="check-and-brand pull-left">
+                                                <input type="checkbox" name="brand2" value="Decar">
+                                                <div class="brand">Decar</div>
+                                            </div>
+                                            <div class="number pull-right">12</div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <div class="check-and-brand pull-left">
+                                                <input type="checkbox" name="brand3" value="Fantini" checked>
+                                                <div class="brand">Fantini</div>
+                                            </div>
+                                            <div class="number pull-right">4</div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <div class="check-and-brand pull-left">
+                                                <input type="checkbox" name="brand4" value="Flamentstyle">
+                                                <div class="brand">Flamestyle</div>
+                                            </div>
+                                            <div class="number pull-right">4</div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <div class="check-and-brand pull-left">
+                                                <input type="checkbox" name="brand5" value="Heerenhuis">
+                                                <div class="brand">Heerenhuis</div>
+                                            </div>
+                                            <div class="number pull-right">6</div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <div class="check-and-brand pull-left">
+                                                <input type="checkbox" name="brand6" value="Hoffmann">
+                                                <div class="brand">Hoffmann</div>
+                                            </div>
+                                            <div class="number pull-right">10</div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <div class="check-and-brand pull-left">
+                                                <input type="checkbox" name="brand7" value="Italfloor">
+                                                <div class="brand">Italfloor</div>
+                                            </div>
+                                            <div class="number pull-right">3</div>
+                                        </li>
+                                    </ul>
+                                </form>
+                                <hr>
+                                <form class="filter-by-price">
+                                    <h4>Filter by Price</h4>
+                                     
+                                    <div id="slider-range"></div>
+
+                                    <p>
+                                      <label for="amount">Price</label>
+                                      <input type="text" id="amount" readonly>
+                                    </p>
+
+                                    <input type="submit" value="Filter">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="categories">
+                            <h2 class="title">CATEGORIES</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">CHAIRS</a>
+                                     <div class="number">4</div>
+                                </li>
+                                <li>
+                                    <a href="#">SOFAS</a>
+                                     <div class="number">24</div>
+                                </li>
+                                <li>
+                                    <a href="#">ARMCHAIRS</a>
+                                     <div class="number">9</div>
+                                </li>
+                                <li>
+                                    <a href="#">BEDROOM</a>
+                                     <div class="number">2</div>
+                                </li>
+                                <li>
+                                    <a href="#">LIGHTING</a>
+                                     <div class="number">17</div>
+                                </li>
+                                <li>
+                                    <a href="#">KITCHEN</a>
+                                     <div class="number">10</div>
+                                </li>
+                                <li>
+                                    <a href="#">ACCESSORIES</a>
+                                     <div class="number">23</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hot-sales clearfix">
+                            <h2 class="title">HOT SALE</h2>
+                            <!-- 繞了一大圈...應該有一小時...最後還是回到bootstarp的grid框架...
+                            -而且最後還是妥協了，統一在md以下採用上二下二，跟我原本想要在做一個版
+                            在768~991時四個一排不一樣，所以下面那個版在問問時一定要拿出來問! -->
+                            <div class="row clearfix">
+                                <div class="col-xs-6 col-md-12 sale">
+                                        <div class="photo">
+                                            <img src="https://picsum.photos/79/79?image=81" alt="photo">
+                                        </div>
+                                        <div class="info">
+                                            <div class="subtitle">Egon Wooden Chair</div>
+                                            <div class="rank clearfix">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="price"><span>$75.00</span>$55,00</div>
+                                        </div>
+                                </div>
+                                 <div class="col-xs-6 col-md-12 sale">
+                                        <div class="photo">
+                                            <img src="https://picsum.photos/79/79?image=80" alt="photo">
+                                        </div>
+                                        <div class="info">
+                                            <div class="subtitle">Oyo Cantilever Chair</div>
+                                            <div class="price" style="margin-top: 17px;">$55,00</div>
+                                        </div>
+                                 </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-xs-6 col-md-12 sale">
+                                    <div class="photo">
+                                        <img src="https://picsum.photos/79/79?image=847" alt="photo">
+                                    </div>
+                                    <div class="info">
+                                        <div class="subtitle">Kurve Chair</div>
+                                        <div class="rank clearfix">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="price"><span>$75.00</span>$55,00</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-12 sale">
+                                    <div class="photo">
+                                        <img src="https://picsum.photos/79/79?image=142" alt="photo">
+                                    </div>
+                                    <div class="info">
+                                        <div class="subtitle">Marvelous Wooden Chair</div>
+                                        <div class="price"><span>$75.00</span>$55,00</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 問問題時一定要用這個架構在做一次!
+                                問問題時一定要用這個架構在做一次!
+                                問問題時一定要用這個架構在做一次!
+                            <div class="row clearfix">
+                                <div class="col-xs-6 col-sm-3 col-md-12 sale">
+                                    <div class="photo">
+                                        <img src="https://picsum.photos/79/79?image=81" alt="photo">
+                                    </div>
+                                    <div class="info">
+                                        <div class="subtitle">Egon Wooden Chair</div>
+                                        <div class="rank clearfix">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="price"><span>$75.00</span>$55,00</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-12 sale">
+                                    <div class="photo">
+                                        <img src="https://picsum.photos/79/79?image=80" alt="photo">
+                                    </div>
+                                    <div class="info">
+                                        <div class="subtitle">Oyo Cantilever Chair</div>
+                                        <div class="price" style="margin-top: 17px;">$55,00</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-12 sale">
+                                    <div class="photo">
+                                        <img src="https://picsum.photos/79/79?image=847" alt="photo">
+                                    </div>
+                                    <div class="info">
+                                        <div class="subtitle">Kurve Chair</div>
+                                        <div class="rank clearfix">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="price"><span>$75.00</span>$55,00</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-3 col-md-12 sale">
+                                    <div class="photo">
+                                        <img src="https://picsum.photos/79/79?image=142" alt="photo">
+                                    </div>
+                                    <div class="info">
+                                        <div class="subtitle">Marvelous Wooden Chair</div>
+                                        <div class="price"><span>$75.00</span>$55,00</div>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>     
+                    -->
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-12 col-md-9 products">
+                        <div class="results-and-info clearfix">
+                            <div class="result pull-left">
+                                Showing <span>1–9</span> of <span>65</span> results<br>
+                                View   9 / 18 / 27 / All
+                            </div>
+                            
+                            <div class="sort-info pull-right">
+                                <ul class="clearfix">
+                                    <li class="dropdown sorting">
+                                        Default Sorting
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        <div class="dropdown-content">
+                                            <a href="#">Link 1</a>
+                                            <a href="#">Link 2</a>
+                                            <a href="#">Link 3</a>
+                                        </div>
+                                    </li>
+                                    <li class="circle"><a href="#"><i class="fa fa-th-list" aria-hidden="true"></i></a></li>
+                                    <li class="circle"><a href="#"><i class="fa fa-th-large" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="products-info clearfix">
+                                <div class="products-info">
+                                    <!-- 本來想說讓col-4自然往下擠就好，卻發生莫名留白
+                                    導致跑版，因此還是乖乖分成三列，每列三排評分33.333%才能搞定-->
+                                    <div class="row-inner clearfix">
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="item-with-rank">
+                                                <a href="#"><img src="https://picsum.photos/721/721?image=800" alt="photo"></a>
+                                                <div class="name-price rank">
+                                                    <ul class="rank clearfix">
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                                    </ul>
+
+                                                    <div class="name">product 1</div>
+                                                    <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="item">
+                                                <a href="#"><img src="https://picsum.photos/721/721?image=802" alt="photo"></a>
+                                                <div class="name-price">
+                                                    <div class="name">product 2</div>
+                                                    <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,02</div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="item">
+                                                <a href="#"><img src="https://picsum.photos/721/721?image=803" alt="photo"></a>
+                                                <div class="discount">15% off</div>
+                                                <div class="name-price">
+                                                    <div class="name">product 2</div>
+                                                    <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,02</div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-inner clearfix">
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="item-with-rank">
+                                                <a href="#"><img src="https://picsum.photos/721/721?image=804" alt="photo"></a>
+                                                <div class="name-price rank">
+                                                    <ul class="rank clearfix">
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                                    </ul>
+
+                                                    <div class="name">product 1</div>
+                                                    <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="item-with-rank">
+                                                <a href="#"><img src="https://picsum.photos/721/721?image=805" alt="photo"></a>
+                                                <div class="name-price rank">
+                                                    <ul class="rank clearfix">
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                                    </ul>
+
+                                                    <div class="name">product 1</div>
+                                                    <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="item">
+                                                <a href="#"><img src="https://picsum.photos/721/721?image=806" alt="photo"></a>
+                                                <div class="name-price">
+                                                    <div class="name">product 2</div>
+                                                    <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,02</div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-inner clearfix">
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="item-with-rank">
+                                                <a href="#"><img src="https://picsum.photos/721/721?image=807" alt="photo"></a>
+                                                <div class="name-price rank">
+                                                    <ul class="rank clearfix">
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                                    </ul>
+
+                                                    <div class="name">product 1</div>
+                                                    <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="item-with-rank">
+                                                <a href="#"><img src="https://picsum.photos/721/721?image=808" alt="photo"></a>
+                                                <div class="name-price rank">
+                                                    <ul class="rank clearfix">
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                                    </ul>
+
+                                                    <div class="name">product 1</div>
+                                                    <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="item">
+                                                <a href="#"><img src="https://picsum.photos/721/721?image=809" alt="photo"></a>
+                                                <div class="name-price">
+                                                    <div class="name">product 2</div>
+                                                    <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,02</div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <nav aria-label="Page navigation">
+                              <ul class="pagination">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                              </ul>
+                            </nav>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+            
+
+        <div id="Footer">
+            <div class="misc1">
+                <div class="container">
+                    <div class="row clearfix">
+                        <div class="col-xs-12 col-md-6 col-lg-3">
+                            <i class="fa fa-plane fa-3x" aria-hidden="true"></i>
+                            <div class="services">
+                                <h5 class="title">FREE SHIPPING</h5>
+                                <p>Free shipping on all US order</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6 col-lg-3">
+                            <i class="fa fa-life-ring fa-3x" aria-hidden="true"></i>
+                            <div class="services">
+                                <h5 class="title">SUPPORT</h5>
+                                <p>We support 24 hours a day</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6 col-lg-3">
+                            <i class="fa fa-dropbox fa-3x" aria-hidden="true"></i>
+                            <div class="services">
+                                <h5 class="title">GIFT CARDS</h5>
+                                <p>Give perfect gift</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6 col-lg-3">
+                            <i class="fa fa-money fa-3x" aria-hidden="true"></i>
+                            <div class="services">
+                                <h5 class="title">PAYMENT 100% SECURE</h5>
+                                <p>Payment 100% secure</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                
+                </div>
+            </div>
+
+
+
+            <div class="misc2 clearfix">
+                <div class="container">
+                    <div class="row clearfix">
+                        <div class="col-x col-left col-xs-12 col-md-4">
+                            <div id="logo-gray">
+                                <a href="#"><img src="images/logo.gray.png" alt="logo"></a>
+                            </div>
+                            <p>Exercitation ullamco laboris nisi ut aliquip excommodo consequat. Duis aute irure
+                            </p>
+                            <div class="address">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <a href="#">connaught orad central suite 18B, 148 <br>New Yankee</a>
+                            </div>
+                            <div class="phone">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <a href="tel:+1(500)333 22 11">+1(500)333 22 11</a>
+                            </div>
+                            <div class="email">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                <a href="mailto:info@schon.chair">info@schon.chair</a>
+                            </div>
+                        </div>
+                        <div class="col-x col-center col-xs-12 col-md-5">
+                            <div class="row clearfix">
+                                <div class="col-x col-inner col-xs-12 col-md-4">
+                                    <a  data-toggle="collapse" data-target="#categories" aria-expanded="true" aria-controls="categories">
+                                      Categories
+                                    </a>
+                                    <ul class="collapse in" id="categories">
+                                        <li><a href="#">chairs</a></li>
+                                        <li><a href="#">sofas</a></li>
+                                        <li><a href="#">living</a></li>
+                                        <li><a href="#">bedroom</a></li>
+                                        <li><a href="#">tables</a></li>
+                                        <li><a href="#">new</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-x col-inner col-xs-12 col-md-4">
+                                    <a  data-toggle="collapse" data-target="#informations" aria-expanded="true" aria-controls="informations">
+                                      Informations
+                                    </a>
+                                    <ul class="collapse in" id="informations">
+                                        <li><a href="#">About Contact Us</a></li>
+                                        <li><a href="#">sofas</a></li>
+                                        <li><a href="#">Terms&Conditions</a></li>
+                                        <li><a href="#">Privay Policy</a></li>
+                                        <li><a href="#">Customer Services</a></li>
+                                        <li><a href="#">FAQs</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-x col-inner col-xs-12 col-md-4">
+                                    <a  data-toggle="collapse" data-target="#accounts" aria-expanded="true" aria-controls="accounts">
+                                      Accounts
+                                    </a>
+                                    <ul class="collapse in" id="accounts">
+                                        <li><a href="#">MyAccount</a></li>
+                                        <li><a href="#">OrderTracking</a></li>
+                                        <li><a href="#">Wishlist</a></li>
+                                        <li><a href="#">ShoppingCart</a></li>
+                                        <li><a href="#">Checkout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-x col-right col-xs-12 col-md-3">
+                            <ul class="sign-up">
+                                <li class="title">Sign Up Newsletter</li>
+                                <li>Subscribe now to get 15% off
+                                    <br>on any product</li>
+                                <li class="email">
+                                      <input type="email" placeholder='Your e-mail'>
+                                      <input type="submit" value='subscribe'>
+                                </li>
+                                <li class="bold">Follow us</li>
+                                <li class="social">
+                                    <ul class="social clearfix">
+                                        <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                        <li><a href="#" target="_blank "><i class="fa fa-youtube"  aria-hidden="true"></i></a></li>
+                                        <li><a href="#" target="_blank "><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        <li><a href="#" target="_blank "><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right">
+                <div class="container">
+                    <div class="row clearfix">
+                        <div class="col-xs-6">
+                            <p>&copy; <a href="#" class="transition">Schön.</a> All Rights Reserved</p>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="pay-method">
+                                <img src="images/card icon.png" alt="card icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery-ui-customize.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $( "#slider-range" ).slider({
+                      range: true,
+                      min: 0,
+                      max: 1000,
+                      values: [ 10, 599 ],
+                      slide: function( event, ui ) {
+                        $( "#amount" ).val( "$"+ " "+ " " + ui.values[ 0 ] + " " + " "+ " "+ "-" + " "+ " "+ " " + "$" + " "+ " "+ ui.values[ 1 ] );
+                      }
+                    });
+                /*初始發動值，另外發現，在""每案一次空白建，就代表文字空一格，像下面這樣寫(每個""都只按一次空格，用+號相連)，好處是比較明顯，*/
+                $( "#amount" ).val( "$" + " "+ " " + $( "#slider-range" ).slider( "values", 0 ) + " "+ " "+ " "+
+                  " - " + " "+ " "+ " "+" $ "+ $( "#slider-range" ).slider( "values", 1 ) );
+            });
+        </script>
+        <script>
+            function accordin(){
+                if ($(window).width()<=992) {
+                    $('.col-4 .collapse').collapse('hide')
+                }
+                else{
+                    $('.col-4 .collapse').collapse('show')
+                }
+            }
+            accordin();
+
+            $(document).ready(function() {
+                $(window).resize(function() {
+                    if ($(window).width()<=992) {
+                        $('.col-4 .collapse').collapse('hide')
+                    }
+                    else{
+                        $('.col-4 .collapse').collapse('show')
+                    }
+                });
+            });
+        </script>
+    </body>
+    
+</html>

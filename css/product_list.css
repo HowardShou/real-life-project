@@ -1,0 +1,866 @@
+/*--------------------------------style.always-----------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  color: #929292;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  margin: 0;
+}
+h3 {
+  margin: 0;
+}
+h4 {
+  margin: 0;
+}
+h5 {
+  margin: 0;
+}
+h6 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #929292;
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+li {
+  list-style-type: none;
+}
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  float: left;
+}
+.col-12 {
+  width: calc(100%);
+}
+.col-11 {
+  width: calc(91.66666667%);
+}
+.col-10 {
+  width: calc(83.33333333%);
+}
+.col-9 {
+  width: calc(75%);
+}
+.col-8 {
+  width: calc(66.66666667%);
+}
+.col-7 {
+  width: calc(58.33333333%);
+}
+.col-6 {
+  width: calc(50%);
+}
+.col-5 {
+  width: calc(41.66666667%);
+}
+.col-4 {
+  width: calc(33.33333333%);
+}
+.col-2 {
+  width: calc(16.66666667%);
+}
+.col-1 {
+  width: calc(8.33333333%);
+}
+.container {
+  position: relative;
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/*---------------------------------product-list.css--------------------------------------------*/
+/*---------------------------customize------------------------------*/
+.rank i.fa-star {
+  color: #D6B161;
+}
+h2.title {
+  font-size: 20px;
+  font-family: Montserrat, sans-serif;
+  color: #737373;
+}
+/*----------------------------Header------------------------------*/
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-brand {
+  height: auto;
+  padding: 44px 42px 50px 53px;
+  line-height: normal;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+.navbar-default {
+  font-family: Montserrat, sans-serif;
+}
+.navbar-default .navbar-nav > li .twicks {
+  position: relative;
+  bottom: 5px;
+}
+.navbar-default .navbar-nav > li > a {
+  display: inline-block;
+  color: black;
+  transition: color 0.3s ease;
+}
+.navbar-default .navbar-nav > li > a:active {
+  color: #D6B161;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #D6B161;
+}
+.navbar-default .navbar-nav > li > a [class^="icon-"]:before,
+.navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+  margin: 0;
+}
+.navbar-default .navbar-nav > li > a div.count {
+  background-color: black;
+  position: absolute;
+  bottom: 6px;
+  right: 3px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  font-size: 8px;
+  font-weight: 400;
+  color: white;
+  transition: background-color 0.2s linear;
+}
+.navbar-default .navbar-nav > li > a div.count:hover {
+  background: #D6B161;
+}
+.navbar-default .navbar-text {
+  margin: 0;
+  padding-top: 53px;
+  color: black;
+}
+ul.nav.navbar-nav.navbar-right {
+  padding-top: 38px;
+}
+.chairs {
+  background: #f4f4f4;
+  padding: 52px 0px 71px 0px;
+  text-align: center;
+}
+.chairs h1 {
+  color: #494949;
+  font-family: Montserrat, sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.chairs p {
+  text-align: center;
+  margin-top: 26px;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #494949;
+  /*本來想運用跟home裡面feature一樣的after方法，但這邊需要用icon-fonts
+		css那個content不能放tag因此作罷*/
+}
+.chairs p a {
+  margin-right: 7px;
+}
+.chairs p i {
+  margin-right: 7px;
+}
+/*----------------------------------Content-----------------------*/
+#Content .container {
+  margin-top: 25px;
+}
+#Content .container .sidebar .filter {
+  /*背景上色不及於margin 耍87*/
+  padding-top: 42px;
+  padding-bottom: 42px;
+  background-color: #f4f4f4;
+}
+#Content .container .sidebar .filter .filter-class {
+  width: 78%;
+  margin: 0 auto;
+}
+#Content .container .sidebar .filter .filter-by-brand {
+  margin-top: 42px;
+}
+#Content .container .sidebar .filter .filter-by-brand h4 {
+  font-size: 14px;
+  font-weight: bold;
+}
+#Content .container .sidebar .filter .filter-by-brand ul {
+  margin-top: 22px;
+}
+#Content .container .sidebar .filter .filter-by-brand ul .check-and-brand input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 9px;
+}
+#Content .container .sidebar .filter .filter-by-brand ul .check-and-brand .brand {
+  display: inline-block;
+  position: relative;
+  /*input怪怪的只好這樣讓brand對齊*/
+  bottom: 2px;
+}
+#Content .container .sidebar .filter hr {
+  border-color: #e0e0e0;
+}
+#Content .container .sidebar .filter .filter-by-price {
+  position: relative;
+  /*price-slider 用jqueryUI完工，牡蠣!*/
+}
+#Content .container .sidebar .filter .filter-by-price h4 {
+  font-size: 14px;
+  font-weight: bold;
+}
+#Content .container .sidebar .filter .filter-by-price #slider-range {
+  margin-top: 21px;
+}
+#Content .container .sidebar .filter .filter-by-price .ui-widget-content {
+  background-color: #b3b3b3;
+}
+#Content .container .sidebar .filter .filter-by-price .ui-corner-all,
+#Content .container .sidebar .filter .filter-by-price .ui-corner-bottom,
+#Content .container .sidebar .filter .filter-by-price .ui-corner-left,
+#Content .container .sidebar .filter .filter-by-price .ui-corner-bl {
+  border-radius: 5px;
+}
+#Content .container .sidebar .filter .filter-by-price .ui-slider-horizontal {
+  height: 5px;
+}
+#Content .container .sidebar .filter .filter-by-price .ui-slider-horizontal .ui-slider-handle {
+  top: -0.6rem;
+}
+#Content .container .sidebar .filter .filter-by-price .ui-widget-header {
+  background-color: #494949;
+  height: 5px;
+}
+#Content .container .sidebar .filter .filter-by-price span.ui-slider-handle.ui-corner-all.ui-state-default {
+  border-radius: 15px;
+  border: 4px solid #494949;
+  background: #f2f2f2;
+}
+#Content .container .sidebar .filter .filter-by-price span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
+  outline: none;
+}
+#Content .container .sidebar .filter .filter-by-price p {
+  margin-top: 21px;
+  display: inline-block;
+}
+#Content .container .sidebar .filter .filter-by-price p label {
+  margin-right: 5px;
+}
+#Content .container .sidebar .filter .filter-by-price p #amount {
+  color: #737373;
+  background-color: #f4f4f4;
+  /*沒把border設0會壞掉，input就是這樣*/
+  border: 0;
+  width: 113px;
+}
+#Content .container .sidebar .filter .filter-by-price input[type="submit"] {
+  background-color: #494949;
+  color: white;
+  border: 0;
+  padding: 0px 10px;
+  border-radius: 5px;
+}
+#Content .container .sidebar .filter .filter-by-price input[type="submit"]:focus {
+  outline: none;
+}
+#Content .container .sidebar .filter .filter-by-price input[type="submit"]:active {
+  color: #D6B161;
+}
+#Content .container .sidebar .categories {
+  margin-top: 40px;
+}
+#Content .container .sidebar .categories ul {
+  margin-top: 28px;
+}
+#Content .container .sidebar .categories ul li {
+  padding: 10px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #e6e6e6;
+}
+#Content .container .sidebar .categories ul li:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+#Content .container .sidebar .categories ul li .number {
+  float: right;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  color: #929292;
+}
+#Content .container .sidebar .hot-sales {
+  margin-top: 70px;
+}
+#Content .container .sidebar .hot-sales .sale {
+  margin-top: 33px;
+}
+#Content .container .sidebar .hot-sales .sale .photo {
+  display: inline-block;
+  margin-right: 10px;
+  width: 29.5%;
+}
+#Content .container .sidebar .hot-sales .sale .info {
+  position: relative;
+  bottom: 15px;
+  display: inline-block;
+  width: 65%;
+}
+#Content .container .sidebar .hot-sales .sale .info .subtitle {
+  color: #959595;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+}
+#Content .container .sidebar .hot-sales .sale .info .rank {
+  margin-top: 6px;
+}
+#Content .container .sidebar .hot-sales .sale .info .rank i {
+  margin: 0px;
+  font-size: 12px;
+  float: left;
+  /*i的間隙不是margin也不是p，用下面的ta-l也沒用，
+								還是只能出動float達到完全貼緊的效果
+								text-align: left;
+								 */
+}
+#Content .container .sidebar .hot-sales .sale .info .price {
+  margin-top: 4px;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  color: #252528;
+}
+#Content .container .sidebar .hot-sales .sale .info .price span {
+  margin-right: 15px;
+  text-decoration: line-through;
+  color: #959596;
+  font-size: 8px;
+}
+#Content .container .products .results-and-info .result span {
+  font-weight: bold;
+}
+#Content .container .products .results-and-info .sort-info {
+  /*拿w3schools做好的車子來用<3，當然也已經知道他運作的技巧囉*/
+}
+#Content .container .products .results-and-info .sort-info li {
+  float: left;
+  transition: all 0.3s ease;
+  border: 1px solid #a5a5a5;
+  padding: 10px 0px;
+}
+#Content .container .products .results-and-info .sort-info li:hover {
+  color: #D6B161;
+}
+#Content .container .products .results-and-info .sort-info li a {
+  transition: all 0.3s ease;
+}
+#Content .container .products .results-and-info .sort-info li a:hover {
+  color: #D6B161;
+}
+#Content .container .products .results-and-info .sort-info li.dropdown {
+  display: inline-block;
+  position: relative;
+  border-radius: 40px ;
+  text-align: center;
+  width: 146px;
+  cursor: pointer;
+}
+#Content .container .products .results-and-info .sort-info li.dropdown:hover .dropdown-content {
+  display: block;
+}
+#Content .container .products .results-and-info .sort-info li.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 16px;
+  background-color: #fff;
+  min-width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+#Content .container .products .results-and-info .sort-info li.dropdown .dropdown-content a {
+  color: #929292;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+}
+#Content .container .products .results-and-info .sort-info li.dropdown .dropdown-content a:hover {
+  color: #D6B161;
+}
+#Content .container .products .results-and-info .sort-info li.circle {
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 40px;
+  text-align: center;
+}
+#Content .container .products .products-info .row-inner:first-child {
+  margin-top: 20px;
+}
+#Content .container .products .products-info .row-inner:nth-child(2),
+#Content .container .products .products-info .row-inner:nth-child(3) {
+  margin-top: 50px;
+}
+#Content .container .products .products-info .item,
+#Content .container .products .products-info .item-with-rank {
+  position: relative;
+}
+#Content .container .products .products-info .item .discount,
+#Content .container .products .products-info .item-with-rank .discount {
+  position: absolute;
+  top: 10%;
+  padding: 5px 10px;
+  background-color: #b2cc29;
+  font-family: Montserrat, sans-serif;
+  color: white;
+}
+#Content .container .products .products-info .name-price {
+  padding-top: 18px;
+  padding-left: 20px;
+}
+#Content .container .products .products-info .name-price .name {
+  font-size: 18px;
+  padding-top: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+#Content .container .products .products-info .name-price .price {
+  padding-top: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+}
+#Content .container .products .products-info .name-price .price i {
+  padding-right: 5px;
+}
+#Content .container .products .products-info .name-price.rank {
+  padding-top: 0px;
+}
+#Content .container .products .products-info .rank li {
+  float: left;
+}
+#Content .container .products nav[aria-label="Page navigation"] {
+  margin-top: 188px;
+  text-align: center;
+}
+#Content .container .products nav[aria-label="Page navigation"] ul {
+  margin: 0px;
+}
+#Content .container .products nav[aria-label="Page navigation"] ul li a {
+  margin-right: 5px;
+  border-radius: 0px;
+  border: 0;
+  padding: 2.5px 5px;
+  width: 27px;
+  background-color: #f6f6f6;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  color: #bababa;
+  /*高沒辦法置中，因此在borderbox下，要靠padding達到想要的效果
+							height: 27px;
+							 */
+}
+/*---------------------------------Footer--------------------------*/
+#Footer {
+  margin-top: 98px;
+  background-color: #f6f6f6;
+}
+#Footer .misc1 {
+  padding-top: 65px;
+}
+#Footer .misc1 i {
+  float: left;
+}
+#Footer .misc1 .services {
+  display: inline-block;
+  margin-left: 23px;
+  color: #535353;
+}
+#Footer .misc1 .services h5.title {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+#Footer .misc1 .services p {
+  font-weight: 700;
+}
+#Footer .misc1 hr {
+  border-color: rgba(92, 92, 92, 0.2);
+  margin: 0;
+  margin-top: 55px;
+}
+#Footer .misc2 .container {
+  padding-top: 51px;
+  padding-bottom: 75px;
+}
+#Footer .misc2 .container .col-left {
+  font-weight: 700;
+  color: #a8a8a8;
+}
+#Footer .misc2 .container .col-left a {
+  text-transform: capitalize;
+  color: #a8a8a8;
+}
+#Footer .misc2 .container .col-left div i {
+  padding-right: 3px;
+}
+#Footer .misc2 .container .col-left div i.fa-map-marker {
+  display: inline-block;
+  position: relative;
+  top: -15px;
+}
+#Footer .misc2 .container .col-left div.address a {
+  display: inline-block;
+}
+#Footer .misc2 .container .col-left #logo-gray {
+  padding-bottom: 30px;
+  width: 112px;
+}
+#Footer .misc2 .container .col-left p {
+  padding-bottom: 30px;
+}
+#Footer .misc2 .container .col-left .address {
+  padding-bottom: 30px;
+}
+#Footer .misc2 .container .col-center .col-inner > a {
+  text-transform: capitalize;
+  cursor: pointer;
+  padding-left: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #575757;
+}
+#Footer .misc2 .container .col-center .col-inner > a:hover {
+  text-decoration: none;
+}
+#Footer .misc2 .container .col-center .col-inner ul.collapse.in {
+  padding-top: 27px;
+}
+#Footer .misc2 .container .col-center .col-inner ul.collapsing {
+  padding-top: 27px;
+}
+#Footer .misc2 .container .col-center .col-inner li a {
+  color: #929292;
+  line-height: 30px;
+  text-transform: capitalize;
+  font-weight: 700;
+  display: block;
+}
+#Footer .misc2 .container .col-right .sign-up {
+  text-align: right;
+}
+#Footer .misc2 .container .col-right .sign-up > li {
+  padding-bottom: 30px;
+  font-weight: 700;
+}
+#Footer .misc2 .container .col-right .sign-up li.title {
+  font-size: 18px;
+  color: #575757;
+  padding-bottom: 30px;
+}
+#Footer .misc2 .container .col-right .sign-up li.bold {
+  padding-bottom: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #494949;
+}
+#Footer .misc2 .container .col-right .sign-up li.email {
+  float: right;
+  position: relative;
+  display: block;
+  width: 255px;
+}
+#Footer .misc2 .container .col-right .sign-up li.email [type='email'] {
+  border-radius: 23px;
+  border: 1px solid #fff;
+  padding: 10px 0px;
+  padding-left: 10px;
+  width: calc(100% - 12px);
+  font-family: Montserrat, sans-serif;
+  font-size: 8px;
+  color: #696969;
+}
+#Footer .misc2 .container .col-right .sign-up li.email [type='email']:focus {
+  outline: none;
+  border: 1px solid #D6B161;
+}
+#Footer .misc2 .container .col-right .sign-up li.email [type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 23px 23px 0;
+  border: 1px solid  #696969;
+  padding: 10px 10px;
+  padding-left: 10px;
+  font-family: Montserrat, sans-serif;
+  font-size: 8px;
+  color: white;
+  background-color: #696969;
+  cursor: pointer;
+}
+#Footer .misc2 .container .col-right .sign-up li.email [type="submit"]:active {
+  color: #D6B161;
+}
+#Footer .misc2 .container .col-right .sign-up li.email [type="submit"]:focus {
+  outline: none;
+}
+#Footer .misc2 .container .col-right .sign-up ul.social {
+  float: right;
+}
+#Footer .misc2 .container .col-right .sign-up ul.social li {
+  float: left;
+}
+#Footer .misc2 .container .col-right .sign-up ul.social li a {
+  padding-left: 10px;
+  font-size: 16px;
+  color: #494949;
+}
+#Footer .copy-right {
+  background-color: #fff;
+}
+#Footer .copy-right .container {
+  padding-top: 40px;
+  padding-bottom: 95px;
+}
+#Footer .copy-right .col-xs-6 p {
+  font-weight: 700;
+}
+#Footer .copy-right .col-xs-6 a {
+  color: black;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0px;
+  transition: all 0.3s linear;
+}
+#Footer .copy-right .col-xs-6 a:hover {
+  color: red;
+}
+#Footer .copy-right .col-xs-6 .pay-method {
+  float: right;
+  width: 117px;
+}
+#Footer .copy-right .col-xs-6 .pay-method img {
+  position: relative;
+  bottom: 3px;
+}
+/*--------------------------------------------------------RWD-------------------------------------------------------*/
+@media screen and (max-width: 1229px) {
+  div#nav1 {
+    text-align: center;
+  }
+  .navbar-default {
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar-default .navbar-nav > li .twicks {
+    position: relative;
+    bottom: 5px;
+  }
+  .navbar-default .navbar-nav > li > a div.count {
+    bottom: 2px;
+    right: 3px;
+  }
+  .navbar-default .navbar-text {
+    padding-top: 43.5px;
+  }
+  .navbar-default ul.nav.navbar-nav.navbar-right {
+    padding-bottom: 36px;
+  }
+  .navbar-toggle {
+    margin-right: 53px;
+    padding: 10px 10px;
+    margin-top: 41px;
+  }
+  #Content .container .sidebar .hot-sales .sale .photo {
+    display: inline-block;
+    margin-right: 0px;
+    margin-left: 20px;
+    width: 40%;
+  }
+  #Content .container .sidebar .hot-sales .sale .info {
+    display: block;
+    position: static;
+    width: 100%;
+  }
+  #Footer .misc1 i {
+    margin-left: 60px;
+  }
+  #Footer .misc1 .row .col-md-6:nth-child(3) {
+    margin-top: 50px;
+  }
+  #Footer .misc1 .row .col-md-6:nth-child(4) {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 991px) {
+  #Content .container .sidebar .hot-sales {
+    /*繞了一大圈...應該有一小時...最後還是回到bootstarp的grid框架...
+					果然不要不信邪啊...*/
+  }
+  #Content .container .sidebar .hot-sales .sale .photo {
+    display: block;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;
+  }
+  #Content .container .products {
+    margin-top: 70px;
+  }
+  #Footer .misc1 .row .col-md-6 {
+    position: relative;
+  }
+  #Footer .misc1 .row .col-md-6:nth-child(2) {
+    margin-top: 50px;
+  }
+  #Footer .misc1 .row .col-xs-12 {
+    float: none;
+    width: 40%;
+    margin: 0 auto;
+  }
+  #Footer .misc1 .row .col-xs-12 i {
+    margin-left: 0px;
+    width: 100%;
+    text-align: center;
+  }
+  #Footer .misc1 .row .col-xs-12 .services {
+    margin-top: 20px;
+    padding-left: 10px;
+  }
+  #Footer .misc2 .container .col-x {
+    text-align: center;
+  }
+  #Footer .misc2 .container .col-left {
+    float: none;
+  }
+  #Footer .misc2 .container .col-left #logo-gray {
+    margin: 0 auto;
+  }
+  #Footer .misc2 .container .col-center {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #Footer .misc2 .container .col-center .col-inner {
+    padding-bottom: 20px;
+  }
+  #Footer .misc2 .container .col-right .sign-up li {
+    position: relative;
+    text-align: center;
+  }
+  #Footer .misc2 .container .col-right .sign-up li i.fa-map-marker {
+    top: -20px;
+  }
+  #Footer .misc2 .container .col-right .sign-up li.email {
+    float: none;
+    margin: 0 auto;
+  }
+  #Footer .misc2 .container .col-right .sign-up li.social {
+    width: 153px;
+    display: block;
+    margin: 0 auto;
+  }
+  #Footer .misc2 .container .col-right .sign-up li.social ul.social {
+    float: none;
+  }
+  #Footer .misc2 .container .col-right .sign-up li.social ul.social a {
+    padding: 0px 10px 0px 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  a.navbar-brand {
+    padding-left: 7px;
+  }
+  .navbar-toggle {
+    margin-right: 7px;
+  }
+  #Content .container .sidebar .hot-sales .sale {
+    /*
+						到底要如何用同樣的架構達成「991~768一行四排，767以下一行兩排」
+
+						嘗試用inline-block解決
+						算很接近了...但還是有明顯的落差
+						float:none;
+						width: 49.175%;
+						display: inline-block;
+						
+						 */
+  }
+  #Content .container .sidebar .hot-sales .sale .photo {
+    display: block;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;
+  }
+  #Content .container .products {
+    margin-top: 70px;
+  }
+  #Content .container .products .results-and-info {
+    text-align: center;
+  }
+  #Content .container .products .results-and-info .result {
+    float: none!important;
+  }
+  #Content .container .products .results-and-info .sort-info {
+    margin-top: 40px;
+    text-align: center;
+    float: none!important;
+  }
+  #Content .container .products .results-and-info .sort-info li {
+    display: inline-block;
+    float: none;
+  }
+  #Content .container .products .products-info .row-inner {
+    margin-top: 0px!important;
+  }
+  #Content .container .products .products-info .col-xs-12 {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 425px) {
+  #Footer .misc1 .row .col-xs-12 {
+    width: 70%;
+  }
+}
+
+/*# sourceMappingURL=product_list.css.map */

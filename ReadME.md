@@ -1,8 +1,16 @@
+8/23
+
+Q 到底要如何用同樣的架構達成「991到768一行四排，767以下一行兩排」
+
+上述問題在product_list的html,code 232以下，搭配less code 817以下要實作重現，看有沒有解決方式
+
+------------------------------------------
+
 8/22
 
 1.blog_post的content尾端的comments，雖然看起來版面是沒有問題，不過總覺得該部分的html的架構可能有問題...
 
-2.product_detail關於input[type="number"]，找過資料後，還是無法弄出客製化的spinner...
+2.product_detail關於input[type="number"]，找過資料後，目前還是無法弄出客製化的spinner...
 
 -------------------------------------------
 

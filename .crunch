@@ -180,6 +180,26 @@
 				"basic.less",
 				"product_detail.less"
 			]
+		},
+		"less/product_list.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/product_list.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
+				"basic.less",
+				"product_list.less"
+			]
 		}
 	}
 }
