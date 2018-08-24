@@ -16,6 +16,7 @@
     </head>
 
     <body>
+        <div id="full-screen-cover"></div>
         <div id="Header clearfix">
             <nav class="navbar navbar-default">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,11 +43,68 @@
                       <li><a href="#">contact</a></li>
                       <li><a class="twicks" href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a></li>
                       <li><a class="twicks" href="#"><i class="fa fa-heart-o fa-2x" aria-hidden="true"></i></a></li>
-                      <li>
+                      <li id="shopping-cart">
                           <a class="twicks" href="#">
                               <i class="icon-handbag fa-2x"></i>
                               <div class="count">3</div>
                           </a>
+
+                          <div class="shopping-content-base">
+                            <div class="triangle"></div>
+                            <div class="shopping-content">
+                                <div class="treasure">
+                                    <div class="photo">
+                                        <a href="#"><img src="https://picsum.photos/74/74?image=81" alt="photo"></a>
+                                    </div>
+                                    <div class="info">
+                                        <div class="item-name">Egon Wooden Chair</div>
+                                        <div class="price">
+                                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                                            <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div class="amount">Qty:1</div>
+                                    </div>
+                                </div>
+                                <div class="treasure">
+                                    <div class="photo">
+                                        <a href="#"><img src="https://picsum.photos/74/74?image=84" alt="photo"></a>
+                                    </div>
+                                    <div class="info">
+                                        <div class="item-name">Egon Wooden Chair</div>
+                                        <div class="price">
+                                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                                            <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div class="amount">Qty:1</div>
+                                    </div>
+                                </div>
+                                <div class="treasure">
+                                    <div class="photo">
+                                        <a href="#"><img src="https://picsum.photos/74/74?image=87" alt="photo"></a>
+                                    </div>
+                                    <div class="info">
+                                        <div class="item-name">Egon Wooden Chair</div>
+                                        <div class="price">
+                                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                                            <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div class="amount">Qty:1</div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="total-count clearfix">
+                                    <div class="total-word">Sub Total</div>
+                                    <div class="total-amount">
+                                        <i class="fa fa-eur" aria-hidden="true"></i>799,00
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="view-or-checkout clearfix">
+                                    <a href="#" class="view">view cart</a>
+                                    <a href="#" class="checkout">checkout</a>
+                                </div>
+                            </div>
+                          </div>
                       </li>
                   </ul>
                 </div>
@@ -179,7 +237,7 @@
                             <div class="row clearfix">
                                 <div class="col-xs-6 col-md-12 sale">
                                         <div class="photo">
-                                            <img src="https://picsum.photos/79/79?image=81" alt="photo">
+                                            <a href="#"><img src="https://picsum.photos/79/79?image=81" alt="photo"></a>
                                         </div>
                                         <div class="info">
                                             <div class="subtitle">Egon Wooden Chair</div>
@@ -194,7 +252,7 @@
                                 </div>
                                  <div class="col-xs-6 col-md-12 sale">
                                         <div class="photo">
-                                            <img src="https://picsum.photos/79/79?image=80" alt="photo">
+                                            <a href="#"><img src="https://picsum.photos/79/79?image=80" alt="photo"></a>
                                         </div>
                                         <div class="info">
                                             <div class="subtitle">Oyo Cantilever Chair</div>
@@ -205,7 +263,7 @@
                             <div class="row clearfix">
                                 <div class="col-xs-6 col-md-12 sale">
                                     <div class="photo">
-                                        <img src="https://picsum.photos/79/79?image=847" alt="photo">
+                                        <a href="#"><img src="https://picsum.photos/79/79?image=847" alt="photo"></a>
                                     </div>
                                     <div class="info">
                                         <div class="subtitle">Kurve Chair</div>
@@ -220,7 +278,7 @@
                                 </div>
                                 <div class="col-xs-6 col-md-12 sale">
                                     <div class="photo">
-                                        <img src="https://picsum.photos/79/79?image=142" alt="photo">
+                                        <a href="#"><img src="https://picsum.photos/79/79?image=142" alt="photo"></a>
                                     </div>
                                     <div class="info">
                                         <div class="subtitle">Marvelous Wooden Chair</div>
@@ -644,6 +702,15 @@
                     else{
                         $('.col-4 .collapse').collapse('show')
                     }
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('#shopping-cart').hover(function() {
+                    $('#full-screen-cover').fadeIn("fast")
+                }, function() {
+                    $('#full-screen-cover').fadeOut("fast")
                 });
             });
         </script>
