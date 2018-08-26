@@ -1,0 +1,981 @@
+/*--------------------------------style.always-----------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  color: #929292;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  margin: 0;
+}
+h3 {
+  margin: 0;
+}
+h4 {
+  margin: 0;
+}
+h5 {
+  margin: 0;
+}
+h6 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #929292;
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  outline: none;
+}
+li {
+  list-style-type: none;
+}
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  float: left;
+}
+.col-12 {
+  width: calc(100%);
+}
+.col-11 {
+  width: calc(91.66666667%);
+}
+.col-10 {
+  width: calc(83.33333333%);
+}
+.col-9 {
+  width: calc(75%);
+}
+.col-8 {
+  width: calc(66.66666667%);
+}
+.col-7 {
+  width: calc(58.33333333%);
+}
+.col-6 {
+  width: calc(50%);
+}
+.col-5 {
+  width: calc(41.66666667%);
+}
+.col-4 {
+  width: calc(33.33333333%);
+}
+.col-2 {
+  width: calc(16.66666667%);
+}
+.col-1 {
+  width: calc(8.33333333%);
+}
+.container {
+  position: relative;
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/*---------------------------------order_checkout.css--------------------------------------------*/
+/* --------------------------------customize----------------------------------------- */
+/* --------------------------------Header------------------------------------------- */
+#Header {
+  background-image: url("https://picsum.photos/1920/350?image=1059");
+  background-position: right center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#Header #Header_home .contact {
+  float: left;
+  text-transform: lowercase;
+}
+#Header #Header_home .lists {
+  float: right;
+}
+#Header #Header_home li {
+  float: left;
+  padding: 13px 17px;
+  transition: background-color 0.2s ease;
+  color: white;
+}
+#Header #Header_home li:hover {
+  color: #D6B161;
+}
+#Header #Header_home li.languages:hover .language {
+  display: block;
+}
+#Header #Header_home li.languages i {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+#Header #Header_home li.languages .language {
+  display: none;
+  position: absolute;
+  width: 80px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+#Header #Header_home li.languages .language a {
+  display: inline-block;
+  padding: 5px 0px;
+}
+#Header #Header_home a {
+  font-weight: bold;
+  text-transform: capitalize;
+  color: white;
+}
+#Header #Header_home a:hover {
+  color: #D6B161;
+}
+#Header #Header_nav .navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+#Header #Header_nav .navbar-brand {
+  height: auto;
+  line-height: normal;
+  margin-left: 0px;
+  padding-left: 46px;
+  padding-top: 26px;
+}
+#Header #Header_nav .navbar {
+  margin-bottom: 0px;
+}
+#Header #Header_nav .navbar-default {
+  font-family: Montserrat, sans-serif;
+}
+#Header #Header_nav .navbar-default .container {
+  background-color: #fff;
+}
+#Header #Header_nav .navbar-default .navbar-nav > li {
+  position: relative;
+}
+#Header #Header_nav .navbar-default .navbar-nav > li.cart-info h5 {
+  padding-bottom: 3px;
+}
+#Header #Header_nav .navbar-default .navbar-nav > li.cart-info h6 {
+  padding-top: 3px;
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: lowercase;
+  font-family: "Source Sans Pro", sans-serif;
+}
+#Header #Header_nav .navbar-default .navbar-nav > li .twicks {
+  position: relative;
+  bottom: 5px;
+}
+#Header #Header_nav .navbar-default .navbar-nav > li > a {
+  display: inline-block;
+  color: black;
+  transition: color 0.3s ease;
+}
+#Header #Header_nav .navbar-default .navbar-nav > li > a:active {
+  color: #D6B161;
+}
+#Header #Header_nav .navbar-default .navbar-nav > li > a:hover {
+  color: #D6B161;
+}
+#Header #Header_nav .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
+#Header #Header_nav .navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+  margin: 0;
+}
+#Header #Header_nav .navbar-default .navbar-nav > li > a div.count {
+  background-color: black;
+  position: absolute;
+  bottom: 6px;
+  right: 3px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  font-size: 8px;
+  font-weight: 400;
+  color: white;
+  transition: background-color 0.2s linear;
+}
+#Header #Header_nav .navbar-default .navbar-nav > li > a div.count:hover {
+  background: #D6B161;
+}
+#Header #Header_nav .navbar-default .navbar-text {
+  margin: 0;
+  padding-top: 53px;
+  color: black;
+}
+#Header #Header_nav .navbar-collapse.collapse {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#Header #Header_nav .check-out {
+  padding: 52px 0px 0px 0px;
+  text-align: center;
+}
+#Header #Header_nav .check-out .container {
+  padding-bottom: 71px;
+}
+#Header #Header_nav .check-out h1 {
+  color: white;
+  font-family: Montserrat, sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#Header #Header_nav .check-out p {
+  position: absolute;
+  bottom: 20px;
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+#Header #Header_nav .check-out p a {
+  margin-right: 7px;
+  color: white;
+  transition: all 0.3s ease;
+}
+#Header #Header_nav .check-out p a:hover {
+  color: #D6B161;
+}
+#Header #Header_nav .check-out p i {
+  color: white;
+  margin-right: 7px;
+}
+/* -----------------------------------Content------------------------------------------- */
+#Content {
+  /*這一條鍊略麻煩，不過還是解決惹
+	1.先將3個step群組化，並將格線穿插其中
+	2.將step與circle都設為d-ib，.position則保留維持d-b，到這邊，此時step內置中等已完成
+	3.將step與.hl都設成flaot，此時已經完成90%，微調隔線的高度即可
+	4.我們現在需要的是容器置中，由於step和.hl都是容器，用ta-c不會有作用的
+	  得出動容器置中大法d-b,m0auto,with:?%，由於原本checkout-chain並沒有特別給它width
+	  因此它預設的width是100%它組祖先的width，關鍵就在於這width:100%，既然width就已經塞滿
+	  整個容器了，自然就不會有margin出現的空間!因此必須調降width的%數，d-b自動長出margin塞
+	  滿整行的特性才有顯現的空間!雖然你很快就想起來了不過應該已經要記得了!*/
+}
+#Content .checkout-chain {
+  color: #000;
+  margin: 0 auto;
+  margin-top: 77px;
+  width: 48%;
+}
+#Content .checkout-chain .step {
+  float: left;
+  text-align: center;
+  display: inline-block;
+}
+#Content .checkout-chain .step.second {
+  margin: 0px 13px;
+}
+#Content .checkout-chain .step.third {
+  color: rgba(0, 0, 0, 0.5);
+}
+#Content .checkout-chain .step.third .circle {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+#Content .checkout-chain .step .circle {
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 86px;
+  font-size: 30px;
+  font-weight: bold;
+}
+#Content .checkout-chain .step .position {
+  margin-top: 21px;
+  font-size: 16px;
+  font-weight: 700;
+}
+#Content .checkout-chain .hl {
+  /*原本只有在step設float這邊沒設，結果橫槓沒辦法卡中間，才想到這是文繞圖的特性，
+			把它也給float後，就被float視為一家人，順利卡中間惹*/
+  float: left;
+  display: inline-block;
+  border-top: 1px solid #e0e0e0;
+  width: 107px;
+  margin-top: 40px;
+}
+#Content h2.title {
+  margin-top: 98px;
+  color: black;
+}
+#Content .forms {
+  margin-top: 29px;
+}
+#Content .forms .billing-details {
+  width: 96.833333%;
+}
+#Content .forms .billing-details .form-group .c-downspinner {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 1px solid #ccc;
+  padding: 18px 0px;
+  width: 48px;
+  color: #c5c5c5;
+  background-color: transparent;
+  text-align: center;
+  transform: translateX(-68%);
+  cursor: pointer;
+  z-index: 1;
+}
+#Content .forms .billing-details .form-control {
+  padding: 26px 12px;
+  border-radius: 9px;
+}
+#Content .forms .billing-details .form-control#country {
+  /*首先，跟在做radio時一樣，可以先用這個隱藏版的屬性取消瀏覽器內部渲染的
+					外觀，這樣那個討人厭的三角形就會消失，再來，就可以用跟checkbox概念一模一樣的
+					透明input隱形覆蓋大法了，不過謹記mdn特別寫到再不同瀏覽器這個設定很有可能出狀況，
+					面對select這種內建架構複雜的，建議用類似JQUI等模組調整較好*/
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  padding: 17px 12px;
+  height: auto;
+  z-index: 2;
+  background-color: transparent;
+}
+#Content .forms .billing-details .form-control#country:focus ~ .c-downspinner {
+  border-color: #66afe9;
+}
+#Content .forms .billing-details .form-control#address {
+  padding-bottom: 70px;
+}
+#Content .forms .billing-details .form-control#notes {
+  padding-top: 18px;
+}
+#Content .forms .billing-details .form-inline input {
+  width: 46.8239%;
+}
+#Content .forms .order-and-pay {
+  background-color: #f6f6f6;
+  padding: 55px;
+  /*精益求精!既然設計要右邊這塊灰底色的區域width要551px，而原本bootstrap給我們
+			的是570px，差那麼一點~就自己在給底下的容器with設個百分比就好囉*/
+  width: 96.833333%;
+  /*由於設計稿是靠右對齊，因此把d-b預設給的右邊的margin清掉，補到左邊去，完事!*/
+  margin-left: 3.16666666666%;
+  margin-right: 0%;
+}
+#Content .forms .order-and-pay .title {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+#Content .forms .order-and-pay .subtitle {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 0px;
+  color: #888;
+}
+#Content .forms .order-and-pay .good {
+  margin-bottom: 0px;
+  color: #a3a3a3;
+}
+#Content .forms .order-and-pay span {
+  margin-left: 10px;
+}
+#Content .forms .order-and-pay .price {
+  font-size: 16px;
+  color: #636363;
+  font-weight: bold;
+}
+#Content .forms .order-and-pay i.fa-eur {
+  position: relative;
+  top: 1px;
+  margin-right: 3px;
+}
+#Content .forms .order-and-pay .border {
+  padding-bottom: 11px;
+  padding-top: 11px;
+  border-bottom: 1px solid #cccccc;
+}
+#Content .forms .order-and-pay input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  margin-top: 0px;
+  border: 1px solid #999;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  outline: none;
+  background-color: #fff;
+}
+#Content .forms .order-and-pay ul.order-detail .product {
+  margin-top: 45px;
+}
+#Content .forms .order-and-pay ul.order-detail .product ul li {
+  margin-top: 8px;
+}
+#Content .forms .order-and-pay ul.order-detail .product ul li:first-child {
+  margin-top: 0px;
+}
+#Content .forms .order-and-pay ul.order-detail .product ul li:nth-child(2) {
+  margin-top: 17px;
+}
+#Content .forms .order-and-pay ul.order-detail > li:last-child {
+  padding-top: 11px;
+}
+#Content .forms .order-and-pay ul.payment-methods {
+  margin-top: 97px;
+  /*這邊自己想出來其實已經95%了，最後這5%是不夠熟的pseudo class，
+				:focus跟原本的仍有落差，好險看mdn的例子時有發現例子中有我要的效果，關鍵就是這個
+				:checked!radio可以這樣解決。
+
+				checkbox卻無法用上面同樣的方式做(關鍵在於無法製造讓勾勾toggle的效果)
+				，餵狗瞬間在w3schools找到答案，其實再簡單不過...核心概念一樣是覆蓋，
+				只是這次不是單純拿iconfonts覆蓋上去，而是一整個容器蓋在上面，在用關鍵的opacity!畢竟opacity只是讓東西變透明
+				，實際上還是存在的，詳見.notice以下。
+				!input[type="radio"]:focus{
+				*/
+}
+#Content .forms .order-and-pay ul.payment-methods > li:last-child {
+  padding-top: 11px;
+}
+#Content .forms .order-and-pay ul.payment-methods label {
+  cursor: pointer;
+}
+#Content .forms .order-and-pay ul.payment-methods p {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+#Content .forms .order-and-pay ul.payment-methods input[type="radio"]:checked ~ i.fa-check {
+  display: block;
+}
+#Content .forms .order-and-pay ul.payment-methods i.fa-check {
+  display: none;
+  position: relative;
+  top: 5px;
+  left: 16px;
+}
+#Content .forms .notice {
+  margin-top: 38px;
+  padding: 0px 55px;
+  /*以下為checkbox客製化的方法，radio也同樣適用~即"隱形覆蓋法"*/
+}
+#Content .forms .notice br {
+  display: none;
+}
+#Content .forms .notice a {
+  color: #000;
+}
+#Content .forms .notice input[type="checkbox"] {
+  /*新發現:即使設了z-index，卻仍是pos-s的狀態，設定過pos-a等值的容器
+				還是會覆蓋掉高z-index的容器哦*/
+  position: relative;
+  /*隱形的input一定要在最上面唷，不然被其他容器擋住你想點也點不到~*/
+  z-index: 2;
+  opacity: 0;
+}
+#Content .forms .notice input[type="checkbox"]:checked ~ .c-checkbox i {
+  display: block;
+}
+#Content .forms .notice .c-checkbox {
+  width: 16px;
+  height: 16px;
+  padding-bottom: 1px;
+  border: 1px solid #999;
+  background-color: #fff;
+  position: relative;
+  top: 3px;
+  left: 13px;
+  z-index: 0;
+}
+#Content .forms .notice .c-checkbox i {
+  z-index: 1;
+  position: relative;
+  display: none;
+}
+#Content .forms .proceed {
+  margin-top: 54px;
+  padding: 18px 28px;
+  width: 307px;
+  background-color: #88bd6e;
+  box-shadow: 10px 10px 5px 0px black;
+  float: right;
+  font-family: Montserrat, sans-serif;
+  color: white;
+  font-size: 16px;
+}
+#Content .forms .proceed:active {
+  transform: translate(10px, 10px);
+  box-shadow: none;
+}
+#Content .forms .proceed i {
+  margin-left: 4px;
+}
+/* -----------------------------------Footer-------------------------------------------- */
+#Footer {
+  margin-top: 73px;
+}
+#Footer .misc1 {
+  padding-top: 65px;
+}
+#Footer .misc1 .vl {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  width: 1px;
+  height: 40px;
+  border-right: 1px solid #e9e9e9;
+}
+#Footer .misc1 .vl.a1,
+#Footer .misc1 .vl.a2 {
+  right: 9px;
+}
+#Footer .misc1 .vl.a3 {
+  right: 49px;
+}
+#Footer .misc1 i {
+  float: left;
+}
+#Footer .misc1 .services {
+  display: inline-block;
+  margin-left: 23px;
+  color: #535353;
+}
+#Footer .misc1 .services h5.title {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+#Footer .misc1 .services p {
+  font-weight: 700;
+}
+#Footer .misc2 {
+  margin-top: 72px;
+}
+#Footer .misc2 .container {
+  box-sizing: content-box;
+  background-color: #f6f6f6;
+  padding-top: 51px;
+  padding-bottom: 75px;
+  padding-right: 206px;
+  padding-left: 206px;
+}
+#Footer .misc2 .container .col-left {
+  font-weight: 700;
+  color: #a8a8a8;
+}
+#Footer .misc2 .container .col-left a {
+  text-transform: capitalize;
+  color: #a8a8a8;
+}
+#Footer .misc2 .container .col-left div i {
+  padding-right: 3px;
+}
+#Footer .misc2 .container .col-left div i.fa-map-marker {
+  display: inline-block;
+  position: relative;
+  top: -15px;
+}
+#Footer .misc2 .container .col-left div.address a {
+  display: inline-block;
+}
+#Footer .misc2 .container .col-left #logo-gray {
+  padding-bottom: 30px;
+  width: 112px;
+}
+#Footer .misc2 .container .col-left p {
+  padding-bottom: 30px;
+}
+#Footer .misc2 .container .col-left .address {
+  padding-bottom: 30px;
+}
+#Footer .misc2 .container .col-center .col-inner > a {
+  text-transform: capitalize;
+  cursor: pointer;
+  padding-left: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #575757;
+}
+#Footer .misc2 .container .col-center .col-inner > a:hover {
+  text-decoration: none;
+}
+#Footer .misc2 .container .col-center .col-inner ul.collapse.in {
+  padding-top: 27px;
+}
+#Footer .misc2 .container .col-center .col-inner ul.collapsing {
+  padding-top: 27px;
+}
+#Footer .misc2 .container .col-center .col-inner li a {
+  color: #929292;
+  line-height: 30px;
+  text-transform: capitalize;
+  font-weight: 700;
+  display: block;
+}
+#Footer .misc2 .container .col-right .sign-up {
+  text-align: right;
+}
+#Footer .misc2 .container .col-right .sign-up > li {
+  padding-bottom: 30px;
+  font-weight: 700;
+}
+#Footer .misc2 .container .col-right .sign-up li.title {
+  font-size: 18px;
+  color: #575757;
+  padding-bottom: 30px;
+}
+#Footer .misc2 .container .col-right .sign-up li.bold {
+  padding-bottom: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #494949;
+}
+#Footer .misc2 .container .col-right .sign-up li.email {
+  float: right;
+  position: relative;
+  display: block;
+  width: 255px;
+}
+#Footer .misc2 .container .col-right .sign-up li.email [type='email'] {
+  border-radius: 23px;
+  border: 1px solid #fff;
+  padding: 10px 0px;
+  padding-left: 10px;
+  width: calc(100% - 12px);
+  font-family: Montserrat, sans-serif;
+  font-size: 8px;
+  color: #696969;
+}
+#Footer .misc2 .container .col-right .sign-up li.email [type='email']:focus {
+  outline: none;
+  border: 1px solid #D6B161;
+}
+#Footer .misc2 .container .col-right .sign-up li.email [type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 23px 23px 0;
+  border: 1px solid  #696969;
+  padding: 10px 10px;
+  padding-left: 10px;
+  font-family: Montserrat, sans-serif;
+  font-size: 8px;
+  color: white;
+  background-color: #696969;
+  cursor: pointer;
+}
+#Footer .misc2 .container .col-right .sign-up li.email [type="submit"]:active {
+  color: #D6B161;
+}
+#Footer .misc2 .container .col-right .sign-up li.email [type="submit"]:focus {
+  outline: none;
+}
+#Footer .misc2 .container .col-right .sign-up ul.social {
+  float: right;
+}
+#Footer .misc2 .container .col-right .sign-up ul.social li {
+  float: left;
+}
+#Footer .misc2 .container .col-right .sign-up ul.social li a {
+  padding-left: 10px;
+  font-size: 16px;
+  color: #494949;
+}
+#Footer .copy-right {
+  background-color: #fff;
+}
+#Footer .copy-right .container {
+  padding-top: 40px;
+  padding-bottom: 95px;
+}
+#Footer .copy-right .col-xs-6 p {
+  font-weight: 700;
+}
+#Footer .copy-right .col-xs-6 a {
+  color: black;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0px;
+  transition: all 0.3s linear;
+}
+#Footer .copy-right .col-xs-6 a:hover {
+  color: red;
+}
+#Footer .copy-right .col-xs-6 .pay-method {
+  float: right;
+  width: 117px;
+}
+#Footer .copy-right .col-xs-6 .pay-method img {
+  position: relative;
+  bottom: 3px;
+}
+/*--------------------------------------------------------RWD-------------------------------------------------------*/
+@media screen and (max-width: 1612px) {
+  #Footer .misc2 .container {
+    box-sizing: border-box;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 1229px) {
+  #Header #Header_nav div#nav1 {
+    text-align: center;
+  }
+  #Header #Header_nav .navbar-default {
+    font-family: Montserrat, sans-serif;
+  }
+  #Header #Header_nav .navbar-default .navbar-brand {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+  }
+  #Header #Header_nav .navbar-default .navbar-toggle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+  }
+  #Header #Header_nav .navbar-default .navbar-nav > li .twicks {
+    position: relative;
+    bottom: 5px;
+  }
+  #Header #Header_nav .navbar-default .navbar-nav > li > a div.count {
+    bottom: 2px;
+    right: 3px;
+  }
+  #Header #Header_nav .navbar-default .navbar-text {
+    padding-top: 43.5px;
+  }
+  #Header #Header_nav .navbar-default ul.nav.navbar-nav.navbar-right {
+    padding-bottom: 36px;
+  }
+  #Content .checkout-chain {
+    width: 60%;
+  }
+  #Footer .misc1 .vl.a1 {
+    right: 50px;
+  }
+  #Footer .misc1 .vl.a2 {
+    display: none;
+  }
+  #Footer .misc1 .vl.a3 {
+    right: 49px;
+  }
+  #Footer .misc1 i {
+    margin-left: 60px;
+  }
+  #Footer .misc1 .row .col-md-6:nth-child(3) {
+    margin-top: 50px;
+  }
+  #Footer .misc1 .row .col-md-6:nth-child(4) {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 991px) {
+  #Content .checkout-chain {
+    width: 78%;
+  }
+  #Content .forms .billing-details {
+    width: 100%;
+  }
+  #Content .forms .billing-details .form-group .c-downspinner {
+    transform: translateX(-47%);
+  }
+  #Content .forms .order-and-pay {
+    margin: 0px;
+    width: 100%;
+  }
+  #Footer .misc1 .vl.a1,
+  #Footer .misc1 .vl.a3 {
+    display: none;
+  }
+  #Footer .misc1 .row .col-md-6 {
+    position: relative;
+  }
+  #Footer .misc1 .row .col-md-6:nth-child(2) {
+    margin-top: 50px;
+  }
+  #Footer .misc1 .row .col-xs-12 {
+    float: none;
+    width: 40%;
+    margin: 0 auto;
+  }
+  #Footer .misc1 .row .col-xs-12 i {
+    margin-left: 0px;
+    width: 100%;
+    text-align: center;
+  }
+  #Footer .misc1 .row .col-xs-12 .services {
+    margin-top: 20px;
+    padding-left: 10px;
+  }
+  #Footer .misc2 .container .col-x {
+    text-align: center;
+  }
+  #Footer .misc2 .container .col-left {
+    float: none;
+  }
+  #Footer .misc2 .container .col-left #logo-gray {
+    margin: 0 auto;
+  }
+  #Footer .misc2 .container .col-center {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #Footer .misc2 .container .col-center .col-inner {
+    padding-bottom: 20px;
+  }
+  #Footer .misc2 .container .col-right .sign-up li {
+    position: relative;
+    text-align: center;
+  }
+  #Footer .misc2 .container .col-right .sign-up li i.fa-map-marker {
+    top: -20px;
+  }
+  #Footer .misc2 .container .col-right .sign-up li.email {
+    float: none;
+    margin: 0 auto;
+  }
+  #Footer .misc2 .container .col-right .sign-up li.social {
+    width: 153px;
+    display: block;
+    margin: 0 auto;
+  }
+  #Footer .misc2 .container .col-right .sign-up li.social ul.social {
+    float: none;
+  }
+  #Footer .misc2 .container .col-right .sign-up li.social ul.social a {
+    padding: 0px 10px 0px 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #Content .checkout-chain {
+    width: 100%;
+  }
+  #Content .checkout-chain .hl {
+    display: none;
+  }
+  #Content .checkout-chain .step.second {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0px;
+  }
+  #Content .checkout-chain .step.third {
+    float: right;
+  }
+  #Content .forms .order-and-pay {
+    padding: 20px;
+  }
+  #Content .forms .notice {
+    padding: 0px 20px;
+  }
+  #Content input#last-name,
+  #Content input#phone-number {
+    float: none!important;
+    min-width: 290px;
+  }
+  #Content input#first-name,
+  #Content input#email-address {
+    margin-bottom: 15px;
+    min-width: 290px;
+  }
+  #Header #Header_home ul li {
+    padding: 17px 10px;
+  }
+  #Header #Header_home .contact {
+    display: inline-block;
+  }
+  #Header #Header_home .lists {
+    display: inline-block;
+  }
+  #Header #Header_home .lists li:nth-child(2) {
+    padding: 17px 0px;
+  }
+  #Footer .misc2 .boring-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 437px) {
+  #Header #Header_home .contact {
+    width: 320px;
+    max-width: 320px;
+    margin: 0 auto;
+    display: block;
+    float: none;
+    text-align: center;
+  }
+  #Header #Header_home .contact li {
+    /*只清掉ul的float，忘記清li的，難怪原本怎麼設ta-c都沒用...*/
+    float: none;
+  }
+  #Header #Header_home .lists {
+    width: 320px;
+    max-width: 320px;
+    margin: 0 auto;
+    display: block;
+    float: none;
+    text-align: center;
+  }
+  #Header #Header_home .lists li {
+    /*只清掉ul的float，忘記清li的，難怪原本怎麼設ta-c都沒用...*/
+    float: none;
+    display: inline-block;
+  }
+  #Header #Header_home .lists li:nth-child(2) {
+    padding: 17px 0px;
+  }
+  #Content .feature .slider-select-bar li:after {
+    padding: 0px 14px;
+  }
+  #Content .forms .notice br {
+    display: block;
+  }
+  #Content .checkout-chain .step .position {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 425px) {
+  #Footer .misc1 .row .col-xs-12 {
+    width: 70%;
+  }
+}
+
+/*# sourceMappingURL=order_checkout.css.map */

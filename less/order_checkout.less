@@ -1,0 +1,1040 @@
+@import "basic";
+
+/*---------------------------------order_checkout.css--------------------------------------------*/
+
+/* --------------------------------customize----------------------------------------- */
+
+
+/* --------------------------------Header------------------------------------------- */
+#Header{
+	background-image:url("https://picsum.photos/1920/350?image=1059");
+	background-position: right center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	// url("https://picsum.photos/1920/350?image=100") center cover no-repeat fixed;
+	#Header_home{
+		.contact{
+			float: left;
+			text-transform: lowercase;
+		}
+		.lists{
+			float: right;
+		}
+		li{
+			float: left;
+			padding: 13px 17px;
+			transition:background-color 0.2s ease;
+			color:white;
+			&:hover{
+				color:#D6B161;
+			}
+			&.languages{
+				&:hover{
+					.language{
+						display: block;
+					}
+				}
+				i{
+					margin-left: 5px;
+					position: relative;
+					top: 2px;
+				}
+				.language{
+					display: none;
+					position: absolute;
+					width: 80px;
+					background-color: rgba(0,0,0,0.7);
+					color:white;
+					text-align: center;
+					z-index: 1;
+					a{	
+						display:inline-block;
+						padding: 5px 0px;
+					}
+				}
+			}	
+		}
+		a{
+			font-weight: bold;
+			text-transform: capitalize;
+			color:white;
+			&:hover{
+				color:#D6B161;
+			}
+		}
+	}
+
+	#Header_nav{
+		.navbar-default {
+		    background-color: transparent; 
+		    border-color: transparent; 
+		}
+
+		.navbar-brand{
+			height:auto;
+			line-height: normal;
+			margin-left: 0px;
+			padding-left: 46px;
+			padding-top: 26px;
+		}
+
+		.navbar {
+		    margin-bottom: 0px;
+		}
+
+		.navbar-default{
+			font-family:@Mr;
+			.container{
+				background-color: #fff;
+			}
+			.navbar-nav>li{
+				position: relative;
+				&.cart-info{
+					h5{
+						padding-bottom: 3px;
+					}
+					h6{
+						padding-top: 3px;
+						font-size: 8px;
+						font-weight: 700;
+						text-transform: lowercase;
+						font-family:@SSP;
+					}
+				}
+				.twicks{
+					position: relative;
+					bottom:5px;
+				}
+			}
+			.navbar-nav>li>a {
+				display: inline-block;
+			    color: black;
+				transition:color 0.3s ease;
+			    &:active{
+					color:@navi_active_color;
+			    }
+			    &:hover{
+			    	color:@navi_active_color;	
+			    }
+			    [class^="icon-"]:before, [class*=" icon-"]:before {
+			    	margin: 0;
+			    }
+			    div.count {
+					background-color: @background_color_1;
+					position: absolute;
+					bottom: 6px;
+					right: 3px;
+					border-radius: 50%;
+					height: 20px;
+					width: 20px;
+					text-align: center;
+					font-size: 8px;
+					font-weight: 400;
+					color:white;
+					transition:background-color 0.2s linear;
+					&:hover{
+						background:#D6B161; 
+					}
+				}
+			}
+			.navbar-text{
+				margin:0;
+				padding-top:53px;
+				color:black;
+			}
+		}
+
+		ul.nav.navbar-nav.navbar-right{
+		}
+
+		.navbar-collapse.collapse{
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.check-out {
+			.container{
+				padding-bottom: 71px;
+			}
+			padding: 52px 0px 0px 0px;
+			text-align: center;
+			h1 {
+				color: white;
+				font-family: @Mr;
+				font-size: 44px;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+			p {
+				position: absolute;
+				bottom: 20px;
+				text-align: left;
+				text-transform: capitalize;
+				font-size: 14px;
+				a{
+					margin-right: 7px;
+					color:white;
+					transition: all 0.3s ease;
+					&:hover{
+						color:@navi_active_color;
+					}
+				}
+				i{
+					color:white;
+					margin-right: 7px;
+				}
+			}
+		} 	
+	}
+}
+
+/* -----------------------------------Content------------------------------------------- */
+#Content{
+	/*這一條鍊略麻煩，不過還是解決惹
+	1.先將3個step群組化，並將格線穿插其中
+	2.將step與circle都設為d-ib，.position則保留維持d-b，到這邊，此時step內置中等已完成
+	3.將step與.hl都設成flaot，此時已經完成90%，微調隔線的高度即可
+	4.我們現在需要的是容器置中，由於step和.hl都是容器，用ta-c不會有作用的
+	  得出動容器置中大法d-b,m0auto,with:?%，由於原本checkout-chain並沒有特別給它width
+	  因此它預設的width是100%它組祖先的width，關鍵就在於這width:100%，既然width就已經塞滿
+	  整個容器了，自然就不會有margin出現的空間!因此必須調降width的%數，d-b自動長出margin塞
+	  滿整行的特性才有顯現的空間!雖然你很快就想起來了不過應該已經要記得了!*/
+	.checkout-chain{
+		color: #000;
+		margin: 0 auto;
+		margin-top: 77px;
+		width:48%; 
+		.step{
+			float: left;
+			text-align: center;
+			display:inline-block;
+			&.second{
+				margin: 0px 13px;
+			}
+			&.third{
+				color:rgba(0,0,0,0.5);
+				.circle{
+					border-color:rgba(0,0,0,0.1);
+				}
+			}
+			.circle{
+				display:inline-block;
+				border-radius: 50%;
+				border: 2px solid #000;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				width: 86px;
+				font-size: 30px;
+				font-weight: bold;
+			}
+			.position{
+				margin-top: 21px;
+				font-size: 16px;
+				font-weight: 700;
+			}
+		}
+		.hl{
+			/*原本只有在step設float這邊沒設，結果橫槓沒辦法卡中間，才想到這是文繞圖的特性，
+			把它也給float後，就被float視為一家人，順利卡中間惹*/
+			float: left;
+			display: inline-block;
+			border-top: 1px solid #e0e0e0;
+			width: 107px;
+			margin-top: 40px;
+		}
+	}
+	
+	h2.title{
+		margin-top: 98px;
+		color: black;
+	}
+	
+	
+	.forms{
+		margin-top: 29px;
+		.billing-details{
+			width: 96.833333%;
+			.form-group{
+				.c-downspinner{
+					position: absolute;
+					right: 0;
+					top: 0;
+					border-left: 1px solid #ccc;
+					padding: 18px 0px;
+					width: 48px;
+					color:#c5c5c5;
+					background-color:transparent;
+					text-align: center;
+					transform: translateX(-68%);
+					cursor:pointer;
+					z-index: 1;
+				}
+			}
+			.form-control{
+				padding: 26px 12px;
+				border-radius: 9px;
+				&#country{
+					/*首先，跟在做radio時一樣，可以先用這個隱藏版的屬性取消瀏覽器內部渲染的
+					外觀，這樣那個討人厭的三角形就會消失，再來，就可以用跟checkbox概念一模一樣的
+					透明input隱形覆蓋大法了，不過謹記mdn特別寫到再不同瀏覽器這個設定很有可能出狀況，
+					面對select這種內建架構複雜的，建議用類似JQUI等模組調整較好*/
+					-webkit-appearance:none;
+   					appearance:none;
+      				-moz-appearance:none;
+					position: relative;
+					padding: 17px 12px;
+					height: auto;
+					z-index: 2;
+					background-color: transparent;
+					&:focus ~ .c-downspinner{
+					    border-color: #66afe9;
+					}
+				}
+				&#address{
+					padding-bottom: 70px;
+				}
+				&#notes{
+					padding-top: 18px;
+				}
+
+			}
+			.form-inline{
+				input{
+					width: 46.8239%;
+				}
+			}
+		}
+		.order-and-pay{
+			background-color: #f6f6f6;
+			padding: 55px;
+			/*精益求精!既然設計要右邊這塊灰底色的區域width要551px，而原本bootstrap給我們
+			的是570px，差那麼一點~就自己在給底下的容器with設個百分比就好囉*/
+			width: 96.833333%;
+			/*由於設計稿是靠右對齊，因此把d-b預設給的右邊的margin清掉，補到左邊去，完事!*/
+   			margin-left: 3.16666666666%;
+    		margin-right: 0%;
+			.title{
+				font-family: @Mr;
+				font-size: 16px;
+				color:#000;
+			}
+
+			.subtitle{
+				font-weight: bold;
+				font-size: 16px;
+				margin-bottom: 0px;
+				color:#888;
+			}
+
+			.good{
+				margin-bottom: 0px;
+				color:#a3a3a3;
+			}
+
+			span{
+				margin-left: 10px;
+			}
+
+
+			.price{
+				font-size: 16px;
+				color:#636363;
+				font-weight: bold;
+			}
+
+			i.fa-eur{
+				position: relative;
+				top: 1px;
+				margin-right: 3px;
+			}
+
+			.border{
+				padding-bottom: 11px;
+				padding-top: 11px;
+				border-bottom: 1px solid #cccccc;
+			}
+
+			input[type="radio"]{
+				-webkit-appearance:none;
+				-moz-appearance:none;
+				appearance:none;
+				position: relative;
+				margin-top: 0px;
+				border: 1px solid #999;
+				top: 4px;
+				width: 16px;
+				height: 16px;
+				outline: none;
+				background-color: #fff;
+			}
+
+			ul.order-detail{
+				.product{
+					margin-top: 45px;
+					ul li{
+						margin-top: 8px;
+						&:first-child{
+							margin-top: 0px;
+						}
+						&:nth-child(2){
+							margin-top: 17px;
+						}
+					}
+				}
+				&>li:last-child{
+					padding-top: 11px;
+				}
+
+			}
+			ul.payment-methods{
+				margin-top: 97px;
+				&>li:last-child{
+					padding-top: 11px;
+				}
+				label{
+					cursor: pointer;
+				}
+				p{
+					margin-top: 16px;
+					margin-bottom: 8px;
+					font-size: 12px;
+				}
+				
+				/*這邊自己想出來其實已經95%了，最後這5%是不夠熟的pseudo class，
+				:focus跟原本的仍有落差，好險看mdn的例子時有發現例子中有我要的效果，關鍵就是這個
+				:checked!radio可以這樣解決。
+
+				checkbox卻無法用上面同樣的方式做(關鍵在於無法製造讓勾勾toggle的效果)
+				，餵狗瞬間在w3schools找到答案，其實再簡單不過...核心概念一樣是覆蓋，
+				只是這次不是單純拿iconfonts覆蓋上去，而是一整個容器蓋在上面，在用關鍵的opacity!畢竟opacity只是讓東西變透明
+				，實際上還是存在的，詳見.notice以下。
+				!input[type="radio"]:focus{
+				*/
+				input[type="radio"]{
+					&:checked ~ i.fa-check{
+						display: block;
+					}						
+				}
+
+				i.fa-check{
+					display:none;
+					position:relative;
+					top:5px;
+					left: 16px;
+				}
+			}
+				
+		}
+
+		.notice{
+			margin-top: 38px;
+			padding: 0px 55px;
+			br{
+				display: none;
+			}
+			a{
+				color:#000;
+			}
+			/*以下為checkbox客製化的方法，radio也同樣適用~即"隱形覆蓋法"*/
+			input[type="checkbox"]{
+				/*新發現:即使設了z-index，卻仍是pos-s的狀態，設定過pos-a等值的容器
+				還是會覆蓋掉高z-index的容器哦*/
+				position: relative;
+				/*隱形的input一定要在最上面唷，不然被其他容器擋住你想點也點不到~*/
+				z-index: 2;
+				opacity: 0;
+				&:checked ~ .c-checkbox i{
+					display: block;
+				}
+			} 
+			.c-checkbox{
+				width: 16px;
+				height: 16px;
+				padding-bottom: 1px;
+				border:1px solid #999;
+				background-color: #fff;
+				position: relative;
+				top: 3px;
+				left: 13px;
+				z-index: 0;
+				i{
+					z-index: 1;
+					position: relative;
+					display: none;
+				}
+			}
+		}
+		.proceed{
+			margin-top: 54px;
+			padding: 18px 28px;
+			width: 307px;
+			background-color: #88bd6e;
+			box-shadow: 10px 10px 5px 0px black;
+			float: right;
+			font-family: @Mr;
+			color: white;
+			font-size: 16px;
+			&:active{
+				transform: translate(10px,10px);
+				box-shadow: none;
+			}
+
+			i{
+				margin-left: 4px;
+			}				
+		}
+	}
+}
+
+/* -----------------------------------Footer-------------------------------------------- */
+
+
+
+#Footer {
+	margin-top: 73px;
+
+	.misc1{
+		padding-top: 65px;
+		.vl{
+			position: absolute;
+			right: 0;
+			display: inline-block;
+			width: 1px;
+			height: 40px;
+			border-right:1px solid #e9e9e9;
+			&.a1,&.a2{
+				right: 9px;
+			}
+			&.a3{
+				right: 49px;
+			}
+		}
+		i{
+			float: left;
+		}
+		.services{
+			display: inline-block;
+			margin-left: 23px;
+			color:#535353;
+			h5.title{
+				font-family: @Mr;
+				font-weight: 700;
+				margin-bottom: 2px;
+			}
+			p{
+				font-weight: 700;
+			}
+		}
+	}
+	.misc2 {
+		margin-top: 72px;
+		.container {
+			box-sizing: content-box;
+			background-color: @background_color_6;
+			padding-top: 51px;
+			padding-bottom:75px;
+			padding-right: 206px;
+			padding-left: 206px;
+			.col-left {
+				font-weight: 700;
+				color: @color_9;
+				a {
+					text-transform: capitalize;
+					color: @color_9;
+				}
+				div {
+					i {
+						padding-right: 3px;
+					}
+					i.fa-map-marker {
+						display: inline-block;
+						position: relative;
+						top: -15px;
+					}
+				}
+				div.address {
+					a {
+						display: inline-block;
+					}
+				}
+				#logo-gray {
+					padding-bottom: 30px;
+					width: 112px;
+				}
+				p {
+					padding-bottom: 30px;
+				}
+				.address {
+					padding-bottom: 30px;
+				}
+			}
+			.col-center {
+				.col-inner{
+					>a{
+						text-transform: capitalize;
+					    cursor: pointer;
+					    padding-left: 5px;
+					    font-weight: 700;
+					    font-size: 18px;
+					    color: #575757;
+					    &:hover{
+					    	text-decoration: none;
+					    }
+					}
+					ul.collapse.in{
+						padding-top:27px;
+					}
+					ul.collapsing{
+					  padding-top:27px;
+					}
+					li a{
+						color:@body_color;
+					    line-height: 30px;
+					    text-transform: capitalize;
+					    font-weight: 700;
+					    display: block;
+					}
+				}
+			}
+			.col-right {
+				.sign-up {
+					text-align: right;
+					>li {
+						padding-bottom: 30px;
+						font-weight: 700;
+					}
+					li.title{
+						font-size: 18px;
+						color: @color_11;
+						padding-bottom: 30px;
+					}
+					li.bold {
+						padding-bottom: 10px;
+						font-family: @SSP;
+						font-weight: 700;
+						font-size: 16px;
+						color: @title-dark;
+					}
+					li.email {
+						float: right;
+						position: relative;
+						display: block;
+						width:255px;
+						[type='email']{
+							  border-radius:23px;
+							  border: 1px solid #fff;
+							  padding:10px 0px;
+							  padding-left:10px;
+							  width:~'calc(100% - 12px)';
+							  font-family: @Mr;
+							  font-size: 8px;
+							  color:rgb(105,105,105);
+							  &:focus{
+							    outline:none;
+							    border:1px solid #D6B161
+							  }
+						}
+						[type="submit"]{
+							position: absolute;
+							top:0;
+							right:0;
+							border-radius:0 23px 23px 0; 
+							border:1px solid  #696969;
+							padding:10px 10px;
+							padding-left:10px;
+						    font-family: @Mr;					
+							font-size: 8px;
+							color:white;
+							background-color: #696969;
+							cursor:pointer;
+							&:active{
+							color: #D6B161;
+							}
+							&:focus{
+							outline:none;
+							}
+						}				  
+					}
+					ul.social {
+						float: right;
+						li {
+							float: left;
+							a {
+								padding-left: 10px;
+								font-size: 16px;
+								color: @title-dark;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.copy-right {
+		background-color: #fff;
+		.container {
+			padding-top: 40px;
+			padding-bottom: 95px;
+		}
+		.col-xs-6 {
+			p {
+				font-weight: 700;
+			}
+			a {
+				color: @color_12;
+				font-family: @Mr;
+				font-weight: 700;
+				letter-spacing: 0px;
+				transition: all 0.3s linear;
+				&:hover {
+					color: @color_13;
+				}
+			}
+			.pay-method{
+				float: right;
+				width: 117px;
+				img {
+					position: relative;
+					bottom: 3px;
+				}
+			}
+			
+		}
+	}
+}
+
+
+
+/*--------------------------------------------------------RWD-------------------------------------------------------*/
+
+
+//	本以為塞新增一個容器條寬度就好，但就像骨牌一樣下面完全被影響
+//	還是先轉成content-box法比較直觀簡易...
+ @media screen and (max-width:1612px) {
+	#Footer .misc2 .container {
+		box-sizing: border-box;
+		padding-right:15px;
+		padding-left:15px;
+	}	
+}
+
+
+@media screen and (max-width:1229px){
+	#Header{
+		#Header_nav{
+
+			div#nav1{
+				text-align: center;
+			}
+
+			.navbar-default{
+				font-family:@Mr;
+				.navbar-brand{
+					padding-top: 20px;
+					padding-bottom: 20px;
+					padding-left: 15px;
+				}
+
+				.navbar-toggle{
+					margin-top: 20px;
+					margin-bottom: 20px;
+					margin-right: 15px;
+				} 
+
+				.navbar-nav>li .twicks{
+						position: relative;
+						bottom:5px;
+				}
+				
+				.navbar-nav>li>a {
+
+				    div.count {
+						bottom: 2px;
+						right: 3px;
+					}
+				}
+
+				.navbar-text{
+					padding-top:43.5px;
+				}
+
+				ul.nav.navbar-nav.navbar-right{
+					padding-bottom:36px;
+				}
+			}
+		}
+	}
+
+	#Content{
+		.checkout-chain{
+			width:60%;
+		} 
+	} 
+
+	#Footer{
+		.misc1{
+			.vl{
+				&.a1{
+					right:50px;
+				}
+				&.a2{
+					display: none;;
+				}
+				&.a3{
+					right: 49px;
+				}
+			}
+			i{
+				margin-left: 60px;
+			}
+			.row{
+				.col-md-6:nth-child(3){
+					margin-top: 50px;
+				}
+				.col-md-6:nth-child(4){
+					margin-top: 50px;
+				}
+			}			
+		}
+	}
+
+	// #Footer .misc2 .boring-container {
+	// 	width:970px;
+	// }
+}
+
+@media screen and (max-width:991px){ 
+	#Content{
+		.checkout-chain{
+			width:78%;
+		}
+		.forms{
+			.billing-details{
+				width: 100%;
+				.form-group .c-downspinner{
+					transform:translateX(-47%);
+				}
+			}
+			.order-and-pay{
+				margin: 0px;
+				width: 100%;
+			}
+			
+		}
+	} 
+
+
+	#Footer{
+		.misc1{
+			.vl{
+				&.a1,&.a3{
+					display: none;
+				}
+			}
+			.row{
+				.col-md-6{
+					position: relative;
+					&:nth-child(2){
+						margin-top: 50px;
+					}
+				}
+				.col-xs-12{
+					float: none;
+					width:40%;
+					margin:0 auto;
+					i{
+						margin-left: 0px;
+						width: 100%;
+						text-align: center;
+					}
+					.services{
+						margin-top: 20px;
+						padding-left: 10px;
+					}			
+				}
+			}
+		}
+		.misc2{
+			.container{
+				.col-x{
+					text-align: center;
+				}
+				.col-left{
+					float:none;
+					#logo-gray{
+						margin:0 auto;
+					}
+				}
+				.col-center{
+					padding-top: 30px; 
+					padding-bottom: 30px;
+					.col-inner{
+						padding-bottom:20px;
+					}
+				}
+				.col-right{
+					.sign-up{
+						li{
+							position: relative;
+							text-align: center;
+							i.fa-map-marker{
+								top:-20px;
+							}
+						}
+						li.email {
+							float: none;
+							margin:0 auto;
+						}
+						li.social{
+						    width: 153px;
+							display: block;
+							margin: 0 auto;
+							ul.social{
+								float:none;
+								a{
+									padding:0px 10px 0px 0px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// #Footer .misc2 .boring-container {
+	// 	width:750px;
+	// }
+}
+
+
+@media screen and (max-width:767px){
+	#Content{
+		.checkout-chain{
+			width: 100%;
+			.hl{
+				display: none;	
+			}
+			.step.second{
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				margin: 0px;
+			}
+			.step.third{
+				float: right;
+			} 
+		}
+		.forms {
+			.order-and-pay{
+			padding: 20px;
+			}
+
+			.notice{
+				padding: 0px 20px;
+			}
+		}
+		input#last-name,input#phone-number{
+			float: none!important;
+			min-width: 290px;
+		} 
+		input#first-name,input#email-address{
+			margin-bottom: 15px;
+			min-width: 290px;
+		}
+	}
+
+	#Header{
+		#Header_home{
+			// background-color: #282828;
+			ul li{
+				padding: 17px 10px;
+			}
+			.contact{
+				// width: 320px;
+				// min-width: 320px;
+				// margin: 0 auto;
+				display: inline-block;
+			}
+			.lists{
+				// width: 320px;
+				// min-width: 320px;
+				// margin: 0 auto;
+				display: inline-block;
+				// text-align: right;
+				// float: none;
+				li:nth-child(2){
+					padding:17px 0px;
+				}
+			}
+		}
+	}
+	
+	#Footer .misc2 .boring-container {
+		width:100%;
+	}	
+
+}
+
+@media screen and (max-width:437px){
+	#Header{
+		#Header_home{
+			.contact{
+				width: 320px;
+				max-width: 320px;
+				margin: 0 auto;
+				display: block;
+				float: none;
+				text-align: center;
+				li{
+					/*只清掉ul的float，忘記清li的，難怪原本怎麼設ta-c都沒用...*/
+					float: none;
+				}
+			}
+			.lists{
+				width:320px;
+				max-width: 320px;
+				margin: 0 auto;
+				display: block;
+				float: none;
+				text-align: center;
+				li{
+					/*只清掉ul的float，忘記清li的，難怪原本怎麼設ta-c都沒用...*/
+					float: none;
+					display: inline-block;
+				}
+				li:nth-child(2){
+					padding:17px 0px;
+				}
+			}
+		}
+	}
+
+	#Content .feature .slider-select-bar li:after {
+	    padding: 0px 14px;
+	}
+	#Content .forms .notice br{
+		display: block;
+	}
+	#Content .checkout-chain .step .position{
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 425px){
+	#Content{
+	}
+
+	#Footer{
+		.misc1{
+			.row{
+				.col-xs-12{
+					
+					width:70%;
+				
+				}
+			}
+		}
+	}
+}

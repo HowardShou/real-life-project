@@ -40,7 +40,9 @@ img {
   width: 100%;
 }
 a {
+  text-decoration: none;
   text-transform: uppercase;
+  color: #929292;
 }
 a:hover,
 a:focus,
@@ -103,121 +105,13 @@ li {
 .col-1 {
   width: calc(8.33333333%);
 }
-/*--------------------------------style.customize-----------------------------------------*/
 .container {
   position: relative;
   display: block;
   max-width: 1200px;
   margin: 0 auto;
 }
-/*---------------------------------about.css--------------------------------------------*/
-* {
-  box-sizing: border-box;
-}
-body {
-  position: relative;
-  color: #929292;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-h1 {
-  margin: 0;
-}
-h2 {
-  margin: 0;
-}
-h3 {
-  margin: 0;
-}
-h4 {
-  margin: 0;
-}
-h5 {
-  margin: 0;
-}
-h6 {
-  margin: 0;
-}
-p {
-  margin: 0;
-}
-ul {
-  margin: 0;
-  padding: 0;
-}
-li {
-  list-style-type: none;
-}
-dl,
-dt,
-dd {
-  margin: 0;
-}
-img {
-  display: block;
-  width: 100%;
-}
-a {
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.clearfix:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-.col-6 {
-  width: 50%;
-  float: left;
-  padding: 0 15px;
-}
-.col-5 {
-  width: 41.666666666666667%;
-  float: left;
-  padding: 0 15px;
-}
-.col-4 {
-  width: 33.333333%;
-  float: left;
-  padding: 0 15px;
-}
-.col-3 {
-  width: calc(25%);
-  float: left;
-  padding: 0 15px;
-}
-.co-2 {
-  width: calc(16.66666667%);
-}
-.row {
-  margin: 0 -15px;
-}
-.col-2 {
-  float: left;
-  padding: 0 15px;
-}
-.col-12 {
-  float: left;
-  padding: 0 15px;
-}
-.container {
-  max-width: 1200px;
-  position: relative;
-  margin: 0 auto;
-}
-.nav_container {
-  max-width: 1980px;
-  display: block;
-  margin: 0 auto;
-}
-#cart-container {
-  display: none;
-}
-.template {
-  display: none;
-}
+/*---------------------------------contact.css--------------------------------------------*/
 /*----------------------------Header------------------------------*/
 .navbar-default {
   background-color: transparent;
@@ -291,10 +185,20 @@ ul.nav.navbar-nav.navbar-right {
   text-transform: uppercase;
 }
 .contact-us p {
-  padding-top: 18px;
+  text-align: center;
+  margin-top: 26px;
   text-transform: capitalize;
   font-size: 14px;
-  color: #494949;
+  /*本來想運用跟home裡面feature一樣的after方法，但這邊需要用icon-fonts
+		css那個content不能放tag因此作罷*/
+}
+.contact-us p a {
+  margin-right: 7px;
+  color: white;
+}
+.contact-us p i {
+  color: white;
+  margin-right: 7px;
 }
 /*----------------------------------Content-----------------------*/
 .infos {

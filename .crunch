@@ -197,8 +197,28 @@
 				}
 			],
 			"sources": [
+				"product_list.less",
+				"basic.less"
+			]
+		},
+		"less/order_checkout.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/order_checkout.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
 				"basic.less",
-				"product_list.less"
+				"order_checkout.less"
 			]
 		}
 	}
