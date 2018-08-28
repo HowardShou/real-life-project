@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SHOPPING-CART</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Source+Sans+Pro:300,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/order_shopping-cart.css">
+</head>
+
+<body>
+    <div id="Header">
+        <div id="Header_home" calss="clearfix">
+            <div class="container clearfix">
+                <div class="row">
+                    <ul class="contact clearfix">
+                        <li class="phone">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+1(500)333 22 11">+1(500)333 22 11</a>
+                        </li>
+                    </ul>
+                    <ul class="lists clearfix">
+                        <li><a href="#">Login or Creat Account</a></li>
+                        <li>|</li>
+                        <li class="languages">
+                            Language<i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <div class="language">
+                                <a href="#">Chinese</a>
+                                <a href="#">English</a>
+                                <a href="#">日本語</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+        <div id="Header_nav" class="clearfix">
+            <nav class="navbar navbar-default">
+                <div class="container container-fluid">
+                    <div class="row">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
+                              <a class="navbar-brand" href="#">
+                                <img src="images/logo.png" alt="logo">
+                              </a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="nav1">
+                          <ul class="nav navbar-nav navbar-right">
+                              <li><a href="#">home</a></li>
+                              <li><a href="#">products<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                              <li><a href="#">pages<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                              <li><a href="#">blog</a></li>
+                              <li><a href="#">about</a></li>
+                              <li><a href="#">contact</a></li>
+                              <li><a class="twicks" href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a></li> 
+                              <li><a class="twicks" href="#"><i class="fa fa-heart-o fa-2x" aria-hidden="true"></i></a></li>
+                              <li>
+                                  <a class="twicks" href="#">
+                                      <i class="icon-handbag fa-2x"></i>
+                                      <div class="count">3</div>
+                                  </a>
+                              </li>
+                          </ul>
+                        </div>
+                    </div>
+                </div> 
+            </nav>
+
+            <div class="check-out">
+                <div class="container clearfix">
+                    <h1>Contact</h1>
+                    <p>
+                        <a href="#">Home</a><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="#">Check Out</a>
+                    </p>
+                </div>
+            </div>    
+        </div> 
+    </div>
+
+    <div id="Content">
+        <div class="container">
+            <div class="checkout-chain clearfix">
+                <div class="first step">
+                    <div class="circle">01</div>
+                    <div class="position">Shopping Cart</div>
+                </div>
+                <div class="hl"></div>
+                <div class="second step">
+                    <div class="circle">02</div>
+                    <div class="position">Check Out</div>
+                </div>
+                <div class="hl"></div>
+                <div class="third step">
+                    <div class="circle">03</div>
+                    <div class="position">Order Complete</div>
+                </div>
+            </div>
+            
+            <form class="lists" action="">
+                <div class="list1">
+                    <ul class="title clearfix">
+                        <li>PRODUCT</li>
+                        <li>PRICE</li>
+                        <li>QUANTITY</li>
+                        <li>TOTAL</li>
+                    </ul>
+                    <hr>
+                    <ul class="detail clearfix">
+                        <li>
+                            <div class="photo">
+                                <a href="#"><img src="https://picsum.photos/106/106?image=250" alt="photo" ></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="p-name">Marvelous Modern 3 Seater</div>
+                        </li>
+                        <li>
+                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                        </li>
+                        <li>
+                            <label for="quantity" class="sr-only">quantity</label>
+                            <select id="quantity" name="quantity" >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </li>
+                        <li>
+                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                            <button><i class="fa fa-times" aria-hidden="true"></i></button>
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul class="detail clearfix">
+                        <li>
+                            <div class="photo">
+                                <a href="#"><img src="https://picsum.photos/106/106?image=250" alt="photo" ></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="p-name">Marvelous Modern 3 Seater</div>
+                        </li>
+                        <li>
+                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                        </li>
+                        <li>
+                            <label for="quantity" class="sr-only">quantity</label>
+                            <select id="quantity" name="quantity" >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </li>
+                        <li>
+                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                            <button><i class="fa fa-times" aria-hidden="true"></i></button>
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul class="detail clearfix">
+                        <li>
+                            <div class="photo">
+                                <a href="#"><img src="https://picsum.photos/106/106?image=250" alt="photo" ></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="p-name">Marvelous Modern 3 Seater</div>
+                        </li>
+                        <li>
+                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                        </li>
+                        <li>
+                            <label for="quantity" class="sr-only">quantity</label>
+                            <select id="quantity" name="quantity" >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </li>
+                        <li>
+                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                            <button><i class="fa fa-times" aria-hidden="true"></i></button>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="coupon">
+                    <input type="text" name="coupon" placeholder="Your Coupon Code">
+                    <input type="submit" name="send" value="APPLY">
+                </div>
+
+                <hr>
+                
+                <div class="list2">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <h2 class="title">CACULATE SHIPPING</h2>
+                            <div class="caculate-group">
+                                <div class="form-group">
+                                    <label for="country" class="sr-only">Select Country</label>
+                                    <select  class="form-control" id="country" name="country" >
+                                        <option value="">Select Country</option>
+                                        <option value="Taiwan">Taiwan</option>
+                                        <option value="U.S.A">U.S.A</option>
+                                        <option value="Japan">Japan</option>
+                                        <option value="Korea">Korea</option>
+                                    </select>
+                                    <div class="c-downspinner"><i class="fa fa-angle-down" aria-hidden="true"></i></a></li></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state" class="sr-only">State</label>
+                                    <select  class="form-control" id="state" name="state" >
+                                        <option value="">State/Province</option>
+                                        <option value="Taipei">Taipei</option>
+                                        <option value="Koushong">Koushong</option>
+                                        <option value="Yi-lang">Yi-lang</option>
+                                        <option value="Taichung">Taichung</option>
+                                    </select>
+                                    <div class="c-downspinner"><i class="fa fa-angle-down" aria-hidden="true"></i></a></li></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip-code" class="sr-only">Zip/Postal Code</label>
+                                    <select  class="form-control" id="zip-code" name="zip-code" >
+                                        <option value="">Zip/Postal Code</option>
+                                        <option value="116">116</option>
+                                        <option value="117">117</option>
+                                        <option value="118">118</option>
+                                        <option value="119">119</option>
+                                    </select>
+                                    <div class="c-downspinner"><i class="fa fa-angle-down" aria-hidden="true"></i></a></li></div>
+                                </div>
+                            </div>
+                            <button>
+                                UPDATE TOTAL<i class="fa fa-refresh" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <h2 class="title title2">CART TOTAL</h2>
+                            
+                            <ul class="sum">
+                                <li class="clearfix">
+                                    <div class="subtitle">CART SUBTOTAL</div>
+                                    <div class="price pull-right"><i class="fa fa-eur" aria-hidden="true"></i>1299,00</div>   
+                                </li>
+                                <hr>
+                                <li class="clearfix">
+                                    <div class="subtitle ship">SHIPPING</div>
+                                    <div class="price ship pull-right">Free shipping</div>   
+                                </li>
+                                <hr>
+                                <li class="clearfix">
+                                    <div class="subtitle">CART TOTAl</div>
+                                    <div class="price pull-right"><i class="fa fa-eur" aria-hidden="true"></i>1299,00</div>   
+                                </li>
+                            </ul>
+                          
+                            <a class="proceed" href="#">PROCEED TO CHECKOUT<i class="fa fa-check" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <div id="Footer">
+        <div class="misc1">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-xs-12 col-md-6 col-lg-3">
+                        <i class="fa fa-plane fa-3x" aria-hidden="true"></i>
+                        <div class="services">
+                            <h5 class="title">FREE SHIPPING</h5>
+                            <p>Free shipping on all US order</p>
+                        </div>
+                        <div class="vl a1"></div>
+                        </div>
+                    <div class="col-xs-12 col-md-6 col-lg-3">
+                        <i class="fa fa-life-ring fa-3x" aria-hidden="true"></i>
+                        <div class="services">
+                            <h5 class="title">SUPPORT</h5>
+                            <p>We support 24 hours a day</p>
+                        </div>
+                        <div class="vl a2"></div>
+                        </div>
+                    <div class="col-xs-12 col-md-6 col-lg-3">
+                        <i class="fa fa-dropbox fa-3x" aria-hidden="true"></i>
+                        <div class="services">
+                            <h5 class="title">GIFT CARDS</h5>
+                            <p>Give perfect gift</p>
+                        </div>
+                        <div class="vl a3"></div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-3">
+                        <i class="fa fa-money fa-3x" aria-hidden="true"></i>
+                        <div class="services">
+                            <h5 class="title">PAYMENT 100% SECURE</h5>
+                            <p>Payment 100% secure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="misc2 clearfix">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-x col-left col-xs-12 col-md-4">
+                        <div id="logo-gray">
+                            <a href="#"><img src="images/logo.gray.png" alt="logo"></a>
+                        </div>
+                        <p>Exercitation ullamco laboris nisi ut aliquip excommodo consequat. Duis aute irure
+                        </p>
+                        <div class="address">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <a href="#">connaught orad central suite 18B, 148 <br>New Yankee</a>
+                        </div>
+                        <div class="phone">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+1(500)333 22 11">+1(500)333 22 11</a>
+                        </div>
+                        <div class="email">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <a href="mailto:info@schon.chair">info@schon.chair</a>
+                        </div>
+                    </div>
+                    <div class="col-x col-center col-xs-12 col-md-5">
+                        <div class="row clearfix">
+                            <div class="col-x col-inner col-xs-12 col-md-4">
+                                <a  data-toggle="collapse" data-target="#categories" aria-expanded="true" aria-controls="categories">
+                                  Categories
+                                </a>
+                                <ul class="collapse in" id="categories">
+                                    <li><a href="#">chairs</a></li>
+                                    <li><a href="#">sofas</a></li>
+                                    <li><a href="#">living</a></li>
+                                    <li><a href="#">bedroom</a></li>
+                                    <li><a href="#">tables</a></li>
+                                    <li><a href="#">new</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-x col-inner col-xs-12 col-md-4">
+                                <a  data-toggle="collapse" data-target="#informations" aria-expanded="true" aria-controls="informations">
+                                  Informations
+                                </a>
+                                <ul class="collapse in" id="informations">
+                                    <li><a href="#">About Contact Us</a></li>
+                                    <li><a href="#">sofas</a></li>
+                                    <li><a href="#">Terms&Conditions</a></li>
+                                    <li><a href="#">Privay Policy</a></li>
+                                    <li><a href="#">Customer Services</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-x col-inner col-xs-12 col-md-4">
+                                <a  data-toggle="collapse" data-target="#accounts" aria-expanded="true" aria-controls="accounts">
+                                  Accounts
+                                </a>
+                                <ul class="collapse in" id="accounts">
+                                    <li><a href="#">MyAccount</a></li>
+                                    <li><a href="#">OrderTracking</a></li>
+                                    <li><a href="#">Wishlist</a></li>
+                                    <li><a href="#">ShoppingCart</a></li>
+                                    <li><a href="#">Checkout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-x col-right col-xs-12 col-md-3">
+                        <ul class="sign-up">
+                            <li class="title">Sign Up Newsletter</li>
+                            <li>Subscribe now to get 15% off
+                                <br>on any product</li>
+                            <li class="email">
+                                  <input type="email" placeholder='Your e-mail'>
+                                  <input type="submit" value='subscribe'>
+                            </li>
+                            <li class="bold">Follow us</li>
+                            <li class="social">
+                                <ul class="social clearfix">
+                                    <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                    <li><a href="#" target="_blank "><i class="fa fa-youtube"  aria-hidden="true"></i></a></li>
+                                    <li><a href="#" target="_blank "><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="#" target="_blank "><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-xs-6">
+                        <p>&copy; <a href="#" class="transition">Schön.</a> All Rights Reserved</p>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="pay-method">
+                            <img src="images/card icon.png" alt="card icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <script src="js/bootstrap.min.js"></script>
+    <!-- 原本怎樣都吃不到jQuery的外掛，後來發現原本使用的jquery-ui-customize.min.js似乎有少資料
+        把jquery-ui-customize.js重新compress過後就可以正常使用了，媽的...-->
+    <script src="js/jquery-ui-customize.min.js"></script>
+    <!-- 雖然用CSS就解決了，但還是很好奇，select裡面的option究竟要用什麼event才能使之呈現
+        感覺就是focus，但表單就是不出現T_T
+    <script>
+        $(document).ready(function() {
+            $(".c-downspinner").click(function(event) {
+                $("#country").focus();
+            });
+        });
+    </script> -->
+    <script>
+        $(document).ready(function() {
+            $("select#quantity").selectmenu().selectmenu("menuWidget");
+        });
+    </script>
+    <script>
+        function accordin(){
+            if ($(window).width()<=992) {
+                $('.col-4 .collapse').collapse('hide')
+            }
+            else{
+                $('.col-4 .collapse').collapse('show')
+            }
+        }
+        accordin();
+
+        $(document).ready(function() {
+            $(window).resize(function() {
+                if ($(window).width()<=992) {
+                    $('.col-4 .collapse').collapse('hide')
+                }
+                else{
+                    $('.col-4 .collapse').collapse('show')
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

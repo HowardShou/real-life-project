@@ -220,6 +220,26 @@
 				"basic.less",
 				"order_checkout.less"
 			]
+		},
+		"less/order_shopping-cart.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/order_shopping-cart.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
+				"basic.less",
+				"order_shopping-cart.less"
+			]
 		}
 	}
 }
