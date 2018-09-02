@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CHECKOUT</title>
+    <title>SHOPPING-CART</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Source+Sans+Pro:300,600" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/order_checkout.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/order_shopping-cart.css">
 </head>
 
 <body>
@@ -45,6 +46,7 @@
             <nav class="navbar navbar-default">
                 <div class="container container-fluid">
                     <div class="row">
+                        <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
                               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav1" aria-expanded="false">
                                 <span class="sr-only">Toggle navigation</span>
@@ -56,6 +58,7 @@
                                 <img src="images/logo.png" alt="logo">
                               </a>
                         </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="nav1">
                           <p class="navbar-text">+1(555) 333 22 11</p>
                           <ul class="nav navbar-nav navbar-right">
@@ -72,6 +75,7 @@
                                 </a>
                               </li>
                               <li>
+                                <!-- 新發現--本來是用a來包覆，但是發現a底下不能接div!故將a換成div -->
                                 <div class="dropdown-container">
                                     pages
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -101,6 +105,7 @@
 
                                   <div class="shopping-content-base">
                                     <div class="triangle"></div>
+                                    <!-- 後來聽助教一講，其實這種shopping-cart都可以用ul配li來做，最後在li裡面塞div即可-->
                                     <div class="shopping-content">
                                         <div class="treasure">
                                             <div class="photo">
@@ -164,7 +169,7 @@
 
             <div class="check-out">
                 <div class="container clearfix">
-                    <h1>check out</h1>
+                    <h1>shopping cart</h1>
                     <p>
                         <a href="#">Home</a><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="#">Check Out</a>
                     </p>
@@ -191,138 +196,188 @@
                     <div class="position">Order Complete</div>
                 </div>
             </div>
+            
+            <form class="lists" action="">
+                <div class="list1">
+                    <ul class="title clearfix">
+                        <li>PRODUCT</li>
+                        <li>PRICE</li>
+                        <li>QUANTITY</li>
+                        <li>TOTAL</li>
+                    </ul>
+                    <hr>
+                    <ul class="detail clearfix">
+                        <li>
+                            <div class="photo">
+                                <a href="#"><img src="https://picsum.photos/106/106?image=250" alt="photo" ></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="p-name">Marvelous Modern 3 Seater</div>
+                        </li>
+                        <li>
+                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                        </li>
+                        <li>
+                            <label for="quantity" class="sr-only">quantity</label>
+                            <select id="quantity" name="quantity" >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </li>
+                        <li>
+                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                            <button><i class="fa fa-times" aria-hidden="true"></i></button>
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul class="detail clearfix">
+                        <li>
+                            <div class="photo">
+                                <a href="#"><img src="https://picsum.photos/106/106?image=250" alt="photo" ></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="p-name">Marvelous Modern 3 Seater</div>
+                        </li>
+                        <li>
+                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                        </li>
+                        <li>
+                            <label for="quantity" class="sr-only">quantity</label>
+                            <select id="quantity" name="quantity" >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </li>
+                        <li>
+                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                            <button><i class="fa fa-times" aria-hidden="true"></i></button>
+                        </li>
+                    </ul>
+                    <hr>
+                    <ul class="detail clearfix">
+                        <li>
+                            <div class="photo">
+                                <a href="#"><img src="https://picsum.photos/106/106?image=250" alt="photo" ></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="p-name">Marvelous Modern 3 Seater</div>
+                        </li>
+                        <li>
+                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                        </li>
+                        <li>
+                            <label for="quantity" class="sr-only">quantity</label>
+                            <select id="quantity" name="quantity" >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </li>
+                        <li>
+                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                            <button><i class="fa fa-times" aria-hidden="true"></i></button>
+                        </li>
+                    </ul>
+                </div>
 
-            <h2 class="title">BILLING DETAILS</h2>
-            <div class="forms">
-                <div class="row">
-                    <div class="col-xs-12 col-md-6">
-                        <form class="billing-details" action="">
-                            <div class="form-group">
-                                <label for="country" class="sr-only">Select Country</label>
-                                <select  class="form-control" id="country" name="country" >
-                                    <option value="">Select Country</option>
-                                    <option value="Taiwan">Taiwan</option>
-                                    <option value="U.S.A">U.S.A</option>
-                                    <option value="Japan">Japan</option>
-                                    <option value="Korea">Korea</option>
-                                </select>
-                                <div class="c-downspinner"><i class="fa fa-angle-down" aria-hidden="true"></i></a></li></div>
-                            </div>
-                            
-                            <div class="form-group form-inline">
-                                <label for="first-name" class="sr-only">Name</label>
-                                <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Name">
+                <hr>
 
-                                <label for="last-name" class="sr-only">Last Name</label>
-                                <input type="text" class="form-control pull-right" id="last-name" name="last-name"placeholder="Last Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="company" class="sr-only">Company Name</label>
-                                <input type="text" class="form-control" id="company" name="company" placeholder="Company Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="address" class="sr-only">Address</label>
-                                <input type="text" class="form-control" id="address" name="address" placeholder="Address">
-                            </div>
-                            <div class="form-group">
-                                <label for="city" class="sr-only">Town/City</label>
-                                <input type="text" class="form-control" id="city" name="city" placeholder="Town/City">
-                            </div>
-                            <div class="form-group">
-                                <label for="state" class="sr-only">State/Country</label>
-                                <input type="text" class="form-control" id="state" name="state" placeholder="State/Country">
-                            </div>
-                            <div class="form-group">
-                                <label for="postcode" class="sr-only">Postcode/Zip</label>
-                                <input type="text" class="form-control" id="postcode" name="postcode" placeholder="Postcode/Zip">
-                            </div>
-                            <div class="form-group form-inline">
-                                <label for="email-address" class="sr-only">Email Address</label>
-                                <input type="email" class="form-control" id="email-address" placeholder="Email Address">
+                <div class="coupon">
+                    <input type="text" name="coupon" placeholder="Your Coupon Code">
+                    <input type="submit" name="send" value="APPLY">
+                </div>
 
-                                <label for="phone-number" class="sr-only">Phone Number</label>
-                                <input type="tel" class="form-control pull-right" id="phone-number" placeholder="Phone Number">
-                            </div>
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <label>
-                                    <input type="checkbox" name="d-address" value="taipei" checked="checked">Ship to a different address?
-                                    </label>
+                <hr>
+                
+                <div class="list2">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <h2 class="title">CACULATE SHIPPING</h2>
+                            <div class="caculate-group">
+                                <div class="form-group">
+                                    <label for="country" class="sr-only">Select Country</label>
+                                    <select  class="form-control" id="country" name="country" >
+                                        <option value="">Select Country</option>
+                                        <option value="Taiwan">Taiwan</option>
+                                        <option value="U.S.A">U.S.A</option>
+                                        <option value="Japan">Japan</option>
+                                        <option value="Korea">Korea</option>
+                                    </select>
+                                    <div class="c-downspinner"><i class="fa fa-angle-down" aria-hidden="true"></i></a></li></div>
                                 </div>
-                            </div>   
-                            
-                            <div class="form-group">
-                                <textarea class="form-control" rows="3" id="notes" name="notes" placeholder="Order Notes"></textarea>
-                            </div>                            
-                        </form>
-                    </div>
-                    <div class="col-xs-12 col-md-6">
-                        <form class="order-and-pay">
-                            <ul class="order-detail">
-                                <li class="title">YOUR ORDER</li>
-                                <li class="product border">
-                                    <ul>
-                                        <li class="clearfix">
-                                            <label class="subtitle">PRODUCTS</label>
-                                            <div class="subtitle pull-right">TOTALS</div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <label class="good">Marvelous Modern 3 Seater<span>x1</span></label>
-                                            <div class="price pull-right"><i class="fa fa-eur" aria-hidden="true"></i>299,00</div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <label class="good">Bombi Chair<span>x1</span></label>
-                                            <div class="price pull-right"><i class="fa fa-eur" aria-hidden="true"></i>299,00</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="clearfix border">
-                                    <label class="subtitle">CART SUBTOTAL</label>
-                                    <div class="price pull-right"><i class="fa fa-eur" aria-hidden="true"></i>532,00</div>
-                                </li>
-                                <li class="clearfix border">
-                                    <label class="subtitle">SHIPPING</label>
-                                    <div class="price pull-right">Free Shipping</div>
-                                </li>
-                                <li class="clearfix">
-                                    <label class="subtitle">ORDER TOTAL</label>
-                                    <div class="price pull-right"><i class="fa fa-eur" aria-hidden="true"></i>1299,00</div>
-                                </li>
-                            </ul>
-
-                            <ul class="payment-methods">
-                                <li class="title">Payment Methods</li>
-                                <li class="clearfix border">
-                                    <label for="bank" class="subtitle">DIRECT BANK TRANSFER</label>
-                                    <input type="radio" id="bank" class="pull-right" name="pay"  value="bank">
-                                    <i class="fa fa-check pull-right" aria-hidden="true"></i>
-                                    <p>Make your payment directly into our bank account. Please use your order id as the payment reference. Your order wont be shippided until the funds have cleared in our account</p>
-                                </li>
-                                <li class="clearfix border">
-                                    <label for="cheque" class="subtitle">CHEQUE PAYMENT</label>
-                                    <input type="radio" id="cheque" class="pull-right" name="pay"  value="cheque">
-                                    <i class="fa fa-check pull-right" aria-hidden="true"></i>
-                                </li>
-                                <li class="clearfix">
-                                    <label for="paypal" class="subtitle">PAYPAL</label>
-                                    <input type="radio" id="paypal" class="pull-right" name="pay"  value="paypal">
-                                    <i class="fa fa-check pull-right" aria-hidden="true"></i>
-                                </li>
-                            </ul>
-                        </form>
-
-                        <div class="notice clearfix">
-                            <label for="terms">I’ve read & accept the <br><a href="#">terms & conditions</a></label>
-                            <input type="checkbox" id="terms" class="pull-right" name="terms" value="conditions">
-                            <div class="c-checkbox pull-right">
-                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <div class="form-group">
+                                    <label for="state" class="sr-only">State</label>
+                                    <select  class="form-control" id="state" name="state" >
+                                        <option value="">State/Province</option>
+                                        <option value="Taipei">Taipei</option>
+                                        <option value="Koushong">Koushong</option>
+                                        <option value="Yi-lang">Yi-lang</option>
+                                        <option value="Taichung">Taichung</option>
+                                    </select>
+                                    <div class="c-downspinner"><i class="fa fa-angle-down" aria-hidden="true"></i></a></li></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip-code" class="sr-only">Zip/Postal Code</label>
+                                    <select  class="form-control" id="zip-code" name="zip-code" >
+                                        <option value="">Zip/Postal Code</option>
+                                        <option value="116">116</option>
+                                        <option value="117">117</option>
+                                        <option value="118">118</option>
+                                        <option value="119">119</option>
+                                    </select>
+                                    <div class="c-downspinner"><i class="fa fa-angle-down" aria-hidden="true"></i></a></li></div>
+                                </div>
                             </div>
-                         </div>
-
-                        <a class="proceed" href="#">PROCEED TO CHECKOUT<i class="fa fa-check" aria-hidden="true"></i></a>
+                            <button>
+                                UPDATE TOTAL<i class="fa fa-refresh" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <h2 class="title title2">CART TOTAL</h2>
+                            
+                            <ul class="sum">
+                                <li class="clearfix">
+                                    <div class="subtitle">CART SUBTOTAL</div>
+                                    <div class="price pull-right"><i class="fa fa-eur" aria-hidden="true"></i>1299,00</div>   
+                                </li>
+                                <hr>
+                                <li class="clearfix">
+                                    <div class="subtitle ship">SHIPPING</div>
+                                    <div class="price ship pull-right">Free shipping</div>   
+                                </li>
+                                <hr>
+                                <li class="clearfix">
+                                    <div class="subtitle">CART TOTAl</div>
+                                    <div class="price pull-right"><i class="fa fa-eur" aria-hidden="true"></i>1299,00</div>   
+                                </li>
+                            </ul>
+                          
+                            <a class="proceed" href="#">PROCEED TO CHECKOUT<i class="fa fa-check" aria-hidden="true"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
+
         </div>
     </div>
 
@@ -473,6 +528,31 @@
     </div>    
 
     <script src="js/bootstrap.min.js"></script>
+    <!-- 原本怎樣都吃不到jQuery的外掛，後來發現原本使用的jquery-ui-customize.min.js似乎有少資料
+        把jquery-ui-customize.js重新compress過後就可以正常使用了，媽的...-->
+    <script src="js/jquery-ui-customize.min.js"></script>
+    <!-- 雖然用CSS就解決了，但還是很好奇，select裡面的option究竟要用什麼event才能使之呈現
+        感覺就是focus，但表單就是不出現T_T
+    <script>
+        $(document).ready(function() {
+            $(".c-downspinner").click(function(event) {
+                $("#country").focus();
+            });
+        });
+    </script> -->
+    <script>
+        $(document).ready(function() {
+            $("select#quantity").selectmenu().selectmenu("menuWidget");
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".fa-times").click(function() {
+                $(this).closest('ul').next().remove()
+                $(this).closest('ul').remove()
+            });
+        });
+    </script>
     <script>
         function accordin(){
             if ($(window).width()<=992) {

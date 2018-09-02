@@ -105,6 +105,8 @@
 
 	/* -----------------------------------Content------------------------------------------- */
 	#Content{
+		/*最後在這個要求精確又複雜的架構下，決定~~~轉為contentbox!利用content-box精確定位，
+		width則仍是使用百分比，其實並沒有那麼不堪*/
 		.FDI_1,.FDI_2{
 			.product_info{
 				position: absolute;
@@ -505,6 +507,7 @@
 				.owl-nav{
 					position: absolute;
 					top:-7.5%;
+					// md7% sm6.5%
 					right:0;
 				    border-radius: 19px;
 				    padding: 4px 5px;
@@ -513,6 +516,9 @@
 						margin: 0px 1px;
 						padding:5px 11.781px !important;
 						border-radius: 50%;
+						/* 沒設亦可運作
+						border:solid 1px transparent; 
+						*/
 						background-color:white;
 						&:focus{
 							outline: none;
@@ -700,6 +706,7 @@
 				.owl-nav{
 					position: absolute;
 					top:-19.5%;
+					// md-15.5% sm-14%
 					right:0;
 				    border-radius: 19px;
 				    padding: 4px 5px;
@@ -760,6 +767,7 @@
 	}
 
 	/* -----------------------------------Footer-------------------------------------------- */
+
 
 
 	#Footer {
@@ -1160,6 +1168,7 @@
 
 					.owl-nav{
 						top:-6.5%;
+						// md7% sm6.5%
 					}
 				}
 				.featurelist2{
@@ -1183,6 +1192,7 @@
 				.owl-carousel.slider2{
 					.owl-nav{
 						top:-14%;
+						// md-15.5% sm-14%
 						right:0;
 					    border-radius: 19px;
 					    padding: 4px 5px;
@@ -1404,6 +1414,7 @@
 		} 
 	}
 
+	/*預先套用bootstrap新的grid的概念~*/
 	@media screen and (max-width:576px){
 		#Content{
 			.FDI_1{
@@ -1481,6 +1492,101 @@
 	}
 
 	@media screen and (max-width: 425px){
+		// #Content{
+		// 	.FDI_1{
+		// 		padding-top: 35px;
+		// 		.product_1{
+		// 			bottom:17%;
+		// 			left: 12%;
+		// 			h1{
+		// 				font-size: 42px;
+		// 			}
+		// 		}
+		// 		.product_2{
+		// 			bottom: 10%;
+		// 		    left: 12%;
+		// 			.circle{
+		// 				margin-left: 53%;
+		// 				margin-top: 70%;
+		// 			}
+		// 			.shopnow{
+		// 				margin-top: 60%;
+		// 			}
+		// 		}
+		// 		.product_3{
+		// 			bottom: 0%;
+		// 		    left: 0%;
+		// 		    top: 10%;
+		// 		    right: 10%;
+		// 		}
+		// 		.product_4{
+		// 			bottom:8%;
+		// 			left:10%;
+		// 		}
+		// 	}
+		
+		// 	.FDI_2{
+		// 		.product_1{
+		// 			right: 6%;
+		// 			.shopnow{
+		// 				margin-top: 60px;
+		// 			}
+		// 		}
+		// 		.product_2{
+		// 	        bottom: 0%;
+		// 		    left: 0%;
+		// 		    top: 10%;
+		// 		    right: 6%;
+		// 			.shopnow{
+		// 				margin-top: 130px;
+		// 			}
+		// 		}
+		// 		.owl-carousel.slider0{
+		// 			.item{
+		// 				.product_info{
+		// 					top: 10%;
+		// 					left:10%;
+		// 					right: 0%;
+		// 					bottom:0%;
+		// 					h1{
+		// 						font-size: 22px;
+		// 					}
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+
+		// 	.feature{
+		// 		.featurelist2{
+		// 			.col-xs-12.col-sm-4:first-child{
+		// 				.product_info{
+		// 					transform: translate(-81%,50%);
+		// 				}
+		// 			}
+		// 			.product_info{
+		// 				bottom:50%;
+		// 				left:34%;
+		// 			    margin-left:0px;
+		// 			    margin-bottom: 0px;
+		// 			    transform:translate(-50%,50%);
+		// 				.title{
+		// 				    font-size: 16px;					
+		// 				    letter-spacing: 7px;
+		// 				}
+		// 				h2{
+		// 					margin-top: 5px;
+		// 					font-size: 26px;
+		// 				}
+		// 				.shopnow{
+		// 					margin-top: 65px;
+		// 					p{
+		// 						font-size: 17px;
+		// 					}
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// }
 
 		#Footer{
 			.misc1{

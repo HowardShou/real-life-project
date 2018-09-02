@@ -12,6 +12,7 @@
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
+	// url("https://picsum.photos/1920/350?image=100") center cover no-repeat fixed;
 	#Header_home{
 		.contact{
 			float: left;
@@ -143,6 +144,8 @@
 			}
 		}
 		.hl{
+			/*原本只有在step設float這邊沒設，結果橫槓沒辦法卡中間，才想到這是文繞圖的特性，
+			把它也給float後，就被float視為一家人，順利卡中間惹*/
 			float: left;
 			display: inline-block;
 			border-top: 1px solid #e0e0e0;
@@ -155,10 +158,23 @@
 		margin-top: 151px;
 	}
 	
+	/*初做購物車頁面，在這邊的layout遇到了些狀況(從用margin推容器改用width來推、應該要用li推距離不小心設到
+	他的子容器等)，尤其是在RWD的部分差點想放棄去問老師它們
+	還好有想到先去citesocial「參觀」一下，果然馬上就找到解決的參考範本，在修正的時候，發現html架構
+	難以做出想要的style，所以又做了不少修正(ex:detail的li從4個改成5個)，總算橋出來了!*/
 	.list1{
 
 		ul{
 			&.title{
+				/*這邊所花的時間，再再證明了，一個觀念不對，很可能走五分鐘的路，你要走半小時甚至更久! 
+				li:first-child{margin-right: 634px;}
+				li:nth-child(2){margin-right: 121px;}
+				li:nth-child(3){margin-right: 108px;} 
+				以上是用margin推出邊距，問題做RWD時，因為margin是固定的，不會隨著容器大小變動會，開始嚴重跑版...
+				一叫醒來後想到...既然要讓距離保持一致，幹嘛不用width的百分比功能就好????
+				(以前推距離時只想到要用padding或margin，但能夠順著容器縮放的只有width，而且沒人說width不能做間格啊XD)
+				因為li們的parent ul預設是 width100% , 底下的元素們自然可以藉由調整百分比弄出適合RWD的間距啊!
+				還好最後有想到了，這對後面的東西來說太重要啦!加油*/
 				li:first-child{width: 58%;}
 				li:nth-child(2){width: 13%;}
 				li:nth-child(3){width: 17%;} 
@@ -179,6 +195,7 @@
 				}
 				li:nth-child(4){
 					width: 15%;
+					/*第一次利用icon-sprite就在jQUI*/
 					span#quantity-button{
 						position: relative;
 						bottom: 12px;
@@ -206,9 +223,12 @@
 				    top: 42px;
 				    font-weight: 700;
 				    color: #000;
+				    /*不管視窗大小最後都要這個size的圖，所以給固定數值*/
 					.photo{
 						width: 106px;
 						height:106px;
+						/*之前不小心多加了這個設定害我一直跑版= =+
+						 margin-right: 65px;*/
 					}
 					button{
 						position: absolute;
@@ -586,6 +606,9 @@
 
 /*--------------------------------------------------------RWD-------------------------------------------------------*/
 
+
+//	本以為塞新增一個容器條寬度就好，但就像骨牌一樣下面完全被影響
+//	還是先轉成content-box法比較直觀簡易...
  @media screen and (max-width:1612px) {
 	#Footer .misc2 .container {
 		box-sizing: border-box;
@@ -857,6 +880,9 @@
 					}
 					li:first-child{
 						position: static;
+						/*本來只用width:120px 但這樣在到320px以前留白實在太多，所以改百分比，
+						卻又會面臨小容器時可能跑版的問題，解決之道其實就是放min-width下去而已
+						，其實你很早以前在input那邊已經用過了，但是不夠熟，+U*/
 						min-width: 120px;
   						width: 44%;
 						float: left!important;
@@ -902,6 +928,7 @@
 				float: none;
 				text-align: center;
 				li{
+					/*只清掉ul的float，忘記清li的，難怪原本怎麼設ta-c都沒用...*/
 					float: none;
 				}
 			}
@@ -913,6 +940,7 @@
 				float: none;
 				text-align: center;
 				li{
+					/*只清掉ul的float，忘記清li的，難怪原本怎麼設ta-c都沒用...*/
 					float: none;
 					display: inline-block;
 				}

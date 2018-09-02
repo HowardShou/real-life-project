@@ -4,19 +4,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>BLOG-SIDEBAR</title>
+        <title>BLOG POST</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Source+Sans+Pro:300,600" rel="stylesheet">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/fontello.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/blog_sidebar.css">
+        <link rel="stylesheet" href="css/blog_post.css">
     </head>
 
     <body>
+        <!-- 拜託別在這種低能的錯誤上在花時間了<div id="Header clearfix"> clearfix是class...-->
         <div id="full-screen-cover"></div>
-        <div id="Header class="clearfix">
+        <div id="Header" class="clearfix">
             <nav class="navbar navbar-default">
                 <div class="navbar-header">
                       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav1" aria-expanded="false">
@@ -133,155 +134,164 @@
                 </div>
             </nav>    
             
-            <div class="blog-list-sidebar2">
-                <div class="container clearfix">
-                    <h1>BLOG LIST SIDEBAR 2</h1>
-                    <p>Home > Blog > Category</p>
-                    <form class="form-inline">
-                        <div class="form-group">
-                            <label for="searchicont">Search <i class="fa fa-search" aria-hidden="true"></i></label>
-                            <input type="search" class="form-control" id="searchicont">
+            <div class="blog-title1">
+                <div class="container">
+                    <h1>BLOG DETAIL FULL WIDTH </h1>
+                </div>
+            </div>
+
+            <div class="blog-title2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 text-left"><a href="#">Home</a><i class="fa fa-angle-right" aria-hidden="true"></i> Blog</div>
+                        <div class="col-xs-12 col-sm-4 text-center">
+                            <a href="#"><i class="fa fa-th" aria-hidden="true"></i></a>
                         </div>
-                    </form>
+                        <div class="col-xs-12 col-sm-4 text-right">
+                            <form class="clearfix">
+                                <div class="form-group">
+                                    <label for="searchicont">Search <i class="fa fa-search" aria-hidden="true"></i></label>
+                                    <input type="search" class="form-control" id="searchicont">
+                                </div>
+                                <p>Categories<a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></p>
+                            </form>
+
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
         
         <div id="Content">
-            <div class="container">
-                <div class="row clearfix">
-                    <div class="col-xs-12 col-md-7 blog-contents">
-                        <div class="blog-content clearfix">
-                            <img src="https://picsum.photos/760/350?image=576" alt="photo">
-                            <div class="informations clearfix">
-                                <div class="date-and-month">
-                                    <h4 class="date">25</h4>
-                                    <h5 class="month">April</h5>
-                                </div>
-                                <div class="summary">
-                                    <h1 class="title">IDEAS FOR LIVING ROOMS</h1>
-                                    <ul>
-                                        <li><i class="fa fa-clock-o" aria-hidden="true"></i>20  April 2015</li>
-                                        <li><i class="fa fa-list" aria-hidden="true"></i>Design</li>
-                                        <li><i class="fa fa-comment" aria-hidden="true"></i>2 Comments</li>
-                                    </ul>
-                                    <p>Fusce mattis nunc lacus, vulputate facilisis dui efficitur ut. Vestibulum sit amet metus euismod, condimentum lectus id, ultrices sem. Morbi in erat malesuada, sollicitudin massa at, tristique nisl. Maecenas id eros scelerisque, vulputate tortor quis, efficitur arcu</p>
-                                    <a href="#" class="read">READ MORE</a>
-                                </div>
-                            </div>      
-                        </div> 
+             <div class="container">
+                <div class="main-picture">
+                    <img src="https://picsum.photos/1200/570?image=272" alt="photo">
+                    <div class="date-and-month">
+                        <h4 class="date">25</h4>
+                        <h5 class="month">April</h5>
+                    </div>
+                    <div class="share">
+                        <a href="#"><i class="fa fa-comments" aria-hidden="true"></i> 12</a>
+                        <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i> 14</a>
+                    </div>
+                </div> 
 
-                        <div class="blog-content clearfix">
-                            <img src="https://picsum.photos/760/350?image=579" alt="photo">
-                            <div class="informations clearfix">
-                                <div class="date-and-month">
-                                    <h4 class="date">25</h4>
-                                    <h5 class="month">April</h5>
-                                </div>
-                                <div class="summary">
-                                    <h1 class="title">IDEAS FOR LIVING ROOMS</h1>
-                                    <ul>
-                                        <li><i class="fa fa-clock-o" aria-hidden="true"></i>20  April 2015</li>
-                                        <li><i class="fa fa-list" aria-hidden="true"></i>Design</li>
-                                        <li><i class="fa fa-comment" aria-hidden="true"></i>2 Comments</li>
-                                    </ul>
-                                    <p>Fusce mattis nunc lacus, vulputate facilisis dui efficitur ut. Vestibulum sit amet metus euismod, condimentum lectus id, ultrices sem. Morbi in erat malesuada, sollicitudin massa at, tristique nisl. Maecenas id eros scelerisque, vulputate tortor quis, efficitur arcu</p>
-                                    <a href="#" class="read">READ MORE</a>
+                <div class="container inner">
+                    <div class="summary">
+                        <h1 class="title">IDEAS FOR LIVING ROOMS</h1>
+                        <ul>
+                            <li><i class="fa fa-clock-o" aria-hidden="true"></i>20  April 2015</li>
+                            <li><i class="fa fa-list" aria-hidden="true"></i>Design</li>
+                            <li><i class="fa fa-comment" aria-hidden="true"></i>2 Comments</li>
+                        </ul>
+                        <p>
+                            Fusce mattis nunc lacus, vulputate facilisis dui efficitur ut. Vestibulum sit amet metus euismod, condimentum lectus id, ultrices sem. Morbi in erat malesuada, sollicitudin massa at, tristique nisl. Maecenas id eros scelerisque, vulputate tortor quis, efficitur arcu. Aenean lacus mi, porttitor quis dapibus a, tincidunt vitae arcu. Etiam dolor sem, luctus id risus vel, ultricies dignissim lacus.
+                            <br><br>
+
+                            Fusce mattis nunc lacus, vulputate facilisis dui efficitur ut. Vestibulum sit amet metus euismod, condimentum lectus id, ultrices sem. Morbi in erat malesuada, sollicitudin massa at, tristique nisl. Maecenas id eros scelerisque, vulputate tortor quis, efficitur arcu. Aenean lacus mi, porttitor quis dapibus a, tincidunt vitae arcu. Etiam dolor sem, luctus id risus vel, ultricies dignissim lacus.
+                            <!-- good -->
+                            <br><br><br><br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+
+                    <div class="pictures clearfix center-block">
+                        <div class="left col-xs-12 col-sm-4">
+                            <img class="n1" src="https://picsum.photos/260/260?image=593"  alt="photos">
+                            <img class="n2" src="https://picsum.photos/260/175?image=594"  alt="photos">
+                        </div>
+                        <div class="center col-xs-12 col-sm-4">
+                            <img class="n1" src="https://picsum.photos/260/200?image=548"  alt="photos">
+                            <img class="n2" src="https://picsum.photos/260/190?image=596"  alt="photos">
+                        </div>
+                        <div class="right col-xs-12 col-sm-4">
+                            <img class="n1" src="https://picsum.photos/260/350?image=564"  alt="photos">
+                        </div>
+                    </div>
+
+                    <p class="middle">
+                        Fusce mattis nunc lacus, vulputate facilisis dui efficitur ut. Vestibulum sit amet metus euismod, condimentum lectus id, ultrices sem. Morbi in erat malesuada, sollicitudin massa at, tristique nisl. Maecenas id eros scelerisque, vulputate tortor quis, efficitur arcu
+                        <br><br>
+                        Aenean lacus mi, porttitor quis dapibus a, tincidunt vitae arcu. Etiam dolor sem, luctus id risus vel, ultricies dignissim lacus. t cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+
+
+                    <div class="author_and_comments center-block">
+                        <div class="author">
+                            <div class="photo">
+                                <img src="https://picsum.photos/146/146?image=598" alt="photo">
+                            </div> 
+                            
+                            <div class="info">
+                                <div class="name">Clara Wooden</div>
+                                <p>Commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <div class="socials">
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                 </div>
                             </div>
-                        </div> 
 
-                        <div class="blog-content clearfix">
-                            <img src="https://picsum.photos/760/350?image=581" alt="photo">
-                            <div class="informations clearfix">
-                                <div class="date-and-month">
-                                    <h4 class="date">25</h4>
-                                    <h5 class="month">April</h5>
-                                </div>
-                                <div class="summary">
-                                    <h1 class="title">IDEAS FOR LIVING ROOMS</h1>
-                                    <ul>
-                                        <li><i class="fa fa-clock-o" aria-hidden="true"></i>20  April 2015</li>
-                                        <li><i class="fa fa-list" aria-hidden="true"></i>Design</li>
-                                        <li><i class="fa fa-comment" aria-hidden="true"></i>2 Comments</li>
-                                    </ul>
-                                    <p>Fusce mattis nunc lacus, vulputate facilisis dui efficitur ut. Vestibulum sit amet metus euismod, condimentum lectus id, ultrices sem. Morbi in erat malesuada, sollicitudin massa at, tristique nisl. Maecenas id eros scelerisque, vulputate tortor quis, efficitur arcu</p>
-                                    <a href="#" class="read">READ MORE</a>
+                        </div>
+                        
+                        <!--這個關於comment的架構比較複雜，不果還是解出來了，牡蠣! -->
+                        <div class="comments">
+                            <div class="title">COMMENTS</div>
+                            <hr class="title">
+                            <div class="commentatories">
+                                <div class="commentator">
+                                    <div class="photo">
+                                        <img src="https://picsum.photos/64/64?image=529" alt="photo">
+                                    </div>
+                                    <div class="comment_info">
+                                        <div class="name">John Wick</div>
+                                        <div class="date">May 24 2015</div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                                        </p>
+                                        <hr>
+                                        <div class="commentator inner">
+                                            <div class="photo">
+                                                <img src="https://picsum.photos/64/64?image=971" alt="photo">
+                                            </div>
+                                            <div class="comment_info">
+                                                <div class="name">John Wick</div>
+                                                <div class="date">May 24 2015</div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>  
+                       
+                        <form>
+                            <div class="title">LEAVE A COMMENT</div>
+                            <div class="form-group">
+                                <input type="text" class="form-control inline" id="name" placeholder="Name">
 
-                        <nav aria-label="change-block-pages">
-                          <ul class="pager">
-                            <li class="pull-left"><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i>Previous</a></li>
-                            <li class="pull-right"><a href="#">Next<i class="fa fa-angle-right" aria-hidden="true"></a></i></li>
-                          </ul>
-                        </nav> 
+                                 <input type="email" class="form-control inline" id="email" placeholder="E-mail">
 
-                    </div>
-                    <div class="col-md-5 hidden-xs hidden-sm text-right sidebars">
-                        <div class="sidebar">
-                            <h2 class="title">CATEGORIES</h2>
-                            <hr>
-                            <ul>
-                                <li>Design</li>
-                                <li>Future</li>
-                                <li>Kitchen</li>
-                                <li>Photography</li>
-                            </ul>
-                        </div>
+                                 <input type="text" class="form-control inline" id="Website" placeholder="website">
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="form-control" value="Send"> 
+                            </div>
+                        <form>
+                    </div>    
                         
-                        <div class="sidebar">
-                            <h2 class="title">POPULAR POST</h2>
-                            <hr class="longer">
-                            <ul>
-                                <li class="clearfix">
-                                    <div class="intro">
-                                        <p>Vestibulum sit amet metus euismod amet<br> metus euismod</p>
-                                        <div class="date">24.09.2015</div>
-                                    </div>
-                                    <div class="photo">
-                                        <img src="https://picsum.photos/64/64?image=582" alt="photo">
-                                    </div>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="intro">
-                                        <p>Vestibulum sit amet metus euismod amet<br> metus euismod</p>
-                                        <div class="date">24.09.2015</div>
-                                    </div>
-                                    <div class="photo">
-                                        <img src="https://picsum.photos/64/64?image=582" alt="photo">
-                                    </div>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="intro">
-                                        <p>Vestibulum sit amet metus euismod amet <br>metus euismod</p>
-                                        <div class="date">24.09.2015</div>
-                                    </div>
-                                    <div class="photo">
-                                        <img src="https://picsum.photos/64/64?image=582" alt="photo">
-                                    </div>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="intro">
-                                        <p>Vestibulum sit amet metus euismod amet <br>metus euismod</p>
-                                        <div class="date">24.09.2015</div>
-                                    </div>
-                                    <div class="photo">
-                                        <img src="https://picsum.photos/64/64?image=582" alt="photo">
-                                    </div>
-                                </li>
-                            </ul>
-                         </div>
-                        
-                        <div class="sidebar tag">
-                            <h2 class="title">TAGS</h2>
-                            <hr class="shorter">
-                            <a href="#">Fusce, mattis, nunc, lacus,<br>vulputate, facilisis, dui,<br>efficitur, ut</a>
-                        </div> 
-                    </div>
-                </div>
-            </div>   
+                </div>                          
+                
+             </div>
         </div>
             
 

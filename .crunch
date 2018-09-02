@@ -38,8 +38,9 @@
 				}
 			],
 			"sources": [
-				"about.less",
-				"basic.less"
+				"nav-bar.less",
+				"basic.less",
+				"about.less"
 			]
 		},
 		"less/home.less": {
@@ -58,8 +59,9 @@
 				}
 			],
 			"sources": [
-				"basic.less",
-				"home.less"
+				"nav-bar.less",
+				"home.less",
+				"basic.less"
 			]
 		},
 		"less/basic.less": {
@@ -97,6 +99,7 @@
 				}
 			],
 			"sources": [
+				"nav-bar.less",
 				"contact.less",
 				"basic.less"
 			]
@@ -117,8 +120,9 @@
 				}
 			],
 			"sources": [
+				"basic.less",
 				"blog_sidebar.less",
-				"basic.less"
+				"nav-bar.less"
 			]
 		},
 		"less/blog_post.less": {
@@ -137,6 +141,7 @@
 				}
 			],
 			"sources": [
+				"nav-bar.less",
 				"blog_post.less",
 				"basic.less"
 			]
@@ -177,8 +182,9 @@
 				}
 			],
 			"sources": [
-				"basic.less",
-				"product_detail.less"
+				"product_detail.less",
+				"nav-bar.less",
+				"basic.less"
 			]
 		},
 		"less/product_list.less": {
@@ -198,6 +204,7 @@
 			],
 			"sources": [
 				"product_list.less",
+				"nav-bar.less",
 				"basic.less"
 			]
 		},
@@ -217,8 +224,9 @@
 				}
 			],
 			"sources": [
-				"basic.less",
-				"order_checkout.less"
+				"order_checkout.less",
+				"nav-bar.less",
+				"basic.less"
 			]
 		},
 		"less/order_shopping-cart.less": {
@@ -237,8 +245,47 @@
 				}
 			],
 			"sources": [
-				"basic.less",
-				"order_shopping-cart.less"
+				"order_shopping-cart.less",
+				"nav-bar.less",
+				"basic.less"
+			]
+		},
+		"less/nav-bar1.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/nav-bar1.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
+				"nav-bar1.less"
+			]
+		},
+		"less/nav-bar.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/nav-bar.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true
+					}
+				}
+			],
+			"sources": [
+				"nav-bar.less"
 			]
 		}
 	}

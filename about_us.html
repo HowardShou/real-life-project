@@ -16,7 +16,8 @@
     </head>
 
     <body>
-        <div id="Header clearfix">
+        <div id="full-screen-cover"></div>
+        <div id="Header" class="clearfix">
             <nav class="navbar navbar-default">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -35,22 +36,107 @@
                   <p class="navbar-text">+1(555) 333 22 11</p>
                   <ul class="nav navbar-nav navbar-right">
                       <li><a href="#">home</a></li>
-                      <li><a href="#">products<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
-                      <li><a href="#">pages<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                      <li>
+                        <div href="#" class="dropdown-container">
+                            products
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </a>
+                      </li>
+                      <li>
+                        <!-- 新發現--本來是用a來包覆，但是發現a底下不能接div!故將a換成div -->
+                        <div class="dropdown-container">
+                            pages
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                                <a href="#">Link 4</a>
+                                <a href="#">Link 5</a>
+                                <a href="#">Link 6</a>
+                                <a href="#">Link 7</a>
+                                <a href="#">Link 8</a>
+                                <a href="#">Link 9</a>
+                            </div>
+                        </div>
+                      </li>
                       <li><a href="#">blog</a></li>
                       <li><a href="#">about</a></li>
                       <li><a href="#">contact</a></li>
                       <li><a class="twicks" href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a></li>
                       <li><a class="twicks" href="#"><i class="fa fa-heart-o fa-2x" aria-hidden="true"></i></a></li>
-                      <li>
+                      <li id="shopping-cart">
                           <a class="twicks" href="#">
                               <i class="icon-handbag fa-2x"></i>
                               <div class="count">3</div>
                           </a>
+
+                          <div class="shopping-content-base">
+                            <div class="triangle"></div>
+                            <!-- 後來聽助教一講，其實這種shopping-cart都可以用ul配li來做，最後在li裡面塞div即可-->
+                            <div class="shopping-content">
+                                <div class="treasure">
+                                    <div class="photo">
+                                        <a href="#"><img src="https://picsum.photos/74/74?image=81" alt="photo"></a>
+                                    </div>
+                                    <div class="info">
+                                        <div class="item-name">Egon Wooden Chair</div>
+                                        <div class="price">
+                                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                                            <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div class="amount">Qty:1</div>
+                                    </div>
+                                </div>
+                                <div class="treasure">
+                                    <div class="photo">
+                                        <a href="#"><img src="https://picsum.photos/74/74?image=84" alt="photo"></a>
+                                    </div>
+                                    <div class="info">
+                                        <div class="item-name">Egon Wooden Chair</div>
+                                        <div class="price">
+                                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                                            <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div class="amount">Qty:1</div>
+                                    </div>
+                                </div>
+                                <div class="treasure">
+                                    <div class="photo">
+                                        <a href="#"><img src="https://picsum.photos/74/74?image=87" alt="photo"></a>
+                                    </div>
+                                    <div class="info">
+                                        <div class="item-name">Egon Wooden Chair</div>
+                                        <div class="price">
+                                            <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                                            <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div class="amount">Qty:1</div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="total-count clearfix">
+                                    <div class="total-word">Sub Total</div>
+                                    <div class="total-amount">
+                                        <i class="fa fa-eur" aria-hidden="true"></i>799,00
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="view-or-checkout clearfix">
+                                    <a href="#" class="view">view cart</a>
+                                    <a href="#" class="checkout">checkout</a>
+                                </div>
+                            </div>
+                          </div>
                       </li>
                   </ul>
                 </div>
-            </nav>    
+            </nav>   
             
             <div class="about-us">
                 <div class="container clearfix">
@@ -86,7 +172,7 @@
                     <div class="row clearfix">
                         <div class="col-x col-xs-12 col-sm-6 col-md-3">
                             <div class="member">
-                                <img src=h alt="photo">
+                                <img src="https://picsum.photos/280/280?image=1011" alt="photo">
                                 <div class="cover">
                                     <ul>
                                         <li>
@@ -105,7 +191,7 @@
                         </div>
                         <div class="col-x col-xs-12 col-sm-6 col-md-3">
                             <div class="member">
-                                <img src="https://picsum.photos/280/280" alt="photo">
+                                <img src="https://picsum.photos/280/280?image=1010" alt="photo">
                                 <div class="cover">
                                     <ul>
                                         <li>
@@ -124,7 +210,7 @@
                         </div>
                         <div class="col-x col-xs-12 col-sm-6 col-md-3">
                             <div class="member">
-                                <img src="https://picsum.photos/280/280" alt="photo">
+                                <img src="https://picsum.photos/280/280?image=1009" alt="photo">
                                 <div class="cover">
                                     <ul>
                                         <li>
@@ -315,6 +401,7 @@
                 });
             });
         </script>
+        <script src="js/main.js"></script>
     </body>
     
 </html>

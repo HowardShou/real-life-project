@@ -190,7 +190,6 @@
 }
 
 .owl-carousel {
-	
 	/*  owl-carousel nav 與navigation 的大小 */
 	.owl-nav {
 		button.owl-prev {
@@ -210,7 +209,6 @@
 			outline: none;
 		}
 	}
-	
 	/* dots style*/
 	.owl-dots {
 		text-align: center;
@@ -443,6 +441,11 @@
 }
 
 @media screen and (max-width:464px){
+	/*在這個input上，嘗試做出與home不同的呈現效果(原則上要隨著螢幕大小拖動讓input自由身長縮短)
+	上面已經先利用min-with解決螢幕過小時input會太短的問題，至於這個submit要如何順利覆蓋在其上面
+	呢?由於之前要的效果是跟著input一起移動，所以用pos-a對齊li動沒有問題，但是現在我們要的是「固定」
+	效果，既然對齊的標的在這邊沒辦法替換，索性把它還原成static，在利用transform直接變換它的位置，
+	此時位置就會是固定的囉!*/
 	#Footer .col-right .sign-up li i.fa-angle-right {
 	    position: static;
 	    bottom:50%;

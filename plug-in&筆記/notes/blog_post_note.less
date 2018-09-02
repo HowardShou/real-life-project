@@ -3,6 +3,14 @@
 
 /*--------------------------------style.customize-----------------------------------------*/
 
+/*目前順序:
+1.必要時先畫出草稿，讓自己心裡大概有個底
+2.html框架，現在已經會bootstrap盡量在這階段就使用bootstrap順便做layout
+3.html完換CSS，此時先把css的layout搞定(小技巧:在psdetch先看每個大先抓大的明顯的段落間距)
+※記得好好用google的dev tool!包括直接測試、找程式碼等
+*/
+
+
 /*----------------------------Header------------------------------*/
 @import "nav-bar";
 
@@ -137,7 +145,8 @@
 			}
 		}
 	}
-
+	/*layout部分想蠻久的，不過最後是正確的，而且這次有記得先把每段的mt都先做出來，沒放類太多時間一直切畫面，
+	牡蠣~*/
 	.container.inner{
 		padding-top: 56px;
 		max-width: 1100px;
@@ -193,11 +202,14 @@
 					display: inline-block;
 					margin-right: 37px;
 					max-width:18%;
+					/* width:146px;
+					height:146px; */
 				}
 				.info{
 					position: relative;
    					bottom: 11px;
 					display: inline-block;
+					/* max-width: 576px; */
 					max-width: 75%;
 					*{
 						margin-top: 10px;
@@ -406,7 +418,8 @@
 
 /*--------------------------------------------------------RWD-------------------------------------------------------*/
 
-
+/*這次在Header的form那邊犯了一個致命的錯誤:應該先從上往下設定!因為我這邊的斷點都是用max-width啊!
+導致同樣的東西重寫了好幾次，浪費了一堆時間，務必注意!*/
 
 @media screen and (max-width:1229px){
 
@@ -422,6 +435,8 @@
 					.form-group{
 						width: 67%;
 						float: left;
+						/*這個ta-l超重要，否則這個form-group的內容不會對到最左邊，
+						跟上面的float-left有各自存在的意義!*/
 						text-align: left;
 					}
 					p{
@@ -464,6 +479,8 @@
 					.form-group{
 						width: 56%;
 						float: left;
+						/*這個ta-l超重要，否則這個form-group的內容不會對到最左邊，
+						跟上面的float-left有各自存在的意義!*/
 						text-align: left;
 					}
 					p{
@@ -521,6 +538,7 @@
 	
 	#Footer{
 		.row{
+			/*記住:after和:before是怎麼運作了...*/
 			*{
 				float:none!important;
 			}
@@ -557,10 +575,14 @@
 						}
 					}
 					[type="search"]{
+						/*不小心再這邊讓input常駐了width，加上前面又把它設opacity:0;浪費一堆時間找... 
+						width: 76%;*/
 						display: inline-block;
 					}
 					.form-group{
 						float: left;
+						/*這個ta-l超重要，否則這個form-group的內容不會對到最左邊，
+						跟上面的float-left有各自存在的意義!*/
 						text-align: left;
 					}
 					p{
@@ -626,3 +648,20 @@
 		}
 	}
 }
+
+
+// @media screen and (max-width:360px){
+// 	#Header{
+// 		.blog-title2{
+// 			.col-sm-4{
+// 				form{
+// 					input{
+// 						&:focus{
+// 							width: 121px;
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
