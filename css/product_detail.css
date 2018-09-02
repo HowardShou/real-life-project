@@ -162,7 +162,7 @@ li {
 .navbar-default .navbar-nav > li .dropdown-container .dropdown-content a {
   display: block;
   border-bottom: 1px solid #000;
-  padding: 10px;
+  padding: 15px;
   color: #929292;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -338,6 +338,11 @@ ul.nav.navbar-nav.navbar-right {
     bottom: 5px;
   }
   .navbar-default .navbar-nav > li .dropdown-container .dropdown-content {
+    top: 17px;
+    right: -80px;
+    z-index: 4;
+  }
+  .navbar-default .navbar-nav > li:nth-child(3) .dropdown-container .dropdown-content {
     top: 40px;
     right: -106px;
     z-index: 4;
