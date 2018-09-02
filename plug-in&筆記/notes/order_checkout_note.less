@@ -63,7 +63,7 @@
 			}
 		}
 	}
-
+	
 	@import "nav-bar";
 
 	.navbar-default .container.container-fluid{
@@ -102,12 +102,20 @@
 					margin-right: 7px;
 				}
 			}
-	} 	
-	
+	}
 }
 
 /* -----------------------------------Content------------------------------------------- */
 #Content{
+	/*這一條鍊略麻煩，不過還是解決惹
+	1.先將3個step群組化，並將格線穿插其中
+	2.將step與circle都設為d-ib，.position則保留維持d-b，到這邊，此時step內置中等已完成
+	3.將step與.hl都設成flaot，此時已經完成90%，微調隔線的高度即可
+	4.我們現在需要的是容器置中，由於step和.hl都有被flaot影響，ta不會有動作
+	  得出動容器置中大法d-b,m0auto,with:?%，由於原本checkout-chain並沒有特別給它width
+	  因此它預設的width是100%它組祖先的width，關鍵就在於這width:100%，既然width就已經塞滿
+	  整個容器了，自然就不會有margin出現的空間!因此必須調降width的%數，d-b自動長出margin塞
+	  滿整行的特性才有顯現的空間!雖然你很快就想起來了不過應該已經要記得了!*/
 	.checkout-chain{
 		color: #000;
 		margin: 0 auto;
@@ -143,6 +151,8 @@
 			}
 		}
 		.hl{
+			/*原本只有在step設float這邊沒設，結果橫槓沒辦法卡中間，才想到這是文繞圖的特性，
+			把它也給float後，就被float視為一家人，順利卡中間惹*/
 			float: left;
 			display: inline-block;
 			border-top: 1px solid #e0e0e0;
@@ -151,120 +161,20 @@
 		}
 	}
 	
-	.lists{
-		margin-top: 151px;
+	h2.title{
+		margin-top: 98px;
+		color: black;
 	}
 	
-	.list1{
-
-		ul{
-			&.title{
-				li:first-child{width: 58%;}
-				li:nth-child(2){width: 13%;}
-				li:nth-child(3){width: 17%;} 
-				font-size: 16px;
-				font-weight: 700;
-			}
-			&.detail{
-				li:first-child{
-					position: static;
-					width: 15%;
-				}
-				li:nth-child(2){
-					word-wrap: break-word;
-					width: 42.5%;
-				}
-				li:nth-child(3){
-					width: 14%;
-				}
-				li:nth-child(4){
-					width: 15%;
-					span#quantity-button{
-						position: relative;
-						bottom: 12px;
-						outline: none;
-						border:0px;
-						padding-top:12px;
-						padding-bottom:12px;
-						width: 60px;
-						background-color: #eee;
-						font-weight: bold;
-						font-size: 16px; 
-						color: #000;
-					}
-					.ui-selectmenu-text{
-						margin-right: 0px;
-					}
-					.ui-icon-triangle-1-s{
-						position: relative;
-						left: 3px;
-						background-position:-65px 1.5px;
-					}
-				}
-				li{
-					position: relative;
-				    top: 42px;
-				    font-weight: 700;
-				    color: #000;
-					.photo{
-						width: 106px;
-						height:106px;
-					}
-					button{
-						position: absolute;
-						top:0;
-						right: -50px;
-    					border: 0;
-    					padding: 0;
-						background: transparent;
-    					i.fa-times{
-    						color:#f05c5c;
-    					}
-					}
-				}
-			}
-			li{
-				float: left;
-			}
-		}
-	}
-
-	.coupon{
-		padding: 20px 0px;
-		text-align: center;
-		input[type="text"]{
-		    width: 27.5%;
-		    padding-left: 24px;
-		    padding: 11px 0px 11px 24px;
-		}
-		input[type="submit"]{
-			outline: none;
-			position: relative;
-			font-family: @Mr;
-			background-color: #cba233;
-			color: #fff;
-			border:0;
-			padding: 14px 32px;
-		}
-	}
-
-	.list2{
-		margin-top: 79px;
-		h2.title{
-			font-family: @Mr;
-			font-size: 18px;
-			margin-left: 42px;
-			color: black;
-		}
-
-		.caculate-group{
-			margin-top: 30px;
-			width: 96.5%;
+	
+	.forms{
+		margin-top: 29px;
+		.billing-details{
+			width: 96.833333%;
 			.form-group{
-				position: relative;
 				.c-downspinner{
 					position: absolute;
-					right: -32px;
+					right: 0;
 					top: 0;
 					border-left: 1px solid #ccc;
 					padding: 18px 0px;
@@ -277,72 +187,200 @@
 					z-index: 1;
 				}
 			}
-			
 			.form-control{
 				padding: 26px 12px;
 				border-radius: 9px;
-				&#country,&#state,&#zip-code{
+				&#country{
+					/*首先，跟在做radio時一樣，可以先用這個隱藏版的屬性取消瀏覽器內部渲染的
+					外觀，這樣那個討人厭的三角形就會消失，再來，就可以用跟checkbox概念一模一樣的
+					透明input隱形覆蓋大法了，不過謹記mdn特別寫到再不同瀏覽器這個設定很有可能出狀況，
+					面對select這種內建架構複雜的，建議用類似JQUI等模組調整較好*/
 					-webkit-appearance:none;
-						appearance:none;
-	  				-moz-appearance:none;
+   					appearance:none;
+      				-moz-appearance:none;
 					position: relative;
 					padding: 17px 12px;
-					background-color: transparent;
 					height: auto;
-					cursor: pointer;
 					z-index: 2;
+					background-color: transparent;
 					&:focus ~ .c-downspinner{
 					    border-color: #66afe9;
 					}
 				}
-			}
-		}
-		
-		 
-		.sum{
-		    width: 97%;
-			margin-left: 3%;
-		    margin-top: 31px;
-		    margin-right: 0px;
-		    padding: 41px 40px;
-		    border: 1px solid rgba(0,0,0,0.2);
-			hr{
-				margin: 10px 0px;
-			}
-			.subtitle{
-				position: relative;
-				top:5px;
-				display: inline-block;
-				&.ship{
-					position: static;
+				&#address{
+					padding-bottom: 70px;
 				}
-			}
-			.price{
-				font-size: 18px;
-				font-weight: bold;
-				color:#000;
-				&.ship{
-					font-size: 14px;
+				&#notes{
+					padding-top: 18px;
 				}
-				i{
-					margin-right: 4px;
-				}
-			}
-		}
-		
 
-		button{
-			font-family: @Mr;
-			color: #dadada;
+			}
+			.form-inline{
+				input{
+					width: 46.8239%;
+				}
+			}
+		}
+		.order-and-pay{
 			background-color: #f6f6f6;
-			border: 0;
-			padding: 14px 43px;
-			i{
-				margin-left: 4px;
+			padding: 55px;
+			/*精益求精!既然設計要右邊這塊灰底色的區域width要551px，而原本bootstrap給我們
+			的是570px，差那麼一點~就自己在給底下的容器with設個百分比就好囉*/
+			width: 96.833333%;
+			/*由於設計稿是靠右對齊，因此把d-b預設給的右邊的margin清掉，補到左邊去，完事!*/
+   			margin-left: 3.16666666666%;
+    		margin-right: 0%;
+			.title{
+				font-family: @Mr;
+				font-size: 16px;
+				color:#000;
 			}
+
+			.subtitle{
+				font-weight: bold;
+				font-size: 16px;
+				margin-bottom: 0px;
+				color:#888;
+			}
+
+			.good{
+				margin-bottom: 0px;
+				color:#a3a3a3;
+			}
+
+			span{
+				margin-left: 10px;
+			}
+
+
+			.price{
+				font-size: 16px;
+				color:#636363;
+				font-weight: bold;
+			}
+
+			i.fa-eur{
+				position: relative;
+				top: 1px;
+				margin-right: 3px;
+			}
+
+			.border{
+				padding-bottom: 11px;
+				padding-top: 11px;
+				border-bottom: 1px solid #cccccc;
+			}
+
+			input[type="radio"]{
+				-webkit-appearance:none;
+				-moz-appearance:none;
+				appearance:none;
+				position: relative;
+				margin-top: 0px;
+				border: 1px solid #999;
+				top: 4px;
+				width: 16px;
+				height: 16px;
+				outline: none;
+				background-color: #fff;
+			}
+
+			ul.order-detail{
+				.product{
+					margin-top: 45px;
+					ul li{
+						margin-top: 8px;
+						&:first-child{
+							margin-top: 0px;
+						}
+						&:nth-child(2){
+							margin-top: 17px;
+						}
+					}
+				}
+				&>li:last-child{
+					padding-top: 11px;
+				}
+
+			}
+			ul.payment-methods{
+				margin-top: 97px;
+				&>li:last-child{
+					padding-top: 11px;
+				}
+				label{
+					cursor: pointer;
+				}
+				p{
+					margin-top: 16px;
+					margin-bottom: 8px;
+					font-size: 12px;
+				}
+				
+				/*這邊自己想出來其實已經95%了，最後這5%是不夠熟的pseudo class，
+				:focus跟原本的仍有落差，好險看mdn的例子時有發現例子中有我要的效果，關鍵就是這個
+				:checked!radio可以這樣解決。
+
+				checkbox卻無法用上面同樣的方式做(關鍵在於無法製造讓勾勾toggle的效果)
+				，餵狗瞬間在w3schools找到答案，其實再簡單不過...核心概念一樣是覆蓋，
+				只是這次不是單純拿iconfonts覆蓋上去，而是一整個容器蓋在上面，在用關鍵的opacity!畢竟opacity只是讓東西變透明
+				，實際上還是存在的，詳見.notice以下。
+				!input[type="radio"]:focus{
+				*/
+				input[type="radio"]{
+					&:checked ~ i.fa-check{
+						display: block;
+					}						
+				}
+
+				i.fa-check{
+					display:none;
+					position:relative;
+					top:5px;
+					left: 16px;
+				}
+			}
+				
 		}
 
-
+		.notice{
+			margin-top: 38px;
+			padding: 0px 55px;
+			br{
+				display: none;
+			}
+			a{
+				color:#000;
+			}
+			/*以下為checkbox客製化的方法，radio也同樣適用~即"隱形覆蓋法"*/
+			input[type="checkbox"]{
+				/*新發現:即使設了z-index，卻仍是pos-s的狀態，設定過pos-a等值的容器
+				還是會覆蓋掉高z-index的容器哦*/
+				position: relative;
+				/*隱形的input一定要在最上面唷，不然被其他容器擋住你想點也點不到~*/
+				z-index: 2;
+				opacity: 0;
+				&:checked ~ .c-checkbox i{
+					display: block;
+				}
+			} 
+			.c-checkbox{
+				width: 16px;
+				height: 16px;
+				padding-bottom: 1px;
+				border:1px solid #999;
+				background-color: #fff;
+				position: relative;
+				top: 3px;
+				left: 13px;
+				z-index: 0;
+				i{
+					z-index: 1;
+					position: relative;
+					display: none;
+				}
+			}
+		}
 		.proceed{
 			margin-top: 54px;
 			padding: 18px 28px;
@@ -586,6 +624,9 @@
 
 /*--------------------------------------------------------RWD-------------------------------------------------------*/
 
+
+//	本以為塞新增一個容器條寬度就好，但就像骨牌一樣下面完全被影響
+//	還是先轉成content-box法比較直觀簡易...
  @media screen and (max-width:1612px) {
 	#Footer .misc2 .container {
 		box-sizing: border-box;
@@ -596,67 +637,10 @@
 
 
 @media screen and (max-width:1229px){
-	#Header{
-		#Header_nav{
-
-			div#nav1{
-				text-align: center;
-			}
-
-			.navbar-default{
-				font-family:@Mr;
-				.navbar-brand{
-					padding-top: 20px;
-					padding-bottom: 20px;
-					padding-left: 15px;
-				}
-
-				.navbar-toggle{
-					margin-top: 20px;
-					margin-bottom: 20px;
-					margin-right: 15px;
-				} 
-
-				.navbar-nav>li .twicks{
-						position: relative;
-						bottom:5px;
-				}
-				
-				.navbar-nav>li>a {
-
-				    div.count {
-						bottom: 2px;
-						right: 3px;
-					}
-				}
-
-				.navbar-text{
-					padding-top:43.5px;
-				}
-
-				ul.nav.navbar-nav.navbar-right{
-					padding-bottom:36px;
-				}
-			}
-		}
-	}
-
 	#Content{
 		.checkout-chain{
 			width:60%;
-		}
-
-		.list1 ul.detail li{
-			top:30px;
-		}
-
-		.list1 ul.detail li:nth-child(4){
-			top:18px;
-			span#quantity-button{
-				position:static;	
-			}
-		}
-
+		} 
 	} 
 
 	#Footer{
@@ -686,6 +670,9 @@
 		}
 	}
 
+	// #Footer .misc2 .boring-container {
+	// 	width:970px;
+	// }
 }
 
 @media screen and (max-width:991px){ 
@@ -693,26 +680,18 @@
 		.checkout-chain{
 			width:78%;
 		}
-
-		.list1 ul.detail li:first-child{
-			width: 21%;
-		}
-
-		.list1 ul.detail li:nth-child(2){
-			width: 36%;
-		}
-		
-		.list2 .caculate-group{
-			width: 100%;
-		}
-
-		.list2 .sum{
-			width: 100%;
-			margin-left: 0px;
-		}
-
-		.list2 h2.title.title2{
-			margin-top: 79px;
+		.forms{
+			.billing-details{
+				width: 100%;
+				.form-group .c-downspinner{
+					transform:translateX(-47%);
+				}
+			}
+			.order-and-pay{
+				margin: 0px;
+				width: 100%;
+			}
+			
 		}
 	} 
 
@@ -794,6 +773,10 @@
 			}
 		}
 	}
+
+	// #Footer .misc2 .boring-container {
+	// 	width:750px;
+	// }
 }
 
 
@@ -814,19 +797,44 @@
 				float: right;
 			} 
 		}
+		.forms {
+			.order-and-pay{
+			padding: 20px;
+			}
+
+			.notice{
+				padding: 0px 20px;
+			}
+		}
+		input#last-name,input#phone-number{
+			float: none!important;
+			min-width: 290px;
+		} 
+		input#first-name,input#email-address{
+			margin-bottom: 15px;
+			min-width: 290px;
+		}
 	}
 
 	#Header{
 		#Header_home{
+			// background-color: #282828;
 			ul li{
 				padding: 17px 10px;
 			}
 			.contact{
-
+				// width: 320px;
+				// min-width: 320px;
+				// margin: 0 auto;
 				display: inline-block;
 			}
 			.lists{
+				// width: 320px;
+				// min-width: 320px;
+				// margin: 0 auto;
 				display: inline-block;
+				// text-align: right;
+				// float: none;
 				li:nth-child(2){
 					padding:17px 0px;
 				}
@@ -839,57 +847,6 @@
 	}	
 
 }
-@media screen and (max-width:560px){
-	#Content{
-		.list1{
-			ul{
-				&.title{
-					display: none;
-				}
-				&.detail{
-					li{
-						display: block;
-						float:none;
-						position: static;
-						button{
-							position: static;
-						}
-					}
-					li:first-child{
-						position: static;
-						min-width: 120px;
-  						width: 44%;
-						float: left!important;
-					}
-					li:nth-child(2){
-						width: 100%;
-					}
-					li:nth-child(3){
-						margin-top: 10px;
-						width: 100%;
-					}
-					li:nth-child(4){
-						display: inline-block;
-					    margin-top: 10px;
-					    margin-right: 10px;
-						width: auto;
-						top: 0px;
-					}
-					li:nth-child(5){
-						display: inline-block;
-						width: auto;
-					}
-					.photo{
-						margin-right: 65px;
-					    width: 106px;
-					    height: 106px
-					}
-				}
-			}
-		}
-	}
-}
-
 
 @media screen and (max-width:437px){
 	#Header{
@@ -902,6 +859,7 @@
 				float: none;
 				text-align: center;
 				li{
+					/*只清掉ul的float，忘記清li的，難怪原本怎麼設ta-c都沒用...*/
 					float: none;
 				}
 			}
@@ -913,6 +871,7 @@
 				float: none;
 				text-align: center;
 				li{
+					/*只清掉ul的float，忘記清li的，難怪原本怎麼設ta-c都沒用...*/
 					float: none;
 					display: inline-block;
 				}
@@ -923,6 +882,12 @@
 		}
 	}
 
+	#Content .feature .slider-select-bar li:after {
+	    padding: 0px 14px;
+	}
+	#Content .forms .notice br{
+		display: block;
+	}
 	#Content .checkout-chain .step .position{
 		font-size: 12px;
 	}

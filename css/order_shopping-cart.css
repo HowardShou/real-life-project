@@ -120,6 +120,7 @@ li {
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
+  /*--------------------------------nav-bar's RWD-------------------------------------*/
 }
 #Header #Header_home .contact {
   float: left;
@@ -166,59 +167,185 @@ li {
 #Header #Header_home a:hover {
   color: #D6B161;
 }
-#Header #Header_nav .navbar-default {
+#Header #full-screen-cover {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+#Header .navbar-default {
   background-color: transparent;
   border-color: transparent;
 }
-#Header #Header_nav .navbar-brand {
+#Header .navbar-brand {
   height: auto;
+  padding: 44px 42px 50px 53px;
   line-height: normal;
-  margin-left: 0px;
-  padding-left: 46px;
-  padding-top: 26px;
 }
-#Header #Header_nav .navbar {
+#Header .navbar {
   margin-bottom: 0px;
 }
-#Header #Header_nav .navbar-default {
+#Header .navbar-default {
   font-family: Montserrat, sans-serif;
 }
-#Header #Header_nav .navbar-default .container {
-  background-color: #fff;
-}
-#Header #Header_nav .navbar-default .navbar-nav > li {
+#Header .navbar-default .navbar-nav > li .dropdown-container {
   position: relative;
 }
-#Header #Header_nav .navbar-default .navbar-nav > li.cart-info h5 {
-  padding-bottom: 3px;
+#Header .navbar-default .navbar-nav > li .dropdown-container:hover .dropdown-content {
+  display: block;
 }
-#Header #Header_nav .navbar-default .navbar-nav > li.cart-info h6 {
-  padding-top: 3px;
-  font-size: 8px;
-  font-weight: 700;
-  text-transform: lowercase;
-  font-family: "Source Sans Pro", sans-serif;
+#Header .navbar-default .navbar-nav > li .dropdown-container .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 33px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  z-index: 3;
 }
-#Header #Header_nav .navbar-default .navbar-nav > li .twicks {
+#Header .navbar-default .navbar-nav > li .dropdown-container .dropdown-content a {
+  display: block;
+  border-bottom: 1px solid #000;
+  padding: 15px;
+  color: #929292;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+#Header .navbar-default .navbar-nav > li .dropdown-container .dropdown-content a:hover {
+  color: #D6B161;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart {
+  position: relative;
+  z-index: 3;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base {
+  display: none;
+  position: absolute;
+  padding: 60px 0px 46px 0px;
+  width: 381px;
+  max-width: 381px;
+  right: 0px;
+  background-color: #fff;
+  z-index: 3;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base:hover {
+  display: block;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .triangle {
+  position: absolute;
+  top: -9px;
+  right: 21px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 7.5px 10px 7.5px;
+  border-color: transparent transparent #ffffff transparent;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content {
+  width: 75%;
+  margin: 0 auto;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure {
+  margin-top: 16px;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure:first-child {
+  margin-top: 0px;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .photo {
+  display: inline-block;
+  margin-right: 20px;
+  width: 26%;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info {
+  position: relative;
+  bottom: 10px;
+  display: inline-block;
+  width: 65%;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info .item-name {
+  color: #959595;
+  font-weight: bold;
+  font-size: 12px;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info .price {
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #252528;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info .price i.fa-eur {
+  margin-right: 5px;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info .price i.fa-times {
+  color: #f05c5c;
+  float: right;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info .amount {
+  color: #959595;
+  margin-top: 4px;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .total-count .total-word {
+  float: left;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .total-count .total-amount {
+  color: #000;
+  float: right;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .total-count .total-amount i {
+  margin-right: 5px;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .view-or-checkout a {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  border: 1px solid #000;
+  border-radius: 24px;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .view-or-checkout a.view {
+  padding: 10px 15px;
+  width: 127px;
+  max-width: 127px;
+  float: left;
+  color: #000;
+}
+#Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .view-or-checkout a.checkout {
+  padding: 10px 15px;
+  width: 140px;
+  max-width: 140px;
+  float: right;
+  background-color: #000;
+  color: white;
+}
+#Header .navbar-default .navbar-nav > li .twicks {
   position: relative;
   bottom: 5px;
 }
-#Header #Header_nav .navbar-default .navbar-nav > li > a {
+#Header .navbar-default .navbar-nav > li > a,
+#Header .navbar-default div.dropdown-container {
   display: inline-block;
+  text-transform: uppercase;
+  padding: 10px 15px;
   color: black;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
-#Header #Header_nav .navbar-default .navbar-nav > li > a:active {
+#Header .navbar-default .navbar-nav > li > a:active,
+#Header .navbar-default div.dropdown-container:active {
   color: #D6B161;
 }
-#Header #Header_nav .navbar-default .navbar-nav > li > a:hover {
+#Header .navbar-default .navbar-nav > li > a:hover,
+#Header .navbar-default div.dropdown-container:hover {
   color: #D6B161;
 }
-#Header #Header_nav .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
-#Header #Header_nav .navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+#Header .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
+#Header .navbar-default div.dropdown-container [class^="icon-"]:before,
+#Header .navbar-default .navbar-nav > li > a [class*=" icon-"]:before,
+#Header .navbar-default div.dropdown-container [class*=" icon-"]:before {
   margin: 0;
 }
-#Header #Header_nav .navbar-default .navbar-nav > li > a div.count {
+#Header .navbar-default .navbar-nav > li > a div.count,
+#Header .navbar-default div.dropdown-container div.count {
   background-color: black;
   position: absolute;
   bottom: 6px;
@@ -232,58 +359,212 @@ li {
   color: white;
   transition: background-color 0.2s linear;
 }
-#Header #Header_nav .navbar-default .navbar-nav > li > a div.count:hover {
+#Header .navbar-default .navbar-nav > li > a div.count:hover,
+#Header .navbar-default div.dropdown-container div.count:hover {
   background: #D6B161;
 }
-#Header #Header_nav .navbar-default .navbar-text {
+#Header .navbar-default .navbar-text {
   margin: 0;
   padding-top: 53px;
   color: black;
 }
-#Header #Header_nav .navbar-collapse.collapse {
-  padding-top: 20px;
-  padding-bottom: 20px;
+#Header ul.nav.navbar-nav.navbar-right {
+  padding-top: 38px;
 }
-#Header #Header_nav .check-out {
+@media screen and (max-width: 1229px) {
+  #Header div#nav1 {
+    text-align: center;
+  }
+  #Header .navbar-default {
+    font-family: Montserrat, sans-serif;
+  }
+  #Header .navbar-default .navbar-nav > li .twicks {
+    position: relative;
+    bottom: 5px;
+  }
+  #Header .navbar-default .navbar-nav > li .dropdown-container .dropdown-content {
+    top: 17px;
+    right: -80px;
+    z-index: 4;
+  }
+  #Header .navbar-default .navbar-toggle {
+    border: 0;
+  }
+  #Header .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+  }
+  #Header .navbar-default .navbar-toggle:hover .icon-bar {
+    background-color: #D6B161;
+  }
+  #Header .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+  }
+  #Header .navbar-default .navbar-toggle .icon-bar {
+    background-color: #000;
+    transition: all 0.2s ease;
+  }
+  #Header .navbar-default .navbar-nav > li > a div.count {
+    bottom: 2px;
+    right: 3px;
+  }
+  #Header .navbar-default .navbar-text {
+    padding-top: 43.5px;
+  }
+  #Header .navbar-default ul.nav.navbar-nav.navbar-right {
+    padding-bottom: 36px;
+  }
+  #Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base {
+    padding-bottom: 31px;
+    width: 50%;
+    min-width: 320px;
+    max-width: 381px;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%);
+  }
+  #Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content {
+    width: 75%;
+    margin: 0 auto;
+  }
+  #Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info {
+    text-align: left;
+  }
+  #Header .navbar-default .navbar-nav > li#shopping-cart .triangle {
+    display: none;
+  }
+  #Header .navbar-default .navbar-nav > li > a {
+    display: inline-block;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  #Header .navbar-default .navbar-nav > li > a:active {
+    color: #D6B161;
+  }
+  #Header .navbar-default .navbar-nav > li > a:hover {
+    color: #D6B161;
+  }
+  #Header .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
+  #Header .navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+    margin: 0;
+  }
+  #Header .navbar-default .navbar-nav > li > a div.count {
+    background-color: black;
+    position: absolute;
+    bottom: 6px;
+    right: 3px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: 8px;
+    font-weight: 400;
+    color: white;
+    transition: background-color 0.2s linear;
+  }
+  #Header .navbar-default .navbar-nav > li > a div.count:hover {
+    background: #D6B161;
+  }
+  #Header .navbar-default .navbar-text {
+    margin: 0;
+    padding-top: 53px;
+    color: black;
+  }
+  #Header .navbar-toggle {
+    margin-right: 53px;
+    padding: 10px 10px;
+    margin-top: 41px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #Header a.navbar-brand {
+    padding-left: 7px;
+  }
+  #Header .navbar-toggle {
+    margin-right: 7px;
+  }
+  #Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base {
+    padding-bottom: 14px;
+    width: 100%;
+  }
+  #Header .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content {
+    width: 87%;
+    margin: 0 auto;
+  }
+  #Header .navbar-default .navbar-nav > li > a {
+    display: inline-block;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  #Header .navbar-default .navbar-nav > li > a:active {
+    color: #D6B161;
+  }
+  #Header .navbar-default .navbar-nav > li > a:hover {
+    color: #D6B161;
+  }
+  #Header .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
+  #Header .navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+    margin: 0;
+  }
+  #Header .navbar-default .navbar-nav > li > a div.count {
+    background-color: black;
+    position: absolute;
+    bottom: 6px;
+    right: 3px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: 8px;
+    font-weight: 400;
+    color: white;
+    transition: background-color 0.2s linear;
+  }
+  #Header .navbar-default .navbar-nav > li > a div.count:hover {
+    background: #D6B161;
+  }
+  #Header .navbar-default .navbar-text {
+    margin: 0;
+    padding-top: 53px;
+    color: black;
+  }
+}
+#Header .navbar-default .container.container-fluid {
+  background-color: #fff;
+}
+#Header .check-out {
   padding: 52px 0px 0px 0px;
   text-align: center;
 }
-#Header #Header_nav .check-out .container {
+#Header .check-out .container {
   padding-bottom: 71px;
 }
-#Header #Header_nav .check-out h1 {
+#Header .check-out h1 {
   color: white;
   font-family: Montserrat, sans-serif;
   font-size: 44px;
   font-weight: 700;
   text-transform: uppercase;
 }
-#Header #Header_nav .check-out p {
+#Header .check-out p {
   position: absolute;
   bottom: 20px;
   text-align: left;
   text-transform: capitalize;
   font-size: 14px;
 }
-#Header #Header_nav .check-out p a {
+#Header .check-out p a {
   margin-right: 7px;
   color: white;
   transition: all 0.3s ease;
 }
-#Header #Header_nav .check-out p a:hover {
+#Header .check-out p a:hover {
   color: #D6B161;
 }
-#Header #Header_nav .check-out p i {
+#Header .check-out p i {
   color: white;
   margin-right: 7px;
 }
 /* -----------------------------------Content------------------------------------------- */
-#Content {
-  /*初做購物車頁面，在這邊的layout遇到了些狀況(從用margin推容器改用width來推、應該要用li推距離不小心設到
-	他的子容器等)，尤其是在RWD的部分差點想放棄去問老師它們
-	還好有想到先去citesocial「參觀」一下，果然馬上就找到解決的參考範本，在修正的時候，發現html架構
-	難以做出想要的style，所以又做了不少修正(ex:detail的li從4個改成5個)，總算橋出來了!*/
-}
 #Content .checkout-chain {
   color: #000;
   margin: 0 auto;
@@ -320,8 +601,6 @@ li {
   font-weight: 700;
 }
 #Content .checkout-chain .hl {
-  /*原本只有在step設float這邊沒設，結果橫槓沒辦法卡中間，才想到這是文繞圖的特性，
-			把它也給float後，就被float視為一家人，順利卡中間惹*/
   float: left;
   display: inline-block;
   border-top: 1px solid #e0e0e0;
@@ -332,15 +611,6 @@ li {
   margin-top: 151px;
 }
 #Content .list1 ul.title {
-  /*這邊所花的時間，再再證明了，一個觀念不對，很可能走五分鐘的路，你要走半小時甚至更久! 
-				li:first-child{margin-right: 634px;}
-				li:nth-child(2){margin-right: 121px;}
-				li:nth-child(3){margin-right: 108px;} 
-				以上是用margin推出邊距，問題做RWD時，因為margin是固定的，不會隨著容器大小變動會，開始嚴重跑版...
-				一叫醒來後想到...既然要讓距離保持一致，幹嘛不用width的百分比功能就好????
-				(以前推距離時只想到要用padding或margin，但能夠順著容器縮放的只有width，而且沒人說width不能做間格啊XD)
-				因為li們的parent ul預設是 width100% , 底下的元素們自然可以藉由調整百分比弄出適合RWD的間距啊!
-				還好最後有想到了，這對後面的東西來說太重要啦!加油*/
   font-size: 16px;
   font-weight: 700;
 }
@@ -366,9 +636,11 @@ li {
 }
 #Content .list1 ul.detail li:nth-child(4) {
   width: 15%;
-  /*第一次利用icon-sprite就在jQUI*/
 }
 #Content .list1 ul.detail li:nth-child(4) span#quantity-button {
+  position: relative;
+  bottom: 12px;
+  outline: none;
   border: 0px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -391,13 +663,10 @@ li {
   top: 42px;
   font-weight: 700;
   color: #000;
-  /*不管視窗大小最後都要這個size的圖，所以給固定數值*/
 }
 #Content .list1 ul.detail li .photo {
   width: 106px;
   height: 106px;
-  /*之前不小心多加了這個設定害我一直跑版= =+
-						 margin-right: 65px;*/
 }
 #Content .list1 ul.detail li button {
   position: absolute;
@@ -423,8 +692,8 @@ li {
   padding: 11px 0px 11px 24px;
 }
 #Content .coupon input[type="submit"] {
+  outline: none;
   position: relative;
-  top: 1px;
   font-family: Montserrat, sans-serif;
   background-color: #cba233;
   color: #fff;
@@ -473,9 +742,10 @@ li {
   -moz-appearance: none;
   position: relative;
   padding: 17px 12px;
-  height: auto;
-  z-index: 2;
   background-color: transparent;
+  height: auto;
+  cursor: pointer;
+  z-index: 2;
 }
 #Content .list2 .caculate-group .form-control#country:focus ~ .c-downspinner,
 #Content .list2 .caculate-group .form-control#state:focus ~ .c-downspinner,
@@ -788,6 +1058,9 @@ li {
   #Content .list1 ul.detail li:nth-child(4) {
     top: 18px;
   }
+  #Content .list1 ul.detail li:nth-child(4) span#quantity-button {
+    position: static;
+  }
   #Footer .misc1 .vl.a1 {
     right: 50px;
   }
@@ -936,9 +1209,6 @@ li {
   }
   #Content .list1 ul.detail li:first-child {
     position: static;
-    /*本來只用width:120px 但這樣在到320px以前留白實在太多，所以改百分比，
-						卻又會面臨小容器時可能跑版的問題，解決之道其實就是放min-width下去而已
-						，其實你很早以前在input那邊已經用過了，但是不夠熟，+U*/
     min-width: 120px;
     width: 44%;
     float: left!important;
@@ -977,7 +1247,6 @@ li {
     text-align: center;
   }
   #Header #Header_home .contact li {
-    /*只清掉ul的float，忘記清li的，難怪原本怎麼設ta-c都沒用...*/
     float: none;
   }
   #Header #Header_home .lists {
@@ -989,7 +1258,6 @@ li {
     text-align: center;
   }
   #Header #Header_home .lists li {
-    /*只清掉ul的float，忘記清li的，難怪原本怎麼設ta-c都沒用...*/
     float: none;
     display: inline-block;
   }

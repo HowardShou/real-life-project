@@ -40,12 +40,12 @@
                     </ul>
                 </div>
             </div>
-        </div>        
+        </div>
+        <div id="full-screen-cover"></div>        
         <div id="Header_nav" class="clearfix">
             <nav class="navbar navbar-default">
                 <div class="container container-fluid">
                     <div class="row">
-                        <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
                               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav1" aria-expanded="false">
                                 <span class="sr-only">Toggle navigation</span>
@@ -57,22 +57,105 @@
                                 <img src="images/logo.png" alt="logo">
                               </a>
                         </div>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="nav1">
+                          <p class="navbar-text">+1(555) 333 22 11</p>
                           <ul class="nav navbar-nav navbar-right">
                               <li><a href="#">home</a></li>
-                              <li><a href="#">products<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
-                              <li><a href="#">pages<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                              <li>
+                                <div href="#" class="dropdown-container">
+                                    products
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <div class="dropdown-content">
+                                        <a href="#">Link 1</a>
+                                        <a href="#">Link 2</a>
+                                        <a href="#">Link 3</a>
+                                    </div>
+                                </a>
+                              </li>
+                              <li>
+                                <div class="dropdown-container">
+                                    pages
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <div class="dropdown-content">
+                                        <a href="#">Link 1</a>
+                                        <a href="#">Link 2</a>
+                                        <a href="#">Link 3</a>
+                                        <a href="#">Link 4</a>
+                                        <a href="#">Link 5</a>
+                                        <a href="#">Link 6</a>
+                                        <a href="#">Link 7</a>
+                                        <a href="#">Link 8</a>
+                                        <a href="#">Link 9</a>
+                                    </div>
+                                </div>
+                              </li>
                               <li><a href="#">blog</a></li>
                               <li><a href="#">about</a></li>
                               <li><a href="#">contact</a></li>
-                              <li><a class="twicks" href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a></li> 
+                              <li><a class="twicks" href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a></li>
                               <li><a class="twicks" href="#"><i class="fa fa-heart-o fa-2x" aria-hidden="true"></i></a></li>
-                              <li>
+                              <li id="shopping-cart">
                                   <a class="twicks" href="#">
                                       <i class="icon-handbag fa-2x"></i>
                                       <div class="count">3</div>
                                   </a>
+
+                                  <div class="shopping-content-base">
+                                    <div class="triangle"></div>
+                                    <div class="shopping-content">
+                                        <div class="treasure">
+                                            <div class="photo">
+                                                <a href="#"><img src="https://picsum.photos/74/74?image=81" alt="photo"></a>
+                                            </div>
+                                            <div class="info">
+                                                <div class="item-name">Egon Wooden Chair</div>
+                                                <div class="price">
+                                                    <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                                                    <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                                </div>
+                                                <div class="amount">Qty:1</div>
+                                            </div>
+                                        </div>
+                                        <div class="treasure">
+                                            <div class="photo">
+                                                <a href="#"><img src="https://picsum.photos/74/74?image=84" alt="photo"></a>
+                                            </div>
+                                            <div class="info">
+                                                <div class="item-name">Egon Wooden Chair</div>
+                                                <div class="price">
+                                                    <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                                                    <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                                </div>
+                                                <div class="amount">Qty:1</div>
+                                            </div>
+                                        </div>
+                                        <div class="treasure">
+                                            <div class="photo">
+                                                <a href="#"><img src="https://picsum.photos/74/74?image=87" alt="photo"></a>
+                                            </div>
+                                            <div class="info">
+                                                <div class="item-name">Egon Wooden Chair</div>
+                                                <div class="price">
+                                                    <i class="fa fa-eur" aria-hidden="true"></i>599,00
+                                                    <a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                                </div>
+                                                <div class="amount">Qty:1</div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="total-count clearfix">
+                                            <div class="total-word">Sub Total</div>
+                                            <div class="total-amount">
+                                                <i class="fa fa-eur" aria-hidden="true"></i>799,00
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="view-or-checkout clearfix">
+                                            <a href="#" class="view">view cart</a>
+                                            <a href="#" class="checkout">checkout</a>
+                                        </div>
+                                    </div>
+                                  </div>
                               </li>
                           </ul>
                         </div>
@@ -82,7 +165,7 @@
 
             <div class="check-out">
                 <div class="container clearfix">
-                    <h1>Contact</h1>
+                    <h1>shopping cart</h1>
                     <p>
                         <a href="#">Home</a><i class="fa fa-angle-right" aria-hidden="true"></i> <a href="#">Check Out</a>
                     </p>
@@ -441,11 +524,7 @@
     </div>    
 
     <script src="js/bootstrap.min.js"></script>
-    <!-- 原本怎樣都吃不到jQuery的外掛，後來發現原本使用的jquery-ui-customize.min.js似乎有少資料
-        把jquery-ui-customize.js重新compress過後就可以正常使用了，媽的...-->
     <script src="js/jquery-ui-customize.min.js"></script>
-    <!-- 雖然用CSS就解決了，但還是很好奇，select裡面的option究竟要用什麼event才能使之呈現
-        感覺就是focus，但表單就是不出現T_T
     <script>
         $(document).ready(function() {
             $(".c-downspinner").click(function(event) {
@@ -456,6 +535,14 @@
     <script>
         $(document).ready(function() {
             $("select#quantity").selectmenu().selectmenu("menuWidget");
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".fa-times").click(function() {
+                $(this).closest('ul').next().remove()
+                $(this).closest('ul').remove()
+            });
         });
     </script>
     <script>
@@ -480,6 +567,7 @@
             });
         });
     </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

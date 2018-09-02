@@ -9,6 +9,14 @@
 
 .contact-us {
 	background: #f4f4f4 url("https://picsum.photos/1600/1030/") 50% 50% no-repeat fixed;
+	// background-color
+	// background-image
+	// background-position
+	// background-size
+	// background-repeat:n;
+	// background-origin
+	// background-clip
+	// background-attachment
 	padding: 60px 0px 60px 0px;
 	text-align: center;
 	h1 {
@@ -23,6 +31,8 @@
 		margin-top: 26px;
 		text-transform: capitalize;
 		font-size: 14px;
+		/*本來想運用跟home裡面feature一樣的after方法，但這邊需要用icon-fonts
+		css那個content不能放tag因此作罷*/
 		a{
 			margin-right: 7px;
 			color:white;
@@ -62,6 +72,7 @@
 						font-weight: 700;
 					}
 					p{
+						/*這玩意兒起碼讓我多花了兩小時在想為何跑版......學起來吧...*/
 						word-wrap:break-word;
 						margin-top: 20px;
 						font-size: 14px;
@@ -99,6 +110,7 @@
 				textarea.form-control{
 					height:auto;
 				}
+				// placeholder顏色這樣改的，真妙...
 				::placeholder{
 					color:black;
 				}
@@ -235,6 +247,7 @@
 		
 			.container.small{
 				.col-x{
+					// float: none!important;
 				}
 				.col-x:nth-child(2){
 					margin-top: 75px;
@@ -255,6 +268,7 @@
 	
 	#Footer{
 		.row{
+			/*記住:after和:before是怎麼運作了...*/
 			*{
 				float:none!important;
 			}

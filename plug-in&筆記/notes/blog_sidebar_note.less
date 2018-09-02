@@ -19,7 +19,15 @@
 
 .blog-list-sidebar2 {
 		background: #f4f4f4;
-
+		// url("https://picsum.photos/1600/1030/") 50% 50% no-repeat fixed;
+		// background-color
+		// background-image
+		// background-position
+		// background-size
+		// background-repeat
+		// background-origin
+		// background-clip
+		// background-attachment
 		padding: 72px 0px 60px 0px;
 		text-align: center;
 		h1 {
@@ -92,6 +100,11 @@
 			}
 			.informations{
 				position: relative;
+				/*float:left設在這邊沒屁用，就跟ul和li一樣，底下的還要自己調*/
+
+				/*本來想要嘗試用inline-block取代float，但是發現inline-blok擠在同一行時
+				，高度會被統一對齊對齊到最高的那個容器的底層，反而更複雜，因此作罷，依舊讓
+				inline-block和float兩者互相搭配，後來發先這兩個容器根本直接用float即可= =*/
 				.date-and-month{
 					float: left;
 				}
@@ -99,7 +112,10 @@
 					float: left;
 					margin-top:41px;
 					margin-left: 38px;
+					/*必備設定，否則不管用in-b或者float都達不到效果*/
 					max-width: 643px;
+					/*也可以用以下這個設定取代這邊的float~
+					 display: inline-block;*/
 					.title{
 						font-size: 30px;
 						font-family: @Mr;
@@ -156,6 +172,7 @@
 				font-size: 20px;
 				color:#737373;
 				font-family: @Mr;
+				/* 無法單獨調整width的長度border-bottom:2px solid black;*/
 			}
 			hr{
 			margin: 7px 0px;
@@ -175,6 +192,10 @@
 			    margin-bottom: 77px;
 			    line-height: 1.42857143;
 			}
+			/*1.這是第一種寫法，但是我和助教都覺得float是比較差的解決方案，能夠用inline-block解決最好
+			，目前的結論是:當左右兩個inline-block的容器高度差不多時，可以用inline-block取代float
+
+			2.助教認為width最好都還是用%數計算最保險，一起改掉*/
 			.intro{
 				display: inline-block;
 				width: 75%;
@@ -208,6 +229,8 @@
 	.misc {
 		background-color: @background_color_6;
 		.container {
+			/*原本寫成padding:72px 0px 75px 0px;導致不小心把container內建
+			的padding給覆蓋掉，然後就跑版了!fk~*/
 			padding-top:82px;
 		}
 	}
@@ -340,6 +363,7 @@
 	
 	#Footer{
 		.row{
+			/*記住:after和:before是怎麼運作了...*/
 			*{
 				float:none!important;
 			}
@@ -383,18 +407,18 @@
 		}
 		.sidebars{
 			.sidebar{
-				.intro{
-					margin-right: 0px;
-				}
-				hr{
-					margin-left: 221px;
-				}
-				hr.longer{
-					margin-left: 220px;
-				}
-				hr.shorter{
-					margin-left: 266px;
-				}
+					.intro{
+						margin-right: 0px;
+					}
+					hr{
+						margin-left: 221px;
+					}
+					hr.longer{
+						margin-left: 220px;
+					}
+					hr.shorter{
+						margin-left: 266px;
+					}
 			}
 		}
 	}

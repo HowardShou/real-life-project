@@ -19,7 +19,7 @@
 
 
 /*----------------------------Header------------------------------*/
-@import "nav-bar";
+@import "nav-bar"; 
 
 /*----------------------------------Content-----------------------*/
 #Content{
@@ -38,6 +38,8 @@
 		.owl-carousel.slider1{
 			margin-left: 35px;
 			margin-top: 50px;
+			/*要用容器調整照片到想要的大小，一開始是把這個設定直接放在owl-carousel上，完全不是想要的效果，
+			後來發現要放這邊才對*/
 			.slide-1,.slide-2,.slide-3,.slide-4{
 				width: 79.9%
 			}
@@ -55,6 +57,7 @@
 				    	outline: none;
 				    }
 				}
+				// 點點變圖片!嘿嘿!
 				button.owl-dot:first-child{
 					background-image: url("https://picsum.photos/105/105?image=410");
 				}
@@ -150,6 +153,7 @@
 			span{
 				margin-right: 26px;
 			}
+			/*spinner請教老師怎麼客製化!*/
 			input[type="number"]{
 				margin-right: 11px;
 				padding: 17.5px 12px;
@@ -201,6 +205,7 @@
 		}
 	}
 
+	/*直接把home作完的拿來用94爽喇!*/
 	.related_products{
 		margin-top: 115px;
 		.title{
@@ -342,6 +347,7 @@
 			.owl-nav{
 				position: absolute;
 				top:-19.5%;
+				// md-15.5% sm-14%
 				right:0;
 			    border-radius: 19px;
 			    padding: 4px 5px;
@@ -374,6 +380,8 @@
 	.misc {
 		background-color: @background_color_6;
 		.container {
+			/*原本寫成padding:72px 0px 75px 0px;導致不小心把container內建
+			的padding給覆蓋掉，然後就跑版了!fk~*/
 			padding-top:72px;
 			padding-bottom:75px;
 		}
@@ -662,6 +670,7 @@
 					margin-bottom: 20px;
 				}
 
+				/*spinner請教老師怎麼客製化!*/
 				input[type="number"]{
 					max-width: 320px; 
 				}

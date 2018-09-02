@@ -19,6 +19,7 @@
         <div id="full-screen-cover"></div>
         <div id="Header" class="clearfix">
             <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
@@ -30,6 +31,7 @@
                         <img src="images/logo.png" alt="logo">
                       </a>
                 </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="nav1">
                   <p class="navbar-text">+1(555) 333 22 11</p>
                   <ul class="nav navbar-nav navbar-right">
@@ -46,6 +48,7 @@
                         </a>
                       </li>
                       <li>
+                        <!-- 新發現--本來是用a來包覆，但是發現a底下不能接div!故將a換成div -->
                         <div class="dropdown-container">
                             pages
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -75,6 +78,7 @@
 
                           <div class="shopping-content-base">
                             <div class="triangle"></div>
+                            <!-- 後來聽助教一講，其實這種shopping-cart都可以用ul配li來做，最後在li裡面塞div即可-->
                             <div class="shopping-content">
                                 <div class="treasure">
                                     <div class="photo">
@@ -802,6 +806,7 @@
             });
         </script>
         <script>
+            /*自己先在codpen把該段落做完後再複製回此份專案good*/
             $(document).ready(function(){
               $(".product_info").find("li").click(function(){
                 var index=$(this).index();

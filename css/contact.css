@@ -113,6 +113,14 @@ li {
 }
 /*---------------------------------contact.css--------------------------------------------*/
 /*----------------------------Header------------------------------*/
+#full-screen-cover {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
 .navbar-default {
   background-color: transparent;
   border-color: transparent;
@@ -128,26 +136,162 @@ li {
 .navbar-default {
   font-family: Montserrat, sans-serif;
 }
+.navbar-default .navbar-nav > li .dropdown-container {
+  position: relative;
+}
+.navbar-default .navbar-nav > li .dropdown-container:hover .dropdown-content {
+  display: block;
+}
+.navbar-default .navbar-nav > li .dropdown-container .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 33px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  z-index: 3;
+}
+.navbar-default .navbar-nav > li .dropdown-container .dropdown-content a {
+  display: block;
+  border-bottom: 1px solid #000;
+  padding: 15px;
+  color: #929292;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.navbar-default .navbar-nav > li .dropdown-container .dropdown-content a:hover {
+  color: #D6B161;
+}
+.navbar-default .navbar-nav > li#shopping-cart {
+  position: relative;
+  z-index: 3;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base {
+  display: none;
+  position: absolute;
+  padding: 60px 0px 46px 0px;
+  width: 381px;
+  max-width: 381px;
+  right: 0px;
+  background-color: #fff;
+  z-index: 3;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base:hover {
+  display: block;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .triangle {
+  position: absolute;
+  top: -9px;
+  right: 21px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 7.5px 10px 7.5px;
+  border-color: transparent transparent #ffffff transparent;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content {
+  width: 75%;
+  margin: 0 auto;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure {
+  margin-top: 16px;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure:first-child {
+  margin-top: 0px;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .photo {
+  display: inline-block;
+  margin-right: 20px;
+  width: 26%;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info {
+  position: relative;
+  bottom: 10px;
+  display: inline-block;
+  width: 65%;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info .item-name {
+  color: #959595;
+  font-weight: bold;
+  font-size: 12px;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info .price {
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #252528;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info .price i.fa-eur {
+  margin-right: 5px;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info .price i.fa-times {
+  color: #f05c5c;
+  float: right;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info .amount {
+  color: #959595;
+  margin-top: 4px;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .total-count .total-word {
+  float: left;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .total-count .total-amount {
+  color: #000;
+  float: right;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .total-count .total-amount i {
+  margin-right: 5px;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .view-or-checkout a {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  border: 1px solid #000;
+  border-radius: 24px;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .view-or-checkout a.view {
+  padding: 10px 15px;
+  width: 127px;
+  max-width: 127px;
+  float: left;
+  color: #000;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .view-or-checkout a.checkout {
+  padding: 10px 15px;
+  width: 140px;
+  max-width: 140px;
+  float: right;
+  background-color: #000;
+  color: white;
+}
 .navbar-default .navbar-nav > li .twicks {
   position: relative;
   bottom: 5px;
 }
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a,
+.navbar-default div.dropdown-container {
   display: inline-block;
+  text-transform: uppercase;
+  padding: 10px 15px;
   color: black;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
-.navbar-default .navbar-nav > li > a:active {
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default div.dropdown-container:active {
   color: #D6B161;
 }
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default div.dropdown-container:hover {
   color: #D6B161;
 }
 .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
-.navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+.navbar-default div.dropdown-container [class^="icon-"]:before,
+.navbar-default .navbar-nav > li > a [class*=" icon-"]:before,
+.navbar-default div.dropdown-container [class*=" icon-"]:before {
   margin: 0;
 }
-.navbar-default .navbar-nav > li > a div.count {
+.navbar-default .navbar-nav > li > a div.count,
+.navbar-default div.dropdown-container div.count {
   background-color: black;
   position: absolute;
   bottom: 6px;
@@ -161,7 +305,8 @@ li {
   color: white;
   transition: background-color 0.2s linear;
 }
-.navbar-default .navbar-nav > li > a div.count:hover {
+.navbar-default .navbar-nav > li > a div.count:hover,
+.navbar-default div.dropdown-container div.count:hover {
   background: #D6B161;
 }
 .navbar-default .navbar-text {
@@ -171,6 +316,164 @@ li {
 }
 ul.nav.navbar-nav.navbar-right {
   padding-top: 38px;
+}
+/*--------------------------------nav-bar's RWD-------------------------------------*/
+@media screen and (max-width: 1229px) {
+  div#nav1 {
+    text-align: center;
+  }
+  .navbar-default {
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar-default .navbar-nav > li .twicks {
+    position: relative;
+    bottom: 5px;
+  }
+  .navbar-default .navbar-nav > li .dropdown-container .dropdown-content {
+    top: 17px;
+    right: -80px;
+    z-index: 4;
+  }
+  .navbar-default .navbar-toggle {
+    border: 0;
+  }
+  .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+  }
+  .navbar-default .navbar-toggle:hover .icon-bar {
+    background-color: #D6B161;
+  }
+  .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #000;
+    transition: all 0.2s ease;
+  }
+  .navbar-default .navbar-nav > li > a div.count {
+    bottom: 2px;
+    right: 3px;
+  }
+  .navbar-default .navbar-text {
+    padding-top: 43.5px;
+  }
+  .navbar-default ul.nav.navbar-nav.navbar-right {
+    padding-bottom: 36px;
+  }
+  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base {
+    padding-bottom: 31px;
+    width: 50%;
+    min-width: 320px;
+    max-width: 381px;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%);
+  }
+  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info {
+    text-align: left;
+  }
+  .navbar-default .navbar-nav > li#shopping-cart .triangle {
+    display: none;
+  }
+  .navbar-default .navbar-nav > li > a {
+    display: inline-block;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  .navbar-default .navbar-nav > li > a:active {
+    color: #D6B161;
+  }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #D6B161;
+  }
+  .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
+  .navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+    margin: 0;
+  }
+  .navbar-default .navbar-nav > li > a div.count {
+    background-color: black;
+    position: absolute;
+    bottom: 6px;
+    right: 3px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: 8px;
+    font-weight: 400;
+    color: white;
+    transition: background-color 0.2s linear;
+  }
+  .navbar-default .navbar-nav > li > a div.count:hover {
+    background: #D6B161;
+  }
+  .navbar-default .navbar-text {
+    margin: 0;
+    padding-top: 53px;
+    color: black;
+  }
+  .navbar-toggle {
+    margin-right: 53px;
+    padding: 10px 10px;
+    margin-top: 41px;
+  }
+}
+@media screen and (max-width: 767px) {
+  a.navbar-brand {
+    padding-left: 7px;
+  }
+  .navbar-toggle {
+    margin-right: 7px;
+  }
+  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base {
+    padding-bottom: 14px;
+    width: 100%;
+  }
+  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content {
+    width: 87%;
+    margin: 0 auto;
+  }
+  .navbar-default .navbar-nav > li > a {
+    display: inline-block;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  .navbar-default .navbar-nav > li > a:active {
+    color: #D6B161;
+  }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #D6B161;
+  }
+  .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
+  .navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+    margin: 0;
+  }
+  .navbar-default .navbar-nav > li > a div.count {
+    background-color: black;
+    position: absolute;
+    bottom: 6px;
+    right: 3px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: 8px;
+    font-weight: 400;
+    color: white;
+    transition: background-color 0.2s linear;
+  }
+  .navbar-default .navbar-nav > li > a div.count:hover {
+    background: #D6B161;
+  }
+  .navbar-default .navbar-text {
+    margin: 0;
+    padding-top: 53px;
+    color: black;
+  }
 }
 .contact-us {
   background: #f4f4f4 url("https://picsum.photos/1600/1030/") 50% 50% no-repeat fixed;
@@ -189,8 +492,6 @@ ul.nav.navbar-nav.navbar-right {
   margin-top: 26px;
   text-transform: capitalize;
   font-size: 14px;
-  /*本來想運用跟home裡面feature一樣的after方法，但這邊需要用icon-fonts
-		css那個content不能放tag因此作罷*/
 }
 .contact-us p a {
   margin-right: 7px;
@@ -228,7 +529,6 @@ ul.nav.navbar-nav.navbar-right {
   font-weight: 700;
 }
 .infos .container.small .col-x:first-child .info .col-xs-4 p {
-  /*這玩意兒起碼讓我多花了兩小時在想為何跑版......學起來吧...*/
   word-wrap: break-word;
   margin-top: 20px;
   font-size: 14px;
@@ -283,8 +583,6 @@ ul.nav.navbar-nav.navbar-right {
   background-color: #f6f6f6;
 }
 #Footer .misc .container {
-  /*原本寫成padding:72px 0px 75px 0px;導致不小心把container內建
-			的padding給覆蓋掉，然後就跑版了!fk~*/
   padding-top: 82px;
 }
 #Footer .col-left .col-inner > a {
@@ -368,33 +666,6 @@ ul.nav.navbar-nav.navbar-right {
   bottom: 3px;
 }
 /*--------------------------------------------------------RWD-------------------------------------------------------*/
-@media screen and (max-width: 1229px) {
-  div#nav1 {
-    text-align: center;
-  }
-  .navbar-default {
-    font-family: Montserrat, sans-serif;
-  }
-  .navbar-default .navbar-nav > li .twicks {
-    position: relative;
-    bottom: 5px;
-  }
-  .navbar-default .navbar-nav > li > a div.count {
-    bottom: 2px;
-    right: 3px;
-  }
-  .navbar-default .navbar-text {
-    padding-top: 43.5px;
-  }
-  .navbar-default ul.nav.navbar-nav.navbar-right {
-    padding-bottom: 36px;
-  }
-  .navbar-toggle {
-    margin-right: 53px;
-    padding: 10px 10px;
-    margin-top: 41px;
-  }
-}
 @media screen and (max-width: 991px) {
   #Content .infos .cleartest {
     clear: both;
@@ -409,9 +680,6 @@ ul.nav.navbar-nav.navbar-right {
   }
   #Content .infos .container.small .col-x:nth-child(2) form .form-control {
     min-width: 0px;
-  }
-  #Footer .row {
-    /*記住:after和:before是怎麼運作了...*/
   }
   #Footer .row * {
     float: none!important;
@@ -431,14 +699,6 @@ ul.nav.navbar-nav.navbar-right {
   }
   #Footer .row > .col-left .col-inner {
     padding-bottom: 20px;
-  }
-}
-@media screen and (max-width: 767px) {
-  a.navbar-brand {
-    padding-left: 7px;
-  }
-  .navbar-toggle {
-    margin-right: 7px;
   }
 }
 

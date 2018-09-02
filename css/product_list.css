@@ -121,6 +121,7 @@ h2.title {
   font-family: Montserrat, sans-serif;
   color: #737373;
 }
+/*----------------------------Header------------------------------*/
 #full-screen-cover {
   display: none;
   position: absolute;
@@ -129,7 +130,6 @@ h2.title {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 2;
 }
-/*----------------------------Header------------------------------*/
 .navbar-default {
   background-color: transparent;
   border-color: transparent;
@@ -145,16 +145,35 @@ h2.title {
 .navbar-default {
   font-family: Montserrat, sans-serif;
 }
-.navbar-default .navbar-nav > li .twicks {
+.navbar-default .navbar-nav > li .dropdown-container {
   position: relative;
-  bottom: 5px;
+}
+.navbar-default .navbar-nav > li .dropdown-container:hover .dropdown-content {
+  display: block;
+}
+.navbar-default .navbar-nav > li .dropdown-container .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 33px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  z-index: 3;
+}
+.navbar-default .navbar-nav > li .dropdown-container .dropdown-content a {
+  display: block;
+  border-bottom: 1px solid #000;
+  padding: 15px;
+  color: #929292;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.navbar-default .navbar-nav > li .dropdown-container .dropdown-content a:hover {
+  color: #D6B161;
 }
 .navbar-default .navbar-nav > li#shopping-cart {
   position: relative;
   z-index: 3;
-}
-.navbar-default .navbar-nav > li#shopping-cart:hover .shopping-content-base {
-  display: block;
 }
 .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base {
   display: none;
@@ -164,8 +183,10 @@ h2.title {
   max-width: 381px;
   right: 0px;
   background-color: #fff;
-  /*如果被全螢幕的cover蓋住的話就選不到囉*/
   z-index: 3;
+}
+.navbar-default .navbar-nav > li#shopping-cart .shopping-content-base:hover {
+  display: block;
 }
 .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .triangle {
   position: absolute;
@@ -251,22 +272,35 @@ h2.title {
   background-color: #000;
   color: white;
 }
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li .twicks {
+  position: relative;
+  bottom: 5px;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar-default div.dropdown-container {
   display: inline-block;
+  text-transform: uppercase;
+  padding: 10px 15px;
   color: black;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
-.navbar-default .navbar-nav > li > a:active {
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default div.dropdown-container:active {
   color: #D6B161;
 }
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default div.dropdown-container:hover {
   color: #D6B161;
 }
 .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
-.navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+.navbar-default div.dropdown-container [class^="icon-"]:before,
+.navbar-default .navbar-nav > li > a [class*=" icon-"]:before,
+.navbar-default div.dropdown-container [class*=" icon-"]:before {
   margin: 0;
 }
-.navbar-default .navbar-nav > li > a div.count {
+.navbar-default .navbar-nav > li > a div.count,
+.navbar-default div.dropdown-container div.count {
   background-color: black;
   position: absolute;
   bottom: 6px;
@@ -280,7 +314,8 @@ h2.title {
   color: white;
   transition: background-color 0.2s linear;
 }
-.navbar-default .navbar-nav > li > a div.count:hover {
+.navbar-default .navbar-nav > li > a div.count:hover,
+.navbar-default div.dropdown-container div.count:hover {
   background: #D6B161;
 }
 .navbar-default .navbar-text {
@@ -290,6 +325,164 @@ h2.title {
 }
 ul.nav.navbar-nav.navbar-right {
   padding-top: 38px;
+}
+/*--------------------------------nav-bar's RWD-------------------------------------*/
+@media screen and (max-width: 1229px) {
+  div#nav1 {
+    text-align: center;
+  }
+  .navbar-default {
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar-default .navbar-nav > li .twicks {
+    position: relative;
+    bottom: 5px;
+  }
+  .navbar-default .navbar-nav > li .dropdown-container .dropdown-content {
+    top: 17px;
+    right: -80px;
+    z-index: 4;
+  }
+  .navbar-default .navbar-toggle {
+    border: 0;
+  }
+  .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+  }
+  .navbar-default .navbar-toggle:hover .icon-bar {
+    background-color: #D6B161;
+  }
+  .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #000;
+    transition: all 0.2s ease;
+  }
+  .navbar-default .navbar-nav > li > a div.count {
+    bottom: 2px;
+    right: 3px;
+  }
+  .navbar-default .navbar-text {
+    padding-top: 43.5px;
+  }
+  .navbar-default ul.nav.navbar-nav.navbar-right {
+    padding-bottom: 36px;
+  }
+  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base {
+    padding-bottom: 31px;
+    width: 50%;
+    min-width: 320px;
+    max-width: 381px;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%);
+  }
+  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info {
+    text-align: left;
+  }
+  .navbar-default .navbar-nav > li#shopping-cart .triangle {
+    display: none;
+  }
+  .navbar-default .navbar-nav > li > a {
+    display: inline-block;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  .navbar-default .navbar-nav > li > a:active {
+    color: #D6B161;
+  }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #D6B161;
+  }
+  .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
+  .navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+    margin: 0;
+  }
+  .navbar-default .navbar-nav > li > a div.count {
+    background-color: black;
+    position: absolute;
+    bottom: 6px;
+    right: 3px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: 8px;
+    font-weight: 400;
+    color: white;
+    transition: background-color 0.2s linear;
+  }
+  .navbar-default .navbar-nav > li > a div.count:hover {
+    background: #D6B161;
+  }
+  .navbar-default .navbar-text {
+    margin: 0;
+    padding-top: 53px;
+    color: black;
+  }
+  .navbar-toggle {
+    margin-right: 53px;
+    padding: 10px 10px;
+    margin-top: 41px;
+  }
+}
+@media screen and (max-width: 767px) {
+  a.navbar-brand {
+    padding-left: 7px;
+  }
+  .navbar-toggle {
+    margin-right: 7px;
+  }
+  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base {
+    padding-bottom: 14px;
+    width: 100%;
+  }
+  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content {
+    width: 87%;
+    margin: 0 auto;
+  }
+  .navbar-default .navbar-nav > li > a {
+    display: inline-block;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  .navbar-default .navbar-nav > li > a:active {
+    color: #D6B161;
+  }
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #D6B161;
+  }
+  .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
+  .navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
+    margin: 0;
+  }
+  .navbar-default .navbar-nav > li > a div.count {
+    background-color: black;
+    position: absolute;
+    bottom: 6px;
+    right: 3px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: 8px;
+    font-weight: 400;
+    color: white;
+    transition: background-color 0.2s linear;
+  }
+  .navbar-default .navbar-nav > li > a div.count:hover {
+    background: #D6B161;
+  }
+  .navbar-default .navbar-text {
+    margin: 0;
+    padding-top: 53px;
+    color: black;
+  }
 }
 .chairs {
   background: #f4f4f4;
@@ -309,8 +502,6 @@ ul.nav.navbar-nav.navbar-right {
   text-transform: capitalize;
   font-size: 14px;
   color: #494949;
-  /*本來想運用跟home裡面feature一樣的after方法，但這邊需要用icon-fonts
-		css那個content不能放tag因此作罷*/
 }
 .chairs p a {
   margin-right: 7px;
@@ -323,7 +514,6 @@ ul.nav.navbar-nav.navbar-right {
   margin-top: 25px;
 }
 #Content .container .sidebar .filter {
-  /*背景上色不及於margin 耍87*/
   padding-top: 42px;
   padding-bottom: 42px;
   background-color: #f4f4f4;
@@ -349,15 +539,12 @@ ul.nav.navbar-nav.navbar-right {
 #Content .container .sidebar .filter .filter-by-brand ul .check-and-brand .brand {
   display: inline-block;
   position: relative;
-  /*input怪怪的只好這樣讓brand對齊*/
-  bottom: 2px;
 }
 #Content .container .sidebar .filter hr {
   border-color: #e0e0e0;
 }
 #Content .container .sidebar .filter .filter-by-price {
   position: relative;
-  /*price-slider 用jqueryUI完工，牡蠣!*/
 }
 #Content .container .sidebar .filter .filter-by-price h4 {
   font-size: 14px;
@@ -379,7 +566,7 @@ ul.nav.navbar-nav.navbar-right {
   height: 5px;
 }
 #Content .container .sidebar .filter .filter-by-price .ui-slider-horizontal .ui-slider-handle {
-  top: -0.6rem;
+  top: -0.5rem;
 }
 #Content .container .sidebar .filter .filter-by-price .ui-widget-header {
   background-color: #494949;
@@ -390,6 +577,7 @@ ul.nav.navbar-nav.navbar-right {
   border: 4px solid #494949;
   background: #f2f2f2;
   z-index: 1;
+  cursor: pointer;
 }
 #Content .container .sidebar .filter .filter-by-price span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   outline: none;
@@ -404,7 +592,6 @@ ul.nav.navbar-nav.navbar-right {
 #Content .container .sidebar .filter .filter-by-price p #amount {
   color: #737373;
   background-color: #f4f4f4;
-  /*沒把border設0會壞掉，input就是這樣*/
   border: 0;
   width: 113px;
 }
@@ -473,10 +660,6 @@ ul.nav.navbar-nav.navbar-right {
   margin: 0px;
   font-size: 12px;
   float: left;
-  /*i的間隙不是margin也不是p，用下面的ta-l也沒用，
-								還是只能出動float達到完全貼緊的效果
-								text-align: left;
-								 */
 }
 #Content .container .sidebar .hot-sales .sale .info .price {
   margin-top: 4px;
@@ -492,9 +675,6 @@ ul.nav.navbar-nav.navbar-right {
 }
 #Content .container .products .results-and-info .result span {
   font-weight: bold;
-}
-#Content .container .products .results-and-info .sort-info {
-  /*拿w3schools做好的車子來用<3，當然也已經知道他運作的技巧囉*/
 }
 #Content .container .products .results-and-info .sort-info li {
   float: left;
@@ -609,9 +789,6 @@ ul.nav.navbar-nav.navbar-right {
   font-family: Montserrat, sans-serif;
   font-size: 16px;
   color: #bababa;
-  /*高沒辦法置中，因此在borderbox下，要靠padding達到想要的效果
-							height: 27px;
-							 */
 }
 /*---------------------------------Footer--------------------------*/
 #Footer {
@@ -799,84 +976,6 @@ ul.nav.navbar-nav.navbar-right {
 }
 /*--------------------------------------------------------RWD-------------------------------------------------------*/
 @media screen and (max-width: 1229px) {
-  div#nav1 {
-    text-align: center;
-  }
-  .navbar-default {
-    font-family: Montserrat, sans-serif;
-  }
-  .navbar-default .navbar-nav > li .twicks {
-    position: relative;
-    bottom: 5px;
-  }
-  .navbar-default .navbar-nav > li > a div.count {
-    bottom: 2px;
-    right: 3px;
-  }
-  .navbar-default .navbar-text {
-    padding-top: 43.5px;
-  }
-  .navbar-default ul.nav.navbar-nav.navbar-right {
-    padding-bottom: 36px;
-  }
-  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base {
-    padding-bottom: 31px;
-    width: 50%;
-    min-width: 320px;
-    max-width: 381px;
-    right: 50%;
-    bottom: 50%;
-    transform: translate(50%);
-  }
-  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content {
-    width: 75%;
-    margin: 0 auto;
-  }
-  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content .treasure .info {
-    text-align: left;
-  }
-  .navbar-default .navbar-nav > li > a {
-    display: inline-block;
-    color: black;
-    transition: color 0.3s ease;
-  }
-  .navbar-default .navbar-nav > li > a:active {
-    color: #D6B161;
-  }
-  .navbar-default .navbar-nav > li > a:hover {
-    color: #D6B161;
-  }
-  .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
-  .navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
-    margin: 0;
-  }
-  .navbar-default .navbar-nav > li > a div.count {
-    background-color: black;
-    position: absolute;
-    bottom: 6px;
-    right: 3px;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    text-align: center;
-    font-size: 8px;
-    font-weight: 400;
-    color: white;
-    transition: background-color 0.2s linear;
-  }
-  .navbar-default .navbar-nav > li > a div.count:hover {
-    background: #D6B161;
-  }
-  .navbar-default .navbar-text {
-    margin: 0;
-    padding-top: 53px;
-    color: black;
-  }
-  .navbar-toggle {
-    margin-right: 53px;
-    padding: 10px 10px;
-    margin-top: 41px;
-  }
   #Content .container .sidebar .filter .filter-by-price input[type="submit"] {
     margin-top: 21px;
   }
@@ -902,10 +1001,6 @@ ul.nav.navbar-nav.navbar-right {
   }
 }
 @media screen and (max-width: 991px) {
-  #Content .container .sidebar .hot-sales {
-    /*繞了一大圈...應該有一小時...最後還是回到bootstarp的grid框架...
-					果然不要不信邪啊...*/
-  }
   #Content .container .sidebar .hot-sales .sale .photo {
     display: block;
     margin-right: 0px;
@@ -975,69 +1070,6 @@ ul.nav.navbar-nav.navbar-right {
   }
 }
 @media screen and (max-width: 767px) {
-  a.navbar-brand {
-    padding-left: 7px;
-  }
-  .navbar-toggle {
-    margin-right: 7px;
-  }
-  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base {
-    padding-bottom: 14px;
-    width: 100%;
-  }
-  .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base .shopping-content {
-    width: 87%;
-    margin: 0 auto;
-  }
-  .navbar-default .navbar-nav > li > a {
-    display: inline-block;
-    color: black;
-    transition: color 0.3s ease;
-  }
-  .navbar-default .navbar-nav > li > a:active {
-    color: #D6B161;
-  }
-  .navbar-default .navbar-nav > li > a:hover {
-    color: #D6B161;
-  }
-  .navbar-default .navbar-nav > li > a [class^="icon-"]:before,
-  .navbar-default .navbar-nav > li > a [class*=" icon-"]:before {
-    margin: 0;
-  }
-  .navbar-default .navbar-nav > li > a div.count {
-    background-color: black;
-    position: absolute;
-    bottom: 6px;
-    right: 3px;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    text-align: center;
-    font-size: 8px;
-    font-weight: 400;
-    color: white;
-    transition: background-color 0.2s linear;
-  }
-  .navbar-default .navbar-nav > li > a div.count:hover {
-    background: #D6B161;
-  }
-  .navbar-default .navbar-text {
-    margin: 0;
-    padding-top: 53px;
-    color: black;
-  }
-  #Content .container .sidebar .hot-sales .sale {
-    /*
-						到底要如何用同樣的架構達成「991~768一行四排，767以下一行兩排」
-
-						嘗試用inline-block解決
-						算很接近了...但還是有明顯的落差
-						float:none;
-						width: 49.175%;
-						display: inline-block;
-						
-						 */
-  }
   #Content .container .sidebar .hot-sales .sale .photo {
     display: block;
     margin-right: 0px;

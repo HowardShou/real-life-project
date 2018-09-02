@@ -45,6 +45,7 @@
             <nav class="navbar navbar-default">
                 <div class="container container-fluid">
                     <div class="row">
+                        <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
                               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav1" aria-expanded="false">
                                 <span class="sr-only">Toggle navigation</span>
@@ -56,6 +57,7 @@
                                 <img src="images/logo.png" alt="logo">
                               </a>
                         </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="nav1">
                           <p class="navbar-text">+1(555) 333 22 11</p>
                           <ul class="nav navbar-nav navbar-right">
@@ -72,6 +74,7 @@
                                 </a>
                               </li>
                               <li>
+                                <!-- 新發現--本來是用a來包覆，但是發現a底下不能接div!故將a換成div -->
                                 <div class="dropdown-container">
                                     pages
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -101,6 +104,7 @@
 
                                   <div class="shopping-content-base">
                                     <div class="triangle"></div>
+                                    <!-- 後來聽助教一講，其實這種shopping-cart都可以用ul配li來做，最後在li裡面塞div即可-->
                                     <div class="shopping-content">
                                         <div class="treasure">
                                             <div class="photo">
@@ -195,6 +199,8 @@
             <h2 class="title">BILLING DETAILS</h2>
             <div class="forms">
                 <div class="row">
+                    <!-- 用實務標準打造以下兩份form，該有的屬性與值一個都不省了
+                    雖然form因為還不熟東西也不少弄起來有點累，不過學起來就是你的!-->
                     <div class="col-xs-12 col-md-6">
                         <form class="billing-details" action="">
                             <div class="form-group">
@@ -208,7 +214,13 @@
                                 </select>
                                 <div class="c-downspinner"><i class="fa fa-angle-down" aria-hidden="true"></i></a></li></div>
                             </div>
-                            
+                            <!-- 這份表單的input，除了本身email和tel谷歌可以自己抓到外，其他type=text的一樣自動抓到了!應該是因為chrome也會從name或者id取的名字來判斷吧，聰明，以後可以依值拿這份表單來改，想到就爽!-->
+
+                            <!-- 在bootstrap下，所有form的元素都用form-group包起來是為了給它們正常的間距(其實就只是給所有容器統一的mb15px，)而近乎所有form的元素都有(除了radio和box這種一小格的input，或者不能打字的select)form-control這個class，則是給它們預設正常的寬高 
+                            ↑↑↑↑↑↑突然發現官方的doc一開始就有寫了...
+                            Individual form controls automatically receive some global styling. All textual <input>, <textarea>, and <select> elements with .form-control are set to width: 100%; by default. Wrap labels and controls in .form-group for optimum spacing.
+                            理論與實務果然並行才是王道啊
+                            -->
                             <div class="form-group form-inline">
                                 <label for="first-name" class="sr-only">Name</label>
                                 <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Name">
@@ -243,6 +255,8 @@
                                 <label for="phone-number" class="sr-only">Phone Number</label>
                                 <input type="tel" class="form-control pull-right" id="phone-number" placeholder="Phone Number">
                             </div>
+                            
+                            <!-- 確定了...只要是form的元素湊成一份表單，如果純用bootstrap的話，管它是input還是textarea還是select，乖乖用.from-group包起來就對了 -->
                             <div class="form-group">
                                 <div class="checkbox">
                                     <label>
@@ -257,12 +271,16 @@
                         </form>
                     </div>
                     <div class="col-xs-12 col-md-6">
+                        <!-- 一張form裡塞兩張ul的概念~ -->
                         <form class="order-and-pay">
                             <ul class="order-detail">
                                 <li class="title">YOUR ORDER</li>
                                 <li class="product border">
                                     <ul>
                                         <li class="clearfix">
+                                            <!--如果是兩個div並排，因為兩者都是block，所以一定要
+                                                一個flot left一個flaot right，如果用label則不會有這個問題，應該是因為label本身display是預設inline或inline-block吧(找到了，bootstrap預設給它inline-block)，總之剛好也在form裡面，一致性很好
+                                                <div class="subtitle">PRODUCTS</div> -->
                                             <label class="subtitle">PRODUCTS</label>
                                             <div class="subtitle pull-right">TOTALS</div>
                                         </li>
@@ -473,6 +491,15 @@
     </div>    
 
     <script src="js/bootstrap.min.js"></script>
+    <!-- 雖然用CSS就解決了，但還是很好奇，select裡面的option究竟要用什麼event才能使之呈現
+        感覺就是focus，但表單就是不出現T_T
+    <script>
+        $(document).ready(function() {
+            $(".c-downspinner").click(function(event) {
+                $("#country").focus();
+            });
+        });
+    </script> -->
     <script>
         function accordin(){
             if ($(window).width()<=992) {
