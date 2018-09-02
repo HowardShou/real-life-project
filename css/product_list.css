@@ -163,7 +163,7 @@ h2.title {
 .navbar-default .navbar-nav > li .dropdown-container .dropdown-content a {
   display: block;
   border-bottom: 1px solid #000;
-  padding: 15px;
+  padding: 10px;
   color: #929292;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -339,8 +339,8 @@ ul.nav.navbar-nav.navbar-right {
     bottom: 5px;
   }
   .navbar-default .navbar-nav > li .dropdown-container .dropdown-content {
-    top: 17px;
-    right: -80px;
+    top: 40px;
+    right: -106px;
     z-index: 4;
   }
   .navbar-default .navbar-toggle {
@@ -502,6 +502,8 @@ ul.nav.navbar-nav.navbar-right {
   text-transform: capitalize;
   font-size: 14px;
   color: #494949;
+  /*本來想運用跟home裡面feature一樣的after方法，但這邊需要用icon-fonts
+		css那個content不能放tag因此作罷*/
 }
 .chairs p a {
   margin-right: 7px;

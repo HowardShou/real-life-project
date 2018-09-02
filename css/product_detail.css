@@ -112,13 +112,14 @@ li {
   margin: 0 auto;
 }
 /*---------------------------------product_detail.css--------------------------------------------*/
-/*--------------------------customize------------------------------*/
+/*比例很怪?算%數客製化解決!*/
 #Content .product_summary .col-md-6.left {
   width: 55.75%;
 }
 #Content .product_summary .col-md-6.right {
   width: 44.25%;
 }
+/*--------------------------customize------------------------------*/
 /*----------------------------Header------------------------------*/
 #full-screen-cover {
   display: none;
@@ -161,7 +162,7 @@ li {
 .navbar-default .navbar-nav > li .dropdown-container .dropdown-content a {
   display: block;
   border-bottom: 1px solid #000;
-  padding: 15px;
+  padding: 10px;
   color: #929292;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -181,7 +182,6 @@ li {
   max-width: 381px;
   right: 0px;
   background-color: #fff;
-  /*如果被全螢幕的cover蓋住的話就選不到囉*/
   z-index: 3;
 }
 .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base:hover {
@@ -338,8 +338,8 @@ ul.nav.navbar-nav.navbar-right {
     bottom: 5px;
   }
   .navbar-default .navbar-nav > li .dropdown-container .dropdown-content {
-    top: 17px;
-    right: -80px;
+    top: 40px;
+    right: -106px;
     z-index: 4;
   }
   .navbar-default .navbar-toggle {

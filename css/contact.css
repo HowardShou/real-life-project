@@ -154,7 +154,7 @@ li {
 .navbar-default .navbar-nav > li .dropdown-container .dropdown-content a {
   display: block;
   border-bottom: 1px solid #000;
-  padding: 15px;
+  padding: 10px;
   color: #929292;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -330,8 +330,8 @@ ul.nav.navbar-nav.navbar-right {
     bottom: 5px;
   }
   .navbar-default .navbar-nav > li .dropdown-container .dropdown-content {
-    top: 17px;
-    right: -80px;
+    top: 40px;
+    right: -106px;
     z-index: 4;
   }
   .navbar-default .navbar-toggle {
@@ -583,6 +583,8 @@ ul.nav.navbar-nav.navbar-right {
   background-color: #f6f6f6;
 }
 #Footer .misc .container {
+  /*原本寫成padding:72px 0px 75px 0px;導致不小心把container內建
+			的padding給覆蓋掉，然後就跑版了!fk~*/
   padding-top: 82px;
 }
 #Footer .col-left .col-inner > a {
