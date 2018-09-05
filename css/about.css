@@ -165,7 +165,7 @@ li {
 }
 .navbar-default .navbar-nav > li#shopping-cart {
   position: relative;
-  z-index: 3;
+  z-index: 0;
 }
 .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base {
   display: none;
@@ -175,7 +175,7 @@ li {
   max-width: 381px;
   right: 0px;
   background-color: #fff;
-  z-index: 3;
+  z-index: 0;
 }
 .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base:hover {
   display: block;
