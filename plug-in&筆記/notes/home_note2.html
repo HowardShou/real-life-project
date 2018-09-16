@@ -296,6 +296,10 @@
             </div>
         </div>
 
+        <!-- 終於找到問題在哪!就是原來我在太多沒必要放row的地方放了row，並不是container底下就要
+            放row拉回來，而是container底下有其他.col的容器時，.container和.col的內距會導致
+            .col無法貼齊，此時才有必要用row拉出空間，讓.col最左和最右邊的padding可以與.container
+            重疊-->
         <div class="feature">
             <div class="container">
                 <ul class="slider-select-bar clearfix">
