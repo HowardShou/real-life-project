@@ -59,9 +59,9 @@
 				}
 			],
 			"sources": [
-				"nav-bar.less",
+				"basic.less",
 				"home.less",
-				"basic.less"
+				"nav-bar.less"
 			]
 		},
 		"less/basic.less": {
