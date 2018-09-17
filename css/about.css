@@ -175,7 +175,7 @@ li {
   max-width: 381px;
   right: 0px;
   background-color: #fff;
-  z-index: 0;
+  z-index: 3;
 }
 .navbar-default .navbar-nav > li#shopping-cart .shopping-content-base:hover {
   display: block;

@@ -38,9 +38,9 @@
 				}
 			],
 			"sources": [
-				"about.less",
+				"nav-bar.less",
 				"basic.less",
-				"nav-bar.less"
+				"about.less"
 			]
 		},
 		"less/home.less": {
