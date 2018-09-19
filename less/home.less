@@ -3,6 +3,10 @@
 	/*---------------------------------home.css--------------------------------------------*/
 
 	/* --------------------------------customize----------------------------------------- */
+	* {
+		position: relative;
+	}
+
 	.rank li{
 		float: left;
 		i.fa-star{
@@ -141,30 +145,17 @@
 		}
 		.FDI_1{
 			padding-top: 35px;
-			.col-md-6{
-				box-sizing: content-box;
-			}
 			.col_left{
-				padding-left: 0px;
-				padding-right: 19px;
-				width: 49.08333333%;
+			    padding-right: 12px;
 			}
+			//原本拉錯容器的pl(拉成.col-md-6.inner1)的pl，後來發現拉這邊才對
 			.col_right{
-				width: 49.08333333%;
-				padding-right: 0px;
-				padding-left: 0px;
-				.row{
-					margin: 0px;
-				}
+				padding-left: 10px;
 				.col-md-6.inner1{
-					width: 46.85908319185059%;
-					padding-left: 0px;
 					padding-right: 19px;
 				}
-				.col-md-6.inner2{
-					width: 49.9151103565365%;
-					padding-right: 0px;
-					padding-left: 0px;
+				.inner2{
+					padding-left: 1px;
 				}
 			}
 			.pics{
@@ -330,18 +321,13 @@
 		
 		.FDI_2{
 			padding-top: 20px;
-			.col-md-4,.col-md-8{
-				box-sizing: content-box;
-			}
 			.col-md-4{
-				padding-left: 0px;
-				padding-right: 19px;
-				width: 34.5%;
+				width: 36%;
+				padding-right: 13px;
 			}
 			.col-md-8{
-				padding-left: 0px;
-				padding-right: 0px;
-				width: 63.75%;
+				width: 64%;
+				padding-left: 6px;
 			}
 			.pics{
 				position: relative;
@@ -422,6 +408,7 @@
 						    color:@body_color;
 						}
 						h1{
+
 							font-size: 50px;
 							font-weight:400;
 							color:#505050;
@@ -973,10 +960,11 @@
 			.FDI_1{
 				padding-top: 35px;
 				.col_left{
-					padding-right: 15px;
+					padding-right: 12px;
 				}
 				.col_right{
 					.col-md-6.inner1{
+						padding-left: 16px;
 						padding-right: 15px;
 					}
 				}
@@ -987,6 +975,7 @@
 					}
 				}
 				.product_2{
+					bottom: 3%;
 					.circle{
 						margin-left: 22%;
 					}
@@ -1013,7 +1002,10 @@
 			.FDI_2{
 				padding-top: 15px;
 				.col-md-4{
-					padding-right: 15px;
+					padding-right: 11px;
+				}
+				.col-md-8{
+					padding-left: 7px;
 				}
 				.pics{
 					&.inner2{
@@ -1021,8 +1013,8 @@
 					}
 				}
 				.product_1{
-			        bottom: 5%;
-				    left: 9%;
+			        bottom: 3%;
+				    left: 6%;
 				}
 				.product_2{
 			        bottom: 5%;
@@ -1081,12 +1073,14 @@
 			.FDI_1{
 				padding-top: 0px;
 				.col_left{
-					padding-right: 0px;
+					padding-right: 15px;
+					padding-left: 15px;
 					width: 100%;
 				}
 				.col_right{
 					width: 100%;
-					padding-right: 0px;
+					padding-right: 15px;
+					padding-left: 15px;
 					padding-top: 24px;
 					.col-md-6.inner1{
 						padding-right: 24px;
@@ -1094,7 +1088,7 @@
 				}
 				.pics{
 					&.inner2{
-						padding-top: 24px;
+						padding-top: 21px;
 					}
 				}
 				.product_2{
@@ -1113,12 +1107,12 @@
 					    font-size: 18px;
 					}
 					.price{
-						margin-top: 120px;
+						margin-top: 100px;
 					}
 				}
 				.product_4{
 					.rank{
-						margin-top: 100px;
+						margin-top: 69px;
 					}
 				}
 			}
@@ -1127,10 +1121,13 @@
 				padding-top: 24px;
 				.col-md-4{
 					width: 100%;
-					padding-right: 0px;
+					padding-right: 15px;
+					padding-left: 15px;
 				}
 				.col-md-8{
 					width: 100%;
+					padding-right: 15px;
+					padding-left: 15px;
 					padding-top: 24px;
 				}
 				.pics{
@@ -1298,19 +1295,22 @@
 			.FDI_1{
 				padding-top: 0px;
 				.col_left{
-					padding-right: 0px;
+					padding-right: 15px;
+					padding-left: 15px;
 					width: 100%;
 				}
 				.col_right{
 					width: 100%;
-					padding-right: 0px;
 					padding-top: 24px;
 					.col-md-6.inner1{
 						width: 100%;
-						padding-right: 0px;
+						padding-right: 15px;
+						padding-left: 15px;
 					}
 					.col-md-6.inner2{
 						padding-top: 24px;
+						padding-right: 15px;
+						padding-left: 15px;
 						width: 100%;
 					}
 				}
@@ -1339,11 +1339,14 @@
 				padding-top: 24px;
 				.col-md-4{
 					width: 100%;
-					padding-right: 0px;
+					padding-right: 15px;
+					padding-left: 15px;
 				}
 				.col-md-8{
 					width: 100%;
 					padding-top: 24px;
+					padding-right: 15px;
+					padding-left: 15px;
 				}
 				.pics{
 					float: left;
@@ -1409,14 +1412,14 @@
 			.FDI_1{
 				padding-top: 35px;
 				.product_1{
-					bottom:17%;
+					bottom:8%;
 					left: 12%;
 					h1{
 						font-size: 42px;
 					}
 				}
 				.product_2{
-					bottom: 10%;
+					bottom: 6%;
 				    left: 12%;
 					.circle{
 						margin-left: 53%;

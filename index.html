@@ -57,7 +57,7 @@
                       <ul class="nav navbar-nav navbar-right">
                           <li><a href="#">home</a></li>
                           <li>
-                            <div href="#" class="dropdown-container">
+                            <div class="dropdown-container">
                                 products
                                 <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 <div class="dropdown-content">
@@ -65,29 +65,28 @@
                                     <a href="#">Link 2</a>
                                     <a href="#">Link 3</a>
                                 </div>
-                            </a>
+                            </div>
                           </li>
                           <li>
-                            <!-- 新發現--本來是用a來包覆，但是發現a底下不能接div!故將a換成div -->
                             <div class="dropdown-container">
-                            pages
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="dropdown-content">
-                                <a href="index.html">Home</a>
-                                <a href="about_us.html">About</a>
-                                <a href="contact.html">Contact</a>
-                                <a href="blog_post.html">Blog1</a>
-                                <a href="blog_sidebar.html">Blog2</a>
-                                <a href="product_list.html">Product List</a>
-                                <a href="product_detail.html">Product Detail</a>
-                                <a href="order_checkout.html">Checkout</a>
-                                <a href="order_shopping-cart.html">Shopping Cart</a>
+                                pages
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <div class="dropdown-content">
+                                    <a href="index.html">Home</a>
+                                    <a href="about_us.html">About</a>
+                                    <a href="contact.html">Contact</a>
+                                    <a href="blog_post.html">Blog1</a>
+                                    <a href="blog_sidebar.html">Blog2</a>
+                                    <a href="product_list.html">Product List</a>
+                                    <a href="product_detail.html">Product Detail</a>
+                                    <a href="order_checkout.html">Checkout</a>
+                                    <a href="order_shopping-cart.html">Shopping Cart</a>
+                                </div>
                             </div>
-                        </div>
                           </li>
-                          <li><a href="#">blog</a></li>
-                          <li><a href="#">about</a></li>
-                          <li><a href="#">contact</a></li>
+                          <li><a href="blog_post.html">blog</a></li>
+                          <li><a href="about_us.html">about</a></li>
+                          <li><a href="contact.html">contact</a></li>
                           <li><a class="twicks" href="#"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a></li> 
                           <li id="shopping-cart">
                               <a class="twicks" href="#">
@@ -96,7 +95,6 @@
 
                               <div class="shopping-content-base">
                                 <div class="triangle"></div>
-                                <!-- 後來聽助教一講，其實這種shopping-cart都可以用ul配li來做，最後在li裡面塞div即可-->
                                 <div class="shopping-content">
                                     <div class="treasure">
                                         <div class="photo">
@@ -146,14 +144,14 @@
                                     </div>
                                     <hr>
                                     <div class="view-or-checkout clearfix">
-                                    <a href="order_shopping-cart.html" class="view">view cart</a>
-                                    <a href="order_checkout.html" class="checkout">checkout</a>
-                                </div>
+                                        <a href="order_shopping-cart.html" class="view">view cart</a>
+                                        <a href="order_checkout.html" class="checkout">checkout</a>
+                                    </div>
                                 </div>
                               </div>
                           </li>
                           <li class="cart-info">
-                              <a class="twicks" href="#">
+                              <a class="twicks" href="order_shopping-cart.html">
                                 <h5>shopping cart</h5>
                                 <h6>3 items $74.00</h6>
                               </a>
@@ -191,7 +189,7 @@
                                         </div>
                                     <div class="shopnow">
                                         <p>shop now</p>
-                                        <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="order_shopping-cart.html"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>   
@@ -209,7 +207,7 @@
                                             <i class="fa fa-star-o" aria-hidden="true"></i>
                                         </div>  
                                         <div class="price">$ 99.00</div>
-                                        <a href="#" class="shopnow">shop now</a>
+                                        <a href="order_shopping-cart.html" class="shopnow">shop now</a>
                                     </div>
                                 </div>
                                 <div class="pics inner2">
@@ -226,7 +224,7 @@
                                         <div class="price">$ 99.00</div>
                                         <div class="shopnow">
                                             <p>hurry up!</p>
-                                            <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                            <a href="order_shopping-cart.html"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -249,7 +247,7 @@
                                     <h2>ZIO DINNGING CHAIR</h2>
                                     <div class="shopnow">
                                         <p>shop now</p>
-                                        <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="order_shopping-cart.html"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -261,7 +259,7 @@
                                     <h2>TOTEM FLOOR LAMP</h2>
                                     <div class="shopnow">
                                         <p>shop now</p>
-                                        <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="order_shopping-cart.html"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -272,7 +270,7 @@
                                 <a href="#"><img src="https://picsum.photos/765/579?image=124" alt="photo"></a>
                                 <div class="product_info product_3">
                                     <div class="title">FUNITURE DESIGNS IDEAS</div>
-                                    <h1><span>Upholstered fabric0</span><br>Counter stool</h1>
+                                    <h1><span>Upholstered fabric</span><br>Counter stool</h1>
                                     <p>Consectetur adipisicing elit. Beatae accusamus, optio<br>repellendus inventore</p>
                                 </div>                    
                             </div>
@@ -300,181 +298,179 @@
 
         <div class="feature">
             <div class="container">
-                <div class="row clearfix">
-                    <ul class="slider-select-bar clearfix">
-                        <li><a href="#">FEATURED</a></li>
-                        <li><a href="#">LATEST</a></li>
-                        <li><a href="#">BEST SELLER</a></li>
-                    </ul>
+                <ul class="slider-select-bar clearfix">
+                    <li><a href="#">FEATURED</a></li>
+                    <li><a href="#">LATEST</a></li>
+                    <li><a href="#">BEST SELLER</a></li>
+                </ul>
 
-                    <div class="owl-carousel slider1 featurelist1">
-                        <div class="item-with-rank">
-                            <a href="#"><img src="https://picsum.photos/721/721?image=800" alt="photo"></a>
-                            <div class="name-price rank">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                <div class="owl-carousel slider1 featurelist1">
+                    <div class="item-with-rank">
+                        <a href="#"><img src="https://picsum.photos/721/721?image=800" alt="photo"></a>
+                        <div class="name-price rank">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
                         </div>
-                        <div class="item">
-                            <a href="#"><img src="https://picsum.photos/721/721?image=802" alt="photo"></a>
-                            <div class="name-price">
-                                <div class="name">product 2</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,02</div> 
-                            </div>
+                    </div>
+                    <div class="item">
+                        <a href="#"><img src="https://picsum.photos/721/721?image=802" alt="photo"></a>
+                        <div class="name-price">
+                            <div class="name">product 2</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,02</div> 
                         </div>
-                        <div class="item-with-rank">
-                            <a href="#"><img src="https://picsum.photos/721/721?image=803" alt="photo"></a>
-                            <div class="discount">15% off</div>    
-                            <div class="name-price rank">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                    </div>
+                    <div class="item-with-rank">
+                        <a href="#"><img src="https://picsum.photos/721/721?image=803" alt="photo"></a>
+                        <div class="discount">15% off</div>    
+                        <div class="name-price rank">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 3</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,03</div> 
-                            </div>
+                            <div class="name">product 3</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,03</div> 
                         </div>
-                        <div class="item">
-                            <a href="#"><img src="https://picsum.photos/721/721?image=804" alt="photo"></a>
-                            <div class="name-price">
-                                <div class="name">product 4</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,04</div> 
-                            </div>
+                    </div>
+                    <div class="item">
+                        <a href="#"><img src="https://picsum.photos/721/721?image=804" alt="photo"></a>
+                        <div class="name-price">
+                            <div class="name">product 4</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,04</div> 
                         </div>
-                        <div class="item-with-rank">
-                            <a href="#"><img src="https://picsum.photos/721/721?image=805" alt="photo"></a>
-                            <div class="name-price rank">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                    </div>
+                    <div class="item-with-rank">
+                        <a href="#"><img src="https://picsum.photos/721/721?image=805" alt="photo"></a>
+                        <div class="name-price rank">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 5</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,05</div> 
-                            </div>
+                            <div class="name">product 5</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,05</div> 
                         </div>
-                        <div class="item">
-                            <a href="#"><img src="https://picsum.photos/721/721?image=806" alt="photo"></a>
-                            <div class="name-price">
-                                <div class="name">product 6</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,06</div> 
-                            </div>
+                    </div>
+                    <div class="item">
+                        <a href="#"><img src="https://picsum.photos/721/721?image=806" alt="photo"></a>
+                        <div class="name-price">
+                            <div class="name">product 6</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,06</div> 
                         </div>
-                        <div class="item-with-rank">
-                            <a href="#"><img src="https://picsum.photos/721/721?image=807" alt="photo"></a>
-                            <div class="name-price rank">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                    </div>
+                    <div class="item-with-rank">
+                        <a href="#"><img src="https://picsum.photos/721/721?image=807" alt="photo"></a>
+                        <div class="name-price rank">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 7</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,07</div> 
-                            </div>
+                            <div class="name">product 7</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,07</div> 
                         </div>
-                        <div class="item">
-                            <a href="#"><img src="https://picsum.photos/721/721?image=808" alt="photo"></a>
-                            <div class="name-price">
-                                <div class="name">product 8</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,08</div> 
-                            </div>
+                    </div>
+                    <div class="item">
+                        <a href="#"><img src="https://picsum.photos/721/721?image=808" alt="photo"></a>
+                        <div class="name-price">
+                            <div class="name">product 8</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,08</div> 
                         </div>
-                        <div class="item-with-rank">
-                            <a href="#"><img src="https://picsum.photos/721/721?image=809" alt="photo"></a>
-                            <div class="name-price rank">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                    </div>
+                    <div class="item-with-rank">
+                        <a href="#"><img src="https://picsum.photos/721/721?image=809" alt="photo"></a>
+                        <div class="name-price rank">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 9</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,09</div> 
-                            </div>
+                            <div class="name">product 9</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,09</div> 
                         </div>
-                        <div class="item">
-                            <a href="#"><img src="https://picsum.photos/721/721?image=810" alt="photo"></a>
-                            <div class="name-price">
-                                <div class="name">product 10</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,10</div> 
-                            </div>
+                    </div>
+                    <div class="item">
+                        <a href="#"><img src="https://picsum.photos/721/721?image=810" alt="photo"></a>
+                        <div class="name-price">
+                            <div class="name">product 10</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,10</div> 
                         </div>
-                        <div class="item-with-rank">
-                            <a href="#"><img src="https://picsum.photos/721/721?image=811" alt="photo"></a>
-                            <div class="name-price rank">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                    </div>
+                    <div class="item-with-rank">
+                        <a href="#"><img src="https://picsum.photos/721/721?image=811" alt="photo"></a>
+                        <div class="name-price rank">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 11</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,11</div> 
-                            </div>
+                            <div class="name">product 11</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,11</div> 
                         </div>
-                        <div class="item">
-                            <a href="#"><img src="https://picsum.photos/721/721?image=813" alt="photo"></a>
-                            <div class="name-price">
-                                <div class="name">product 12</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,12</div> 
+                    </div>
+                    <div class="item">
+                        <a href="#"><img src="https://picsum.photos/721/721?image=813" alt="photo"></a>
+                        <div class="name-price">
+                            <div class="name">product 12</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,12</div> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="featurelist2 clearfix">
+                    <div class="col-xs-12 col-sm-4">
+                        <img src="https://picsum.photos/400/210?image=633" alt="photo">
+                        <div class="product_info">
+                            <div class="title">wall decor</div>
+                            <h2>CLOCKs</h2>
+                            <div class="shopnow">
+                                <p>view</p>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="featurelist2 clearfix">
-                        <div class="col-xs-12 col-sm-4">
-                            <img src="https://picsum.photos/400/210?image=633" alt="photo">
-                            <div class="product_info">
-                                <div class="title">wall decor</div>
-                                <h2>CLOCKs</h2>
-                                <div class="shopnow">
-                                    <p>view</p>
-                                    <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <img src="https://picsum.photos/400/210?image=531" alt="photo">
+                        <div class="product_info">
+                            <div class="title">coffee tables</div>
+                            <h2>S.O.S BLOCKERS</h2>
+                            <div class="shopnow">
+                                <p>view</p>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-4">
-                            <img src="https://picsum.photos/400/210?image=531" alt="photo">
-                            <div class="product_info">
-                                <div class="title">coffee tables</div>
-                                <h2>S.O.S BLOCKERS</h2>
-                                <div class="shopnow">
-                                    <p>view</p>
-                                    <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 clearfix">
-                            <img src="https://picsum.photos/400/210?image=478" alt="photo">
-                            <div class="product_info">
-                                <div class="title">Floor Lamps</div>
-                                <h2>ROCKING LAMP</h2>
-                                <div class="shopnow">
-                                    <p>view</p>
-                                    <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 clearfix">
+                        <img src="https://picsum.photos/400/210?image=478" alt="photo">
+                        <div class="product_info">
+                            <div class="title">Floor Lamps</div>
+                            <h2>ROCKING LAMP</h2>
+                            <div class="shopnow">
+                                <p>view</p>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -484,402 +480,400 @@
 
         <div class="best-seller">
             <div class="container">
-                <div class="row clearfix">
-                    <h2 class="title">BEST SELLER</h2>
-                    <div class="owl-carousel slider2">
-                        <div class="item-with-rank">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=426" alt="photo"></a>
-                                <div class="new">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                <h2 class="title">BEST SELLER</h2>
+                <div class="owl-carousel slider2">
+                    <div class="item-with-rank">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=426" alt="photo"></a>
+                            <div class="new">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            
-                            <div class="rank name-price">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                        </div>
+                        
+                        <div class="rank name-price">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
                         </div>
-                        <div class="item">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721" alt="photo"></a>
-                                <div class="discount">15% off</div>
-                                <div class="new couple">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    </div>
+                    <div class="item">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721" alt="photo"></a>
+                            <div class="discount">15% off</div>
+                            <div class="new couple">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="name-price">
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
                         </div>
-                        <div class="item-with-rank">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=427" alt="photo"></a>
-                                <div class="new">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                        <div class="name-price">
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
+                        </div>
+                    </div>
+                    <div class="item-with-rank">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=427" alt="photo"></a>
+                            <div class="new">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            
-                            <div class="rank name-price">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                        </div>
+                        
+                        <div class="rank name-price">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
                         </div>
-                        <div class="item">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=428" alt="photo"></a>
-                                <div class="discount">15% off</div>
-                                <div class="new couple">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    </div>
+                    <div class="item">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=428" alt="photo"></a>
+                            <div class="discount">15% off</div>
+                            <div class="new couple">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="name-price">
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
                         </div>
-                        <div class="item-with-rank">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=429" alt="photo"></a>
-                                <div class="new">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                        <div class="name-price">
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
+                        </div>
+                    </div>
+                    <div class="item-with-rank">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=429" alt="photo"></a>
+                            <div class="new">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            
-                            <div class="rank name-price">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                        </div>
+                        
+                        <div class="rank name-price">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
                         </div>
-                        <div class="item">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=430" alt="photo"></a>
-                                <div class="discount">15% off</div>
-                                <div class="new couple">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    </div>
+                    <div class="item">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=430" alt="photo"></a>
+                            <div class="discount">15% off</div>
+                            <div class="new couple">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="name-price">
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
                         </div>
-                        <div class="item-with-rank">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=431" alt="photo"></a>
-                                <div class="new">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                        <div class="name-price">
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
+                        </div>
+                    </div>
+                    <div class="item-with-rank">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=431" alt="photo"></a>
+                            <div class="new">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            
-                            <div class="rank name-price">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                        </div>
+                        
+                        <div class="rank name-price">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
                         </div>
-                        <div class="item">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=432" alt="photo"></a>
-                                <div class="discount">15% off</div>
-                                <div class="new couple">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    </div>
+                    <div class="item">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=432" alt="photo"></a>
+                            <div class="discount">15% off</div>
+                            <div class="new couple">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="name-price">
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
                         </div>
-                        <div class="item-with-rank">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=433" alt="photo"></a>
-                                <div class="new">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                        <div class="name-price">
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
+                        </div>
+                    </div>
+                    <div class="item-with-rank">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=433" alt="photo"></a>
+                            <div class="new">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            
-                            <div class="rank name-price">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                        </div>
+                        
+                        <div class="rank name-price">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
                         </div>
-                        <div class="item">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=434" alt="photo"></a>
-                                <div class="discount">15% off</div>
-                                <div class="new couple">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    </div>
+                    <div class="item">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=434" alt="photo"></a>
+                            <div class="discount">15% off</div>
+                            <div class="new couple">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="name-price">
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
                         </div>
-                        <div class="item-with-rank">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=435" alt="photo"></a>
-                                <div class="new">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                        <div class="name-price">
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
+                        </div>
+                    </div>
+                    <div class="item-with-rank">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=435" alt="photo"></a>
+                            <div class="new">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            
-                            <div class="rank name-price">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                        </div>
+                        
+                        <div class="rank name-price">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
                         </div>
-                        <div class="item">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=436" alt="photo"></a>
-                                <div class="discount">15% off</div>
-                                <div class="new couple">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    </div>
+                    <div class="item">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=436" alt="photo"></a>
+                            <div class="discount">15% off</div>
+                            <div class="new couple">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="name-price">
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
                         </div>
-                        <div class="item-with-rank">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=437" alt="photo"></a>
-                                <div class="new">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                        <div class="name-price">
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
+                        </div>
+                    </div>
+                    <div class="item-with-rank">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=437" alt="photo"></a>
+                            <div class="new">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            
-                            <div class="rank name-price">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                        </div>
+                        
+                        <div class="rank name-price">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
                         </div>
-                        <div class="item">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=440" alt="photo"></a>
-                                <div class="discount">15% off</div>
-                                <div class="new couple">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    </div>
+                    <div class="item">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=440" alt="photo"></a>
+                            <div class="discount">15% off</div>
+                            <div class="new couple">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="name-price">
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
                         </div>
-                        <div class="item-with-rank">
-                            <div class="for-cover">
-                                <a href="#"><img src="https://picsum.photos/721/721?image=439" alt="photo"></a>
-                                <div class="new">NEW</div>    
-                                <div class="cover">
-                                    <div class="cover-context">
-                                        <ul class="clearfix">
-                                            <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
-                                            <li class="col-xs-5">
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
-                                                <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                        <div class="name-price">
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
+                        </div>
+                    </div>
+                    <div class="item-with-rank">
+                        <div class="for-cover">
+                            <a href="#"><img src="https://picsum.photos/721/721?image=439" alt="photo"></a>
+                            <div class="new">NEW</div>    
+                            <div class="cover">
+                                <div class="cover-context">
+                                    <ul class="clearfix">
+                                        <li class="col-xs-7"><a href="#"><i class="icon-handbag fa"></i>Add to Cart</a></li>
+                                        <li class="col-xs-5">
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-heart-o fa" aria-hidden="true"></i></a></div>
+                                            <div class="col-xs-6"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i></a></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            
-                            <div class="rank name-price">
-                                <ul class="rank clearfix">
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                </ul>
+                        </div>
+                        
+                        <div class="rank name-price">
+                            <ul class="rank clearfix">
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            </ul>
 
-                                <div class="name">product 1</div>
-                                <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
-                            </div>
+                            <div class="name">product 1</div>
+                            <div class="price"><i class="fa fa-eur" aria-hidden="true"></i>399,01</div> 
                         </div>
                     </div>
                 </div>
@@ -888,23 +882,21 @@
 
         <div class="brands">
             <div class="container">
-                <div class="row clearfix">
-                    <h2 class="title">BRANDS <small>FURNITURE</small></h2>
-                    <div class="col-xs-11">
-                        <div class="owl-carousel slider3">
-                            <div class="brands-picture"><img src="images/devon.png" alt="brand"></div>
-                            <div class="brands-picture"><img src="images/gan.png" alt="brand"></div>
-                            <div class="brands-picture"><img src="images/artek.png" alt="brand"></div>
-                            <div class="brands-picture"><img src="images/toncelli.png" alt="brand"></div>
-                            <div class="brands-picture"><img src="images/addoravit.png" alt="brand"></div>
-                            <div class="brands-picture"><img src="images/zanotta.png" alt="brand"></div>
-                            <div class="brands-picture"><img src="images/devon.png" alt="brand"></div>
-                            <div class="brands-picture"><img src="images/gan.png" alt="brand"></div>
-                            <div class="brands-picture"><img src="images/artek.png" alt="brand"></div>
-                            <div class="brands-picture"><img src="images/toncelli.png" alt="brand"></div>
-                            <div class="brands-picture"><img src="images/addoravit.png" alt="brand"></div>
-                            <div class="brands-picture"><img src="images/zanotta.png" alt="brand"></div>
-                        </div>
+                <h2 class="title">BRANDS <small>FURNITURE</small></h2>
+                <div class="col-xs-11">
+                    <div class="owl-carousel slider3">
+                        <div class="brands-picture"><img src="images/devon.png" alt="brand"></div>
+                        <div class="brands-picture"><img src="images/gan.png" alt="brand"></div>
+                        <div class="brands-picture"><img src="images/artek.png" alt="brand"></div>
+                        <div class="brands-picture"><img src="images/toncelli.png" alt="brand"></div>
+                        <div class="brands-picture"><img src="images/addoravit.png" alt="brand"></div>
+                        <div class="brands-picture"><img src="images/zanotta.png" alt="brand"></div>
+                        <div class="brands-picture"><img src="images/devon.png" alt="brand"></div>
+                        <div class="brands-picture"><img src="images/gan.png" alt="brand"></div>
+                        <div class="brands-picture"><img src="images/artek.png" alt="brand"></div>
+                        <div class="brands-picture"><img src="images/toncelli.png" alt="brand"></div>
+                        <div class="brands-picture"><img src="images/addoravit.png" alt="brand"></div>
+                        <div class="brands-picture"><img src="images/zanotta.png" alt="brand"></div>
                     </div>
                 </div>
             </div>
